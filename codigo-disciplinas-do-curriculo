@@ -1,0 +1,1409 @@
+
+        
+<html>
+
+<head>
+
+  <title>Aluno Online</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="KeyWords" content="Aluno Online UERJ SAG CETREINA PROTOCOLO">
+
+  <script type="text/javascript" src="../cssJs/alunoOnline.js" ></script>
+  <link type="text/css" rel="stylesheet" href="../estilo_alunoonline.css">
+  <link type="text/css" rel="stylesheet" href="../cssJs/caixaConteudoPagina.css">
+
+    <style TYPE="text/css">
+
+          A.LINKNAOSUB { text-decoration: none; color: #000066;}
+           .LINKNAOSUBB {  color: #FFFFFF; text-decoration: none;}
+           .linalt2 {  line-height: 15px; top-margin: 15px;}
+
+           
+          
+    </style>
+
+<script language="JavaScript">
+    
+<!-- 
+ 
+        
+    
+-->
+ 
+</script>
+
+</head>
+
+
+<body>
+
+<!--<table height="100%" width="100%" border="1" cellspacing='0' cellpadding='0'>
+-->    
+
+        <table style="margin-left:auto; margin-right:auto; height:100%; width:900px;" cellspacing='0' cellpadding='0'>
+
+            <tr><td>
+                                <table border=0 id="table_cabecalho_rodape" height="95" width="100%" cellspacing="0" cellpadding="0">
+
+                                   <tr valign="middle">
+
+                                      <td width="90" valign="middle" align="center">
+                                          <img src="../images/logo_uerj_cor.gif" width="70" height="75" border="0">
+                                      </td>
+
+                                      <td align="center" valign="middle">
+
+                                          <table id="table_cabecalho_rodape" border="0" cellspacing="0" cellpadding="2">
+                                                 <tr><td align="center" valign="top"><font style="font-size:16pt;">Disciplinas do Currículo</font></td></tr>
+                                                 <tr><td align="center" valign="middle"><font style="font-size:10pt;"><b>&nbsp;&nbsp;</b></font></td></tr><tr><td align="center" valign="middle"><font style="font-size:16pt;">201920650311 - Rodrigo Bezerra Cordeiro</font></td></tr>
+                                          </table>
+
+                                      </td>
+
+                                      <td width="90" valign="middle" align="center">
+                                          <div><img src="../images/logo_alunoonline.gif" width="70" height="40" border="0"></div>
+                                      </td>
+                                   </tr>
+
+                                </table>
+                        </td></tr>
+
+            <tr><td>
+                      <table border='0' cellspacing='0' cellpadding='4'>
+                         <tr><td>
+                                  
+                                  <a href='javascript:history.go(-1)'>
+                                     <img src='../images/icone_voltar.gif' width='48' height='23' border='0'></a>
+
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                                  
+                                  <a href='#' onClick='window.print();return false;'>
+                                     <img src='../images/icone_imprimir.gif' width='63' height='23' border='0'></a>
+
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                                  
+                         </td></tr>
+                      </table>
+                    </td></tr> 
+
+            <tr style="height:100%">
+                <td align="center" valign="top">
+                    <!--  INÍCIO DO CONTEÚDO DA PÁGINA -->
+                        <style>
+
+.tdHeader 
+{
+    /*margin:0px 0px 0px 0px;*/
+    margin-left: 3px;
+    text-align:left;
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+    border-bottom-color:#8B8B83;    
+    vertical-align: bottom;
+}
+    
+td
+{
+    vertical-align: top;
+}
+
+</style>
+
+<script type="text/javascript" language="JavaScript">
+<!--
+     function envia( codigo )
+     {
+              criaInputHidden('disciplinas[0]', codigo);
+              document.output.submit();
+     }
+
+     function criaInputHidden(campo, valor)
+     {
+         var hiddenField = document.createElement('input');            
+         hiddenField.type = 'hidden';
+         hiddenField.name = campo;
+         hiddenField.value = valor;            
+         document.output.appendChild(hiddenField);            
+     }
+-->
+</script>
+
+<form name='output' METHOD='post' ACTION=''>
+    <input type='hidden' name='_token' value='c5fb3ede309b901bd803ef7136040f56'>
+    <input name='requisicao' type='hidden' value='8e570a5fd317c9e96a0ba9c27d7844c2'>
+    <input type='hidden' name='matricula'   value='201920650311'>
+
+
+    <div class="divContentBox">
+
+        <div class='divContentBoxHeader'>
+            <b>&nbsp;&nbsp;Disciplinas do Currículo</b>
+        </div>
+
+        <div class="divContentBoxBody">
+
+            <table style='width:100%;font-size:12px; border-spacing: 6px;'>
+
+                <tr>
+                    <td class="tdHeader" style="text-align: left;" width='45%'>Disciplina</td>
+                    <td class="tdHeader" style="text-align: center;">Período</td>
+                    <td class="tdHeader" style="text-align: center;">Atendida?</td>
+                    <td class="tdHeader" style="text-align: center;" width='10%'>Tipo</td>
+                    <td class="tdHeader" style="text-align: center;">Ramif.</td>
+                    <td class="tdHeader" style="text-align: center;">Cred.</td>
+                    <td class="tdHeader" style="text-align: center;">CH<br>Total</td>
+                    <td class="tdHeader" style="text-align: center;">Trava<br>Crédito</td>
+                    <td class="tdHeader" style="text-align: center;">Turma<br>Período?</td>
+                </tr>    
+
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "4827"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME01-04827 Cálculo I                                                                       
+                                       </a></td>
+                    <td align=center>1</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>6</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "4827"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10814"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME03-10814 Geometria Analítica                                                             
+                                       </a></td>
+                    <td align=center>1</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10814"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10815"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME02-10815 Álgebra                                                                         
+                                       </a></td>
+                    <td align=center>1</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10815"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10816"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-10816 Matemática Discreta                                                             
+                                       </a></td>
+                    <td align=center>1</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10816"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10817"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10817 Fundamentos da Computação                                                       
+                                       </a></td>
+                    <td align=center>1</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>5</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10817"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "6766"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME01-06766 Cálculo II                                                                      
+                                       </a></td>
+                    <td align=center>2</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "6766"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10818"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME02-10818 Álgebra Linear                                                                  
+                                       </a></td>
+                    <td align=center>2</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>6</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10818"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10819"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME05-10819 Cálculo das Probabilidades                                                      
+                                       </a></td>
+                    <td align=center>2</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10819"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10820"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10820 Algoritmos e Estruturas de Dados I                                              
+                                       </a></td>
+                    <td align=center>2</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>6</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10820"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10821"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10821 Linguagem de Programação I                                                      
+                                       </a></td>
+                    <td align=center>2</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10821"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10982"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       FIS01-10982 Física I                                                                        
+                                       </a></td>
+                    <td align=center>2</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>5</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10982"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "6767"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME01-06767 Cálculo III                                                                     
+                                       </a></td>
+                    <td align=center>3</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "6767"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10822"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       ILE02-10822 Português Instrumental                                                          
+                                       </a></td>
+                    <td align=center>3</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10822"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10823"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10823 Algoritmos e Estruturas de Dados II                                             
+                                       </a></td>
+                    <td align=center>3</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10823"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10824"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME02-10824 Elementos de Lógica                                                             
+                                       </a></td>
+                    <td align=center>3</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10824"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10825"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10825 Linguagem de Programação II                                                     
+                                       </a></td>
+                    <td align=center>3</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10825"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10826"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10826 Teoria da Computação                                                            
+                                       </a></td>
+                    <td align=center>3</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10826"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10827"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-10827 Cálculo Numérico                                                                
+                                       </a></td>
+                    <td align=center>4</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10827"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10828"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME01-10828 Cálculo IV                                                                      
+                                       </a></td>
+                    <td align=center>4</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>6</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10828"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10830"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10830 Engenharia de Software                                                          
+                                       </a></td>
+                    <td align=center>4</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>59</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10830"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10831"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10831 Arquitetura de Computadores I                                                   
+                                       </a></td>
+                    <td align=center>4</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10831"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10983"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       FIS03-10983 Física II                                                                       
+                                       </a></td>
+                    <td align=center>4</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>5</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10983"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11311"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-11311 Algoritmos em Grafos                                                            
+                                       </a></td>
+                    <td align=center>4</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>3</td>
+                    <td align=center>45</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11311"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10832"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10832 Banco de Dados I                                                                
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>69</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10832"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10833"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10833 Análise e Projeto de Sistemas                                                   
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10833"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10834"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10834 Estruturas de Linguagens                                                        
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10834"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10835"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10835 Sistemas Operacionais I                                                         
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10835"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10836"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10836 Arquitetura de Computadores II                                                  
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10836"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11312"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-11312 Otimização em Grafos                                                            
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>3</td>
+                    <td align=center>45</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11312"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10837"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-10837 Otimização Combinatória                                                         
+                                       </a></td>
+                    <td align=center>6</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10837"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10838"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10838 Banco de Dados II                                                               
+                                       </a></td>
+                    <td align=center>6</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10838"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10839"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10839 Interfaces Humano-Computador                                                    
+                                       </a></td>
+                    <td align=center>6</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10839"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10840"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10840 Sistemas Operacionais II                                                        
+                                       </a></td>
+                    <td align=center>6</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10840"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10841"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10841 Compiladores                                                                    
+                                       </a></td>
+                    <td align=center>6</td>
+                    <td align=center>Sim</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10841"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10842"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10842 Computação Gráfica                                                              
+                                       </a></td>
+                    <td align=center>7</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10842"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10843"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10843 Inteligência Artificial                                                         
+                                       </a></td>
+                    <td align=center>7</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10843"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10844"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10844 Ética, Computadores e Sociedade                                                 
+                                       </a></td>
+                    <td align=center>7</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>118</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10844"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10845"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10845 Metodologia Científica no Projeto Final                                         
+                                       </a></td>
+                    <td align=center>7</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>118</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10845"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10846"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10846 Redes de Computadores I                                                         
+                                       </a></td>
+                    <td align=center>7</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10846"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10847"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10847 Arquiteturas Avançadas de Computadores                                          
+                                       </a></td>
+                    <td align=center>7</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10847"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10848"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10848 Projeto Final                                                                   
+                                       </a></td>
+                    <td align=center>8</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10848"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10849"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10849 Sistemas Distribuídos                                                           
+                                       </a></td>
+                    <td align=center>8</td>
+                    <td align=center>Não</td>
+                    <td align=center>Obrigatória</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10849"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10850"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10850 Álgebra Linear aplic à Computação Gráfica                                       
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10852"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-10852 Análise Numérica                                                                
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10862"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME05-10862 Estatística Aplicada                                                            
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10866"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       ILE04-10866 Ling Inglesa Instr p/Leitura na Ciência da Computação                           
+                                       </a></td>
+                    <td align=center>5</td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "4304"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       FAF03-04304 Fundamentos de Administração                                                    
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "6247"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-06247 Empreendedor em Tecnologia de Informação                                        
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "6247"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "8559"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-08559 Tópicos Especiais de Matemática Aplicada I                                      
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "8560"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-08560 Tópicos Especiais de Matemática Aplicada II                                     
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10679"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10679 Avaliação e Inovação em Tecnologia                                              
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10679"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10851"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10851 Algoritmos Distribuídos                                                         
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10853"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10853 Algoritmos para Geometria Computacional                                         
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10854"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10854 Aspectos Práticos em Ciência da Computação I                                    
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Sim</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>59</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10854"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10855"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10855 Aspectos Práticos em Ciência da Computação II                                   
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>59</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10855"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10856"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10856 Aspectos Práticos em Redes de Computadores                                      
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10857"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10857 Aspectos Práticos em Sistemas Operacionais                                      
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10858"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME06-10858 Computação Científica                                                           
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10859"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10859 Desenvolvimento e Implementação de Algoritmos                                   
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10860"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10860 Empreendedor em Tecnologia da Informação                                        
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>41</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10860"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10861"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10861 Engenharia de Requisitos de Software                                            
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10863"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10863 Filosofia da Ciência                                                            
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10864"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10864 Gestão de Tecnologia da Informação                                              
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10865"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10865 Informática na Educação                                                         
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>99</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10867"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10867 Modelagem de Sistemas                                                           
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>79</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10868"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10868 Programação Paralela e Distribuída                                              
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Sim</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10869"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10869 Qualidade de Software                                                           
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>79</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10870"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10870 Realidade Virtual                                                               
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10871"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10871 Redes de Computadores II                                                        
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10872"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10872 Redes Neuronais                                                                 
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10873"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10873 Sistemas de Informação                                                          
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10874"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10874 Tópicos Especiais I                                                             
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10874"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10875"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-10875 Tópicos Especiais II                                                            
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>108</td>
+                    <td align=center><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "10875"); return false;'>
+                                                                <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                                                Sim
+                                                            </a></td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11016"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       FIS02-11016 Física III                                                                      
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>5</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11017"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       FIS03-11017 Física IV                                                                       
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>5</td>
+                    <td align=center>90</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                                <tr bgcolor=#F6F6F6>
+                    <td><a class='LINKNAOSUB' href='#' onClick = 'javascript:consultarDisciplina(output, "11454"); return false;'>
+                                         <img src='../images/binoculo.gif' border=0 height='16' width='16'>
+                                       IME04-11454 Gestão da Inovação                                                              
+                                       </a></td>
+                    <td align=center> - </td>
+                    <td align=center>Não</td>
+                    <td align=center>E. Restrita</td>
+                    <td align=center>626</td>
+                    <td align=center>4</td>
+                    <td align=center>60</td>
+                    <td align=center>0</td>
+                    <td align=center><img src='../images/binoculo_disabled.gif' border=0 height='16' width='16'> Não</td>
+                </tr>
+                            </table>
+
+        </div>
+
+    </div>
+        
+        
+    <div style="width:100%; text-align: center; float: left; margin: 20px 0 20px 0;">
+        <button type='button' class='formButtonPadraoAO' OnClick='history.back()'>Retornar</button>
+    </div>
+
+    </form>
+        
+        
+</div>
+
+                    <!--  FINAL DO CONTEÚDO DA PÁGINA -->
+                </td>
+            </tr>
+
+            <tr><td align="center" valign="bottom">
+                    <div style="width: 100%; float: left;">
+                        <table id="table_cabecalho_rodape" style="width: 100%; height=30px;" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="120" valign="middle" align="center"><img src="../../images/logo_DGTi.png" width="69" height="28" border="0"></a></td>
+                                <td align="center"><p style="font-size:6pt;">&copy; 2019, Universidade do Estado do Rio de Janeiro. Todos os Direitos Reservados.</p></td>
+                                <td width="120" valign="middle" align="center"><img src="../../images/logo_sr1.gif" width="24" height="28" border="0"></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                   </td></tr>
+
+        </table>
+    
+</body>
+
+</html>
