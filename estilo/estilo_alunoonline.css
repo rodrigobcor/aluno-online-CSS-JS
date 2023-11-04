@@ -1,0 +1,121 @@
+table_cabecalho_rodape.formButtonPadraoAO
+{
+    width: 120px; 
+    height: 25px; 
+    font-size: 15px;
+    font-style: italic; 
+    font-weight: 600;
+    font-family: sans-serif;
+    color: blue;
+    background-color: #D5D8DC;
+    border-color: #D5D8DC;
+}
+
+div.barraTitulo 
+{
+    width:100%;
+    height:20px;
+    padding-top: 3px;
+    text-indent: 10px;
+    text-align: left;
+    float:left;
+    background-image:url('images/fundo_destaque.jpg');
+ }
+
+
+#linha           { border-top: #104E8B 1px solid; height:0; float:left; font-size:0%;margin:0px 0px 0px 0px;}
+#linha_tracejada { border-bottom: #104E8B 1px dashed; height:0; float:left; font-size:0%;margin:0px 0px 0px 0px;}
+#titulo          { border: #104E8B 1px solid; width:100%; height:21; float:left; font-size:14px;}
+
+/*
+#titulo { border: #104E8B 1px solid; width:100%; height:21; float:left; font-size:14px; BackGround:#EEDD82;}
+#titulo { border-top: #104E8B 1px solid; border-bottom: #104E8B 1px solid; width:100%; height:21; float:left; font-size:14px; BackGround:#EEDD82;}
+*/
+
+
+
+#menu_titulo_blocos { border: #104E8B 1px solid; 
+                      border-bottom: #104E8B 1px solid; 
+                      text-align:center; 
+                      width:100%; 
+                      height:21; 
+                      float:left; 
+                      BackGround:#4169E1;
+                      color:#EEDD82; 
+                      font-size:13px; }
+
+#menu_caixa_bloco { border: #104E8B 1px solid; 
+                    border-bottom: #104E8B 1px solid; 
+                    text-align:center; 
+                    width:100%; 
+                    float:left; }
+
+#menu_linha_item { width:85%; height:25px; text-align:left; float:left; }
+
+body 
+{
+  background-image:url('images/fundo_pagina.jpg');
+  marginwidth:"0";
+  marginheight:"0";
+  topmargin:"0";
+  margin: 0px 0px 0px 0px;
+  font-size: 12px;
+}
+
+div
+{
+    float: left;
+    font-size: 12px;
+    /*line-height: 20px;*/
+}
+
+#table_cabecalho_rodape, table, caption, th, #id_table, #id_th, p, body, #font_basico, #font_tam10, #font_tam12, input
+{ color:#104E8B; }
+
+/* BackGround:#EEDD82; amarelo mostarda */
+/* background-image:url('images/fundo_areia8.jpg'); */
+#menu_caixa_bloco, #table_cabecalho_rodape, th, #id_th, #titulo  
+{ 
+    background-image:url('images/fundo_destaque.jpg'); 
+}
+
+table, caption, th, td, #id_table, #id_th, p, body, #font_basico, #font_tam10, #font_tam12, #id_form_disabled, input, #id_input, #menu_titulo_blocos  
+{  
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica; 
+    font-size: 12px;
+}
+
+table, caption, th, #id_table, #id_th, p, #font_basico, #font_tam10, #font_tam12
+{ 
+/*    font-weight: medium; */
+}
+
+#id_input 
+ {
+  font-weight: medium; 
+  font-size:8px;
+  color:Navy;
+ }
+
+
+label { font-weight: 900; top: 0; font-size: 12px; }
+
+p     {  font-weight:bold; }
+
+#id_table    { font-size:8pt;  }
+#id_th       { font-size:8pt;  }
+#font_basico { font-size:8pt;  }
+#font_tam10  { font-size:10pt; }
+table        { font-size:10px; }
+th           { font-size:10px; }
+caption      { font-size:12px; }
+#font_tam12  { font-size:12pt; }
+
+#id_form_disabled 
+ {	   
+  font-weight: medium; 
+  font-family: Verdana, "MS Sans Serif", Arial, Helvetica; 
+  color:Navy;
+  BackGround:#EDEDED; 
+  font-size:8pt
+ }
