@@ -41,10 +41,10 @@
 
         <table style="margin-left:auto; margin-right:auto; height:100%; width:900px;" cellspacing="0" cellpadding="0">
 
-            <tbody><tr class="celula"><td>
+            <tbody><tr><td>
                                 <table border="0" id="table_cabecalho_rodape" height="95" width="100%" cellspacing="0" cellpadding="0">
 
-                                   <tbody><tr valign="middle" class="celula">
+                                   <tbody><tr valign="middle">
 
                                       <td width="90" valign="middle" align="center">
                                           <img src="../images/logo_uerj_cor.gif" width="70" height="75" border="0">
@@ -53,8 +53,8 @@
                                       <td align="center" valign="middle">
 
                                           <table id="table_cabecalho_rodape" border="0" cellspacing="0" cellpadding="2">
-                                                 <tbody><tr class="celula"><td align="center" valign="top"><font style="font-size:16pt;">Disciplinas Universais</font></td></tr>
-                                                 <tr class="celula"><td align="center" valign="middle"><font style="font-size:10pt;"><b>&nbsp;&nbsp;</b></font></td></tr><tr class="celula"><td align="center" valign="middle"><font style="font-size:16pt;">201920650311 - Rodrigo Bezerra Cordeiro</font></td></tr>
+                                                 <tbody><tr><td align="center" valign="top"><font style="font-size:16pt;">Disciplinas Universais</font></td></tr>
+                                                 <tr><td align="center" valign="middle"><font style="font-size:10pt;"><b>&nbsp;&nbsp;</b></font></td></tr><tr><td align="center" valign="middle"><font style="font-size:16pt;">201920650311 - Rodrigo Bezerra Cordeiro</font></td></tr>
                                           </tbody></table>
 
                                       </td>
@@ -67,9 +67,9 @@
                                 </tbody></table>
                         </td></tr>
 
-            <tr class="celula"><td>
+            <tr><td>
                       <table border="0" cellspacing="0" cellpadding="4">
-                         <tbody><tr class="celula"><td>
+                         <tbody><tr></tr><td>
                                   
                                   <a href="javascript:history.go(-1)">
                                      <img src="../images/icone_voltar.gif" width="48" height="23" border="0"></a>
@@ -87,7 +87,7 @@
                       </tbody></table>
                     </td></tr> 
 
-            <tr style="height:100%" class="celula">
+            <tr style="height:100%">
                 <td align="center" valign="top">
                     <!--  INÍCIO DO CONTEÚDO DA PÁGINA -->
                         <style>
@@ -3935,10 +3935,10 @@ td
                 </td>
             </tr>
 
-            <tr class="celula"><td align="center" valign="bottom">
+            <tr><td align="center" valign="bottom">
                     <div style="width: 100%; float: left;">
                         <table id="table_cabecalho_rodape" style="width: 100%; height=30px;" cellpadding="0" cellspacing="0">
-                            <tbody><tr class="celula">
+                            <tbody><tr>
                                 <td width="120" valign="middle" align="center"><img src="../../images/logo_DGTi.png" width="69" height="28" border="0"></td>
                                 <td align="center"><p style="font-size:6pt;">© 2019, Universidade do Estado do Rio de Janeiro. Todos os Direitos Reservados.</p></td>
                                 <td width="120" valign="middle" align="center"><img src="../../images/logo_sr1.gif" width="24" height="28" border="0"></td>
