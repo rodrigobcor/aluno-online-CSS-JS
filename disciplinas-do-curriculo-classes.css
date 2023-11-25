@@ -1,11 +1,11 @@
+.LINKNAOSUB { text-decoration: none; color: #000066;}
+     .LINKNAOSUBB {  color: #FFFFFF; text-decoration: none;}
+     .linalt2 {  line-height: 15px; margin-top: 15px;}
 
-
-A.LINKNAOSUB { text-decoration: none; color: #000066;}
-.LINKNAOSUBB {  color: #FFFFFF; text-decoration: none;}
-.linalt2 {  line-height: 15px; top-margin: 15px;}
-
-
-
+     
+    
 .celula {
 background-color: pink
-}.celDisciplina.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido
+}.celDisciplina{
+background-color: lightblue
+}.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido{}
