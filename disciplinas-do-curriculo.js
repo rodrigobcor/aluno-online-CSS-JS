@@ -12,4 +12,5 @@ function envia( codigo )
          hiddenField.value = valor;            
          document.output.appendChild(hiddenField);            
      }
+
      
