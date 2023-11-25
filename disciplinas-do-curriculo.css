@@ -1,0 +1,18 @@
+
+
+.tdHeader 
+{
+    /*margin:0px 0px 0px 0px;*/
+    margin-left: 3px;
+    text-align:left;
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+    border-bottom-color:#8B8B83;    
+    vertical-align: bottom;
+}
+    
+td
+{
+    vertical-align: top;
+}
+
