@@ -5,10 +5,32 @@
 
     
 .celula {
-background-color: pink
+     background-color: pink
 }.celDisciplina{
-background-color: lightblue
+     background-color: lightblue
 }.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido{}
 .IME01 {
-background-color: lightcoral
+     background-color: lightcoral
+}.IME02 {
+     background-color: lightcyan
+}.IME03 {
+     background-color: lightgoldenrodyellow
+}.IME04 {
+     background-color: lightpink
+}.IME05 {
+     background-color: lightgreen
+}.IME06 {
+     background-color: lightgray
+}.FIS01 {
+     background-color: lightsalmon
+}.FIS02 {
+     background-color: lightseagreen
+}.FIS03 {
+     background-color: lightskyblue
+}.ILE02 {
+     background-color: whitesmoke
+}.ILE04 {
+     background-color: lightsteelblue
+}.FAF03 {
+     background-color: lightyellow
 }
