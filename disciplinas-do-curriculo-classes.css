@@ -2,10 +2,13 @@
      .LINKNAOSUBB {  color: #FFFFFF; text-decoration: none;}
      .linalt2 {  line-height: 15px; margin-top: 15px;}
 
-     
+
     
 .celula {
 background-color: pink
 }.celDisciplina{
 background-color: lightblue
 }.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido{}
+.IME01 {
+background-color: lightcoral
+}
