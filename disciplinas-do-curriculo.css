@@ -1,12 +1,18 @@
 .tdHeader {
-    /*margin:0px 0px 0px 0px;*/
-    margin-left: 3px;
+    margin:0px;
     text-align: left;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #8B8B83;
     vertical-align: bottom;
+    padding: 0px;
 }
+
+a {
+    color: inherit;
+}
+
+/*.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido {}*/
 
 td {
     vertical-align: top;
@@ -14,7 +20,7 @@ td {
 
 .LINKNAOSUB {
     text-decoration: none;
-    color: #000066;
+    color: inherit;
 }
 
 .linalt2 {
@@ -26,11 +32,13 @@ td {
     background-color: pink
 }
 
-.celDisciplina {
+.linhaDisciplina {
     background-color: lightblue
 }
 
-.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido {}
+.disciplinaAtendida{
+    color: rgba(0, 0, 0, 0.5);
+}
 
 .IME01 {
     background-color: #dbedff
@@ -81,37 +89,38 @@ td {
 }
 
 .periodo1 {
-    background-color: Gainsboro
+    background-color: rgb(220, 220, 220)
 }
 
 .periodo2 {
-    background-color: LightGrey
+    background-color: rgb(205, 205, 205)
 }
 
 .periodo3 {
-    background-color: Silver
+    background-color: rgb(190, 190, 190)
 }
 
 .periodo4 {
-    background-color: DarkGray
+    background-color: rgb(175, 175, 175)
 }
 
 .periodo5 {
-    background-color: Gray
+    background-color: rgb(160, 160, 160)
 }
 
 .periodo6 {
-    background-color: DimGray
+    background-color: rgb(145, 145, 145)
 }
 
 .periodo7 {
-    background-color: #4F4F4F
+    background-color: rgb(130, 130, 130)
 }
 
 .periodo8 {
-    background-color: #363636
+    background-color: rgb(115, 115, 115);
 }
 
 .semPeriodo {
-    background-color: white;
+    background-color: white
 }
+
