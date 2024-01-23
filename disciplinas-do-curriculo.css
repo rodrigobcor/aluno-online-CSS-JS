@@ -12,7 +12,7 @@ a {
     color: inherit;
 }
 
-/*.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celTravaCredito.celPeriodoSugerido {}*/
+/*.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celPeriodoSugerido {}*/
 
 td {
     vertical-align: top;
@@ -124,3 +124,34 @@ td {
     background-color: white
 }
 
+.celTravaCredito {
+    display: none;
+}
+
+.possuiTravaCredito {
+    position: relative;
+    background-color: #fff;
+}
+
+.imagemTravaCredito {
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.possuiTravaCredito .textoBalao {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;    
+}
+
+.possuiTravaCredito:hover .textoBalao {
+    visibility: visible;
+  }
