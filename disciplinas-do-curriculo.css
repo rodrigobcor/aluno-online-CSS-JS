@@ -33,7 +33,14 @@ td {
 }
 
 .linhaDisciplina {
-    background-color: lightblue
+    background-color: lightblue;
+}
+
+.linhaDisciplina th {
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    background-color: lightblue;
 }
 
 .disciplinaAtendida{
