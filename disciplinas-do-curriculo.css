@@ -1,6 +1,6 @@
 .tdHeader {
     margin:0px;
-    text-align: left;
+    text-align: center;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #8B8B83;
@@ -8,19 +8,72 @@
     padding: 0px;
 }
 
+.tdHeader .celTipoDisc {
+    width: 500px;
+}
+
 a {
     color: inherit;
 }
 
-/*.celPeriodo.celAtendida.celTipo.celRamificacao.celCredito.celCHTotal.celPeriodoSugerido {}*/
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+tr {
+    display: table;
+}
 
 td {
     vertical-align: top;
+    
 }
 
 .LINKNAOSUB {
     text-decoration: none;
     color: inherit;
+}
+
+.celDisciplina {
+    width: 350px;
+}
+
+.celCodigoDisc {
+    width: 100px;
+}
+
+.celPeriodo {
+    width: 35px;
+}
+
+.celAtendida {
+    width: 30px;
+    padding-left: 25px;
+}
+
+.celTipoDisc {
+    width: 75px;
+    padding-left: 20px;
+}
+
+.celRamificacao {
+    width: 10px;
+    padding-left: 15px;
+}
+
+.celCredito {
+    width: 10px;
+    padding-left: 30px;
+}
+
+.celCHTotal {
+    width: 10px;
+    padding-left: 25px;
+}
+
+.celPeriodoSugerido {
+    width: ;
 }
 
 .linalt2 {
@@ -34,6 +87,7 @@ td {
 
 .linhaDisciplina {
     background-color: lightblue;
+    order: 1;
 }
 
 .linhaDisciplina th {
@@ -45,6 +99,7 @@ td {
 
 .disciplinaAtendida{
     color: rgba(0, 0, 0, 0.5);
+    order: 2;
 }
 
 .IME01 {
@@ -128,7 +183,7 @@ td {
 }
 
 .semPeriodo {
-    background-color: white
+    background-color: white;
 }
 
 .celTravaCredito {
@@ -137,7 +192,6 @@ td {
 
 .possuiTravaCredito {
     position: relative;
-    background-color: #fff;
 }
 
 .imagemTravaCredito {
@@ -156,7 +210,7 @@ td {
     position: absolute;
     z-index: 1;
     top: -5px;
-    right: 105%;    
+    right: 105%;
 }
 
 .possuiTravaCredito:hover .textoBalao {
