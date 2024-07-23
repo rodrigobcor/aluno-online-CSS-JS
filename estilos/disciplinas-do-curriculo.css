@@ -15,7 +15,7 @@
     padding: 10px;
 }
 
-.header-column .left, .header-column.right {
+.header-column.left, .header-column.right {
     width: 10%;
 }
   
