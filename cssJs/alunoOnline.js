@@ -11,21 +11,29 @@ function criaInputHidden(campo, valor) {
     document.output.appendChild(hiddenField);
 }
 
-var acc = document.getElementsByClassName("accordion");
-var i;
+document.addEventListener('DOMContentLoaded', function() {
+    var celulasAcordeao = document.querySelectorAll('.celDisciplina.acordeao');
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+    celulasAcordeao.forEach(function(celula) {
+        celula.addEventListener('click', function(event) {
+            if (event.target === celula || event.target.classList.contains('disciplina-texto')) {
+                var panel = celula.querySelector('.panel');
 
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                    celula.classList.remove('active');
+                } else {
+                    panel.style.display = "block";
+                    celula.classList.add('active');
+                }
+            }
+        });
+
+        var panel = celula.querySelector('.panel');
+        if (panel) {
+            panel.addEventListener('click', function(event) {
+                event.stopPropagation(); 
+            });
+        }
+    });
+});

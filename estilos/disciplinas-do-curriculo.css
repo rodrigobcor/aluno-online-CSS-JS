@@ -1,36 +1,78 @@
-.page-header {
+body {
+    background-color: fffbeb;
+}
+
+.conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.page-header1,
+.page-header2 {
     box-sizing: border-box;
-    text-align: center;
-    width: 900px; /* TODO: MUDAR DEPOIS pra ficar responsivo */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Roboto, Arial, Serif;
+    padding: 10px;
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+}
+
+.page-header1 {
+    background-color: #cad3e4;
+}
+
+.page-header2 {
+    padding-top: 10px;
 }
 
 .header-column {
-    float: left;
-    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.header-column.left, .header-column.right {
-    width: 10%;
+.header-column.left,
+.header-column.right {
+    width: 20%;
 }
-  
+
 .header-column.middle {
-    width: 70%;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
 }
-  
-.page-header:after { /* Clear floats after the columns */
-    content: "";
-    display: table;
-    clear: both;
+
+.header-column.right {
+    padding-right: 0; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.header-column.middle h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.header-column.middle .aluno-info {
+    margin: 15px 0 0; 
+    font-size: 16px;
+    color: #777;
+}
+
+.header-column img {
+    max-height: 100px;
+}
+
+.page-header2 .header-column.left {
+    gap: 10px;
 }
 
 .tdHeader {
-    margin:0px;
+    margin: 0px;
     text-align: center;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -58,7 +100,7 @@ tr {
 
 td {
     vertical-align: top;
-    
+
 }
 
 .LINKNAOSUB {
@@ -66,21 +108,117 @@ td {
     color: inherit;
 }
 
+.disciplina-table, .horario-table {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+}
+
+.disciplina-table th, .disciplina-table td{
+    padding: 1px; 
+    font-size: 12px;
+    text-align: left;
+}
+
+.disciplina-table th, .horario-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #000;    
+    text-align: center;
+}
+
+.disciplina-table .col-1 {
+    width: 5%; 
+    text-align: right; 
+    border-bottom-width: 0px;
+    padding-right: 5px;
+}
+
+.disciplina-table .col-2 {
+    width: 45%; 
+}
+
+.disciplina-table .col-3 {
+    width: 10%; 
+    text-align: center; 
+}
+
+.disciplina-table .col-4 {
+    width: 20%; 
+}
+
+.disciplina-table .col-5 {
+    width: 20%; 
+}
+
+.horario-table {    
+    border-collapse: collapse;
+}
+
+.horario-table th, .horario-table td {
+    border: 1px solid #808080;
+    padding: 2px;
+    text-align: center;
+    font-size: 12px;
+    width: 14.28%;
+}
+
+.horario-table th {
+    background-color: #cbd4e5;
+    color: #104e8b;
+    font-size: 10px;
+}
+
+.horario-table td {
+    vertical-align: top;
+    color: #104ea7;
+}
+
+.divTabelaBox {
+    border: 1px solid #808080;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.divTabelaBoxHeader {
+    background-color: #a7c7e7;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #808080;
+}
+
+.divTabelaBoxBody {
+    padding: 15px;
+    background-color: #f6f6f6;    
+}
+
 .celDisciplina {
-    width: 350px;
+    width: 450px;
+    vertical-align: top;
+    position: relative;
+}
+
+.celDisciplina.acordeao {
+    cursor: pointer;
 }
 
 .celCodigoDisc {
     width: 100px;
+    text-align: center;
 }
 
 .celPeriodo {
     width: 35px;
+    text-align: center;
 }
 
 .celAtendida {
     width: 30px;
     padding-left: 25px;
+    text-align: center;
 }
 
 .celTipoDisc {
@@ -103,9 +241,7 @@ td {
     padding-left: 25px;
 }
 
-.celPeriodoSugerido {
-    
-}
+.celPeriodoSugerido {}
 
 .linalt2 {
     line-height: 15px;
@@ -128,7 +264,7 @@ td {
     background-color: lightblue;
 }
 
-.disciplinaAtendida{
+.disciplinaAtendida {
     color: rgba(0, 0, 0, 0.5);
     order: 2;
 }
@@ -246,42 +382,33 @@ td {
 
 .possuiTravaCredito:hover .textoBalao {
     visibility: visible;
-  }
+}
 
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  /* Style the accordion panel. Note: hidden by default */
-  .panel {
-    padding: 0 18px;
-    background-color: white;
+.disciplina-texto {
+    display: inline-block;
+    width: calc(100% - 40px);
+}
+
+.panel {
     display: none;
-    overflow: hidden;
-  }
+    padding: 10px;
+    background-color: #fffbeb;
+    border-top: 1px solid #ddd;
+    width: calc(100% + 469px);
+    cursor: default;
+}
 
-  .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+.celDisciplina.acordeao:after {
+    content: '▶';
+    font-size: 12px;
     color: #777;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.celDisciplina.acordeao.active:after {
+    content: '▼';
+    top: 10px;
+}
