@@ -84,7 +84,6 @@ body {
 .tdHeader .celTipoDisc {
     width: 500px;
 }
-
 a {
     color: inherit;
 }
@@ -197,7 +196,6 @@ td {
 
 .celDisciplina {
     width: 450px;
-    vertical-align: top;
     position: relative;
 }
 
@@ -412,3 +410,4 @@ td {
     content: '▼';
     top: 10px;
 }
+
