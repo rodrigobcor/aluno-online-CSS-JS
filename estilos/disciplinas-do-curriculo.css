@@ -490,115 +490,6 @@ div.barraTitulo {
     float: left;
 }
 
-body {
-    background-image: url('images/fundo_pagina.jpg');
-    margin: 0px;
-    font-size: 12px;
-}
-
-div {
-    float: left;
-    font-size: 12px;
-}
-
-#table_cabecalho_rodape,
-table,
-caption,
-th,
-#id_table,
-#id_th,
-p,
-body,
-#font_basico,
-#font_tam10,
-#font_tam12,
-input {
-    color: #104E8B;
-}
-
-#menu_caixa_bloco,
-#table_cabecalho_rodape,
-th,
-#id_th,
-#titulo {
-    background-image: url('images/fundo_destaque.jpg');
-}
-
-table,
-caption,
-th,
-td,
-#id_table,
-#id_th,
-p,
-body,
-#font_basico,
-#font_tam10,
-#font_tam12,
-#id_form_disabled,
-input,
-#id_input,
-#menu_titulo_blocos {
-    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
-    font-size: 12px;
-}
-
-#id_input {
-    font-weight: medium;
-    font-size: 8px;
-    color: Navy;
-}
-
-label {
-    font-weight: 900;
-    top: 0;
-    font-size: 12px;
-}
-
-p {
-    font-weight: bold;
-}
-
-#id_table {
-    font-size: 8pt;
-}
-
-#id_th {
-    font-size: 8pt;
-}
-
-#font_basico {
-    font-size: 8pt;
-}
-
-#font_tam10 {
-    font-size: 10pt;
-}
-
-table {
-    font-size: 10px;
-}
-
-th {
-    font-size: 10px;
-}
-
-caption {
-    font-size: 12px;
-}
-
-#font_tam12 {
-    font-size: 12pt;
-}
-
-#id_form_disabled {
-    font-weight: medium;
-    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
-    color: Navy;
-    background-color: #EDEDED;
-    font-size: 8pt;
-}
-
 /* ===== Regras do Arquivo 2 ===== */
 .divCenterContent {
     margin: 0 auto;
@@ -635,6 +526,7 @@ caption {
     width: 100%;
     float: left;
     border-style: none;
+    margin-top: 1px;
     background-color: #F6F6F6;
     color: #104E8B;
     font-size: 12px;
@@ -642,9 +534,9 @@ caption {
 }
 
 .divContentBoxMessage {
+    margin: 20px 0;
     width: 100%;
     float: left;
-    margin: 10px 0;
     color: red;
     font-weight: bold;
     font-size: 12px;
@@ -687,6 +579,7 @@ caption {
     width: 100%;
     float: left;
     border-style: none;
+    margin-top: 1px;
     background-color: #edf6f7;
     color: #104E8B;
     font-size: 12px;
