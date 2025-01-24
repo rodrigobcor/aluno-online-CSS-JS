@@ -1,272 +1,6 @@
-/*estilo_alunoonline.css*/
-.formButtonPadraoAO
-{
-    width: 120px; 
-    height: 25px; 
-    font-size: 15px;
-    font-style: italic; 
-    font-weight: 600;
-    font-family: sans-serif;
-    color: blue;
-    background-color: #D5D8DC;
-    border-color: #D5D8DC;
-}
-
-div.barraTitulo 
-{
-    width:100%;
-    height:20px;
-    padding-top: 3px;
-    text-indent: 10px;
-    text-align: left;
-    float:left;
-    background-image:url('images/fundo_destaque.jpg');
- }
-
-
-#linha           { border-top: #104E8B 1px solid; height:0; float:left; font-size:0%;margin:0px 0px 0px 0px;}
-#linha_tracejada { border-bottom: #104E8B 1px dashed; height:0; float:left; font-size:0%;margin:0px 0px 0px 0px;}
-#titulo          { border: #104E8B 1px solid; width:100%; height:21; float:left; font-size:14px;}
-
-/*
-#titulo { border: #104E8B 1px solid; width:100%; height:21; float:left; font-size:14px; BackGround:#EEDD82;}
-#titulo { border-top: #104E8B 1px solid; border-bottom: #104E8B 1px solid; width:100%; height:21; float:left; font-size:14px; BackGround:#EEDD82;}
-*/
-
-
-
-#menu_titulo_blocos { border: #104E8B 1px solid; 
-                      border-bottom: #104E8B 1px solid; 
-                      text-align:center; 
-                      width:100%; 
-                      height:21; 
-                      float:left; 
-                      BackGround:#4169E1;
-                      color:#EEDD82; 
-                      font-size:13px; }
-
-#menu_caixa_bloco { border: #104E8B 1px solid; 
-                    border-bottom: #104E8B 1px solid; 
-                    text-align:center; 
-                    width:100%; 
-                    float:left; }
-
-#menu_linha_item { width:85%; height:25px; text-align:left; float:left; }
-
-body 
-{
-  background-image:url('images/fundo_pagina.jpg');
-  marginwidth:"0";
-  marginheight:"0";
-  topmargin:"0";
-  margin: 0px 0px 0px 0px;
-  font-size: 12px;
-}
-
-div
-{
-    float: left;
-    font-size: 12px;
-    /*line-height: 20px;*/
-}
-
-#table_cabecalho_rodape, table, caption, th, #id_table, #id_th, p, body, #font_basico, #font_tam10, #font_tam12, input
-{ color:#104E8B; }
-
-/* BackGround:#EEDD82; amarelo mostarda */
-/* background-image:url('images/fundo_areia8.jpg'); */
-#menu_caixa_bloco, #table_cabecalho_rodape, th, #id_th, #titulo  
-{ 
-    background-image:url('images/fundo_destaque.jpg'); 
-}
-
-table, caption, th, td, #id_table, #id_th, p, body, #font_basico, #font_tam10, #font_tam12, #id_form_disabled, input, #id_input, #menu_titulo_blocos  
-{  
-    font-family: Verdana, "MS Sans Serif", Arial, Helvetica; 
-    font-size: 12px;
-}
-
-table, caption, th, #id_table, #id_th, p, #font_basico, #font_tam10, #font_tam12
-{ 
-/*    font-weight: medium; */
-}
-
-#id_input 
- {
-  font-weight: medium; 
-  font-size:8px;
-  color:Navy;
- }
-
-
-label { font-weight: 900; top: 0; font-size: 12px; }
-
-p     {  font-weight:bold; }
-
-#id_table    { font-size:8pt;  }
-#id_th       { font-size:8pt;  }
-#font_basico { font-size:8pt;  }
-#font_tam10  { font-size:10pt; }
-table        { font-size:10px; }
-th           { font-size:10px; }
-caption      { font-size:12px; }
-#font_tam12  { font-size:12pt; }
-
-#id_form_disabled 
- {	   
-  font-weight: medium; 
-  font-family: Verdana, "MS Sans Serif", Arial, Helvetica; 
-  color:Navy;
-  BackGround:#EDEDED; 
-  font-size:8pt
- }
-
-
-
-/*cssJs/caixaConteudoPagina.css*/
-.divCenterContent
-{
-    margin: 0 auto 0 auto;
-}
-
-
-.divPageContent
-{
-    width: 98%; 
-    margin: 10 auto 0 auto;
-}
-
-.divContentBox
-{
-    width: 100%; 
-    float: left; 
-    border-style: solid; 
-    border-width: 1px; 
-    color: black; /*#104E8B; */
-}
-
-.divContentBoxHeader
-{
-    width: 100%;
-    padding: 5px 0 5px 0;
-    float: left; 
-    
-    border-style: solid; 
-    border-left-width: 0px; 
-    border-right-width: 0px; 
-    border-top-width: 0px; 
-    border-bottom-width: 1px; 
-    background-color: #A7C7E7; 
-    
-    font-size: 14px;
-    font-weight: bold;
-}
-    
-.divContentBoxBody
-{
-    width: 100%;
-    float: left; 
-    border-style: none; 
-    border-left-width: 0px; 
-    border-right-width: 0px; 
-    border-top-width: 0px; 
-    border-bottom-width: 0px; 
-    margin-top: 1px; 
-    background-color: #F6F6F6;
-    color: #104E8B; 
-    font-size: 12px;
-    
-    padding: 5px 0 5px 0;
-    
-}
-    
-.divContentBoxMessage
-{
-    margin: 20px 0 20px 0;
-    width: 100%;
-    float: left;
-}
-
-.divContentBoxMessage
-{
-    width:100%; 
-    float: left; 
-    margin: 10px 0 10px 0; 
-    color: red; 
-    font-weight: bold;
-    
-    font-size: 12px;
-}
-
-.divPageCommandButton
-{
-    width:100%; 
-    float:left; 
-    margin:20px 0 20px 0; 
-    text-align: center;
-}
-
-
-
-
-
-.divContentBlock
-{
-    width: calc(100% - 30px); 
-    background-color: none;
-    float: left; 
-    margin-top: 15px;
-    margin-left: 15px;
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: navy; 
-    border-width: 1px;
-    color: #104E8B; 
-}
-
-.divContentBlockHeader
-{
-    width: 100%;
-    background-color: #96C2D3;
-    /*background-color: #DAE4EA;*/ 
-    color: black;
-    padding: 0px 0 0px 0;
-    float: left; 
-    
-    border-style: solid; 
-    border-left-width: 0px; 
-    border-right-width: 0px; 
-    border-top-width: 0px; 
-    border-bottom-width: 1px; 
-    
-    font-size: 14px;
-    font-weight: bold;
-}
-    
-.divContentBlockBody
-{
-    width: 100%;
-    float: left; 
-    border-style: none; 
-    border-left-width: 0px; 
-    border-right-width: 0px; 
-    border-top-width: 0px; 
-    border-bottom-width: 0px; 
-    margin-top: 1px; 
-    /*background-color: #F6F6F6;*/
-        background-color: #edf6f7;
-    color: #104E8B; 
-    font-size: 12px;
-    
-    padding: 5px 0 5px 0;
-    
-}
-
-
-
-
+/* ===== Regras do Arquivo 3 (prioridade) ===== */
 body {
-    background-color: fffbeb;
+    background-color: #fffbeb;
 }
 
 .conteudo {
@@ -308,14 +42,14 @@ body {
     width: 60%;
     text-align: center;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header-column.right {
-    padding-right: 0; 
+    padding-right: 0;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
 
 .header-column.middle h1 {
@@ -325,7 +59,7 @@ body {
 }
 
 .header-column.middle .aluno-info {
-    margin: 15px 0 0; 
+    margin: 15px 0 0;
     font-size: 16px;
     color: #777;
 }
@@ -351,6 +85,7 @@ body {
 .tdHeader .celTipoDisc {
     width: 500px;
 }
+
 a {
     color: inherit;
 }
@@ -366,7 +101,6 @@ tr {
 
 td {
     vertical-align: top;
-
 }
 
 .LINKNAOSUB {
@@ -374,54 +108,58 @@ td {
     color: inherit;
 }
 
-.disciplina-table, .horario-table {
+.disciplina-table,
+.horario-table {
     width: 100%;
     margin-bottom: 20px;
     font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
 }
 
-.disciplina-table th, .disciplina-table td{
-    padding: 1px; 
+.disciplina-table th,
+.disciplina-table td {
+    padding: 1px;
     font-size: 12px;
     text-align: left;
 }
 
-.disciplina-table th, .horario-table th {
+.disciplina-table th,
+.horario-table th {
     background-color: #f2f2f2;
     font-weight: bold;
-    color: #000;    
+    color: #000;
     text-align: center;
 }
 
 .disciplina-table .col-1 {
-    width: 5%; 
-    text-align: right; 
+    width: 5%;
+    text-align: right;
     border-bottom-width: 0px;
     padding-right: 5px;
 }
 
 .disciplina-table .col-2 {
-    width: 45%; 
+    width: 45%;
 }
 
 .disciplina-table .col-3 {
-    width: 10%; 
-    text-align: center; 
+    width: 10%;
+    text-align: center;
 }
 
 .disciplina-table .col-4 {
-    width: 20%; 
+    width: 20%;
 }
 
 .disciplina-table .col-5 {
-    width: 20%; 
+    width: 20%;
 }
 
-.horario-table {    
+.horario-table {
     border-collapse: collapse;
 }
 
-.horario-table th, .horario-table td {
+.horario-table th,
+.horario-table td {
     border: 1px solid #808080;
     padding: 2px;
     text-align: center;
@@ -458,7 +196,7 @@ td {
 
 .divTabelaBoxBody {
     padding: 15px;
-    background-color: #f6f6f6;    
+    background-color: #f6f6f6;
 }
 
 .celDisciplina {
@@ -514,7 +252,7 @@ td {
 }
 
 .celula {
-    background-color: pink
+    background-color: pink;
 }
 
 .linhaDisciplina {
@@ -535,79 +273,79 @@ td {
 }
 
 .IME01 {
-    background-color: #dbedff
+    background-color: #dbedff;
 }
 
 .IME02 {
-    background-color: #b6dcff
+    background-color: #b6dcff;
 }
 
 .IME03 {
-    background-color: #92caff
+    background-color: #92caff;
 }
 
 .IME04 {
-    background-color: #6db9ff
+    background-color: #6db9ff;
 }
 
 .IME05 {
-    background-color: #4da9ff
+    background-color: #4da9ff;
 }
 
 .IME06 {
-    background-color: #2496ff
+    background-color: #2496ff;
 }
 
 .FIS01 {
-    background-color: aquamarine
+    background-color: aquamarine;
 }
 
 .FIS02 {
-    background-color: turquoise
+    background-color: turquoise;
 }
 
 .FIS03 {
-    background-color: darkturquoise
+    background-color: darkturquoise;
 }
 
 .ILE02 {
-    background-color: plum
+    background-color: plum;
 }
 
 .ILE04 {
-    background-color: violet
+    background-color: violet;
 }
 
 .FAF03 {
-    background-color: darksalmon
+    background-color: darksalmon;
 }
 
 .periodo1 {
-    background-color: rgb(220, 220, 220)
+    background-color: rgb(220, 220, 220);
 }
 
 .periodo2 {
-    background-color: rgb(205, 205, 205)
+    background-color: rgb(205, 205, 205);
 }
 
 .periodo3 {
-    background-color: rgb(190, 190, 190)
+    background-color: rgb(190, 190, 190);
 }
 
 .periodo4 {
-    background-color: rgb(175, 175, 175)
+    background-color: rgb(175, 175, 175);
 }
 
 .periodo5 {
-    background-color: rgb(160, 160, 160)
+    background-color: rgb(160, 160, 160);
 }
 
 .periodo6 {
-    background-color: rgb(145, 145, 145)
+    background-color: rgb(145, 145, 145);
 }
 
 .periodo7 {
-    background-color: rgb(130, 130, 130)
+    background-color: rgb(130, 130, 130);
 }
 
 .periodo8 {
@@ -676,4 +414,172 @@ td {
 .celDisciplina.acordeao.active:after {
     content: '▼';
     top: 10px;
+}
+
+.formButtonPadraoAO {
+    width: 120px;
+    height: 25px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: blue;
+    background-color: #D5D8DC;
+    border-color: #D5D8DC;
+}
+
+div.barraTitulo {
+    width: 100%;
+    height: 20px;
+    padding-top: 3px;
+    text-indent: 10px;
+    text-align: left;
+    float: left;
+    background-image: url('images/fundo_destaque.jpg');
+}
+
+#linha {
+    border-top: #104E8B 1px solid;
+    height: 0;
+    float: left;
+    font-size: 0%;
+    margin: 0px 0px 0px 0px;
+}
+
+#linha_tracejada {
+    border-bottom: #104E8B 1px dashed;
+    height: 0;
+    float: left;
+    font-size: 0%;
+    margin: 0px 0px 0px 0px;
+}
+
+#titulo {
+    border: #104E8B 1px solid;
+    width: 100%;
+    height: 21px;
+    float: left;
+    font-size: 14px;
+}
+
+#menu_titulo_blocos {
+    border: #104E8B 1px solid;
+    border-bottom: #104E8B 1px solid;
+    text-align: center;
+    width: 100%;
+    height: 21px;
+    float: left;
+    background-color: #4169E1;
+    color: #EEDD82;
+    font-size: 13px;
+}
+
+#menu_caixa_bloco {
+    border: #104E8B 1px solid;
+    border-bottom: #104E8B 1px solid;
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+
+#menu_linha_item {
+    width: 85%;
+    height: 25px;
+    text-align: left;
+    float: left;
+}
+
+.divCenterContent {
+    margin: 0 auto;
+}
+
+.divPageContent {
+    width: 98%;
+    margin: 10px auto 0 auto;
+}
+
+.divContentBox {
+    width: 100%;
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+}
+
+.divContentBoxHeader {
+    width: 100%;
+    padding: 5px 0;
+    float: left;
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    background-color: #A7C7E7;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.divContentBoxBody {
+    width: 100%;
+    float: left;
+    border-style: none;
+    margin-top: 1px;
+    background-color: #F6F6F6;
+    color: #104E8B;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.divContentBoxMessage {
+    margin: 20px 0;
+    width: 100%;
+    float: left;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.divPageCommandButton {
+    width: 100%;
+    float: left;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.divContentBlock {
+    width: calc(100% - 30px);
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: navy;
+    color: #104E8B;
+}
+
+.divContentBlockHeader {
+    width: 100%;
+    background-color: #96C2D3;
+    color: black;
+    padding: 0;
+    float: left;
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.divContentBlockBody {
+    width: 100%;
+    float: left;
+    border-style: none;
+    margin-top: 1px;
+    background-color: #edf6f7;
+    color: #104E8B;
+    font-size: 12px;
+    padding: 5px 0;
 }
