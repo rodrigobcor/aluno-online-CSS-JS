@@ -1,0 +1,412 @@
+body {
+    background-color: fffbeb;
+}
+
+.conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.page-header1,
+.page-header2 {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+}
+
+.page-header1 {
+    background-color: #cad3e4;
+}
+
+.page-header2 {
+    padding-top: 10px;
+}
+
+.header-column {
+    display: flex;
+    align-items: center;
+}
+
+.header-column.left,
+.header-column.right {
+    width: 20%;
+}
+
+.header-column.middle {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.header-column.right {
+    padding-right: 0; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.header-column.middle h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.header-column.middle .aluno-info {
+    margin: 15px 0 0; 
+    font-size: 16px;
+    color: #777;
+}
+
+.header-column img {
+    max-height: 100px;
+}
+
+.page-header2 .header-column.left {
+    gap: 10px;
+}
+
+.tdHeader {
+    margin: 0px;
+    text-align: center;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #8B8B83;
+    vertical-align: bottom;
+    padding: 0px;
+}
+
+.tdHeader .celTipoDisc {
+    width: 500px;
+}
+a {
+    color: inherit;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+tr {
+    display: table;
+}
+
+td {
+    vertical-align: top;
+
+}
+
+.LINKNAOSUB {
+    text-decoration: none;
+    color: inherit;
+}
+
+.disciplina-table, .horario-table {
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+}
+
+.disciplina-table th, .disciplina-table td{
+    padding: 1px; 
+    font-size: 12px;
+    text-align: left;
+}
+
+.disciplina-table th, .horario-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #000;    
+    text-align: center;
+}
+
+.disciplina-table .col-1 {
+    width: 5%; 
+    text-align: right; 
+    border-bottom-width: 0px;
+    padding-right: 5px;
+}
+
+.disciplina-table .col-2 {
+    width: 45%; 
+}
+
+.disciplina-table .col-3 {
+    width: 10%; 
+    text-align: center; 
+}
+
+.disciplina-table .col-4 {
+    width: 20%; 
+}
+
+.disciplina-table .col-5 {
+    width: 20%; 
+}
+
+.horario-table {    
+    border-collapse: collapse;
+}
+
+.horario-table th, .horario-table td {
+    border: 1px solid #808080;
+    padding: 2px;
+    text-align: center;
+    font-size: 12px;
+    width: 14.28%;
+}
+
+.horario-table th {
+    background-color: #cbd4e5;
+    color: #104e8b;
+    font-size: 10px;
+}
+
+.horario-table td {
+    vertical-align: top;
+    color: #104ea7;
+}
+
+.divTabelaBox {
+    border: 1px solid #808080;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.divTabelaBoxHeader {
+    background-color: #a7c7e7;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #808080;
+}
+
+.divTabelaBoxBody {
+    padding: 15px;
+    background-color: #f6f6f6;    
+}
+
+.celDisciplina {
+    width: 450px;
+    position: relative;
+}
+
+.celDisciplina.acordeao {
+    cursor: pointer;
+}
+
+.celCodigoDisc {
+    width: 100px;
+    text-align: center;
+}
+
+.celPeriodo {
+    width: 35px;
+    text-align: center;
+}
+
+.celAtendida {
+    width: 30px;
+    padding-left: 25px;
+    text-align: center;
+}
+
+.celTipoDisc {
+    width: 75px;
+    padding-left: 20px;
+}
+
+.celRamificacao {
+    width: 10px;
+    padding-left: 15px;
+}
+
+.celCredito {
+    width: 10px;
+    padding-left: 30px;
+}
+
+.celCHTotal {
+    width: 10px;
+    padding-left: 25px;
+}
+
+.celPeriodoSugerido {}
+
+.linalt2 {
+    line-height: 15px;
+    margin-top: 15px;
+}
+
+.celula {
+    background-color: pink
+}
+
+.linhaDisciplina {
+    background-color: lightblue;
+    order: 1;
+}
+
+.linhaDisciplina th {
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    background-color: lightblue;
+}
+
+.disciplinaAtendida {
+    color: rgba(0, 0, 0, 0.5);
+    order: 2;
+}
+
+.IME01 {
+    background-color: #dbedff
+}
+
+.IME02 {
+    background-color: #b6dcff
+}
+
+.IME03 {
+    background-color: #92caff
+}
+
+.IME04 {
+    background-color: #6db9ff
+}
+
+.IME05 {
+    background-color: #4da9ff
+}
+
+.IME06 {
+    background-color: #2496ff
+}
+
+.FIS01 {
+    background-color: aquamarine
+}
+
+.FIS02 {
+    background-color: turquoise
+}
+
+.FIS03 {
+    background-color: darkturquoise
+}
+
+.ILE02 {
+    background-color: plum
+}
+
+.ILE04 {
+    background-color: violet
+}
+
+.FAF03 {
+    background-color: darksalmon
+}
+
+.periodo1 {
+    background-color: rgb(220, 220, 220)
+}
+
+.periodo2 {
+    background-color: rgb(205, 205, 205)
+}
+
+.periodo3 {
+    background-color: rgb(190, 190, 190)
+}
+
+.periodo4 {
+    background-color: rgb(175, 175, 175)
+}
+
+.periodo5 {
+    background-color: rgb(160, 160, 160)
+}
+
+.periodo6 {
+    background-color: rgb(145, 145, 145)
+}
+
+.periodo7 {
+    background-color: rgb(130, 130, 130)
+}
+
+.periodo8 {
+    background-color: rgb(115, 115, 115);
+}
+
+.semPeriodo {
+    background-color: white;
+}
+
+.celTravaCredito {
+    display: none;
+}
+
+.possuiTravaCredito {
+    position: relative;
+}
+
+.imagemTravaCredito {
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.possuiTravaCredito .textoBalao {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+
+.possuiTravaCredito:hover .textoBalao {
+    visibility: visible;
+}
+
+.disciplina-texto {
+    display: inline-block;
+    width: calc(100% - 40px);
+}
+
+.panel {
+    display: none;
+    padding: 10px;
+    background-color: #fffbeb;
+    border-top: 1px solid #ddd;
+    width: calc(100% + 469px);
+    cursor: default;
+}
+
+.celDisciplina.acordeao:after {
+    content: '▶';
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.celDisciplina.acordeao.active:after {
+    content: '▼';
+    top: 10px;
+}
