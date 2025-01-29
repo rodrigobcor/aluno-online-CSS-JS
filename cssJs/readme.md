@@ -8,3 +8,4 @@
 4. Incluidas formatações como: cores dos códigos, ordem nas disciplinas (entre concluidas e não concluidas) e cadeados com trava de crédito
 5. Inserida a tabela de horários e sua formatação
 6. Modificação dos `tr` das disciplinas para incluir o acordeão
+7. Incluido código CSS e JS para funcionalidades do acordeão
