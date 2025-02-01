@@ -134,20 +134,25 @@ td {
 }
 
 .disciplina-table .colHorarios-2 {
-    width: 45%; 
+    width: 35%; 
 }
 
 .disciplina-table .colHorarios-3 {
-    width: 20%; 
+    width: 10%; 
 }
 
 .disciplina-table .colHorarios-4 {
-    width: 10%; 
+    width: 5%; 
     text-align: center; 
 }
 
 .disciplina-table .colHorarios-5 {
-    width: 20%; 
+    width: 15%; 
+    text-align: center; 
+}
+
+.disciplina-table .colHorarios-6 {
+    width: 15%; 
 }
 
 .horario-table {    
