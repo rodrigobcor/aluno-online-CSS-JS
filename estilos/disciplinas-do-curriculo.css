@@ -126,27 +126,27 @@ td {
     text-align: center;
 }
 
-.disciplina-table .col-1 {
+.disciplina-table .colHorarios-1 {
     width: 5%; 
     text-align: right; 
     border-bottom-width: 0px;
     padding-right: 5px;
 }
 
-.disciplina-table .col-2 {
+.disciplina-table .colHorarios-2 {
     width: 45%; 
 }
 
-.disciplina-table .col-3 {
+.disciplina-table .colHorarios-3 {
+    width: 20%; 
+}
+
+.disciplina-table .colHorarios-4 {
     width: 10%; 
     text-align: center; 
 }
 
-.disciplina-table .col-4 {
-    width: 20%; 
-}
-
-.disciplina-table .col-5 {
+.disciplina-table .colHorarios-5 {
     width: 20%; 
 }
 
