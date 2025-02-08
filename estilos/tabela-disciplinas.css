@@ -1,0 +1,44 @@
+.disciplina-table, #horario-table {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+}
+
+#horario-table {  
+  border-collapse: collapse;
+}
+
+.disciplina-table th, #horario-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #000;  
+  text-align: center;
+}
+
+#horario-table th, #horario-table td {
+  border: 1px solid #808080;
+  padding: 2px;
+  text-align: center;
+  font-size: 12px; /* isso é sobrescrito em "#horario-table th"; se for manter a diferença, mover isso pra #horario-table td" */
+  width: 14.28%;
+}
+
+#horario-table th {
+  background-color: #cbd4e5;
+  color: #104e8b;
+  font-size: 10px;
+}
+
+#horario-table td {
+  vertical-align: top;
+  color: #104ea7;
+  font-weight: bold;
+}
+
+.selecionada {
+  background-color: lightsteelblue;
+}
+
+.com-conflito {
+  background-color: indianred;
+}
