@@ -1,7 +1,7 @@
 /* Estilos gerais */
 
 body {
-    background-color: fffbeb;
+    background-color: #fffbeb;
 }
 
 a {
@@ -75,13 +75,13 @@ td {
 .header-column.middle h1 {
     margin: 0;
     font-size: 24px;
-    color: #333;
+    color: #333333;
 }
 
 .header-column.middle .aluno-info {
     margin: 15px 0 0; 
     font-size: 16px;
-    color: #777;
+    color: #777777;
 }
 
 .header-column img {
@@ -97,7 +97,7 @@ td {
     text-align: center;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: #8B8B83;
+    border-bottom-color: #8b8b83;
     vertical-align: bottom;
     padding: 0px;
 }
@@ -126,7 +126,7 @@ td {
 .disciplina-table th, .horario-table th {
     background-color: #f2f2f2;
     font-weight: bold;
-    color: #000;
+    color: #000000;
     text-align: center;
 }
 
@@ -194,7 +194,7 @@ td {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    color: #000;
+    color: #000000;
     border-bottom: 1px solid #808080;
 }
 
@@ -257,11 +257,11 @@ td {
 }
 
 .celula {
-    background-color: pink
+    background-color: #ffc0cb;
 }
 
 .linhaDisciplina {
-    background-color: lightblue;
+    background-color: #add8e6;
     order: 1;
 }
 
@@ -269,100 +269,100 @@ td {
     font-weight: normal;
     position: sticky;
     top: 0;
-    background-color: lightblue;
+    background-color: #add8e6;
 }
 
 .disciplinaAtendida {
-    color: rgba(0, 0, 0, 0.5);
+    color: #00000080;
     order: 2;
 }
 
 /* Lista de disciplinas - Períodos */
 
 .periodo1 {
-    background-color: rgb(220, 220, 220)
+    background-color: #dcdcdc;
 }
 
 .periodo2 {
-    background-color: rgb(205, 205, 205)
+    background-color: #cdcdcd;
 }
 
 .periodo3 {
-    background-color: rgb(190, 190, 190)
+    background-color: #bebebe;
 }
 
 .periodo4 {
-    background-color: rgb(175, 175, 175)
+    background-color: #afafaf;
 }
 
 .periodo5 {
-    background-color: rgb(160, 160, 160)
+    background-color: #a0a0a0;
 }
 
 .periodo6 {
-    background-color: rgb(145, 145, 145)
+    background-color: #919191;
 }
 
 .periodo7 {
-    background-color: rgb(130, 130, 130)
+    background-color: #828282;
 }
 
 .periodo8 {
-    background-color: rgb(115, 115, 115);
+    background-color: #737373;
 }
 
 .semPeriodo {
-    background-color: white;
+    background-color: #ffffff;
 }
 
 /* Lista de disciplinas - Departamento da disciplina */
 
 .IME01 {
-    background-color: #dbedff
+    background-color: #dbedff;
 }
 
 .IME02 {
-    background-color: #b6dcff
+    background-color: #b6dcff;
 }
 
 .IME03 {
-    background-color: #92caff
+    background-color: #92caff;
 }
 
 .IME04 {
-    background-color: #6db9ff
+    background-color: #6db9ff;
 }
 
 .IME05 {
-    background-color: #4da9ff
+    background-color: #4da9ff;
 }
 
 .IME06 {
-    background-color: #2496ff
+    background-color: #2496ff;
 }
 
 .FIS01 {
-    background-color: aquamarine
+    background-color: #7fffd4;
 }
 
 .FIS02 {
-    background-color: turquoise
+    background-color: #40e0d0;
 }
 
 .FIS03 {
-    background-color: darkturquoise
+    background-color: #00ced1;
 }
 
 .ILE02 {
-    background-color: plum
+    background-color: #dda0dd;
 }
 
 .ILE04 {
-    background-color: violet
+    background-color: #ee82ee;
 }
 
 .FAF03 {
-    background-color: darksalmon
+    background-color: #e9967a;
 }
 
 /* Lista de disciplinas - Disciplinas com trava de crédito */
@@ -383,8 +383,8 @@ td {
 .possuiTravaCredito .textoBalao {
     visibility: hidden;
     width: 120px;
-    background-color: black;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
@@ -404,7 +404,7 @@ td {
     display: none;
     padding: 10px;
     background-color: #fffbeb;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #dddddd;
     width: calc(100% + 469px);
     cursor: default;
 }
@@ -416,7 +416,7 @@ td {
 .celDisciplina.acordeao:after {
     content: '▶';
     font-size: 12px;
-    color: #777;
+    color: #777777;
     position: absolute;
     right: 10px;
     top: 50%;
