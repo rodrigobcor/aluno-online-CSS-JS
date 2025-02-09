@@ -434,6 +434,13 @@ td {
   font-size: 14px;
 }
 
+.divContentBlockHeader {
+    font-weight: bold;
+    margin-left: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 .divContentBlockBody tbody {
       display: table-row-group;
 }
