@@ -272,6 +272,46 @@ td {
     order: 2;
 }
 
+/* Lista de disciplinas - Períodos */
+
+.periodo1 {
+    background-color: rgb(220, 220, 220)
+}
+
+.periodo2 {
+    background-color: rgb(205, 205, 205)
+}
+
+.periodo3 {
+    background-color: rgb(190, 190, 190)
+}
+
+.periodo4 {
+    background-color: rgb(175, 175, 175)
+}
+
+.periodo5 {
+    background-color: rgb(160, 160, 160)
+}
+
+.periodo6 {
+    background-color: rgb(145, 145, 145)
+}
+
+.periodo7 {
+    background-color: rgb(130, 130, 130)
+}
+
+.periodo8 {
+    background-color: rgb(115, 115, 115);
+}
+
+.semPeriodo {
+    background-color: white;
+}
+
+/* Lista de disciplinas - Departamento da disciplina */
+
 .IME01 {
     background-color: #dbedff
 }
@@ -320,41 +360,7 @@ td {
     background-color: darksalmon
 }
 
-.periodo1 {
-    background-color: rgb(220, 220, 220)
-}
-
-.periodo2 {
-    background-color: rgb(205, 205, 205)
-}
-
-.periodo3 {
-    background-color: rgb(190, 190, 190)
-}
-
-.periodo4 {
-    background-color: rgb(175, 175, 175)
-}
-
-.periodo5 {
-    background-color: rgb(160, 160, 160)
-}
-
-.periodo6 {
-    background-color: rgb(145, 145, 145)
-}
-
-.periodo7 {
-    background-color: rgb(130, 130, 130)
-}
-
-.periodo8 {
-    background-color: rgb(115, 115, 115);
-}
-
-.semPeriodo {
-    background-color: white;
-}
+/* Lista de disciplinas - Disciplinas com trava de crédito */
 
 .celTravaCredito {
     display: none;
@@ -392,6 +398,8 @@ td {
     width: calc(100% - 40px);
 }
 
+/* Lista de disciplinas - Detalhes (acordeão) */
+
 .panel {
     display: none;
     padding: 10px;
@@ -400,8 +408,6 @@ td {
     width: calc(100% + 469px);
     cursor: default;
 }
-
-/* Lista de disciplinas - Detalhes (acordeão) */
 
 .celDisciplina.acordeao {
     cursor: pointer;
