@@ -126,7 +126,7 @@ td {
 .disciplina-table th, .horario-table th {
     background-color: #f2f2f2;
     font-weight: bold;
-    color: #000;    
+    color: #000;
     text-align: center;
 }
 
@@ -159,7 +159,7 @@ td {
     width: 15%; 
 }
 
-.horario-table {    
+.horario-table {
     border-collapse: collapse;
 }
 
@@ -200,7 +200,7 @@ td {
 
 .divTabelaBoxBody {
     padding: 15px;
-    background-color: #f6f6f6;    
+    background-color: #f6f6f6;
 }
 
 .celDisciplina {
@@ -211,6 +211,11 @@ td {
 .celCodigoDisc {
     width: 100px;
     text-align: center;
+}
+
+.disciplina-texto {
+    display: inline-block;
+    width: calc(100% - 40px);
 }
 
 .celPeriodo {
@@ -391,11 +396,6 @@ td {
 
 .possuiTravaCredito:hover .textoBalao {
     visibility: visible;
-}
-
-.disciplina-texto {
-    display: inline-block;
-    width: calc(100% - 40px);
 }
 
 /* Lista de disciplinas - Detalhes (acordeão) */
