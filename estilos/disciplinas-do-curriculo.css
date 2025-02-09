@@ -427,3 +427,17 @@ td {
     content: '▼';
     top: 10px;
 }
+
+/* Detalhes da disciplina (no acordeão) */
+
+.divContentBoxBody {
+  font-size: 14px;
+}
+
+.divContentBlockBody tbody {
+      display: table-row-group;
+}
+
+.divContentBlockBody tr {
+      display: table-row;
+}
