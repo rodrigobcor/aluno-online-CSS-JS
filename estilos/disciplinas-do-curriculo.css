@@ -441,6 +441,10 @@ td {
     margin-bottom: 2px;
 }
 
+.divContentBlockBody table {
+    color: inherit;
+}
+
 .divContentBlockBody tbody {
       display: table-row-group;
 }
