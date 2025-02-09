@@ -1,6 +1,27 @@
+/* Estilos gerais */
+
 body {
     background-color: fffbeb;
 }
+
+a {
+    color: inherit;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+tr {
+    display: table;
+}
+
+td {
+    vertical-align: top;
+}
+
+/* Demais estilos */
 
 .conteudo {
     max-width: 1000px;
@@ -83,23 +104,6 @@ body {
 
 .tdHeader .celTipoDisc {
     width: 500px;
-}
-a {
-    color: inherit;
-}
-
-tbody {
-    display: flex;
-    flex-direction: column;
-}
-
-tr {
-    display: table;
-}
-
-td {
-    vertical-align: top;
-
 }
 
 .LINKNAOSUB {
@@ -202,10 +206,6 @@ td {
 .celDisciplina {
     width: 450px;
     position: relative;
-}
-
-.celDisciplina.acordeao {
-    cursor: pointer;
 }
 
 .celCodigoDisc {
@@ -399,6 +399,12 @@ td {
     border-top: 1px solid #ddd;
     width: calc(100% + 469px);
     cursor: default;
+}
+
+/* Lista de disciplinas - Detalhes (acordeão) */
+
+.celDisciplina.acordeao {
+    cursor: pointer;
 }
 
 .celDisciplina.acordeao:after {
