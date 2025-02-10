@@ -1,0 +1,145 @@
+.divCenterContent
+{
+    margin: 0 auto 0 auto;
+}
+
+
+.divPageContent
+{
+    width: 100%; 
+    margin: 10 auto 0 auto;
+}
+
+.divPageCommandButton
+{
+    width:100%; 
+    float:left; 
+    margin:20px 0 20px 0; 
+    text-align: center;
+}
+
+/*
+  Classe divContentBox: caixa principal / externa.''
+*/
+
+.divContentBox
+{
+    width: 100%; 
+    float: left; 
+    border-style: solid; 
+    border-width: 1px; 
+    color: black; /*#104E8B; */
+}
+
+.divContentBoxHeader
+{
+    width: 100%;
+    padding: 5px 0 5px 0;
+    float: left; 
+    
+    border-style: solid; 
+    border-left-width: 0px; 
+    border-right-width: 0px; 
+    border-top-width: 0px; 
+    border-bottom-width: 1px; 
+    background-color: var(--cor-fundo-barra-titulo1);  /* #A7C7E7; */
+    color: var(--cor-texto-barra-titulo1);
+    font-size: 14px;
+    font-weight: bold;
+}
+    
+.divContentBoxBody
+{
+    width: calc(100% - 10px);
+    float: left; 
+    border-style: none; 
+    border-left-width: 0px; 
+    border-right-width: 0px; 
+    border-top-width: 0px; 
+    border-bottom-width: 0px; 
+    margin-top: 0px; 
+    font-size: 12px;
+    padding: 5px;
+    color: var(--cor-texto-corpo-bloco1);
+    background-color: var(--cor-fundo-corpo-bloco1); /* #F6F6F6; */
+    /* background-color: #edf6f7; */
+}
+
+/*
+.divContentBoxMessage
+{
+    margin: 20px 0 20px 0;
+    width: 100%;
+    float: left;
+}
+*/
+
+.divContentBoxMessage
+{
+    width:100%; 
+    float: left; 
+    margin: 10px 0 10px 0; 
+    color: red; 
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+
+/*
+  Classe divContentBlock: caixa secundária / interna.
+*/
+
+
+.divContentBlock
+{
+    width: calc(100% - 30px); 
+    background-color: none;
+    float: left; 
+    margin-top: 15px;
+    margin-left: 15px;
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: navy; 
+    border-width: 1px;
+/*    color: *#104E8B; */
+}
+
+.divContentBlockHeader
+{
+    width: 100%;
+    background-color: var(--cor-fundo-barra-titulo2);
+    /*background-color: #DAE4EA;*/ 
+    color: var(--cor-texto-barra-titulo2);
+    padding: 0px 0 0px 0;
+    float: left; 
+    
+    border-color: black;
+    border-style: solid; 
+    border-left-width: 0px; 
+    border-right-width: 0px; 
+    border-top-width: 0px; 
+    border-bottom-width: 1px; 
+    
+    font-size: 14px;
+    font-weight: bold;
+}
+    
+.divContentBlockBody
+{
+    width: 100%;
+    float: left; 
+    border-style: none; 
+    border-left-width: 0px; 
+    border-right-width: 0px; 
+    border-top-width: 0px; 
+    border-bottom-width: 0px; 
+    margin-top: 1px; 
+    /* background-color: #F6F6F6; */
+/*    background-color: #edf6f7;*/
+    background-color: var(--cor-fundo-corpo-bloco2); /* #F6F6F6; */
+    color: #104E8B; 
+    font-size: 12px;
+    padding: 5px 0 5px 0;
+}
+    
