@@ -21,6 +21,13 @@ td {
     vertical-align: top;
 }
 
+/* Identificadores */
+
+table#disciplinas {
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+    font-size: 12px;
+}
+
 /* Demais estilos */
 
 .conteudo {
@@ -93,13 +100,13 @@ td {
 }
 
 .tdHeader {
-    margin: 0px;
+    margin: 0;
     text-align: center;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #8b8b83;
     vertical-align: bottom;
-    padding: 0px;
+    padding: 0;
 }
 
 .tdHeader .celTipoDisc {
@@ -133,7 +140,7 @@ td {
 .disciplina-table .colHorarios-1 {
     width: 5%; 
     text-align: right; 
-    border-bottom-width: 0px;
+    border-bottom-width: 0;
     padding-right: 5px;
 }
 
@@ -262,6 +269,8 @@ td {
 
 .linhaDisciplina {
     background-color: #add8e6;
+    margin: 2px 0;
+    padding: 2px;
     order: 1;
 }
 
@@ -402,7 +411,8 @@ td {
 
 .panel {
     display: none;
-    padding: 10px;
+    padding: 2px;
+    margin: 5px;
     background-color: #fffbeb;
     border-top: 1px solid #dddddd;
     width: calc(100% + 469px);
@@ -431,7 +441,7 @@ td {
 /* Detalhes da disciplina (no acordeão) */
 
 .divContentBoxBody {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .divContentBlockHeader {
