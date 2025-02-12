@@ -198,6 +198,7 @@ table#disciplinas {
 .divTabelaBoxHeader {
     background-color: #a7c7e7;
     padding: 10px;
+    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -275,9 +276,10 @@ table#disciplinas {
 }
 
 .linhaDisciplina th {
-    font-weight: normal;
+    font-weight: bold;
     position: sticky;
     top: 0;
+    vertical-align: middle;
     background-color: #add8e6;
 }
 
