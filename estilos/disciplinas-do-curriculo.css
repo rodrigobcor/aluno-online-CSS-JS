@@ -118,25 +118,6 @@ table#disciplinas {
     color: inherit;
 }
 
-#disciplina-table, .horario-table {
-    width: 100%;
-    margin-bottom: 20px;
-    font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
-}
-
-#disciplina-table th, #disciplina-table td{
-    padding: 1px; 
-    font-size: 12px;
-    text-align: left;
-}
-
-#disciplina-table th, .horario-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #000000;
-    text-align: center;
-}
-
 #disciplina-table .colHorarios-1 {
     width: 5%; 
     text-align: right; 
@@ -164,29 +145,6 @@ table#disciplinas {
 
 #disciplina-table .colHorarios-6 {
     width: 15%; 
-}
-
-.horario-table {
-    border-collapse: collapse;
-}
-
-.horario-table th, .horario-table td {
-    border: 1px solid #808080;
-    padding: 2px;
-    text-align: center;
-    font-size: 12px;
-    width: 14.28%;
-}
-
-.horario-table th {
-    background-color: #cbd4e5;
-    color: #104e8b;
-    font-size: 10px;
-}
-
-.horario-table td {
-    vertical-align: top;
-    color: #104ea7;
 }
 
 .divTabelaBox {
