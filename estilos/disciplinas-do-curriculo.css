@@ -415,7 +415,7 @@ table#disciplinas {
     margin: 5px;
     background-color: #fffbeb;
     border-top: 1px solid #dddddd;
-    width: calc(100% + 469px);
+    width: calc(100%);
     cursor: default;
 }
 
