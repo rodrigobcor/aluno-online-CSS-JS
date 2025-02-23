@@ -69,14 +69,14 @@ table#disciplinas {
     width: 60%;
     text-align: center;
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header-column.right {
-    padding-right: 0; 
+    padding-right: 0;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
 
 .header-column.middle h1 {
@@ -86,7 +86,7 @@ table#disciplinas {
 }
 
 .header-column.middle .aluno-info {
-    margin: 15px 0 0; 
+    margin: 15px 0 0;
     font-size: 16px;
     color: #777777;
 }
@@ -119,32 +119,32 @@ table#disciplinas {
 }
 
 #disciplina-table .colHorarios-1 {
-    width: 5%; 
-    text-align: right; 
+    width: 5%;
+    text-align: right;
     border-bottom-width: 0;
     padding-right: 5px;
 }
 
 #disciplina-table .colHorarios-2 {
-    width: 35%; 
+    width: 35%;
 }
 
 #disciplina-table .colHorarios-3 {
-    width: 10%; 
+    width: 10%;
 }
 
 #disciplina-table .colHorarios-4 {
-    width: 5%; 
-    text-align: center; 
+    width: 5%;
+    text-align: center;
 }
 
 #disciplina-table .colHorarios-5 {
-    width: 15%; 
-    text-align: center; 
+    width: 15%;
+    text-align: center;
 }
 
 #disciplina-table .colHorarios-6 {
-    width: 15%; 
+    width: 15%;
 }
 
 .divTabelaBox {
