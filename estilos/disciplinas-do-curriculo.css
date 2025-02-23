@@ -1,10 +1,25 @@
 /* Estilos gerais */
 
+html {
+  /* Source: https://stackoverflow.com/a/70360664 */
+  scrollbar-gutter: stable both-edges;
+}
+
 body {
-  background-color: #fffbeb;
+  padding: 0.2em 2em;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  margin: 5px 0;
+}
+
+p {
+  margin: 5px 0;
 }
 
 a {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -344,10 +359,10 @@ table#disciplinas {
   position: relative;
 }
 
-.imagemTravaCredito {
+/* .imagemTravaCredito {
   max-width: 15px;
   max-height: 15px;
-}
+} */
 
 .possuiTravaCredito .textoBalao {
   visibility: hidden;
