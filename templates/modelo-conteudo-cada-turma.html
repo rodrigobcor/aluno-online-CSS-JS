@@ -1,0 +1,95 @@
+            <div class="div-grupo-turmas-disciplina"><!-- Início do conteúdo da turma -->
+              <div class="div-turma-disciplina">
+                <div class="info-disciplina-turma-informacoes">
+                  <ul class="info-disciplina-turma">
+                    <li>
+                      <span class="label-info-disciplina-turma">Turma:</span>
+                      <span class="info-disciplina-turma-id">${ID_TURMA}</span>
+                    </li>
+                    <li>
+                      <span class="label-info-disciplina-turma">Turma preferencial?</span>
+                      <span class="info-disciplina-turma-preferencial">${EH_PREFERENCIAL}</span>
+                    </li>
+                    <li>
+                      <span class="label-info-disciplina-turma">Docente:</span>
+                      <span class="info-disciplina-turma-docente">${NOME_DOCENTE}</span>
+                    </li>
+                    <li>
+                      <span class="label-info-disciplina-turma">Local das aulas:</span>
+                      <span class="info-disciplina-turma-local-aulas">${LOCAL_AULAS}</span>
+                    </li>
+                    <li>
+                      <span class="label-info-disciplina-turma">Tempos:</span>
+                      <ul class="info-disciplina-turma-tempos">
+                        <li class="info-disciplina-turma-tempo">${DIA_E_INTERVALO_01}</li><!-- ex. (apagar ao usar): SEG M5 M6 -->
+                        <li class="info-disciplina-turma-tempo">${DIA_E_INTERVALO_02}</li><!-- etc. -->
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-disciplina-turma-informacoes">
+                  <table class="tabela-disciplina-turma-vagas">
+                    <caption class="tabela-vagas-descricao">Vagas atuais da turma</caption>
+                    <colgroup>
+                      <col class="vagas-tipo" />
+                      <col class="vagas-num-oferecidas" />
+                      <col class="vagas-num-ocupadas" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">Tipo de vaga</th>
+                        <th scope="col">Oferecidas</th>
+                        <th scope="col">Ocupadas</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="vagas-uerj">UERJ</th>
+                        <td>${VAGAS_ATUAIS_UERJ_OFERECIDAS}</td>
+                        <td>${VAGAS_ATUAIS_UERJ_OCUPADAS}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="vagas-vestibular">Vestibular</th>
+                        <td>${VAGAS_ATUAIS_VESTIBULAR_OFERECIDAS}</td>
+                        <td>${VAGAS_ATUAIS_VESTIBULAR_OCUPADAS}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="info-disciplina-turma-informacoes">
+                  <table class="tabela-disciplina-turma-vagas">
+                    <caption class="tabela-vagas-descricao">Vagas para solicitação de inscrição</caption>
+                    <colgroup>
+                      <col class="vagas-tipo" />
+                      <col class="vagas-num-oferecidas" />
+                      <col span="2" class="vagas-num-solicitadas" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2">Tipo de vaga</th>
+                        <th scope="col" rowspan="2">Oferecidas</th>
+                        <th scope="colgroup" colspan="2">Solicitadas</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">Total</th>
+                        <th scope="col">Preferenciais</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="vagas-uerj">UERJ</th>
+                        <td>${VAGAS_PARA_INSCRICAO_UERJ_OFERECIDAS}</td>
+                        <td>${VAGAS_PARA_INSCRICAO_UERJ_SOLICITADAS_TOTAL}</td>
+                        <td>${VAGAS_PARA_INSCRICAO_UERJ_SOLICITADAS_PREFERENCIAIS}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="vagas-vestibular">Vestibular</th>
+                        <td>${VAGAS_PARA_INSCRICAO_VESTIBULAR_OFERECIDAS}</td>
+                        <td>${VAGAS_PARA_INSCRICAO_VESTIBULAR_SOLICITADAS_TOTAL}</td>
+                        <td>${VAGAS_PARA_INSCRICAO_VESTIBULAR_SOLICITADAS_PREFERENCIAIS}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div><!-- Fim do conteúdo da turma -->
