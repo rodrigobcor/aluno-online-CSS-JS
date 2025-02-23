@@ -1,0 +1,115 @@
+    <tr class="dados-disciplina ${CSS_JAH_ATENDIDA_DISCIPLINA_SE_APLICAVEL}">
+      <td class="disciplina-periodo"><span class="${CSS_PERIODO_DISCIPLINA}">{PERIODO_DISCIPLINA}</span></td>
+      <td class="disciplina-nome">
+        <a href="#" onclick="javascript:consultarDisciplina(output, `&quot;${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}&quot;`); return false;">
+          &#128269;
+        </a>
+        <span class="texto-nome-disciplina">${NOME_DISCIPLINA}</span>
+      </td>
+      <td class="disciplina-codigo ${CLASSE_CSS_DEPTO_DISCIPLINA}">${CODIGO_DISCIPLINA}</td>
+      <td class="disciplina-tipo">${TIPO_DISCIPLINA}</td>
+      <td class="disciplina-num-creditos">${NUM_CREDITOS_DISCIPLINA}</td>
+      <td class="disciplina-ch-total">${CH_TOTAL_DISCIPLINA}</td>
+      <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_PERIODO_SUGERIDO_MINUSCULAS}">
+        <a href="#" onclick="javascript:consultarDisciplina(output, `&quot;${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}&quot;`); return false;">
+          &#128269;
+        </a>
+        <span class="texto-periodo-sugerido">${EH_PERIODO_SUGERIDO}</span>
+      </td>
+      <td class="disciplina-codigo-ramificacao">${CODIGO_RAMIFICACAO_DISCIPLINA}</td>
+      <td class="disciplina-trava-credito">${TRAVA_CREDITO_DISCIPLINA}</td>
+    </tr>
+
+    <tr class="fold">
+      <td colspan="8" class="detalhes-disciplina">
+        <div class="divContentBlock">
+          <div class="divContentBlockHeader">
+            <h3 class="info-disciplina-nome">${NOME_DISCIPLINA}</h3>
+            <span class="info-disciplina-codigo">${CODIGO_DISCIPLINA}</span>
+            <!-- QUE ESTRANHO, código está como número aqui (entre aspas em outros lugares): -->
+            <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
+          </div>
+          <div class="divContentBlockBody info-disciplina">
+            <ul class="info-disciplina-dados-gerais">
+              <li>
+                <span class="label-info-disciplina-dados-gerais">N.º de créditos:</span>
+                <span class="info-disciplina-dados-gerais-num-creditos">${NUM_CREDITOS_DISCIPLINA}</span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
+                <span  class="info-disciplina-dados-gerais-ch-semanal">${CH_SEMANAL_DISCIPLINA}</span>
+                (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
+                <span class="info-disciplina-dados-gerais-ch-total">${CH_TOTAL_DISCIPLINA}</span>)
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Sugerida para o período?</span>
+                <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_PERIODO_SUGERIDO_MINUSCULAS}">
+                  ${EH_PERIODO_SUGERIDO}
+                  <a href="#" onclick="javascript:consultarDisciplina(output, `&quot;${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}&quot;`); return false;">
+                    &#128269;
+                  </a>
+                </span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Tempo de duração:</span>
+                <span class="info-disciplina-dados-gerais-tempo-duracao">${TEMPO_DURACAO_DISCIPLINA}</span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Tipo de aprovação:</span>
+                <span class="info-disciplina-dados-gerais-tipo-aprovacao">${TIPO_APROVACAO_DISCIPLINA}</span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
+                <span class="info-disciplina-dados-gerais-trava-credito">${TRAVA_CREDITO_DISCIPLINA}</span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
+                <span class="info-disciplina-dados-gerais-pode-conflitar">${PERMITE_CONFLITO_HORARIO_DISCIPLINA}</span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">É oferecida como Universal?</span>
+                <span class="info-disciplina-dados-gerais-oferta-universal">${EH_UNIVERSAL_DISCIPLINA}</span>
+              </li>
+              <li>
+                <span class="label-info-disciplina-dados-gerais">Permite situação "Em Preparo"?</span>
+                <span class="info-disciplina-dados-gerais-pode-em-preparo">${PERMITE_EM_PREPARO_DISCIPLINA}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="divContentBlock">
+          <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
+          <div class="divContentBlockBody div-pre-requisitos">
+            <!-- SE ${NOT{${TEM_PRE_REQUISITO_DISCIPLINA}}... -->
+            <p>Esta disciplina não possui requisito para inscrição.</p>
+            <!-- SE ${TEM_PRE_REQUISITO_DISCIPLINA}... -->
+            <div class="div-pre-requisito">
+              <span class="label-pre-requisito">Pré-Requisito:</span>
+              <p class="pre-requisitos">
+                ${CODIGO_REQ_DISCIPLINA} ${NOME_REQ_DISCIPLINA}
+                <!-- SE ${TEM_REQUISITO_ALTERNATIVO_DISCIPLINA}... -->
+                <br/><span class="alternativo">ou</span>
+                <!-- ${DADOS_REQUISITO_ALTERNATIVO_DISCIPLINA}: -->
+                <br/>${CODIGO_DISCIPLINA} ${NOME_DISCIPLINA}
+              </p>
+            </div>
+            <div class="div-pre-requisito">
+              <span class="label-pre-requisito">Pré-Requisito:</span>
+              <p class="pre-requisitos">
+                ${CODIGO_REQ_DISCIPLINA} ${NOME_REQ_DISCIPLINA}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="divContentBlock">
+          <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
+          <div class="divContentBlockBody">
+
+<!-- ---------------------------------------------------------- -->
+<!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
+<!-- ---------------------------------------------------------- -->
+
+          </div>
+        </div>
+      </td>
+    </tr>
