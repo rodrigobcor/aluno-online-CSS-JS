@@ -415,6 +415,10 @@ table#disciplinas {
 
 /* Detalhes da disciplina (no acordeão) */
 
+divContentBoxHeader {
+  font-weight: bold;
+}
+
 .divContentBoxBody {
   font-size: 12px;
 }
