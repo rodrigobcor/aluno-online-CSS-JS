@@ -3,7 +3,6 @@
 <head>
 
   <title>Aluno Online</title>
-
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <meta name="KeyWords" content="Aluno Online UERJ SAG CETREINA PROTOCOLO">
 
@@ -14,8 +13,7 @@
   <link rel="stylesheet" href="https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/tabela-disciplinas.css">
 </head>
 
-
-<body data-new-gr-c-s-check-loaded="14.1150.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<body>
 
   <div class="conteudo">
     <div class="page-header1">
@@ -24,7 +22,7 @@
       </div>
       <div class="header-column middle">
         <h1>Solicitação de Inscrição em Disciplinas</h1>
-        <p class="aluno-info">Aluno</p>
+        <p class="aluno-info">Número de Matrícula - Nome do Aluno</p>
       </div>
       <div class="header-column right">
         <img src="images/logo_alunoonline.gif" alt="Logo Aluno Online" />
@@ -41,24 +39,14 @@
       </div>
     </div>
   </div>
-
-
-  <!--<table height="100%" width="100%" border="1" cellspacing='0' cellpadding='0'>
-  -->
-
   <table class="conteudo">
-
     <tbody>
       <td>
-
         <div class="divTabelaContent">
-
           <div class="divTabelaBox">
-
             <div class="divTabelaBoxHeader">
               Quadro Provisório de Horarios
             </div>
-
             <div class="divTabelaBoxBody">
               <div>
                 <table id="disciplina-table">
@@ -220,25 +208,22 @@
                 </table>
               </div>
             </div>
-
           </div>
-
         </div>
 
         <!--script src="./disciplinas-do-curriculo.js"></script-->
 
         <form name="output" method="post" action="">
-          <input type="hidden" name="_token" value="84783789061679a34b6beae5556abc51">
-          <input name="requisicao" type="hidden" value="2d172a0a945305a253c64cb0176b34f2">
-          <input type="hidden" name="matricula" value="201920650311">
-
+          <input type="hidden" name="_token" value="co">
+          <input name="requisicao" type="hidden" value="co">
+          <input type="hidden" name="matricula" value="201999999999">
 
           <div class="divContentBox">
-
+            <div class="divContentBoxHeader">
+              Disciplinas do Currículo
+            </div>
             <div class="divContentBoxBody">
-
               <table id="disciplinas" border-spacing: 6px;>
-
                 <tbody>
                   <tr class="linhaDisciplina">
                     <th class="tdHeader celDisciplina">Disciplina</th>
@@ -252,13 +237,13 @@
                     <th class="tdHeader">Turma<br>Período?</th>
                     <th class="tdHeader celTravaCredito">Trava<br>Crédito</th>
                   </tr>
-
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;4827&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Cálculo I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 4827); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Cálculo I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -270,20 +255,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">6</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;4827&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 4827); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10814&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Geometria Analítica</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10814); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Geometria Analítica</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -295,18 +282,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#" return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10814); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10814&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">Álgebra</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10815); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Álgebra</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -318,20 +309,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10815&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10815); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10816&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Matemática Discreta</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10816); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Matemática Discreta</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -343,20 +336,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10816&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10816); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10817&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Fundamentos da Computação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10817); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Fundamentos da Computação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -368,20 +363,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">5</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10817&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10817); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;6766&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Cálculo II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 6766); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Cálculo II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -393,20 +390,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;6766&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 6766); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10818&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Álgebra Linear</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10818); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Álgebra Linear</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -418,45 +417,49 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">6</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10818&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10818); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10819&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Cálculo das Probabilidades</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10819); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Cálculo das Probabilidades</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME05">IME05-10819</td>
                     <td class="celPeriodo periodo2">2</td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">Obrigatória</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10819&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10819); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10820&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Algoritmos e Estruturas de Dados I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10820); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Algoritmos e Estruturas de Dados I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -468,20 +471,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">6</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10820&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10820); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10821&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Linguagem de Programação I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10821); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Linguagem de Programação I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -493,20 +498,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10821&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10821); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10982&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Física I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10982); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Física I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -518,20 +525,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">5</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10982&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10982); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;6767&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Cálculo III</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 6767); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Cálculo III</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -543,20 +552,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;6767&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 6767); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10822&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Português Instrumental</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10822); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Português Instrumental</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -568,20 +579,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10822&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10822); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10823&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Algoritmos e Estruturas de Dados II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10823); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Algoritmos e Estruturas de Dados II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -593,45 +606,49 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10823&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10823); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10824&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Elementos de Lógica</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10824); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Elementos de Lógica</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME02">IME02-10824</td>
                     <td class="celPeriodo periodo3">3</td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">Obrigatória</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10824&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10824); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10825&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Linguagem de Programação II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10825); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Linguagem de Programação II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -643,20 +660,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10825&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10825); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10826&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Teoria da Computação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10826); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Teoria da Computação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -668,20 +687,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10826&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10826); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10827&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Cálculo Numérico</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10827); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Cálculo Numérico</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -693,20 +714,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10827&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10827); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10828&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Cálculo IV</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10828); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Cálculo IV</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -718,20 +741,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">6</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10828&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10828); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10830&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Engenharia de Software</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10830); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Engenharia de Software</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -743,21 +768,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10830&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10830); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 59</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">59</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10831&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Arquitetura de Computadores I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10831); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Arquitetura de Computadores I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -769,20 +798,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10831&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10831); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10983&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Física II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10983); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Física II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -794,20 +825,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">5</td>
                     <td class="celCHTotal">90</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10983&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10983); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11311&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Algoritmos em Grafos</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11311); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Algoritmos em Grafos</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -819,20 +852,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">3</td>
                     <td class="celCHTotal">45</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11311&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11311); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10832&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Banco de Dados I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10832); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Banco de Dados I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -844,21 +879,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10832&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10832); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 69</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">69</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10833&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Análise e Projeto de Sistemas</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10833); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Análise e Projeto de Sistemas</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -870,20 +909,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10833&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10833); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10834&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Estruturas de Linguagens</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10834); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Estruturas de Linguagens</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -895,20 +936,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10834&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10834); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10835&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Sistemas Operacionais I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10835); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Sistemas Operacionais I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -920,20 +963,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10835&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10835); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10836&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Arquitetura de Computadores II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10836); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Arquitetura de Computadores II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -945,20 +990,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10836&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10836); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11312&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Otimização em Grafos</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11312); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Otimização em Grafos</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -970,20 +1017,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">3</td>
                     <td class="celCHTotal">45</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11312&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11312); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10837&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Otimização Combinatória</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10837); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Otimização Combinatória</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -995,20 +1044,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10837&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10837); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10838&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Banco de Dados II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10838); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Banco de Dados II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1020,20 +1071,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10838&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10838); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10839&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Interfaces Humano-Computador</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10839); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Interfaces Humano-Computador</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1045,21 +1098,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10839&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10839); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                        <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10840&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Sistemas Operacionais II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10840); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Sistemas Operacionais II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1071,20 +1128,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10840&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10840); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10841&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Compiladores</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10841); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Compiladores</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1096,98 +1155,112 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10841&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10841); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10842&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Computação Gráfica</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10842); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Computação Gráfica</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME04">IME04-10842</td>
                     <td class="celPeriodo periodo7">7</td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">Obrigatória</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10842&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10842); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10843&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Inteligência Artificial</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10843); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Inteligência Artificial</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME04">IME04-10843</td>
                     <td class="celPeriodo periodo7">7</td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">Obrigatória</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10843&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10843); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10844&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Ética, Computadores e Sociedade</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10844); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Ética, Computadores e Sociedade</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME04">IME04-10844</td>
                     <td class="celPeriodo periodo7">7</td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">Obrigatória</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10844&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10844); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 118</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">118</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10845&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Metodologia Científica no Projeto Final</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10845); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Metodologia Científica no Projeto Final</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1199,21 +1272,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10845&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10845); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 118</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">118</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10846&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Redes de Computadores I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10846); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Redes de Computadores I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1225,20 +1302,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10846&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10846); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10847&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Arquiteturas Avançadas de Computadores</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10847); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Arquiteturas Avançadas de Computadores</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1250,20 +1329,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10847&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10847); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10848&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Projeto Final</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10848); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Projeto Final</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1275,45 +1356,49 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10848&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10848); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10849&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Sistemas Distribuídos</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10849); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Sistemas Distribuídos</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME04">IME04-10849</td>
                     <td class="celPeriodo periodo8">8</td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">Obrigatória</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10849&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10849); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10850&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Álgebra Linear aplic à Computação Gráfica</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10850); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Álgebra Linear aplic à Computação Gráfica</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1325,19 +1410,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10852&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Análise Numérica</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10852); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Análise Numérica</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1349,18 +1437,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10862&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Estatística Aplicada</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10862); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Estatística Aplicada</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1372,18 +1461,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10866&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Ling Inglesa Instr p/Leitura na Ciência da Computação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10866); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Ling Inglesa Instr p/Leitura na Ciência da Computação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1395,18 +1485,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10866); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;4304&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Fundamentos de Administração</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 4304); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Fundamentos de Administração</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1418,18 +1512,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;6247&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Empreendedor em Tecnologia de Informação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 6247); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Empreendedor em Tecnologia de Informação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1441,20 +1536,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;6247&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 6247); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;8559&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Tópicos Especiais de Matemática Aplicada I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 8559); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Tópicos Especiais de Matemática Aplicada I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1466,18 +1563,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 8559); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;8560&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Tópicos Especiais de Matemática Aplicada II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 8560); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Tópicos Especiais de Matemática Aplicada II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1489,18 +1590,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 8560); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10679&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Avaliação e Inovação em Tecnologia</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10679); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Avaliação e Inovação em Tecnologia</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1512,20 +1617,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10679&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10679); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
+                      </a>
+                    </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10851&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Algoritmos Distribuídos</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10851); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Algoritmos Distribuídos</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1537,18 +1644,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10851); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10853&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Algoritmos para Geometria Computacional</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10853); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Algoritmos para Geometria Computacional</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1560,19 +1671,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10854&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Aspectos Práticos em Ciência da Computação I</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10854); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Aspectos Práticos em Ciência da Computação I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1584,47 +1698,55 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10854&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10854); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 59</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">59</span>
+                    </td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10855&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Aspectos Práticos em Ciência da Computação II</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10855); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Aspectos Práticos em Ciência da Computação II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME04">IME04-10855</td>
                     <td class="celPeriodo semPeriodo"> - </td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">E. Restrita</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10855&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10855); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 59</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">59</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10856&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Aspectos Práticos em Redes de Computadores</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10856); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Aspectos Práticos em Redes de Computadores</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1636,18 +1758,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10857&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Aspectos Práticos em Sistemas Operacionais</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10857); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Aspectos Práticos em Sistemas Operacionais</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1659,18 +1782,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10858&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Computação Científica</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10858); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Computação Científica</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1682,18 +1806,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10859&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Desenvolvimento e Implementação de Algoritmos</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10859); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Desenvolvimento e Implementação de Algoritmos</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1705,18 +1830,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10859); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10860&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Empreendedor em Tecnologia da Informação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10860); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Empreendedor em Tecnologia da Informação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1728,21 +1857,24 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10860&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10860); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 41</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">41</span></td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10861&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Engenharia de Requisitos de Software</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10861); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Engenharia de Requisitos de Software</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1754,19 +1886,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10861); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10863&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Filosofia da Ciência</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10863); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Filosofia da Ciência</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1778,19 +1916,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10864&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Gestão de Tecnologia da Informação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10864); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Gestão de Tecnologia da Informação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1802,19 +1943,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10865&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Informática na Educação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10865); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Informática na Educação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1826,19 +1970,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 99</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">99</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10867&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Modelagem de Sistemas</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10867); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Modelagem de Sistemas</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1850,19 +1997,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 79</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">79</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina disciplinaAtendida">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10868&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Programação Paralela e Distribuída</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10868); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Programação Paralela e Distribuída</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1874,18 +2024,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10868); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10869&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Qualidade de Software</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10869); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Qualidade de Software</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1897,19 +2051,22 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 79</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">79</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10870&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Realidade Virtual</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10870); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Realidade Virtual</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1921,19 +2078,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10870); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10871&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Redes de Computadores II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10871); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Redes de Computadores II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1945,18 +2108,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10872&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Redes Neuronais</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10872); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Redes Neuronais</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1968,19 +2132,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
-                      Não
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10872); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                        Sim
+                      </a>
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10873&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Sistemas de Informação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10873); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Sistemas de Informação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -1992,45 +2162,52 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
-                  <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10874&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Tópicos Especiais I</span>
+                  <tr class="linhaDisciplina disciplinaAtendida">
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10874); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Tópicos Especiais I</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
                     </td>
                     <td class="celCodigoDisc IME04">IME04-10874</td>
                     <td class="celPeriodo semPeriodo"> - </td>
-                    <td class="celAtendida">Não</td>
+                    <td class="celAtendida">Sim</td>
                     <td class="celTipoDisc">E. Restrita</td>
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10874&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10874); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10875&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Tópicos Especiais II</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10875); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Tópicos Especiais II</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -2042,21 +2219,25 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td class="celPeriodoSugerido"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;10875&quot;); return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 10875); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
                         Sim
-                      </a></td>
-                    <td class="possuiTravaCredito"><img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png"
-                        alt=""><span class="textoBalao">Trava de Crédito: 108</span></td>
+                      </a>
+                    </td>
+                    <td class="possuiTravaCredito">
+                      <img class="imagemTravaCredito" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/images/cadeado.png" height="16" width="16">
+                      <span class="textoBalao">108</span>
+                    </td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11016&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Física III</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11016); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Física III</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -2068,18 +2249,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">5</td>
                     <td class="celCHTotal">90</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11017&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Física IV</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11017); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Física IV</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -2091,18 +2273,19 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">5</td>
                     <td class="celCHTotal">90</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
                   </tr>
                   <tr class="linhaDisciplina">
-                    <td class="celDisciplina acordeao"><a class="LINKNAOSUB" href="#"
-                        onclick="javascript:consultarDisciplina(output, &quot;11454&quot;) return false;">
-                        <img src="../images/binoculo.gif" border="0" height="16" width="16"></a>
-                      <span class="disciplina-texto">
-                        Gestão da Inovação</span>
+                    <td class="celDisciplina acordeao">
+                      <a href="#"
+                        onclick="javascript:consultarDisciplina(output, 11454); return false;">
+                        <img src="../images/binoculo.gif" height="16" width="16">
+                      </a>
+                      <span class="texto-nome-disciplina">Gestão da Inovação</span>
                       <div class="panel">
                         <p> - </p>
                       </div>
@@ -2114,8 +2297,8 @@
                     <td class="celRamificacao">626</td>
                     <td class="celCredito">4</td>
                     <td class="celCHTotal">60</td>
-
-                    <td><img src="../images/binoculo_disabled.gif" border="0" height="16" width="16">
+                    <td class="celPeriodoSugerido">
+                      <img src="../images/binoculo_disabled.gif" height="16" width="16">
                       Não
                     </td>
                     <td class="celTravaCredito">0</td>
@@ -2124,175 +2307,32 @@
               </table>
             </div>
           </div>
-          <div text-align: center; float: left; margin: 20px 0 20px 0;">
-            <button type="button" class="formButtonPadraoAO" onclick="history.back()">Retornar</button>
+          <div class="footer-column">
+            <a href="javascript:history.back()">
+              <img src="../images/icone_voltar.gif" alt="Voltar" />
+            </a>
           </div>
         </form>
       </td>
     </tbody>
   </table>
-
-  </div>
-
-  </div>
-
-
-
-
-  </form>
-
-
-
-
-  <!--  FINAL DO CONTEÚDO DA PÁGINA -->
-  </td>
-  </tr>
+  <!--/div-->
+  <!--/div-->
+  <!--/form-->
+  <!--/td-->
+  <!--/tr-->
 
   <tr>
     <td valign="bottom">
-      <div float: left;">
-        <table id="table_cabecalho_rodape" height=30px;" cellpadding="0" cellspacing="0">
-          <tbody>
-            <tr>
-              <td width="120" valign="middle"><img src="../../images/logo_DGTi.png" width="69" height="28" border="0">
-              </td>
-              <td>
-                <p>© 2019, Universidade do Estado do Rio de Janeiro. Todos os Direitos
-                  Reservados.</p>
-              </td>
-              <td width="120" valign="middle"><img src="../../images/logo_sr1.gif" width="24" height="28" border="0">
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div id="table_rodape" style="width: 100%; float: left;">
+              <img src="../../images/logo_DGTi.png" width="69" height="28">
+              <p>© 2024, Universidade do Estado do Rio de Janeiro. Todos os Direitos Reservados.</p>
+              <img src="../../images/logo_sr1.gif" width="24" height="28">
       </div>
     </td>
   </tr>
 
-  </tbody>
-  </table>
-
-
-
-
-  <!-- Code injected by live-server -->
-  <script>
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script>
-  <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
-
-  <!-- Code injected by live-server -->
-  <script>
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script>
-
-
-  <!-- Code injected by live-server -->
-  <script>
-    // <![CDATA[  <-- For SVG support
-    if ('WebSocket' in window) {
-      (function () {
-        function refreshCSS() {
-          var sheets = [].slice.call(document.getElementsByTagName("link"));
-          var head = document.getElementsByTagName("head")[0];
-          for (var i = 0; i < sheets.length; ++i) {
-            var elem = sheets[i];
-            var parent = elem.parentElement || head;
-            parent.removeChild(elem);
-            var rel = elem.rel;
-            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-            }
-            parent.appendChild(elem);
-          }
-        }
-        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-        var address = protocol + window.location.host + window.location.pathname + '/ws';
-        var socket = new WebSocket(address);
-        socket.onmessage = function (msg) {
-          if (msg.data == 'reload') window.location.reload();
-          else if (msg.data == 'refreshcss') refreshCSS();
-        };
-        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-          console.log('Live reload enabled.');
-          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-        }
-      })();
-    }
-    else {
-      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-    }
-    // ]]>
-  </script>
+  <!--/tbody-->
+  <!--/table-->
 </body>
-
 </html>
