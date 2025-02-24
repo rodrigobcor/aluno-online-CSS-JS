@@ -1,0 +1,68 @@
+/**********************************/
+/* Detalhes da disciplina: Turmas */
+/**********************************/
+
+.div-grupo-turmas-disciplina {
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-turmas-disciplina {
+  width: 100%;
+  border-spacing: 10px;
+}
+
+.turma-disciplina {
+  border: 1px solid #d0d1d3;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.div-turma-disciplina {
+  border: 1px dashed #d0d1d3;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  background-color: #ffffff;
+}
+
+.info-disciplina-turma-id {
+  background-color: #d8e8ff;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.info-disciplina-turma-tempos {
+  list-style: none;
+  padding-left: 20px;
+
+  & .info-disciplina-turma-tempo {
+    margin: 5px 0;
+  }
+}
+
+.info-disciplina-turma-informacoes {
+  width: 100%;
+  margin: 0 10px;
+
+  & .tabela-disciplina-turma-vagas {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 20px;
+    /* border: 4px double #d0d1d3; */
+    /* border-spacing: 0px; */
+    
+    & col.vagas-tipo, col.vagas-num-oferecidas,
+        col.vagas-num-solicitadas, col.vagas-num-ocupadas {
+      width:25%;
+    }
+
+    & .vagas-uerj, .vagas-vestibular {
+      width:25%;
+    }
+
+    & td {
+      text-align: right;
+    }
+  }
+}
