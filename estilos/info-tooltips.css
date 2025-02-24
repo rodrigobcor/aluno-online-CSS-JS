@@ -1,0 +1,35 @@
+/******************************
+ * Tooltip (para explicações) *
+ ******************************/
+
+/* Fonte: adaptado de https://www.w3schools.com/css/css_tooltip.asp */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+
+  & .tooltip-texto {
+    visibility: hidden;
+    width: 500px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    background-color: #7ab1e5;
+    color: #000000;
+    border: 1px dashed #f0f8ff;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+
+    &.move-left {
+      right: 50%;
+      left: auto;
+    }
+  }
+}
+
+.tooltip:hover .tooltip-texto {
+  visibility: visible;
+}
