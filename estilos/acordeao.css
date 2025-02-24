@@ -1,0 +1,97 @@
+/************************************/
+/* Tabela de disciplinas - Acordeão */
+/************************************/
+
+#tabela-disciplinas.fold-table {
+
+  & > thead > tr > th {
+    border-bottom: var(--divisor-tabela);
+  }
+  
+  & > tbody {
+    & > tr.dados-disciplina:nth-child(4n-1) {
+      background-color: #cbd4e5;
+    }
+
+    & > tr.dados-disciplina {
+      text-align: center;
+
+      /* & th:first-child, */
+      & td:first-child {
+        position: relative;
+        padding-left: 30px;
+      }
+
+      & td.disciplina-periodo {
+        cursor: pointer;
+      }
+    }
+
+    & > tr.dados-disciplina:hover {
+      background-color: #7ab1e5;
+    }
+
+    &  > tr.dados-disciplina.open {
+      background-color: #104e8b;
+      color: #ffffff;
+
+        /* & th:first-child:before, */
+        &  > td:first-child:before {
+          transform: rotate(-180deg);
+          color: #64caca;
+        }
+
+      & .disciplina-codigo {
+        background-color: unset;
+      }
+    }
+
+    & > tr.fold {
+      display: none;
+
+      &.open {
+        display: table-row;
+      }
+    }
+
+    /* & > tr.dados-disciplina th:first-child:before, */
+    & > tr.dados-disciplina td:first-child:before {
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      width: 12px;
+      height: 16px;
+      margin-top: -8px;
+      margin-left: 5px;
+      font-size: 14px;
+      color: #888888;
+      content: var(--arrow-down);
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+/************************************/
+/* Detalhes da disciplina: Acordeão */
+/************************************/
+
+.detalhes-disciplina {
+  padding: 0.5em;
+  background-color: #f0f8ff;
+  border: 0.5px dashed #babaca;
+
+  & table {
+    /* border: 3px solid #cccccc; */
+    border-top: var(--divisor-tabela);
+    border-bottom: var(--divisor-tabela);
+
+    & > tbody tr:nth-child(odd) {
+      background-color: #d8e8ff;
+    }
+
+    & thead > tr > th[scope="col"] {
+      padding: 0.5em;
+      border-bottom: var(--divisor-tabela);
+    }
+  }
+}
