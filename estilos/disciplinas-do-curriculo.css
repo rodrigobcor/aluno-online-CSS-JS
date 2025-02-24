@@ -114,6 +114,15 @@ table#disciplinas {
   gap: 10px;
 }
 
+.footer-column {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .tdHeader {
   margin: 0;
   text-align: center;
@@ -425,6 +434,7 @@ divContentBoxHeader {
 
 .divContentBlockHeader {
   font-weight: bold;
+  font-size: 20px
   margin-left: 14px;
   margin-top: 2px;
   margin-bottom: 2px;
