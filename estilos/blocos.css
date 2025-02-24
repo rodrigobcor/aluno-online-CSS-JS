@@ -1,0 +1,36 @@
+/********************************************************/
+/* Estilos divContentBlock: blocos de conteúdo interno  */
+/********************************************************/
+
+/**
+ * IMPORTANTE: Esses estilos foram ADAPTADOS do
+ * estilo já utilizado, então deve-se creditar os
+ * desenvolvedores que os elaboraram originalmente.
+ */
+
+.divContentBlock {
+  background-color: unset;
+  /* margin-top: 15px; */
+  /* border: 0.5px dashed #babaca; */
+  width: 100%;
+  padding: 10px;
+  /* float: left; */
+  display: flex;
+  flex-direction: column;
+}
+
+.divContentBlockHeader {
+  font-weight: bold;
+  margin: 2px 0;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /*  width: 100%; */
+  text-align: left;
+  /* float: left; */
+}
+
+.divContentBlockBody {
+  padding: 5px 0;
+}
