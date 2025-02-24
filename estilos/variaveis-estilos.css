@@ -1,0 +1,11 @@
+/**
+ * ATENÇÃO: esse arquivo deve sempre ser o primeiro a ser importado
+ * nos arquivos que dependam de outros estilos CSS.
+ */
+
+:root {
+  --blue: #6495ed;
+  --white: #faf0e6;
+  --arrow-down: "\25bc";
+  --divisor-tabela: 3px solid #104e8b;
+}
