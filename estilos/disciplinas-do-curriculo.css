@@ -236,14 +236,14 @@ table#disciplinas {
 
 .celPeriodoSugerido {}
 
-.linhaDisciplina {
+.dados-disciplina {
   background-color: #add8e6;
   margin: 2px 0;
   padding: 2px;
   order: 1;
 }
 
-.linhaDisciplina th {
+.dados-disciplina th {
   font-weight: bold;
   position: sticky;
   top: 0;
@@ -251,7 +251,7 @@ table#disciplinas {
   background-color: #add8e6;
 }
 
-.disciplinaAtendida {
+.disciplina-atendida {
   color: #00000080;
   order: 2;
 }
