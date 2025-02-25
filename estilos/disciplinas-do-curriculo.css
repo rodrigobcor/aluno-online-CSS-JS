@@ -258,39 +258,39 @@ table#disciplinas {
 
 /* Lista de disciplinas - Períodos */
 
-.periodo1 {
+.periodo-1 {
   background-color: #dcdcdc;
 }
 
-.periodo2 {
+.periodo-2 {
   background-color: #cdcdcd;
 }
 
-.periodo3 {
+.periodo-3 {
   background-color: #bebebe;
 }
 
-.periodo4 {
+.periodo-4 {
   background-color: #afafaf;
 }
 
-.periodo5 {
+.periodo-5 {
   background-color: #a0a0a0;
 }
 
-.periodo6 {
+.periodo-6 {
   background-color: #919191;
 }
 
-.periodo7 {
+.periodo-7 {
   background-color: #828282;
 }
 
-.periodo8 {
+.periodo-8 {
   background-color: #737373;
 }
 
-.semPeriodo {
+.sem-periodo {
   background-color: #ffffff;
 }
 
