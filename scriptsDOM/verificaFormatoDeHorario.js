@@ -1,11 +1,10 @@
 /**
-
-Verifica se o horário atende ao seguinte formato:
-uma abreviação do dia da semana (logo no início da frase),
-seguida de um espaço e dos horários no formato letra-número
-(todos estes com espaços entre si),
-no limite de 6 horários num mesmo dia (terminando a frase em seguida)
-@returns {RegExp} a expressão regular para verificação do horário no formato do Aluno Online
+ * Verifica se o horário atende ao seguinte formato:
+ * - uma abreviação do dia da semana (logo no início da frase),
+ * - seguida de um espaço e dos horários no formato letra-número
+ * (todos estes com espaços entre si),
+ * no limite de 6 horários num mesmo dia (terminando a frase em seguida)
+    @returns {RegExp} a expressão regular para verificação do horário no formato do Aluno Online
 */
 function getRegexHorario() {
     // passo-a-passo:
@@ -19,7 +18,7 @@ function getRegexHorario() {
     // (exceto à noite, que agora tem 5), separado do grupo anterior por um caractere de espaço
     const turnoEIntervalo = " (M[1-6]|T[1-6]|N[1-5])"; // entre parênteses - segundo grupo de captura
 
-    // todo horário tem pelo menos um turno e um identificador de intervalo,
+    // os horário têm pelo menos um turno e um identificador de intervalo,
     // mas normalmente há outros horários, antecedidos por um espaço
     const maisUmTurnoOpcional = "(?:" + turnoEIntervalo + ")" + opcional;
     // a expressão "?:" indicam que, embora estabeleça uma correspondência (match), não é um grupo de captura
@@ -37,11 +36,12 @@ function getRegexHorario() {
 }
 
 /**
-
-Essa função NÃO testa:
-se os horários são sequenciais;
-se há horários repetidos;
-se os horários fazem sentido.
+ * Teste da função `getRegexHorario()`.
+ * 
+ *  Essa função **não** testa:
+ * - se os horários são sequenciais;
+ * - se há horários repetidos;
+ * - se os horários fazem sentido.
 */
 function testeGetRegexHorario() {
     let numErros = 0;
@@ -55,7 +55,7 @@ function testeGetRegexHorario() {
     ];
     devemPassar.forEach(horario => {
         if (!getRegexHorario().test(horario)) { // erro, não passou mas devia passar
-            console.error(O formato de horário "${horario}" teoricamente devia passar mas não passou.);
+            console.error(`O formato de horário "${horario}" teoricamente devia passar mas não passou.`);
             numErros++;
         }
     });
@@ -69,19 +69,19 @@ function testeGetRegexHorario() {
         "QU N2", // número de caracteres do dia da semana < 3
         "QUIN N3", // número de caracteres do dia da semana > 3
         "SEQ G1", // dia da semana inválido
-        // OS FORMATOS A SEGUIR SÃO VÁLIDOS EM OUTROS LUGARES FORA DO AOL
+        // NOTA: OS FORMATOS A SEGUIR SÃO VÁLIDOS *EM OUTROS LUGARES FORA DO AO*:
         "TER T3 SEX T3", // dia da semana na mesma linha
         "SEXM1M2" // sem espaço entre os itens
     ];
     naoPodemPassar.forEach(horario => {
         if (getRegexHorario().test(horario)) { // erro, passou mas não devia passar
-            console.error(O formato de horário "${horario}" teoricamente não devia passar mas passou.);
+            console.error(`O formato de horário "${horario}" teoricamente não devia passar mas passou.`);
             numErros++;
         }
     });
     if (numErros == 0) {
-        console.log(Todos os valores de teste foram aprovados, campeão.);
+        console.log("Todos os valores de teste foram aprovados.");
     } else {
-        console.log(Total de erros = ${ numErros }.);
+        console.log(`Total de erros = ${ numErros }.`);
     }
 }

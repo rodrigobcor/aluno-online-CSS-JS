@@ -1,3 +1,5 @@
+/* DESATUALIZADO - não há mais classes começando com "colHorarios" */
+
 // Seleciona a tabela de disciplinas
 const tabelaDisciplinas = document.querySelector('.disciplina-table');
 
