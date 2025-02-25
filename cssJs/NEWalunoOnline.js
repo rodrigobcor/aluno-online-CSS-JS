@@ -55,7 +55,7 @@ function ementaDisciplina( idDisciplina )
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var celulasAcordeao = document.querySelectorAll('.celDisciplina.acordeao');
+    var celulasAcordeao = document.querySelectorAll('.detalhes-disciplina.acordeao');
 
     celulasAcordeao.forEach(function(celula) {
         celula.addEventListener('click', function(event) {

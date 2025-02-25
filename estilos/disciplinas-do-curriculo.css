@@ -133,13 +133,8 @@ table#disciplinas {
   padding: 0;
 }
 
-.tdHeader .celTipoDisc {
+.tdHeader .disciplina-tipo {
   width: 500px;
-}
-
-.LINKNAOSUB {
-  text-decoration: none;
-  color: inherit;
 }
 
 #disciplina-table .colHorarios-1 {
@@ -193,48 +188,48 @@ table#disciplinas {
   background-color: #f6f6f6;
 }
 
-.celDisciplina {
+.detalhes-disciplina {
   width: 450px;
   position: relative;
 }
 
-.celCodigoDisc {
+.disciplina-codigo {
   width: 100px;
   text-align: center;
 }
 
-.celPeriodo {
+.disciplina-periodo {
   width: 35px;
   text-align: center;
 }
 
-.celAtendida {
+.texto-disciplina-atendida {
   width: 30px;
   padding-left: 25px;
   text-align: center;
 }
 
-.celTipoDisc {
+.disciplina-tipo {
   width: 75px;
   padding-left: 20px;
 }
 
-.celRamificacao {
+.disciplina-codigo-ramificacao {
   width: 10px;
   padding-left: 15px;
 }
 
-.celCredito {
+.disciplina-num-creditos {
   width: 10px;
   padding-left: 30px;
 }
 
-.celCHTotal {
+.disciplina-ch-total {
   width: 10px;
   padding-left: 25px;
 }
 
-.celPeriodoSugerido {}
+.disciplina-periodo-sugerido {}
 
 .dados-disciplina {
   background-color: #add8e6;
@@ -350,7 +345,7 @@ table#disciplinas {
   display: none;
 }
 
-.possuiTravaCredito {
+.possui-trava-credito {
   position: relative;
 }
 
@@ -359,7 +354,7 @@ table#disciplinas {
   max-height: 15px;
 } */
 
-.possuiTravaCredito .textoBalao {
+.possui-trava-credito .textoBalao {
   visibility: hidden;
   width: 120px;
   background-color: #000000;
@@ -373,7 +368,7 @@ table#disciplinas {
   right: 105%;
 }
 
-.possuiTravaCredito:hover .textoBalao {
+.possui-trava-credito:hover .textoBalao {
   visibility: visible;
 }
 
@@ -389,11 +384,11 @@ table#disciplinas {
   cursor: default;
 }
 
-.celDisciplina.acordeao {
+.detalhes-disciplina.acordeao {
   cursor: pointer;
 }
 
-.celDisciplina.acordeao:after {
+.detalhes-disciplina.acordeao:after {
   content: '▶';
   font-size: 12px;
   color: #777777;
@@ -403,7 +398,7 @@ table#disciplinas {
   transform: translateY(-50%);
 }
 
-.celDisciplina.acordeao.active:after {
+.detalhes-disciplina.acordeao.active:after {
   content: '▼';
   top: 10px;
 }
