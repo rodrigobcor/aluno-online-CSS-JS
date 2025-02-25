@@ -203,11 +203,6 @@ table#disciplinas {
   text-align: center;
 }
 
-.disciplina-texto {
-  display: inline-block;
-  width: calc(100% - 40px);
-}
-
 .celPeriodo {
   width: 35px;
   text-align: center;

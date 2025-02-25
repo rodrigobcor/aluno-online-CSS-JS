@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     celulasAcordeao.forEach(function(celula) {
         celula.addEventListener('click', function(event) {
-            if (event.target === celula || event.target.classList.contains('disciplina-texto')) {
+            if (event.target === celula || event.target.classList.contains('texto-nome-disciplina')) {
                 var panel = celula.querySelector('.panel');
 
                 if (panel.style.display === "block") {
