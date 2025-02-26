@@ -1,6 +1,4 @@
-/********************************************************/
 /* Estilos divContentBlock: blocos de conteúdo interno  */
-/********************************************************/
 
 /**
  * IMPORTANTE: Esses estilos foram ADAPTADOS do
@@ -33,4 +31,28 @@
 
 .divContentBlockBody {
   padding: 5px 0;
+}
+
+/* Estilos divTabelaBox - Blocos das tabelas */
+
+.divTabelaBox {
+  border: 1px solid #808080;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.divTabelaBoxHeader {
+  background-color: #a7c7e7;
+  padding: 10px;
+  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  border-bottom: 1px solid #808080;
+}
+
+.divTabelaBoxBody {
+  padding: 15px;
+  background-color: #f6f6f6;
 }

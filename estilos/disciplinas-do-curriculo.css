@@ -166,28 +166,6 @@ table#disciplinas {
   width: 15%;
 }
 
-.divTabelaBox {
-  border: 1px solid #808080;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.divTabelaBoxHeader {
-  background-color: #a7c7e7;
-  padding: 10px;
-  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: #000000;
-  border-bottom: 1px solid #808080;
-}
-
-.divTabelaBoxBody {
-  padding: 15px;
-  background-color: #f6f6f6;
-}
-
 .detalhes-disciplina {
   width: 450px;
   position: relative;
@@ -405,7 +383,7 @@ table#disciplinas {
 
 /* Detalhes da disciplina (no acordeão) */
 
-divContentBoxHeader {
+.divContentBoxHeader {
   font-weight: bold;
 }
 
@@ -415,7 +393,7 @@ divContentBoxHeader {
 
 .divContentBlockHeader {
   font-weight: bold;
-  font-size: 20px
+  font-size: 20px;
   margin-left: 14px;
   margin-top: 2px;
   margin-bottom: 2px;

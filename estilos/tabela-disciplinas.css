@@ -1,50 +1,67 @@
-#tabela-resumo-plano-inscricoes, #tabela-plano-inscricoes {
+#tabela-plano-inscricoes {
   width: 100%;
   margin-bottom: 20px;
   font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
-}
-
-#tabela-plano-inscricoes {
   border-collapse: collapse;
+
+  & thead, tbody {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+
+    & th {
+      background-color: #cbd4e5;
+      color: #104e8b;
+    }
+
+    & tr {
+      display: table;
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #000000;
+      text-align: center;
+    }
+
+    & td {
+      vertical-align: middle;
+      color: #104ea7;
+      font-weight: bold;
+    }
+
+    & th, td {
+      border: 1px solid #808080;
+      padding: 2px;
+      text-align: center;
+      width: 14.28%;
+    }
+  }
+
+  & tbody > tr > td {
+    &.selecionada {
+      background-color: #b0c4de;
+    }
+
+    &.com-conflito {
+      background-color: #cd5c5c;
+    }
+  }
 }
 
-#tabela-resumo-plano-inscricoes th, #tabela-resumo-plano-inscricoes td {
-  padding: 1px; 
-  font-size: 12px;
-  text-align: left;
-}
+#tabela-resumo-plano-inscricoes {
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
 
-#tabela-resumo-plano-inscricoes th, #tabela-plano-inscricoes th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  color: #000000;
-  text-align: center;
-}
+  & th, td {
+    padding: 1px; 
+    font-size: 12px;
+    text-align: left;
+  }
 
-#tabela-plano-inscricoes th, #tabela-plano-inscricoes td {
-  border: 1px solid #808080;
-  padding: 2px;
-  text-align: center;
-  font-size: 12px; /* isso é sobrescrito em "#tabela-plano-inscricoes th"; se for manter a diferença, mover isso pra #tabela-plano-inscricoes td" */
-  width: 14.28%;
-}
-
-#tabela-plano-inscricoes th {
-  background-color: #cbd4e5;
-  color: #104e8b;
-  font-size: 10px;
-}
-
-#tabela-plano-inscricoes td {
-  vertical-align: top;
-  color: #104ea7;
-  font-weight: bold;
-}
-
-.selecionada {
-  background-color: #b0c4de;
-}
-
-.com-conflito {
-  background-color: #cd5c5c;
+  & th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+  }
 }
