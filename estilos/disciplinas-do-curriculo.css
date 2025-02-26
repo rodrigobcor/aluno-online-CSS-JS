@@ -137,32 +137,32 @@ table#disciplinas {
   width: 500px;
 }
 
-#disciplina-table .colHorarios-1 {
+#tabela-resumo-plano-inscricao .colHorarios-1 {
   width: 5%;
   text-align: right;
   border-bottom-width: 0;
   padding-right: 5px;
 }
 
-#disciplina-table .colHorarios-2 {
+#tabela-resumo-plano-inscricao .colHorarios-2 {
   width: 35%;
 }
 
-#disciplina-table .colHorarios-3 {
+#tabela-resumo-plano-inscricao .colHorarios-3 {
   width: 10%;
 }
 
-#disciplina-table .colHorarios-4 {
+#tabela-resumo-plano-inscricao .colHorarios-4 {
   width: 5%;
   text-align: center;
 }
 
-#disciplina-table .colHorarios-5 {
+#tabela-resumo-plano-inscricao .colHorarios-5 {
   width: 15%;
   text-align: center;
 }
 
-#disciplina-table .colHorarios-6 {
+#tabela-resumo-plano-inscricao .colHorarios-6 {
   width: 15%;
 }
 

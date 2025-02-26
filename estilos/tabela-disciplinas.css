@@ -1,41 +1,41 @@
-#disciplina-table, #horario-table {
+#tabela-resumo-plano-inscricao, #tabela-plano-inscricoes {
   width: 100%;
   margin-bottom: 20px;
   font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
 }
 
-#horario-table {
+#tabela-plano-inscricoes {
   border-collapse: collapse;
 }
 
-#disciplina-table th, #disciplina-table td {
+#tabela-resumo-plano-inscricao th, #tabela-resumo-plano-inscricao td {
   padding: 1px; 
   font-size: 12px;
   text-align: left;
 }
 
-#disciplina-table th, #horario-table th {
+#tabela-resumo-plano-inscricao th, #tabela-plano-inscricoes th {
   background-color: #f2f2f2;
   font-weight: bold;
   color: #000000;
   text-align: center;
 }
 
-#horario-table th, #horario-table td {
+#tabela-plano-inscricoes th, #tabela-plano-inscricoes td {
   border: 1px solid #808080;
   padding: 2px;
   text-align: center;
-  font-size: 12px; /* isso é sobrescrito em "#horario-table th"; se for manter a diferença, mover isso pra #horario-table td" */
+  font-size: 12px; /* isso é sobrescrito em "#tabela-plano-inscricoes th"; se for manter a diferença, mover isso pra #tabela-plano-inscricoes td" */
   width: 14.28%;
 }
 
-#horario-table th {
+#tabela-plano-inscricoes th {
   background-color: #cbd4e5;
   color: #104e8b;
   font-size: 10px;
 }
 
-#horario-table td {
+#tabela-plano-inscricoes td {
   vertical-align: top;
   color: #104ea7;
   font-weight: bold;

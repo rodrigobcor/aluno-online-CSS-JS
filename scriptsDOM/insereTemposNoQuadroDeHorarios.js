@@ -1,13 +1,13 @@
 /* DESATUALIZADO - não há mais classes começando com "colHorarios" */
 
 // Seleciona a tabela de disciplinas
-const tabelaDisciplinas = document.querySelector('.disciplina-table');
+const tabelaDisciplinas = document.querySelector('.tabela-resumo-plano-inscricao');
 
     // Seleciona todas as linhas da tabela, exceto o cabeçalho
     const linhas = tabelaDisciplinas.querySelectorAll('tr:not(:first-child)');
 
     // Seleciona a tabela de horários
-    const tabelaHorarios = document.querySelector('.horario-table');
+    const tabelaHorarios = document.querySelector('.tabela-plano-inscricoes');
 
     // Percorre cada linha da tabela de disciplinas
     linhas.forEach(linha => {
