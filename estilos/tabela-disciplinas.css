@@ -1,4 +1,4 @@
-#tabela-resumo-plano-inscricao, #tabela-plano-inscricoes {
+#tabela-resumo-plano-inscricoes, #tabela-plano-inscricoes {
   width: 100%;
   margin-bottom: 20px;
   font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
@@ -8,13 +8,13 @@
   border-collapse: collapse;
 }
 
-#tabela-resumo-plano-inscricao th, #tabela-resumo-plano-inscricao td {
+#tabela-resumo-plano-inscricoes th, #tabela-resumo-plano-inscricoes td {
   padding: 1px; 
   font-size: 12px;
   text-align: left;
 }
 
-#tabela-resumo-plano-inscricao th, #tabela-plano-inscricoes th {
+#tabela-resumo-plano-inscricoes th, #tabela-plano-inscricoes th {
   background-color: #f2f2f2;
   font-weight: bold;
   color: #000000;
