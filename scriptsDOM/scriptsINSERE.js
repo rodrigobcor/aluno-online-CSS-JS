@@ -1,3 +1,43 @@
+/**
+ * Insere o conteúdo CSS personalizado para reformatação do Aluno Online.
+ */
+function inserirCSSPersonalizado() {
+    // Selecionar o elemento <link> existente
+    var linkExistente = document.querySelector('link[href="../cssJs/caixaConteudoPagina.css"]');
+
+    // Criar um novo elemento <link> para o novo arquivo CSS
+    var novoLink = document.createElement('link');
+    novoLink.type = 'text/css';
+    novoLink.rel = 'stylesheet';
+    novoLink.href = 'https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/disciplinas-do-curriculo.css'; // Substitua pelo caminho do seu novo arquivo CSS
+
+    // Inserir o novo elemento <link> após o elemento existente
+    linkExistente.parentNode.insertBefore(novoLink, linkExistente.nextSibling);
+}
+
+
+
+
+
+/**
+ * Insere o conteúdo JavaScript personalizado para reformatação do Aluno Online.
+ */
+function inserirJSPersonalizado() {
+    // Seleciona o arquivo JavaScript existente
+    const scriptExistente = document.querySelector('script[src="../cssJs/alunoOnline.js"]');
+
+    // Cria um novo elemento <script> para o novo arquivo JavaScript
+    const novoScript = document.createElement('script');
+    novoScript.src = 'https://rodrigobcor.github.io/aluno-online-CSS-JS/cssJs/alunoOnline.js'; // Substitua pelo caminho do seu novo arquivo JS
+    novoScript.type = 'text/javascript';
+
+    // Insere o novo arquivo JavaScript após o arquivo existente
+    scriptExistente.parentNode.insertBefore(novoScript, scriptExistente.nextSibling);
+}
+
+
+
+
 /* DESATUALIZADO - não há mais classes começando com "colHorarios" */
 
 // Seleciona a tabela de disciplinas
