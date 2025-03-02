@@ -36,18 +36,15 @@ function inserirJSPersonalizado() {
 }
 
 
-
-
-/* DESATUALIZADO - não há mais classes começando com "colHorarios" */
-
-// Seleciona a tabela de disciplinas
-const tabelaDisciplinas = document.querySelector('.tabela-resumo-plano-inscricoes');
+function inserirIntervaloNaTabela() {
+    // Seleciona a tabela-resumo de disciplinas
+    const tabelaDisciplinas = document.querySelector('.tabela-resumo-plano-inscricoes');
 
     // Seleciona todas as linhas da tabela, exceto o cabeçalho
     const linhas = tabelaDisciplinas.querySelectorAll('tr:not(:first-child)');
 
-    // Seleciona a tabela de horários
-    const tabelaHorarios = document.querySelector('.tabela-plano-inscricoes');
+    // Seleciona a tabela do plano de inscrições com os horários
+    const tabelaIntervalos = document.querySelector('.tabela-plano-inscricoes');
 
     // Percorre cada linha da tabela de disciplinas
     linhas.forEach(linha => {
@@ -61,7 +58,7 @@ const tabelaDisciplinas = document.querySelector('.tabela-resumo-plano-inscricoe
             const [dia, ...horariosDia] = parte.split(' '); // Separa o dia e os horários
             horariosDia.forEach(horario => {
                 // Seleciona a linha correspondente ao horário na tabela de horários
-                const linhaHorario = tabelaHorarios.querySelector(`.${horario}`);
+                const linhaHorario = tabelaIntervalos.querySelector(`.${horario}`);
                 if (linhaHorario) {
                     // Seleciona a célula correspondente ao dia
                     const celula = linhaHorario.querySelector(`.${dia}`);
@@ -73,3 +70,4 @@ const tabelaDisciplinas = document.querySelector('.tabela-resumo-plano-inscricoe
             });
         });
     });
+}
