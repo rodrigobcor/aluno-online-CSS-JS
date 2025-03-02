@@ -1,8 +1,8 @@
-    <tr class="dados-disciplina ${CSS_JAH_ATENDIDA_SE_DISCIPLINA_JA_ATENDIDA} ${CSS_TOOLTIP_SE_DISCIPLINA_JA_ATENDIDA}">
+    <tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_DISCIPLINA_JA_ATENDIDA} ${CSS_TOOLTIP_SE_DISCIPLINA_JA_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
       <td class="disciplina-periodo"><span class="${CSS_PERIODO_DISCIPLINA}">{PERIODO_DISCIPLINA}
-        <!-- SE ${DISCIPLINA_JAH_ATENDIDA}... -->
-        <span class="tooltip-texto">Essa disciplina já foi atendida.</span>
-        <!-- SE NOT(${DISCIPLINA_JAH_ATENDIDA})... -->
+        <!-- SE ${DISCIPLINA_JA_ATENDIDA}... -->
+        <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
+        <!-- SE ${NOT(${DISCIPLINA_JA_ATENDIDA})}... -->
          <span></span>
       </span></td>
       <td class="disciplina-nome">
@@ -85,7 +85,7 @@
         <div class="divContentBlock">
           <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
           <div class="divContentBlockBody div-pre-requisitos">
-            <!-- SE NOT(${TEM_PRE_REQUISITO_DISCIPLINA})... -->
+            <!-- SE ${NOT(${TEM_PRE_REQUISITO_DISCIPLINA})}... -->
             <p>Esta disciplina não possui requisito para inscrição.</p>
             <!-- SE ${TEM_PRE_REQUISITO_DISCIPLINA}... -->
             <div class="div-pre-requisito">
@@ -117,4 +117,4 @@
           </div>
         </div>
       </td>
-    </tr>
+    </tr><!-- Fim do conteúdo da disciplina -->
