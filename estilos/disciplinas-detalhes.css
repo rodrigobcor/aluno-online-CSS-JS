@@ -1,0 +1,112 @@
+/***************************************/
+/* Detalhes da disciplina: Informações */
+/***************************************/
+
+.info-disciplina {
+  width: 100%;
+  float: left;
+  font-size: 12pt;
+}
+
+.info-disciplina-nome {
+  font-size: 20px;
+}
+
+.info-disciplina-nome::before {
+  content: "Disciplina: ";
+  font-weight: bold;
+}
+
+.info-disciplina-codigo {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.info-disciplina-link-ementa {
+  font-size: 14px;
+  font-weight: bold;
+  color: #104e8b;
+  margin: 5px 0;
+}
+
+.info-disciplina-dados-gerais {
+  padding-left: 1em;
+  margin: 5px 0;
+  list-style-type: none;
+  list-style-position: inside;
+  columns: 3;
+}
+
+ul.info-disciplina-dados-gerais,
+ul.info-disciplina-turma {
+  margin: 0;
+  padding: 0 5px;
+  list-style: none;
+
+  & li {
+    margin: 5px 0;
+
+    & span.label-info-disciplina-dados-gerais,
+    & span.label-info-disciplina-turma {
+      font-weight: bold;
+    }
+  }
+
+  & li::before {
+    font-weight: bold;
+  }
+}
+
+/**************************************/
+/* Detalhes da disciplina: Requisitos */
+/**************************************/
+
+.label-pre-requisito {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.pre-requisitos {
+  margin-left: 15px;
+
+  & .alternativo {
+    font-weight: bold;
+  }
+}
+
+/***********************************/
+/* Detalhes da disciplina: Rótulos */
+/***********************************/
+
+/* Estas classes não foram utilizadas na formatação (CSS)
+  mas foram definidas para facilitar a seleção via DOM
+  e para futuras manutenções:
+
+  - info-disciplina-dados-gerais-num-creditos
+  - info-disciplina-dados-gerais-ch-total
+  - info-disciplina-dados-gerais-ch-semanal
+  - info-disciplina-dados-gerais-oferta-universal
+  - info-disciplina-dados-gerais-pode-conflitar
+  - info-disciplina-dados-gerais-pode-em-preparo
+  - info-disciplina-dados-gerais-tipo-aprovacao
+  - info-disciplina-dados-gerais-tempo-duracao
+
+  Nota: a lista pode ficar desatualizada e
+  conter elementos utilizados posteriormente.
+  Nesse caso, remover dessa lista
+  para facilitar a compreensão do código.
+
+*/
+
+span.info-disciplina-turma-preferencial[data-turma-preferencial="true"],
+span.info-disciplina-dados-gerais-periodo-sugerido[data-periodo-sugerido="true"] {
+  font-weight: bold;
+}
+
+span.info-disciplina-turma-docente:empty::after,
+span.info-disciplina-turma-local-aulas:empty::after,
+span.info-disciplina-dados-gerais-trava-credito:empty::after {
+  content: "Informação ainda não registrada";
+  font-style: italic;
+}
