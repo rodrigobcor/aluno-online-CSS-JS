@@ -171,43 +171,11 @@ table#disciplinas {
   position: relative;
 }
 
-.disciplina-codigo {
-  width: 100px;
-  text-align: center;
-}
-
-.disciplina-periodo {
-  width: 35px;
-  text-align: center;
-}
-
 .texto-disciplina-atendida {
   width: 30px;
   padding-left: 25px;
   text-align: center;
 }
-
-.disciplina-tipo {
-  width: 75px;
-  padding-left: 20px;
-}
-
-.disciplina-codigo-ramificacao {
-  width: 10px;
-  padding-left: 15px;
-}
-
-.disciplina-num-creditos {
-  width: 10px;
-  padding-left: 30px;
-}
-
-.disciplina-ch-total {
-  width: 10px;
-  padding-left: 25px;
-}
-
-.disciplina-periodo-sugerido {}
 
 .dados-disciplina {
   background-color: #add8e6;
@@ -224,104 +192,7 @@ table#disciplinas {
   background-color: #add8e6;
 }
 
-.disciplina-atendida {
-  color: #00000080;
-  order: 2;
-}
-
-/* Lista de disciplinas - Períodos */
-
-.periodo-1 {
-  background-color: #dcdcdc;
-}
-
-.periodo-2 {
-  background-color: #cdcdcd;
-}
-
-.periodo-3 {
-  background-color: #bebebe;
-}
-
-.periodo-4 {
-  background-color: #afafaf;
-}
-
-.periodo-5 {
-  background-color: #a0a0a0;
-}
-
-.periodo-6 {
-  background-color: #919191;
-}
-
-.periodo-7 {
-  background-color: #828282;
-}
-
-.periodo-8 {
-  background-color: #737373;
-}
-
-.sem-periodo {
-  background-color: #ffffff;
-}
-
-/* Lista de disciplinas - Departamento da disciplina */
-
-.IME01 {
-  background-color: #dbedff;
-}
-
-.IME02 {
-  background-color: #b6dcff;
-}
-
-.IME03 {
-  background-color: #92caff;
-}
-
-.IME04 {
-  background-color: #6db9ff;
-}
-
-.IME05 {
-  background-color: #4da9ff;
-}
-
-.IME06 {
-  background-color: #2496ff;
-}
-
-.FIS01 {
-  background-color: #7fffd4;
-}
-
-.FIS02 {
-  background-color: #40e0d0;
-}
-
-.FIS03 {
-  background-color: #00ced1;
-}
-
-.ILE02 {
-  background-color: #dda0dd;
-}
-
-.ILE04 {
-  background-color: #ee82ee;
-}
-
-.FAF03 {
-  background-color: #e9967a;
-}
-
 /* Lista de disciplinas - Disciplinas com trava de crédito */
-
-.celTravaCredito {
-  display: none;
-}
 
 .possui-trava-credito {
   position: relative;

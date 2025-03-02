@@ -1,0 +1,186 @@
+/*************************/
+/* Dados das disciplinas */
+/*************************/
+
+.disciplina-codigo {
+  width: 120px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.disciplina-nome {
+  width: 100%;
+  min-width: 400px;
+  position: relative;
+}
+
+td.disciplina-nome {
+  text-align: left;
+}
+
+.texto-nome-disciplina {
+  width: 400px;
+  display: inline-block;
+}
+
+.disciplina-periodo {
+  width: 35px;
+  text-align: center;
+}
+
+.disciplina-periodo span {
+  padding: 2px 10px;
+  font-weight: bold;
+}
+
+.disciplina-situacao-estudante {
+  width: 30px;
+  padding-left: 25px;
+  text-align: center;
+}
+
+.disciplina-tipo {
+  width: 120px;
+  min-width: 120px;
+  padding-left: 20px;
+}
+
+.disciplina-num-creditos {
+  width: 100px;
+  min-width: 100px;
+  padding-left: 30px;
+}
+
+.disciplina-ch-total {
+  width: 120px;
+  min-width: 120px;
+  padding-left: 25px;
+}
+
+.disciplina-periodo-sugerido {
+  width: 100px;
+  min-width: 100px;
+}
+
+:not(.disciplina-atendida) > td[data-periodo-sugerido="true"] {
+  font-weight: bold;
+  color: #64caca;
+}
+
+.disciplina-codigo-ramificacao {
+  width: 110px;
+  /* padding-left: 15px; */
+  /* display: none; */
+}
+
+.disciplina-trava-credito {
+  display: none;
+}
+
+.texto-periodo-sugerido {
+  text-align: center;
+}
+
+td[data-periodo-sugerido="false"] {
+  color: #808080;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+/***********************************/
+/* Dados das disciplinas: Períodos */
+/***********************************/
+
+.periodo-1 {
+  background-color: #dcdcdc;
+  color: #000000;
+}
+
+.periodo-2 {
+  background-color: #cdcdcd;
+}
+
+.periodo-3 {
+  background-color: #bebebe;
+}
+
+.periodo-4 {
+  background-color: #afafaf;
+}
+
+.periodo-5 {
+  background-color: #a0a0a0;
+}
+
+.periodo-6 {
+  background-color: #919191;
+}
+
+.periodo-7 {
+  background-color: #828282;
+}
+
+.periodo-8 {
+  background-color: #737373;
+}
+
+.sem-periodo {
+  background-color: inherit;
+}
+
+.disciplina-atendida {
+  color: #00000030;
+  order: 2;
+}
+
+/****************************************/
+/* Dados das disciplinas: Departamentos */
+/****************************************/
+
+.IME01 {
+  background-color: #dbedff;
+}
+
+.IME02 {
+  background-color: #b6dcff;
+}
+
+.IME03 {
+  background-color: #92caff;
+}
+
+.IME04 {
+  background-color: #6db9ff;
+}
+
+.IME05 {
+  background-color: #4da9ff;
+}
+
+.IME06 {
+  background-color: #2496ff;
+}
+
+.FIS01 {
+  background-color: #7fffd4;
+}
+
+.FIS02 {
+  background-color: #40e0d0;
+}
+
+.FIS03 {
+  background-color: #00ced1;
+}
+
+.ILE02 {
+  background-color: #dda0dd;
+}
+
+.ILE04 {
+  background-color: #ee82ee;
+}
+
+.FAF03 {
+  background-color: #e9967a;
+}
