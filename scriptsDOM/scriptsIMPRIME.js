@@ -44,7 +44,7 @@ function testGetDetalhesDisciplinas(codDisciplina) {
     numDisciplina = "10815";
 
     let htmlDadosDisciplina = getDetalhesDisciplinas(codDisciplina);
-    console.log(htmlDadosDisciplina);    
+    console.log(htmlDadosDisciplina);
 }
 
 /**
@@ -81,7 +81,7 @@ function getDetalhesDisciplinas(codDisciplina) {
             .then(response => response.text())
             .then(html => {
                 // TODO ainda precisa ajustar os números que estão hard-coded
-                
+
                 // Agora, selecionando a parte relevante do conteúdo HTML obtido
                 let inicio = html.indexOf("<form") + 411; // Pega o índice logo após o ": "
                 let fim = html.indexOf("</form>") - 199;
@@ -100,13 +100,10 @@ function getDetalhesDisciplinas(codDisciplina) {
     return dadosDisciplina;
 }
 
-
-
-
- /** 
-  * Imprime o nome das disciplinas no console.
-  */
- function imprimeNomeDisciplinas() {
+/** 
+ * Imprime o nome das disciplinas no console.
+ */
+function imprimeNomeDisciplinas() {
     const disciplina = document.getElementsByClassName("LINKNAOSUB");
     for (let i = 0; i < disciplina.length; i++) {
         console.log(disciplina[i].innerText);

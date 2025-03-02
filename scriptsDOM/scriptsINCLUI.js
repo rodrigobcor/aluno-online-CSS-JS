@@ -15,7 +15,7 @@ function insereClasseNasCelulasDaTabela(idTabela, nomeDaClasse) {
     if (tabela) {
         // Seleciona todas as linhas (<tr>) da tabela
         var linhas = tabela.getElementsByTagName('tr');
-        
+
         // Seleciona todas as celulas (<td>) da tabela
         var celulas = linhas.getElementsByTagName('td');
 

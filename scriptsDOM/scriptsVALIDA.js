@@ -97,7 +97,7 @@ function testeGetRegexHorario() {
     "SEQ G1", // dia da semana inválido
     // OS FORMATOS A SEGUIR SÃO VÁLIDOS EM OUTROS LUGARES FORA DO AOL
     "TER T3 SEX T3", // dia da semana na mesma linha
-    "SEXM1M2" // sem espaço entre os itens      
+    "SEXM1M2" // sem espaço entre os itens
   ];
   naoPodemPassar.forEach(horario => {
     if (getRegexHorario().test(horario)) { // Erro: passou, mas não devia passar.

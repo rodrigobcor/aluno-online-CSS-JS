@@ -51,7 +51,7 @@
     margin-bottom: 20px;
     /* border: 4px double #d0d1d3; */
     /* border-spacing: 0px; */
-    
+
     & col.vagas-tipo, col.vagas-num-oferecidas,
         col.vagas-num-solicitadas, col.vagas-num-ocupadas {
       width:25%;
