@@ -2,6 +2,8 @@
 /* Tabela de disciplinas - Acordeão */
 /************************************/
 
+/* Fonte do acordeão: adaptado de https://codepen.io/jopico/pen/kyRprJ */
+
 #tabela-disciplinas.fold-table {
 
   & > thead > tr > th {
@@ -67,31 +69,6 @@
       color: #888888;
       content: var(--arrow-down);
       transition: all 0.3s ease;
-    }
-  }
-}
-
-/************************************/
-/* Detalhes da disciplina: Acordeão */
-/************************************/
-
-.detalhes-disciplina {
-  padding: 0.5em;
-  background-color: #f0f8ff;
-  border: 0.5px dashed #babaca;
-
-  & table {
-    /* border: 3px solid #cccccc; */
-    border-top: var(--divisor-tabela);
-    border-bottom: var(--divisor-tabela);
-
-    & > tbody tr:nth-child(odd) {
-      background-color: #d8e8ff;
-    }
-
-    & thead > tr > th[scope="col"] {
-      padding: 0.5em;
-      border-bottom: var(--divisor-tabela);
     }
   }
 }
