@@ -42,19 +42,16 @@ td.disciplina-nome {
 .disciplina-tipo {
   width: 120px;
   min-width: 120px;
-  padding-left: 20px;
 }
 
 .disciplina-num-creditos {
   width: 100px;
   min-width: 100px;
-  padding-left: 30px;
 }
 
 .disciplina-ch-total {
   width: 120px;
   min-width: 120px;
-  padding-left: 25px;
 }
 
 .disciplina-periodo-sugerido {

@@ -149,10 +149,34 @@ table#disciplinas {
   background-color: #add8e6;
 }
 
-/* Lista de disciplinas - Disciplinas com trava de crédito */
+/*******************************************/
+/* Dados das disciplinas: Trava de crédito */
+/*******************************************/
 
 .possui-trava-credito {
   position: relative;
+
+  & .texto-balao {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+
+  & .texto-balao::before {
+    content: "Trava de crédito: ";
+  }
+
+  & .texto-balao::after {
+    content: " créditos";
+  }
 }
 
 /* .imagemTravaCredito {
@@ -160,25 +184,9 @@ table#disciplinas {
   max-height: 15px;
 } */
 
-.possui-trava-credito .textoBalao {
-  visibility: hidden;
-  width: 120px;
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: -5px;
-  right: 105%;
-}
-
-.possui-trava-credito:hover .textoBalao {
+.possui-trava-credito:hover .texto-balao {
   visibility: visible;
 }
-
-
 
 .divContentBoxHeader {
   font-weight: bold;
@@ -195,6 +203,8 @@ table#disciplinas {
   margin-top: 2px;
   margin-bottom: 2px;
 }
+
+
 
 .divContentBlockBody table {
   color: inherit;
