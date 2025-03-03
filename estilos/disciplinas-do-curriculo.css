@@ -216,51 +216,7 @@ table#disciplinas {
   visibility: visible;
 }
 
-/* Lista de disciplinas - Detalhes (acordeão) */
 
-/************************************/
-
-.detalhes-disciplina {
-  padding: 0.5em;
-  background-color: #f0f8ff;
-  border: 0.5px dashed #babaca;
-
-  & table {
-    /* border: 3px solid #cccccc; */
-    border-top: var(--divisor-tabela);
-    border-bottom: var(--divisor-tabela);
-
-    & > tbody tr:nth-child(odd) {
-      background-color: #d8e8ff;
-    }
-
-    & thead > tr > th[scope="col"] {
-      padding: 0.5em;
-      border-bottom: var(--divisor-tabela);
-    }
-  }
-}
-
-.detalhes-disciplina.acordeao {
-  cursor: pointer;
-}
-
-.detalhes-disciplina.acordeao:after {
-  content: '▶';
-  font-size: 12px;
-  color: #777777;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.detalhes-disciplina.acordeao.active:after {
-  content: '▼';
-  top: 10px;
-}
-
-/* Detalhes da disciplina (no acordeão) */
 
 .divContentBoxHeader {
   font-weight: bold;
