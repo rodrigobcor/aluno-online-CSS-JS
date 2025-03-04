@@ -4,6 +4,14 @@
  * desenvolvedores que os elaboraram originalmente.
  */
 
+ .conteudo {
+  max-width: 1000px;
+  max-width: 75%;
+  /* margin: 0 auto; */
+  justify-self: center;
+  padding: 0 10px;
+}
+
 /***********************************************************/
  /* Estilos divContentBox: Caixas (containers) de conteúdo */
 /***********************************************************/

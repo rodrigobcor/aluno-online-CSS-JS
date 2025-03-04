@@ -1,18 +1,3 @@
-/* Identificadores */
-
-table#disciplinas {
-  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
-  font-size: 12px;
-}
-
-/* Demais estilos */
-
-.conteudo {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 .page-header1,
 .page-header2 {
   box-sizing: border-box;
