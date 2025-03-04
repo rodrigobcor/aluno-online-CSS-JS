@@ -1,3 +1,23 @@
+/**
+ * 
+ * @param {string} intervalo O horário no formato original a decompor.
+ * @returns {{dia: string, horario: string}} um objeto com a decomposição do intervalo em dia e horário.
+ */
+function decomporIntervalo(intervalo) {
+    let segmentosDoIntervalo = getArrayOfGroupMatches(getRegexIntervalo(), intervalo);
+    // o primeiro elemento é o dia da semana (ex. QUA), os outros são os horários (ex. T2)
+    // cada segmento vai ser antecedido do dia da semana
+    const diaSemana = segmentosDoIntervalo.splice(0, 1); // obtém apenas o dia da semana e mantém o horário no segmentosDoIntervalo
+    segmentosDoIntervalo = segmentosDoIntervalo.map(
+        // lembrando que segmentosDoIntervalo contém apenas o horário, então pode-se reutilizar a variável
+        segmentosDoIntervalo => {
+        	"dia" = diaSemana,
+        	"horario" = segmentosDoIntervalo
+        }
+    );
+    return segmentosDoIntervalo;
+}
+
 function transformarFormato() {
     const formatoAntigo = document.querySelector('td[style*="border-style: solid"]');
     if (!formatoAntigo) {

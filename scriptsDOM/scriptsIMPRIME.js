@@ -3,10 +3,13 @@
  * 
  * Atenção: o conteúdo está hard-coded.
  * Mudanças na estrutura da página impedirão o funcionamento correto.
+ * 
+ * @todo corrigir valores hard-coded
  */
 function getDisciplinasDaPagina() {
     const tds = document.querySelectorAll('td');
     disciplinas = [];
+    // FIXME valores hard-coded
     for (let i = 19; i <= tds.length-5; i++) {
         disciplina = {};
         disciplina.codigoEnome = tds[i].innerText;
@@ -29,9 +32,8 @@ function getDisciplinasDaPagina() {
         disciplinas.push(disciplina);
         i+9;
     }
+    return disciplinas;
 }
-
-
 
 
 /** 
@@ -48,7 +50,7 @@ function testGetDetalhesDisciplinas(codDisciplina) {
 }
 
 /**
- * Obtém os detalhes de determinada disciplina no no período.
+ * Obtém os detalhes de determinada disciplina do período, no formato HTML.
  * 
  * Essa função não altera nenhum dado do servidor original.
  * 
@@ -99,13 +101,22 @@ function getDetalhesDisciplinas(codDisciplina) {
 
     return dadosDisciplina;
 }
+function testGetDetalhesDisciplinas() {
+    // um código (válido) qualquer
+    codDisciplina = "10815";
+    let htmlDadosDisciplina = getDetalhesDisciplinas(codDisciplina);
+    console.log(htmlDadosDisciplina);
+}
 
-/** 
- * Imprime o nome das disciplinas no console.
+
+/**
+ * Pega os horários da lista criada anteriormente.
+ * 
+ * @returns {string[]} os horários obtida da lista de disciplinas selecionadas para matrícula
  */
-function imprimeNomeDisciplinas() {
-    const disciplina = document.getElementsByClassName("LINKNAOSUB");
-    for (let i = 0; i < disciplina.length; i++) {
-        console.log(disciplina[i].innerText);
-    }
+function getHorariosDaLista() {
+    let celulasHorarios = document.querySelectorAll(".colHorarios-5");
+    let horarios = [];
+    celulasHorarios.forEach(horario => horarios.push(horario.innerText));
+    return horarios;
 }
