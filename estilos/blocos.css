@@ -1,10 +1,25 @@
-/* Estilos divContentBlock: blocos de conteúdo interno  */
-
 /**
  * IMPORTANTE: Esses estilos foram ADAPTADOS do
  * estilo já utilizado, então deve-se creditar os
  * desenvolvedores que os elaboraram originalmente.
  */
+
+/***********************************************************/
+ /* Estilos divContentBox: Caixas (containers) de conteúdo */
+/***********************************************************/
+
+
+.divContentBoxHeader {
+  font-weight: bold;
+}
+
+.divContentBoxBody {
+  font-size: 12px;
+}
+
+/********************************************************/
+/* Estilos divContentBlock: Blocos de conteúdo interno  */
+/********************************************************/
 
 .divContentBlock {
   background-color: unset;
@@ -31,9 +46,19 @@
 
 .divContentBlockBody {
   padding: 5px 0;
+
+  & tbody {
+    display: table-row-group;
+  }
+
+  & tr {
+    display: table-row;
+  }
 }
 
-/* Estilos divTabelaBox - Blocos das tabelas */
+/********************************************/
+/* Estilos divTabelaBox: Blocos das tabelas */
+/********************************************/
 
 .divTabelaBox {
   border: 1px solid #808080;
