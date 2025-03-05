@@ -65,3 +65,30 @@
     }
   }
 }
+
+/****************************************/
+/* Resumo do plano de inscrições: Dados */
+/****************************************/
+
+/*
+CSS não utilizado no momento;
+as classes foram definidas para os seletores.
+#tabela-resumo-plano-inscricoes {
+  &.resumo-disciplina-nome {
+
+  }
+  
+  &.resumo-disciplina-codigo {
+
+  }
+  &.resumo-turma-id {
+    font-weight: bold;
+  }
+  &.resumo-turma-tempos {
+
+  }
+  &.resumo-turma-local-aulas {
+
+  }
+}
+*/

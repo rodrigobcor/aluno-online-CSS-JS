@@ -115,7 +115,7 @@ function testGetDetalhesDisciplinas() {
  * @returns {string[]} os horários obtida da lista de disciplinas selecionadas para matrícula
  */
 function getHorariosDaLista() {
-    let celulasHorarios = document.querySelectorAll(".colHorarios-5");
+    let celulasHorarios = document.querySelectorAll(".resumo-turma-tempos");
     let horarios = [];
     celulasHorarios.forEach(horario => horarios.push(horario.innerText));
     return horarios;

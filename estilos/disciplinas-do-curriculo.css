@@ -91,25 +91,25 @@
   padding-right: 5px;
 }
 
-#tabela-resumo-plano-inscricoes .colHorarios-2 {
+#tabela-resumo-plano-inscricoes .resumo-disciplina-nome {
   width: 35%;
 }
 
-#tabela-resumo-plano-inscricoes .colHorarios-3 {
+#tabela-resumo-plano-inscricoes .resumo-disciplina-codigo {
   width: 10%;
 }
 
-#tabela-resumo-plano-inscricoes .colHorarios-4 {
+#tabela-resumo-plano-inscricoes .resumo-turma-id {
   width: 5%;
   text-align: center;
 }
 
-#tabela-resumo-plano-inscricoes .colHorarios-5 {
+#tabela-resumo-plano-inscricoes .resumo-turma-tempos {
   width: 15%;
   text-align: center;
 }
 
-#tabela-resumo-plano-inscricoes .colHorarios-6 {
+#tabela-resumo-plano-inscricoes .resumo-turma-local-aulas {
   width: 15%;
 }
 

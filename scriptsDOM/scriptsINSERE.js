@@ -48,8 +48,8 @@ function inserirIntervaloNaTabela() {
 
     // Percorre cada linha da tabela de disciplinas
     linhas.forEach(linha => {
-        const codigo = linha.querySelector('.colHorarios-3').textContent.trim(); // Código da disciplina
-        const horarios = linha.querySelector('.colHorarios-5').textContent.trim(); // Horários
+        const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim(); // Código da disciplina
+        const horarios = linha.querySelector('.resumo-turma-tempos').textContent.trim(); // Horários
 
         // Divide os horários em partes (SEG M5 M6, TER M5 M6, etc.)
         const partesHorarios = horarios.split('\n');
