@@ -2,6 +2,21 @@
 /* Dados das disciplinas */
 /*************************/
 
+.dados-disciplina {
+  background-color: #add8e6;
+  margin: 2px 0;
+  padding: 2px;
+  order: 1;
+
+  & th {
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    vertical-align: middle;
+    background-color: #add8e6;
+  }
+}
+
 .disciplina-codigo {
   width: 120px;
   min-width: 120px;
@@ -180,4 +195,45 @@ td[data-periodo-sugerido="false"] {
 
 .FAF03 {
   background-color: #e9967a;
+}
+
+/*******************************************/
+/* Dados das disciplinas: Trava de crédito */
+/*******************************************/
+
+/* TODO Conferir se esse conjunto ainda é ou será utilizado */
+
+.possui-trava-credito {
+  position: relative;
+
+  & .texto-balao {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+  }
+
+  & .texto-balao::before {
+    content: "Trava de crédito: ";
+  }
+
+  & .texto-balao::after {
+    content: " créditos";
+  }
+}
+
+/* .imagemTravaCredito {
+  max-width: 15px;
+  max-height: 15px;
+} */
+
+.possui-trava-credito:hover .texto-balao {
+  visibility: visible;
 }

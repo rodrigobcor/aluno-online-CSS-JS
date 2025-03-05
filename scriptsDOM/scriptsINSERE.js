@@ -5,11 +5,14 @@ function inserirCSSPersonalizado() {
     // Selecionar o elemento <link> existente
     var linkExistente = document.querySelector('link[href="../cssJs/caixaConteudoPagina.css"]');
 
+    // FIXME O arquivo não existe mais, e uma série de arquivos passou a existir.
+    // Considerar criar uma função para incluir cada um por parâmetro
+
     // Criar um novo elemento <link> para o novo arquivo CSS
     var novoLink = document.createElement('link');
     novoLink.type = 'text/css';
     novoLink.rel = 'stylesheet';
-    novoLink.href = 'https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/disciplinas-do-curriculo.css'; // Substitua pelo caminho do seu novo arquivo CSS
+    novoLink.href = 'https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/disciplinas-do-curriculo.css'; // FIXME O arquivo não existe mais
 
     // Inserir o novo elemento <link> após o elemento existente
     linkExistente.parentNode.insertBefore(novoLink, linkExistente.nextSibling);

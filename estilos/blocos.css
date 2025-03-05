@@ -89,3 +89,78 @@
   padding: 15px;
   background-color: #f6f6f6;
 }
+
+/***********************************************************/
+ /* Estilos: Cabeçalhos e rodapés */
+/***********************************************************/
+
+.page-header1, .page-header2 {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
+}
+
+.page-header1 {
+  background-color: #cad3e4;
+}
+
+.page-header2 {
+  padding-top: 10px;
+}
+
+.header-column {
+  display: flex;
+  align-items: center;
+}
+
+.header-column.left,
+.header-column.right {
+  width: 20%;
+}
+
+.header-column.middle {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-column.right {
+  padding-right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-column.middle h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333333;
+}
+
+.header-column.middle .aluno-info {
+  margin: 15px 0 0;
+  font-size: 16px;
+  color: #777777;
+}
+
+.header-column img {
+  max-height: 100px;
+}
+
+.page-header2 .header-column.left {
+  gap: 10px;
+}
+
+.footer-column {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
