@@ -16,13 +16,13 @@
     & > th, td {
       padding: 0.4em;
     }
-    
+
     & > th[scope="col"], th[scope="colgroup"] {
       vertical-align: middle;
       padding: 0.4em;
       border-bottom: var(--divisor-tabela);
     }
-  }  
+  }
 }
 
 /************************************/
@@ -34,11 +34,8 @@
   & > thead > tr > th {
     border-bottom: var(--divisor-tabela);
   }
-  
+
   & > tbody {
-    & > tr.dados-disciplina:nth-child(4n-1) {
-      background-color: #cbd4e5;
-    }
 
     & > tr.dados-disciplina {
       text-align: center;
@@ -52,6 +49,10 @@
       & td.disciplina-periodo {
         cursor: pointer;
       }
+    }
+
+    & > tr.dados-disciplina:nth-child(4n-1) {
+      background-color: #cbd4e5;
     }
 
     & > tr.dados-disciplina:hover {
@@ -74,10 +75,13 @@
     }
 
     & > tr.fold {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease;
+      display: table-row; /* sempre uma linha, mas expande/contrai */
 
       &.open {
-        display: table-row;
+        max-height: 5000px; /* temporário, vai ser alterado pelo script */
       }
     }
 

@@ -4,6 +4,7 @@
  * - https://codepen.io/jopico/pen/kyRprJ (estrutura geral);
  * - https://codepen.io/arjancodes/pen/gbweYB (trechos da função `toggleAccordion()`);
  * - https://gomakethings.com/converting-the-jquery-next-method-to-vanilla-js/ (função `next()`).
+ * - https://www.w3schools.com/howto/howto_js_accordion.asp (animação)
  */
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -12,6 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let itemSelecionado = event.currentTarget.parentElement;
     itemSelecionado.classList.toggle("open");
     let proximo = next(itemSelecionado, ".fold");
+
+    if (proximo.classList.contains('open')) {
+      proximo.style.maxHeight = '0px'; // collapse
+    } else {
+      proximo.style.maxHeight = proximo.scrollHeight + 'px'; // expand dynamically
+    }
+
     proximo.classList.toggle("open");
   }
 
