@@ -31,6 +31,11 @@
 
 #tabela-disciplinas.fold-table {
 
+  & > thead > tr.dados-disciplina,
+  & > tbody > tr.dados-disciplina {
+    font-size: 12px;
+  }
+
   & > thead > tr > th {
     border-bottom: var(--divisor-tabela);
   }

@@ -5,7 +5,6 @@
 #tabela-resumo-plano-inscricoes {
   width: 100%;
   margin-bottom: 20px;
-  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
 
   & th, td {
     padding: 1px; 
@@ -53,7 +52,6 @@
 #tabela-plano-inscricoes {
   width: 100%;
   margin-bottom: 20px;
-  font-family: Verdana, "MS Sans Serif", Arial, Helvetica;
   border-collapse: collapse;
 
   & thead, tbody {
