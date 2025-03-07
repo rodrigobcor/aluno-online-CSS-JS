@@ -1,14 +1,14 @@
     <tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_DISCIPLINA_JA_ATENDIDA} ${CSS_TOOLTIP_SE_DISCIPLINA_JA_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
-      <td class="disciplina-periodo"><span class="${CSS_PERIODO_DISCIPLINA}">{PERIODO_DISCIPLINA}
-        <!-- SE ${DISCIPLINA_JA_ATENDIDA}... -->
-        <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
-        <!-- SE ${NOT(${DISCIPLINA_JA_ATENDIDA})}... -->
-         <span></span>
-      </span></td>
+      <td class="disciplina-periodo">
+        <span class="${CSS_PERIODO_DISCIPLINA}">{PERIODO_DISCIPLINA}
+          <!-- SE ${DISCIPLINA_JA_ATENDIDA}... -->
+          <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
+          <!-- SE ${NOT(${DISCIPLINA_JA_ATENDIDA})}... -->
+          <span></span>
+        </span>
+      </td>
       <td class="disciplina-nome">
-        <a href="#" onclick="javascript:consultarDisciplina(output, `&quot;${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}&quot;`); return false;">
-          &#128269;
-        </a>
+        <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
         <span class="texto-nome-disciplina">${NOME_DISCIPLINA}</span>
       </td>
       <td class="disciplina-codigo ${CLASSE_CSS_DEPTO_DISCIPLINA}">${CODIGO_DISCIPLINA}</td>
@@ -16,13 +16,11 @@
       <td class="disciplina-num-creditos">${NUM_CREDITOS_DISCIPLINA}</td>
       <td class="disciplina-ch-total">${CH_TOTAL_DISCIPLINA}</td>
       <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_PERIODO_SUGERIDO_MINUSCULAS}">
-        <a href="#" onclick="javascript:consultarDisciplina(output, `&quot;${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}&quot;`); return false;">
-          &#128269;
-        </a>
+        <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
         <span class="texto-periodo-sugerido">${EH_PERIODO_SUGERIDO}</span>
       </td>
       <td class="disciplina-codigo-ramificacao">${CODIGO_RAMIFICACAO_DISCIPLINA}</td>
-      <td class="disciplina-trava-credito">${TRAVA_CREDITO_DISCIPLINA}</td>
+      <td class="disciplina-trava-credito" data-creditos-necessarios="${TRAVA_CREDITO_DISCIPLINA}">${TRAVA_CREDITO_DISCIPLINA}</td>
     </tr>
 
     <tr class="fold">
