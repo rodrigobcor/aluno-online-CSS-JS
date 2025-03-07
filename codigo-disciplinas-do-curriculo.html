@@ -283,23 +283,79 @@
       <div class="divTabelaBoxHeader">Disciplinas do Currículo</div>
       <div class="divTabelaBoxBody">
         <form name="output" method="post" action="">
-          <input type="hidden" name="_token" value="co">
-          <input name="requisicao" type="hidden" value="co">
-          <input type="hidden" name="matricula" value="201999999999">              
-              <table id="tabela-disciplinas" border-spacing: 6px;>
+          <input type="hidden" name="_token" value="co" />
+          <input name="requisicao" type="hidden" value="co" />
+          <input type="hidden" name="matricula" value="201999999999" />
+          <table id="tabela-disciplinas">
+            <thead>
+              <tr class="dados-disciplina">
+                <th scope="col" class="disciplina-nome tooltip">Nome
+                  <span class="tooltip-texto">O nome da disciplina é a forma designada
+                    para sua identificação em diversas situações.</span>
+                </th>
+
+                <th scope="col" class="disciplina-codigo tooltip">Código
+                  <span class="tooltip-texto">Toda disciplina possui
+                    um código identificador que deve ser utilizado
+                    no formulário de inscrição em disciplinas.</span>
+                </th>
+
+                <th scope="col" class="disciplina-periodo tooltip">Período
+                  <span class="tooltip-texto">Algumas disciplinas estão associadas
+                    a um período específico na grade curricular.</span>
+                </th>
+
+                <th scope="col">Atendida?
+                  <!-- não será mais coluna; cada linha de disciplina atendida
+                   estará mais fosca e com tooltip indicando que foi atendida -->
+                </th>
+
+                <th scope="col" class="disciplina-tipo tooltip">Tipo
+                  <span class="tooltip-texto move-left">Além das obrigatórias,
+                    há disciplinas dos seguintes tipos:
+                    eletivas restritas (para estudantes do curso em
+                    determinada ramificação ou habilitação);
+                    eletivas definidas (para qualquer estudante do curso,
+                    independentemente de ramificação ou habilitação);
+                    universais (para qualquer estudante de qualquer curso);
+                    ou de extensão (para atividades de aprimoramento da
+                    formação e na relação universidade-sociedade).</span>
+                </th>
+
+                <th scope="col" class="disciplina-codigo-ramificacao tooltip">Ramificação
+                  <span class="tooltip-texto move-left">Os cursos da UERJ possuem ramificações
+                    identificadas por códigos. Pode haver, por exemplo, diferentes
+                    ramificações para as modalidades Bacharelado e Licenciatura.
+                    Também há códigos diferentes para versões diferentes da
+                    grade curricular de um curso.</span>
+                </th>
+
+                <th scope="col" class="disciplina-num-creditos tooltip">Créditos
+                  <span class="tooltip-texto move-left">O crédito é a unidade básica
+                    de medida para o trabalho desempenhado em uma disciplina
+                    ou atividade, e corresponde ao número de tempos semanais
+                    em aulas teóricas e/ou a outros trabalhos desenvolvidos
+                    no período.</span>
+                </th>
+
+                <th scope="col" class="disciplina-ch-total tooltip ">Carga horária total
+                  <span class="tooltip-texto move-left">A carga horária total corresponde ao
+                    total de créditos no período de 15 semanas.</span>
+                </th>
+
+                <th scope="col" class="disciplina-periodo-sugerido tooltip">Turma do período?
+                  <span class="tooltip-texto move-left">Espera-se que as disciplinas sejam
+                    atendidas de acordo com o plano de periodização.</span>
+                </th>
+
+                <th scope="col" class="disciplina-trava-credito tooltip">Trava de crédito
+                  <span class="tooltip-texto move-left">Algumas disciplinas só podem ser
+                    cursadas quando uma determinada quantidade de créditos
+                    forem obtidos no decorrer do curso.</span>
+                </th>
+              </tr>
+            </thead>
                 <tbody>
-                  <tr class="dados-disciplina">
-                    <th class="tdHeader detalhes-disciplina">Disciplina</th>
-                    <th class="tdHeader disciplina-codigo">Código</th>
-                    <th class="tdHeader disciplina-periodo">Período</th>
-                    <th class="tdHeader">Atendida?</th>
-                    <th class="tdHeader" style="width: 80px;">Tipo</th>
-                    <th class="tdHeader">Ramif.</th>
-                    <th class="tdHeader">Créd.</th>
-                    <th class="tdHeader">CH<br>Total</th>
-                    <th class="tdHeader">Turma<br>Período?</th>
-                    <th class="tdHeader celTravaCredito">Trava<br>Crédito</th>
-                  </tr>
                   <tr class="dados-disciplina disciplina-atendida">
                     <td class="detalhes-disciplina acordeao">
                       <a href="#"
