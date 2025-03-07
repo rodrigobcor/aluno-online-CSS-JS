@@ -24,8 +24,7 @@
 }
 
 .disciplina-nome {
-  width: 100%;
-  min-width: 400px;
+  width: 400px;
   position: relative;
 }
 
@@ -34,12 +33,11 @@ td.disciplina-nome {
 }
 
 .texto-nome-disciplina {
-  width: 400px;
   display: inline-block;
 }
 
 .disciplina-periodo {
-  width: 35px;
+  width: 70px;
   text-align: center;
 }
 
@@ -59,6 +57,11 @@ td.disciplina-nome {
   min-width: 120px;
 }
 
+/* Números, quando não são apenas rótulos/identificadores, devem ser alinhados à direita. */
+.disciplina-num-creditos, .disciplina-ch-total, .disciplina-trava-credito {
+  text-align: right;
+}
+
 .disciplina-num-creditos {
   width: 100px;
   min-width: 100px;
@@ -76,17 +79,24 @@ td.disciplina-nome {
 
 :not(.disciplina-atendida) > td[data-periodo-sugerido="true"] {
   font-weight: bold;
-  color: #64caca;
 }
 
 .disciplina-codigo-ramificacao {
   width: 110px;
   /* padding-left: 15px; */
-  /* display: none; */
 }
 
 .disciplina-trava-credito {
-  display: none;
+  width: 70px;
+}
+
+td.disciplina-trava-credito::after {
+  content: var(--com-pre-requisito);
+}
+
+/* Overriding previous rule when no credit is required. */
+td.disciplina-trava-credito[data-creditos-necessarios="0"]::after {
+  content: var(--sem-pre-requisito);
 }
 
 .texto-periodo-sugerido {

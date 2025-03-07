@@ -5,8 +5,7 @@
  */
 
  .conteudo {
-  max-width: 1000px;
-  max-width: 75%;
+  min-width: 1000px;
   /* margin: 0 auto; */
   justify-self: center;
   padding: 0 10px;

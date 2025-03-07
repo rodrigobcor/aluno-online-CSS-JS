@@ -7,5 +7,9 @@
   --blue: #6495ed;
   --white: #faf0e6;
   --arrow-down: "\25bc";
+  --arrow-selected-color: #64caca;
   --divisor-tabela: 3px solid #104e8b;
+  --consulta: " 🔍"; /* &#128269; */
+  --sem-pre-requisito: " 🏳️";
+  --com-pre-requisito: " 🔒";
 }

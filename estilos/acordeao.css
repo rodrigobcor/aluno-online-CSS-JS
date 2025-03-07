@@ -68,10 +68,10 @@
       background-color: #104e8b;
       color: #ffffff;
 
-        /* & th:first-child:before, */
-        &  > td:first-child:before {
+        /* & th:first-child::before, */
+        &  > td:first-child::before {
           transform: rotate(-180deg);
-          color: #64caca;
+          color: var(--arrow-selected-color);
         }
 
       & .disciplina-codigo {
@@ -90,8 +90,8 @@
       }
     }
 
-    /* & > tr.dados-disciplina th:first-child:before, */
-    & > tr.dados-disciplina td:first-child:before {
+    /* & > tr.dados-disciplina th:first-child::before, */
+    & > tr.dados-disciplina td:first-child::before {
       position: absolute;
       top: 50%;
       left: 5px;
@@ -138,7 +138,7 @@
   cursor: pointer;
 }
 
-.detalhes-disciplina.acordeao:after {
+.detalhes-disciplina.acordeao::after {
   content: '▶';
   font-size: 12px;
   color: #777777;
@@ -148,7 +148,7 @@
   transform: translateY(-50%);
 }
 
-.detalhes-disciplina.acordeao.active:after {
+.detalhes-disciplina.acordeao.active::after {
   content: '▼';
   top: 10px;
 }
