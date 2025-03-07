@@ -58,7 +58,7 @@ td.disciplina-nome {
 }
 
 /* Números, quando não são apenas rótulos/identificadores, devem ser alinhados à direita. */
-.disciplina-num-creditos, .disciplina-ch-total, .disciplina-trava-credito {
+td.disciplina-num-creditos, td.disciplina-ch-total, td.disciplina-trava-credito {
   text-align: right;
 }
 
