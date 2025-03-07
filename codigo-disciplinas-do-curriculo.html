@@ -284,6 +284,7 @@
           <input name="requisicao" type="hidden" value="co" />
           <input type="hidden" name="matricula" value="201999999999" />
           <table id="tabela-disciplinas" class="fold-table">
+            <!-- Fonte do acordeão: adaptado de https://codepen.io/jopico/pen/kyRprJ -->
             <thead>
               <tr class="dados-disciplina">
                 <th scope="col" class="disciplina-nome tooltip">Nome
@@ -375,6 +376,567 @@
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">0</td>
               </tr>
+
+              <tr class="fold">
+                <td colspan="8" class="detalhes-disciplina">
+                  <div class="divContentBlock">
+                    <div class="divContentBlockHeader">
+                      <h3 class="info-disciplina-nome">Cálculo I</h3>
+                      <span class="info-disciplina-codigo">IME01-04827</span>
+                      <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(4827); return false;">&#128196; Ementa</a>
+                    </div>
+                    <div class="divContentBlockBody info-disciplina">
+                      <ul class="info-disciplina-dados-gerais">
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">N.º de créditos:</span>
+                          <span class="info-disciplina-dados-gerais-num-creditos">6</span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
+                          <span  class="info-disciplina-dados-gerais-ch-semanal">6</span>
+                          (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
+                          <span class="info-disciplina-dados-gerais-ch-total">90</span>)
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Sugerida para o período?</span>
+                          <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="true">
+                            Sim
+                            <a href="#" onclick="javascript:consultarDisciplina(output, 4827); return false;">
+                              &#128269;
+                            </a>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Tempo de duração:</span>
+                          <span class="info-disciplina-dados-gerais-tempo-duracao">Semestral</span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Tipo de aprovação:</span>
+                          <span class="info-disciplina-dados-gerais-tipo-aprovacao">Nota e Frequência</span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
+                          <span class="info-disciplina-dados-gerais-trava-credito">0</span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
+                          <span class="info-disciplina-dados-gerais-pode-conflitar">Não</span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">É oferecida como Universal?</span>
+                          <span class="info-disciplina-dados-gerais-oferta-universal">Sim</span>
+                        </li>
+                        <li>
+                          <span class="label-info-disciplina-dados-gerais">Permite situação "Em Preparo"?</span>
+                          <span class="info-disciplina-dados-gerais-pode-em-preparo">Não</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="divContentBlock">
+                    <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
+                    <div class="divContentBlockBody div-pre-requisitos">
+                      <p>Esta disciplina não possui requisito para inscrição.</p>
+                    </div>
+                  </div>
+                  <div class="divContentBlock">
+                    <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
+                    <div class="divContentBlockBody">
+
+                      <!-- Turma 1; Docente: ALEXANDRE CESAR MARETTO FEDERICI -->
+                      <div class="div-grupo-turmas-disciplina">
+                        <div class="div-turma-disciplina">
+                          <div class="info-disciplina-turma-informacoes">
+                            <ul class="info-disciplina-turma">
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma:</span>
+                                <span class="info-disciplina-turma-id">1</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma preferencial?</span>
+                                <span class="info-disciplina-turma-preferencial" data-turma-preferencial="false">Não</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Docente:</span>
+                                <span class="info-disciplina-turma-docente">ALEXANDRE CESAR MARETTO FEDERICI</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Local das aulas:</span>
+                                <span class="info-disciplina-turma-local-aulas"></span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Tempos:</span>
+                                <ul class="info-disciplina-turma-tempos">
+                                  <li class="info-disciplina-turma-tempo">SEG M5 M6</li>
+                                  <li class="info-disciplina-turma-tempo">TER M5 M6</li>
+                                  <li class="info-disciplina-turma-tempo">QUI M5 M6</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas atuais da turma</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col class="vagas-num-ocupadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Tipo de vaga</th>
+                                  <th scope="col">Oferecidas</th>
+                                  <th scope="col">Ocupadas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>40</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>25</td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas para solicitação de inscrição</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col span="2" class="vagas-num-solicitadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col" rowspan="2">Tipo de vaga</th>
+                                  <th scope="col" rowspan="2">Oferecidas</th>
+                                  <th scope="colgroup" colspan="2">Solicitadas</th>
+                                </tr>
+                                <tr>
+                                  <th scope="col">Total</th>
+                                  <th scope="col">Preferenciais</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>40</td>
+                                  <td>14</td>
+                                  <td>7</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>25</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div><!-- fim grupo-turmas-disciplina -->
+
+                      <!-- Turma 2; Docente: LUCAS SOUZA MOTA DE ARAGÃO -->
+                      <div class="div-grupo-turmas-disciplina">
+                        <div class="div-turma-disciplina">
+                          <div class="info-disciplina-turma-informacoes">
+                            <ul class="info-disciplina-turma">
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma:</span>
+                                <span class="info-disciplina-turma-id">2
+                                </span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma preferencial?</span>
+                                <span class="info-disciplina-turma-preferencial" data-turma-preferencial="true">SIM</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Docente:</span>
+                                <span class="info-disciplina-turma-docente">LUCAS SOUZA MOTA DE ARAGÃO</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Local das aulas:</span>
+                                <span class="info-disciplina-turma-local-aulas"></span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Tempos:</span>
+                                <ul class="info-disciplina-turma-tempos">
+                                  <li class="info-disciplina-turma-tempo">SEG M3 M4</li>
+                                  <li class="info-disciplina-turma-tempo">QUA M3 M4</li>
+                                  <li class="info-disciplina-turma-tempo">SEX M3 M4</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas atuais da turma</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col class="vagas-num-ocupadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Tipo de vaga</th>
+                                  <th scope="col">Oferecidas</th>
+                                  <th scope="col">Ocupadas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>0</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>60</td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas para solicitação de inscrição</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col span="2" class="vagas-num-solicitadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col" rowspan="2">Tipo de vaga</th>
+                                  <th scope="col" rowspan="2">Oferecidas</th>
+                                  <th scope="colgroup" colspan="2">Solicitadas</th>
+                                </tr>
+                                <tr>
+                                  <th scope="col">Total</th>
+                                  <th scope="col">Preferenciais</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                    <td>0</td>
+                                    <td>6</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>60</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div><!-- fim grupo-turmas-disciplina -->
+
+                      <!-- Turma 3; Docente: LUCAS SOUZA MOTA DE ARAGÃO -->
+                      <div class="div-grupo-turmas-disciplina">
+                        <div class="div-turma-disciplina">
+                          <div class="info-disciplina-turma-informacoes">
+                            <ul class="info-disciplina-turma">
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma:</span>
+                                <span class="info-disciplina-turma-id">3</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma preferencial?</span>
+                                <span class="info-disciplina-turma-preferencial" data-turma-preferencial="true">SIM</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Docente:</span>
+                                <span class="info-disciplina-turma-docente">LUCAS SOUZA MOTA DE ARAGÃO</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Local das aulas:</span>
+                                <span class="info-disciplina-turma-local-aulas"></span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Tempos:</span>
+                                <ul class="info-disciplina-turma-tempos">
+                                  <li class="info-disciplina-turma-tempo">SEG M5 M6</li>
+                                  <li class="info-disciplina-turma-tempo">QUA M5 M6</li>
+                                  <li class="info-disciplina-turma-tempo">SEX M5 M6</li>
+                    
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas atuais da turma</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col class="vagas-num-ocupadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Tipo de vaga</th>
+                                  <th scope="col">Oferecidas</th>
+                                  <th scope="col">Ocupadas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>40</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas para solicitação de inscrição</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col span="2" class="vagas-num-solicitadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col" rowspan="2">Tipo de vaga</th>
+                                  <th scope="col" rowspan="2">Oferecidas</th>
+                                  <th scope="colgroup" colspan="2">Solicitadas</th>
+                                </tr>
+                                <tr>
+                                  <th scope="col">Total</th>
+                                  <th scope="col">Preferenciais</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>40</td>
+                                  <td>20</td>
+                                  <td>20</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div><!-- fim grupo-turmas-disciplina -->
+
+                      <!-- Turma 4: Docente: MOHAMMAD SOUFI NEYESTANI -->
+                      <div class="div-grupo-turmas-disciplina">
+                        <div class="div-turma-disciplina">
+                          <div class="info-disciplina-turma-informacoes">
+                            <ul class="info-disciplina-turma">
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma:</span>
+                                <span class="info-disciplina-turma-id">4</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma preferencial?</span>
+                                <span class="info-disciplina-turma-preferencial" data-turma-preferencial="false">Não</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Docente:</span>
+                                <span class="info-disciplina-turma-docente">MOHAMMAD SOUFI NEYESTANI</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Local das aulas:</span>
+                                <span class="info-disciplina-turma-local-aulas"></span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Tempos:</span>
+                                <ul class="info-disciplina-turma-tempos">
+                                  <li class="info-disciplina-turma-tempo">SEG M1 M2</li>
+                                  <li class="info-disciplina-turma-tempo">QUA M1 M2</li>
+                                  <li class="info-disciplina-turma-tempo">SEX M1 M2</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas atuais da turma</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col class="vagas-num-ocupadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Tipo de vaga</th>
+                                  <th scope="col">Oferecidas</th>
+                                  <th scope="col">Ocupadas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>10</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>30</td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas para solicitação de inscrição</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col span="2" class="vagas-num-solicitadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col" rowspan="2">Tipo de vaga</th>
+                                  <th scope="col" rowspan="2">Oferecidas</th>
+                                  <th scope="colgroup" colspan="2">Solicitadas</th>
+                                </tr>
+                                <tr>
+                                  <th scope="col">Total</th>
+                                  <th scope="col">Preferenciais</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>10</td>
+                                  <td>22</td>
+                                  <td>7</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>30</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div><!-- fim grupo-turmas-disciplina -->
+
+                      <!-- Turma 5; Docente: ANDRÉ LUIZ FURTADO -->
+                      <div class="div-grupo-turmas-disciplina">
+                        <div class="div-turma-disciplina">
+                          <div class="info-disciplina-turma-informacoes">
+                            <ul class="info-disciplina-turma">
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma:</span>
+                                <span class="info-disciplina-turma-id">5</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Turma preferencial?</span>
+                                <span class="info-disciplina-turma-preferencial" data-turma-preferencial="true">SIM</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Docente:</span>
+                                <span class="info-disciplina-turma-docente">ANDRÉ LUIZ FURTADO</span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Local das aulas:</span>
+                                <span class="info-disciplina-turma-local-aulas"></span>
+                              </li>
+                              <li>
+                                <span class="label-info-disciplina-turma">Tempos:</span>
+                                <ul class="info-disciplina-turma-tempos">
+                                  <li class="info-disciplina-turma-tempo">SEG N3 N4 N5</li>
+                                  <li class="info-disciplina-turma-tempo">QUI N3 N4 N5</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas atuais da turma</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col class="vagas-num-ocupadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col">Tipo de vaga</th>
+                                  <th scope="col">Oferecidas</th>
+                                  <th scope="col">Ocupadas</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>50</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>0</td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="info-disciplina-turma-informacoes">
+                            <table class="tabela-disciplina-turma-vagas">
+                              <caption>Vagas para solicitação de inscrição</caption>
+                              <colgroup>
+                                <col class="vagas-tipo" />
+                                <col class="vagas-num-oferecidas" />
+                                <col span="2" class="vagas-num-solicitadas" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th scope="col" rowspan="2">Tipo de vaga</th>
+                                  <th scope="col" rowspan="2">Oferecidas</th>
+                                  <th scope="colgroup" colspan="2">Solicitadas</th>
+                                </tr>
+                                <tr>
+                                  <th scope="col">Total</th>
+                                  <th scope="col">Preferenciais</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="vagas-uerj">UERJ</th>
+                                  <td>50</td>
+                                  <td>31</td>
+                                  <td>28</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="vagas-vestibular">Vestibular</th>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div><!-- fim grupo-turmas-disciplina -->
+                    </div>
+                  </div>
+                </td>
+              </tr>
+
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="detalhes-disciplina acordeao">
                   <a href="#"
