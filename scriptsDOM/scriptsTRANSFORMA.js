@@ -18,7 +18,7 @@ function decomporIntervalo(intervalo) {
     return segmentosDoIntervalo;
 }
 
-function transformarFormato() {
+function transformarFormatoTurma() {
     const formatoAntigo = document.querySelector('td[style*="border-style: solid"]');
     if (!formatoAntigo) {
         console.error('Elemento do formato antigo não encontrado.');
@@ -150,4 +150,4 @@ function transformarFormato() {
     formatoAntigo.parentNode.replaceChild(novoFormato, formatoAntigo);
 }
 
-transformarFormato();
+transformarFormatoTurma();

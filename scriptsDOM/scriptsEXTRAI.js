@@ -26,7 +26,7 @@ function extrairDadosGeraisDisciplinas() {
  * Qualquer alteração no formato HTML original pode comprometer seu funcionamento!
  * 
  * @param {string} htmlDaDisciplina 
- * @returns {object} os dados da disciplina, estruturados no formato JSON
+ * @returns {object} um objeto JSON com os dados da disciplina
  */
 function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
   let EstruturacaoDeDados = {
