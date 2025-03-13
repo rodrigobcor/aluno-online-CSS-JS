@@ -151,3 +151,226 @@ function transformarFormatoTurma() {
 }
 
 transformarFormatoTurma();
+
+
+/**
+ * 
+ * @param {object[]} listaDadosDisciplinas Uma lista de objetos no formato JSON.
+ */
+function transformarListaDisciplinas(listaDadosDisciplinas) {
+    listaDadosDisciplinas.forEach(disciplina => preencherModeloDisciplina(disciplina));
+}
+
+function testeTransformarListaDisciplinas() {
+    transformarListaDisciplinas([JSON.parse(`{
+        "EH_PERIODO_SUGERIDO": "Sim",
+        "CODIGO_DEPARTAMENTO_DISCIPLINA": "IME04",
+        "CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS": "10817",
+        "CODIGO_DISCIPLINA": "IME04-10817",
+        "NOME_DISCIPLINA": "Fundamentos da Computação",
+        "PERIODO_DISCIPLINA": "1",
+        "DISCIPLINA_JA_ATENDIDA": "Sim",
+        "TIPO_DISCIPLINA": "Obrigatória",
+        "CODIGO_RAMIFICACAO_DISCIPLINA": "626",
+        "NUM_CREDITOS_DISCIPLINA": "5",
+        "CH_TOTAL_DISCIPLINA": "90",
+        "TRAVA_CREDITO_DISCIPLINA": "0"
+    }`)]);
+}
+
+
+function preencherModeloDisciplina(disciplina) {
+    let dadosGeraisDisciplina = preencherModeloDadosGeraisDisciplina(disciplina);
+    // console.log(dadosGeraisDisciplina);
+
+    let detalhesDisciplina = preencherModeloDetalhesDisciplina(disciplina);
+    // console.log(detalhesDisciplina);
+
+    return dadosGeraisDisciplina + "\n" + detalhesDisciplina;
+}
+
+function preencherModeloDetalhesDisciplina(disciplina) {
+
+    // os dados a incluir aqui (ou a maioria) não se encontram na página geral de lista de disciplinas,
+    // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
+    disciplina = extrairDadosComplementaresDisciplina(disciplina);
+
+    let detalhesDisciplina = `
+<tr class="fold">
+  <td colspan="8" class="detalhes-disciplina">
+
+    <div class="divContentBlock">
+      <div class="divContentBlockHeader">
+        <h3 class="info-disciplina-nome">${disciplina.NOME_DISCIPLINA}</h3>
+        <span class="info-disciplina-codigo">${disciplina.CODIGO_DISCIPLINA}</span>
+        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
+      </div>
+      <div class="divContentBlockBody info-disciplina">
+        <ul class="info-disciplina-dados-gerais">
+          <li>
+            <span class="label-info-disciplina-dados-gerais">N.º de créditos:</span>
+            <span class="info-disciplina-dados-gerais-num-creditos">${disciplina.NUM_CREDITOS_DISCIPLINA}</span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
+            <span  class="info-disciplina-dados-gerais-ch-semanal">${disciplina.CH_SEMANAL_DISCIPLINA}</span>
+            (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
+            <span class="info-disciplina-dados-gerais-ch-total">${disciplina.CH_TOTAL_DISCIPLINA}</span>)
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Sugerida para o período?</span>
+            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
+              ${disciplina.EH_PERIODO_SUGERIDO}
+              <a href="#" onclick="javascript:consultarDisciplina(
+                  output, ${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}
+              ); return false;">&#128269;</a>
+            </span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Tempo de duração:</span>
+            <span class="info-disciplina-dados-gerais-tempo-duracao">${disciplina.TEMPO_DURACAO_DISCIPLINA}</span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Tipo de aprovação:</span>
+            <span class="info-disciplina-dados-gerais-tipo-aprovacao">${disciplina.TIPO_APROVACAO_DISCIPLINA}</span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
+            <span class="info-disciplina-dados-gerais-trava-credito">${disciplina.TRAVA_CREDITO_DISCIPLINA}</span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
+            <span class="info-disciplina-dados-gerais-pode-conflitar">${disciplina.PERMITE_CONFLITO_HORARIO_DISCIPLINA}</span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">É oferecida como Universal?</span>
+            <span class="info-disciplina-dados-gerais-oferta-universal">${disciplina.EH_UNIVERSAL_DISCIPLINA}</span>
+          </li>
+          <li>
+            <span class="label-info-disciplina-dados-gerais">Permite situação "Em Preparo"?</span>
+            <span class="info-disciplina-dados-gerais-pode-em-preparo">${disciplina.PERMITE_EM_PREPARO_DISCIPLINA}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="divContentBlock">
+      <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
+      <div class="divContentBlockBody div-pre-requisitos">
+${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
+      </div>
+    </div>
+    <div class="divContentBlock">
+      <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
+      <div class="divContentBlockBody">
+<!-- ---------------------------------------------------------- -->
+<!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
+<!-- ---------------------------------------------------------- -->
+      </div>
+    </div>
+  </td>
+</tr><!-- Fim do conteúdo da disciplina -->
+`
+    return detalhesDisciplina;
+}
+        
+
+/**
+ * @param {object[]} requisitos O conjunto (`array`) de requisitos da disciplina.
+ * Caso não haja requisitos, deve-se indicar **com um `array` vazio** (sem elementos).
+ * 
+ * @returns O modelo de requisitos preenchido.
+ */
+function getModeloRequisitosDisciplina(requisitos) {
+    if (!requisitos) {
+        throw ReferenceError("Os requisitos da disciplina não foram identificados.");
+    }
+    if (requisitos.length == 0) {
+        return `        <p>Esta disciplina não possui requisito para inscrição.</p>`;
+    }
+    let htmlRequisitos = [], htmlRequisito = null;
+    requisitos.forEach(umRequisito => {
+        htmlRequisito =
+`        <div class="div-pre-requisito">
+          <span class="label-pre-requisito">Pré-Requisito:</span>
+          <p class="pre-requisitos">` + "\n";
+        if (umRequisito.TIPO_REQUISITO == "REQUISITO_SEM_OPCOES_ALTERNATIVAS") {
+            htmlRequisito += getHtmlRequisitoSimples(umRequisito, "");
+        } else if (umRequisito.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") {
+            htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito.ALTERNATIVAS_REQUISITO, "");
+        }
+        htmlRequisitos.push(htmlRequisito);
+        // fechando a tag do parágrafo
+        htmlRequisito +=
+`          </p>
+        </div>` + "\n";
+    });
+
+    // innner function
+    function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
+        return indentacao +
+                `            ${requisitoSimples.CODIGO_REQ_DISCIPLINA} ${requisitoSimples.NOME_REQ_DISCIPLINA}` + "\n";
+    }
+
+    // innner function
+    function getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao = "") {
+        let htmlTodasAsAlternativas = "";
+        // o divisor de alternativas irá constar entre as alternativas
+        let divisorDeAlternativas = indentacao + `            <br/><span class="alternativo">OU</span>` + "\n";
+
+        // o valor do atributo ALTERNATIVAS_REQUISITO é um array de requisitos alternativos
+        opcoesDeRequisito.ALTERNATIVAS_REQUISITO.forEach(requisitoAlternativo => {
+            if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_ALTERNATIVO") {
+                // cada opção/alternativa é tratada como um requisito simples
+                htmlTodasAsAlternativas += getHtmlRequisitoSimples(requisitoAlternativo, indentacao + "  ");
+                // e essas alternativas são separadas por "OU"s que indiquem essa natureza
+
+            } else if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") { // caso muito atípico, não testado!
+                htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
+            } // qualquer outra opção de escolha é provavelmente um erro sintático.
+
+            htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join(divisorDeAlternativas);
+        });
+        
+        return htmlTodasAsAlternativas;
+    }
+
+    // innner function
+    // TODO tratar co-requisitos (menos prioritário que todo o resto)
+    function getCoRequisitos(requisitos) {
+        // provavelmente vai funcionar exatamente como a de comOpcaoAlternativa mas com divisor "E SIMULTANEAMENTE" ao invés de "OU"
+    }
+
+    return htmlRequisitos;
+}
+
+function preencherModeloDadosGeraisDisciplina(disciplina) {
+
+    /* Obs.: Os espaços precedentes por linha, para a devida
+     * indentação com restante do código, devem ser incluídos à parte.
+     */
+    let modeloPreenchidoDadosGerais = `
+<tr class="dados-disciplina ${(disciplina.DISCIPLINA_JA_ATENDIDA == "Sim" ? "disciplina-atendida tooltip" : "")}"><!-- Início do conteúdo da disciplina -->
+  <td class="disciplina-periodo">
+    <span class="${disciplina.CODIGO_DEPARTAMENTO_DISCIPLINA}">${disciplina.PERIODO_DISCIPLINA}
+      ${(disciplina.DISCIPLINA_JA_ATENDIDA == "Sim" ? `<span class="tooltip-texto">Esta disciplina já foi atendida.</span>` : "")}
+    </span>
+  </td>
+  <td class="disciplina-nome">
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-nome-disciplina">${disciplina.NOME_DISCIPLINA}</span>
+  </td>
+  <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO_DISCIPLINA}">${disciplina.CODIGO_DISCIPLINA}</td>
+  <td class="disciplina-tipo">${disciplina.TIPO_DISCIPLINA}</td>
+  <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS_DISCIPLINA}</td>
+  <td class="disciplina-ch-total">${disciplina.CH_TOTAL_DISCIPLINA}</td>
+  <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-periodo-sugerido">${disciplina.EH_PERIODO_SUGERIDO}</span>
+  </td>
+  <td class="disciplina-codigo-ramificacao">${disciplina.CODIGO_RAMIFICACAO_DISCIPLINA}</td>
+  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_CREDITO_DISCIPLINA}">${disciplina.TRAVA_CREDITO_DISCIPLINA}</td>
+</tr>
+`;
+
+    return modeloPreenchidoDadosGerais;
+}

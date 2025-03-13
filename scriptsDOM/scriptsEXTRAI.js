@@ -78,3 +78,67 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
   console.log(dadosDeUmaDisciplina);
   return dadosDeUmaDisciplina;
 }
+
+/**
+ * 
+ * @param {object} disciplina Um objeto JSON com os dados já obtidos na lista de disciplinas.
+   @returns {object} os dados originais acrescidos dos dados complementares da disciplina, mantendo a estrutura JSON
+ */
+function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
+  // TODO AINDA NÃO EXTRAI
+  
+  // TODO cenário mock com dados temporários, para teste
+  console.log("ATENÇÃO: Dados de teste!");
+  
+  // dadosDeUmaDisciplina["NUM_CREDITOS_DISCIPLINA"] = "valor do número de créditos"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "valor da carga horária semanal";
+  // dadosDeUmaDisciplina["CH_TOTAL_DISCIPLINA"] = "valor da carga horária total"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "valor indicando se é o período sugerido"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = "valor do tempo de duração";
+  dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = "valor do tipo de aprovação";
+  // dadosDeUmaDisciplina["TRAVA_CREDITO_DISCIPLINA"] = "valor da trava de crédito" // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = "valor indicando se tem conflito de horário";
+  dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = "valor indicando se é do tipo Universal"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
+  dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = "valor indicando se permite lançamento 'em preparo'";
+
+  dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(dadosDeUmaDisciplina);
+
+  // Função auxiliar interna, para melhor coesão
+  function extrairRequisitos() {
+    let requisitos = []; // se não tiver nenhum, fica vazio
+
+    // ========= PARA CADA REQUISITO INVARIÁVEL: =========
+    // Passo 1: Criar o requisito
+    let requisitoUnico = {
+      TIPO_REQUISITO: "REQUISITO_SEM_OPCOES_ALTERNATIVAS",
+      CODIGO_REQUISITO_DISCIPLINA: "valor do código do requisito",
+      NOME_REQUISITO_DISCIPLINA: "valor do nome do requisito"
+    };
+    // Passo 2: Incluir na lista de requisitos
+    requisitos.push(requisitoUnico);
+
+    // ========= PARA CADA REQUISITO COM ALTERNATIVAS (UM *OU* OUTRO): =========
+    // Passo 1: criar um objeto que funciona como um agregador de alternativas
+    let opcoesDeRequisito = {
+      TIPO_REQUISITO: "REQUISITO_COM_OPCOES_ALTERNATIVAS",
+      ALTERNATIVAS_REQUISITO: [] // por definição, tem que ter pelo menos dois requisitos como alternativas
+    }
+    // Passo 2: criar cada alternativa separadamente
+    let requisitoAlternativo = {
+      TIPO_PRE_REQUISITO: "REQUISITO_ALTERNATIVO", // indica se tratar de uma
+      CODIGO_REQUISITO_DISCIPLINA: "valor do código do requisito alternativo",
+      NOME_REQUISITO_DISCIPLINA: "valor do nome do requisito alternativo"
+    }
+    // Passo 3: PARA CADA ALTERNATIVA CRIADA, inclui-la no agregador de alternativas
+    opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo);
+    // reforçando: deve haver ao menos duas inclusões, por serem duas alternativas
+
+    // Passo 4: Incluir o agregador de alternativas na lista de requisitos
+    requisitos.push(opcoesDeRequisito);
+
+
+    return requisitos;
+  }
+  
+}
+
