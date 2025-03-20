@@ -120,3 +120,10 @@ function getHorariosDaLista() {
     celulasHorarios.forEach(horario => horarios.push(horario.innerText));
     return horarios;
 }
+
+/**
+ * Pega a matrícula e nome do aluno que está logado.
+ */
+function getMatriculaENomeDoAluno {
+    console.log(document.querySelector("#divCabecalhoAplicacao > div:nth-child(2) > div:nth-child(1) > font").innerText;)
+}
