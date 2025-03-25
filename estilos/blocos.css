@@ -92,7 +92,7 @@
  /* Estilos: Cabeçalhos e rodapés */
 /***********************************************************/
 
-.page-header1, .page-header2 {
+.page-header1, .page-header2, .footer-header1 {
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -101,7 +101,11 @@
   padding: 10px;
 }
 
-.page-header1 {
+.footer-header1 {
+  padding: 0px;
+}
+
+.page-header1, .footer-header1 {
   background-color: #cad3e4;
 }
 
