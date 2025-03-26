@@ -6,7 +6,7 @@
   background-color: #add8e6;
   margin: 2px 0;
   padding: 2px;
-  /* order: 1; */
+  order: 1;
 
   & th {
     font-weight: bold;
@@ -152,7 +152,7 @@ td[data-periodo-sugerido="false"] {
 
 .disciplina-atendida {
   color: #00000030;
-  /* order: 2; */
+  order: 2;
 }
 
 /****************************************/
