@@ -164,17 +164,17 @@ function transformarListaDisciplinas(listaDadosDisciplinas) {
 function testeTransformarListaDisciplinas() {
     transformarListaDisciplinas([JSON.parse(`{
         "EH_PERIODO_SUGERIDO": "Sim",
-        "CODIGO_DEPARTAMENTO_DISCIPLINA": "IME04",
-        "CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS": "10817",
-        "CODIGO_DISCIPLINA": "IME04-10817",
-        "NOME_DISCIPLINA": "Fundamentos da Computação",
-        "PERIODO_DISCIPLINA": "1",
-        "DISCIPLINA_JA_ATENDIDA": "Sim",
-        "TIPO_DISCIPLINA": "Obrigatória",
-        "CODIGO_RAMIFICACAO_DISCIPLINA": "626",
-        "NUM_CREDITOS_DISCIPLINA": "5",
-        "CH_TOTAL_DISCIPLINA": "90",
-        "TRAVA_CREDITO_DISCIPLINA": "0"
+        "CODIGO_DEPARTAMENTO": "IME04",
+        "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
+        "CODIGO": "IME04-10817",
+        "NOME": "Fundamentos da Computação",
+        "PERIODO": "1",
+        "FOI_ATENDIDA": "Sim",
+        "TIPO": "Obrigatória",
+        "RAMIFICACAO": "626",
+        "NUM_CREDITOS": "5",
+        "CARGA_HORARIA_TOTAL": "90",
+        "TRAVA_DE_CREDITO": "0"
     }`)]);
 }
 
@@ -201,28 +201,28 @@ function preencherModeloDetalhesDisciplina(disciplina) {
 
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
-        <h3 class="info-disciplina-nome">${disciplina.NOME_DISCIPLINA}</h3>
-        <span class="info-disciplina-codigo">${disciplina.CODIGO_DISCIPLINA}</span>
-        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
+        <h3 class="info-disciplina-nome">${disciplina.NOME}</h3>
+        <span class="info-disciplina-codigo">${disciplina.CODIGO}</span>
+        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
       </div>
       <div class="divContentBlockBody info-disciplina">
         <ul class="info-disciplina-dados-gerais">
           <li>
             <span class="label-info-disciplina-dados-gerais">N.º de créditos:</span>
-            <span class="info-disciplina-dados-gerais-num-creditos">${disciplina.NUM_CREDITOS_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-num-creditos">${disciplina.NUM_CREDITOS}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
             <span  class="info-disciplina-dados-gerais-ch-semanal">${disciplina.CH_SEMANAL_DISCIPLINA}</span>
             (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
-            <span class="info-disciplina-dados-gerais-ch-total">${disciplina.CH_TOTAL_DISCIPLINA}</span>)
+            <span class="info-disciplina-dados-gerais-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</span>)
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Sugerida para o período?</span>
             <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
               ${disciplina.EH_PERIODO_SUGERIDO}
               <a href="#" onclick="javascript:consultarDisciplina(
-                  output, ${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}
+                  output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}
               ); return false;">&#128269;</a>
             </span>
           </li>
@@ -236,7 +236,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
-            <span class="info-disciplina-dados-gerais-trava-credito">${disciplina.TRAVA_CREDITO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-trava-credito">${disciplina.TRAVA_DE_CREDITO}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
@@ -349,26 +349,26 @@ function preencherModeloDadosGeraisDisciplina(disciplina) {
      * indentação com restante do código, devem ser incluídos à parte.
      */
     let modeloPreenchidoDadosGerais = `
-<tr class="dados-disciplina ${(disciplina.DISCIPLINA_JA_ATENDIDA == "Sim" ? "disciplina-atendida tooltip" : "")}"><!-- Início do conteúdo da disciplina -->
+<tr class="dados-disciplina ${(disciplina.FOI_ATENDIDA == "Sim" ? "disciplina-atendida tooltip" : "")}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
-    <span class="${disciplina.CODIGO_DEPARTAMENTO_DISCIPLINA}">${disciplina.PERIODO_DISCIPLINA}
-      ${(disciplina.DISCIPLINA_JA_ATENDIDA == "Sim" ? `<span class="tooltip-texto">Esta disciplina já foi atendida.</span>` : "")}
+    <span class="${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.PERIODO}
+      ${(disciplina.FOI_ATENDIDA == "Sim" ? `<span class="tooltip-texto">Esta disciplina já foi atendida.</span>` : "")}
     </span>
   </td>
   <td class="disciplina-nome">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-nome-disciplina">${disciplina.NOME_DISCIPLINA}</span>
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-nome-disciplina">${disciplina.NOME}</span>
   </td>
-  <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO_DISCIPLINA}">${disciplina.CODIGO_DISCIPLINA}</td>
-  <td class="disciplina-tipo">${disciplina.TIPO_DISCIPLINA}</td>
-  <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS_DISCIPLINA}</td>
-  <td class="disciplina-ch-total">${disciplina.CH_TOTAL_DISCIPLINA}</td>
+  <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.CODIGO}</td>
+  <td class="disciplina-tipo">${disciplina.TIPO}</td>
+  <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS}</td>
+  <td class="disciplina-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</td>
   <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
     <span class="texto-periodo-sugerido">${disciplina.EH_PERIODO_SUGERIDO}</span>
   </td>
-  <td class="disciplina-codigo-ramificacao">${disciplina.CODIGO_RAMIFICACAO_DISCIPLINA}</td>
-  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_CREDITO_DISCIPLINA}">${disciplina.TRAVA_CREDITO_DISCIPLINA}</td>
+  <td class="disciplina-codigo-ramificacao">${disciplina.RAMIFICACAO}</td>
+  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${disciplina.TRAVA_DE_CREDITO}</td>
 </tr>
 `;
 

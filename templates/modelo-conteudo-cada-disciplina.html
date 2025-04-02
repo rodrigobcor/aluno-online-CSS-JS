@@ -1,56 +1,56 @@
 <!-- Os espaços precedentes por linha, para a devida
 formatação dentro da tabela, devem ser incluídos à parte -->
-<tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_DISCIPLINA_JA_ATENDIDA} ${CSS_TOOLTIP_SE_DISCIPLINA_JA_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
+<tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_FOI_ATENDIDA} ${CSS_TOOLTIP_SE_FOI_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
-    <span class="${CSS_PERIODO_DISCIPLINA}">${PERIODO_DISCIPLINA}
-      <!-- SE ${DISCIPLINA_JA_ATENDIDA}... -->
+    <span class="${CSS_PERIODO}">${PERIODO}
+      <!-- SE ${FOI_ATENDIDA}... -->
       <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
-      <!-- SE ${NOT(${DISCIPLINA_JA_ATENDIDA})}... -->
+      <!-- SE ${NOT(${FOI_ATENDIDA})}... -->
       <span></span>
     </span>
   </td>
   <td class="disciplina-nome">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-nome-disciplina">${NOME_DISCIPLINA}</span>
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-nome-disciplina">${NOME}</span>
   </td>
-  <td class="disciplina-codigo ${CODIGO_DEPARTAMENTO_DISCIPLINA}">${CODIGO_DISCIPLINA}</td>
-  <td class="disciplina-tipo">${TIPO_DISCIPLINA}</td>
-  <td class="disciplina-num-creditos">${NUM_CREDITOS_DISCIPLINA}</td>
-  <td class="disciplina-ch-total">${CH_TOTAL_DISCIPLINA}</td>
-  <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_PERIODO_SUGERIDO_MINUSCULAS}">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+  <td class="disciplina-codigo ${CODIGO_DEPARTAMENTO}">${CODIGO}</td>
+  <td class="disciplina-tipo">${TIPO}</td>
+  <td class="disciplina-num-creditos">${NUM_CREDITOS}</td>
+  <td class="disciplina-ch-total">${CARGA_HORARIA_TOTAL}</td>
+  <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_EH_PERIODO_SUGERIDO_MINUSCULAS}">
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
     <span class="texto-periodo-sugerido">${EH_PERIODO_SUGERIDO}</span>
   </td>
-  <td class="disciplina-codigo-ramificacao">${CODIGO_RAMIFICACAO_DISCIPLINA}</td>
-  <td class="disciplina-trava-credito" data-creditos-necessarios="${TRAVA_CREDITO_DISCIPLINA}">${TRAVA_CREDITO_DISCIPLINA}</td>
+  <td class="disciplina-codigo-ramificacao">${RAMIFICACAO}</td>
+  <td class="disciplina-trava-credito" data-creditos-necessarios="${TRAVA_DE_CREDITO}">${TRAVA_DE_CREDITO}</td>
 </tr>
 
 <tr class="fold">
   <td colspan="8" class="detalhes-disciplina">
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
-        <h3 class="info-disciplina-nome">${NOME_DISCIPLINA}</h3>
-        <span class="info-disciplina-codigo">${CODIGO_DISCIPLINA}</span>
-        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
+        <h3 class="info-disciplina-nome">${NOME}</h3>
+        <span class="info-disciplina-codigo">${CODIGO}</span>
+        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
       </div>
       <div class="divContentBlockBody info-disciplina">
         <ul class="info-disciplina-dados-gerais">
           <li>
             <span class="label-info-disciplina-dados-gerais">N.º de créditos:</span>
-            <span class="info-disciplina-dados-gerais-num-creditos">${NUM_CREDITOS_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-num-creditos">${NUM_CREDITOS}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
             <span  class="info-disciplina-dados-gerais-ch-semanal">${CH_SEMANAL_DISCIPLINA}</span>
             (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
-            <span class="info-disciplina-dados-gerais-ch-total">${CH_TOTAL_DISCIPLINA}</span>)
+            <span class="info-disciplina-dados-gerais-ch-total">${CARGA_HORARIA_TOTAL}</span>)
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Sugerida para o período?</span>
-            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_PERIODO_SUGERIDO_MINUSCULAS}">
+            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_EH_PERIODO_SUGERIDO_MINUSCULAS}">
               ${EH_PERIODO_SUGERIDO}
               <a href="#" onclick="javascript:consultarDisciplina(
-                  output, ${CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS}
+                  output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}
               ); return false;">&#128269;</a>
             </span>
           </li>
@@ -64,7 +64,7 @@ formatação dentro da tabela, devem ser incluídos à parte -->
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
-            <span class="info-disciplina-dados-gerais-trava-credito">${TRAVA_CREDITO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-trava-credito">${TRAVA_DE_CREDITO}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
@@ -94,7 +94,7 @@ formatação dentro da tabela, devem ser incluídos à parte -->
             <!-- SE ${TEM_REQUISITO_ALTERNATIVO_DISCIPLINA}... -->
             <br/><span class="alternativo">ou</span>
             <!-- ${DADOS_REQUISITO_ALTERNATIVO_DISCIPLINA}: -->
-            <br/>${CODIGO_DISCIPLINA} ${NOME_DISCIPLINA}
+            <br/>${CODIGO} ${NOME}
           </p>
         </div>
         <div class="div-pre-requisito">

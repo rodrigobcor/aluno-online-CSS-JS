@@ -33,7 +33,7 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
     DEPTO_NUM_COD_NOME: {
       // dois \s pra não ignorar espaço entre palavras
       contentToFind: /\s*<span style="vertical-align: top;">([A-Z]{3}[0-9]{2})(?:-| )([0-9]{5})\s*(.+?)\s\s+<\/span>\s*/gm,
-      // replace: "\nCODIGO_DEPARTAMENTO_DISCIPLINA:$1\nCODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS:$2\nCODIGO_DISCIPLINA:$1-$2\nNOME_DISCIPLINA:$3\n"
+      // replace: "\nCODIGO_DEPARTAMENTO:$1\nCODIGO_CINCO_ULTIMOS_NUMEROS:$2\nCODIGO:$1-$2\nNOME:$3\n"
     },
     TURMA_NO_PERIODO: {
       contentToFind:/\s*<span style="vertical-align: top;">\s*(Sim|Não)\s*<\/span>\s*/gm,
@@ -41,7 +41,7 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
     },
     DEMAIS_CAMPOS: {
       contentToFind: /\s*<td style="text-align: center;">([0-9 -]+?)<\/td>\n\s*<td style="text-align: center;">(Sim|Não)<\/td>\n\s*<td style="text-align: center;">(.+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>/gm,
-      // replace: "\nPERIODO_DISCIPLINA:$1\nDISCIPLINA_JA_ATENDIDA:$2\nTIPO_DISCIPLINA:$3\nCODIGO_RAMIFICACAO_DISCIPLINA:$4\nNUM_CREDITOS_DISCIPLINA:$5\nCH_TOTAL_DISCIPLINA:$6\nTRAVA_CREDITO_DISCIPLINA:$7\n"
+      // replace: "\nPERIODO:$1\nFOI_ATENDIDA:$2\nTIPO:$3\nRAMIFICACAO:$4\nNUM_CREDITOS:$5\nCARGA_HORARIA_TOTAL:$6\nTRAVA_DE_CREDITO:$7\n"
     }
   };
 
@@ -55,10 +55,10 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
 
   resultadoDoMatch = EstruturacaoDeDados.DEPTO_NUM_COD_NOME["contentToFind"].exec(htmlDaDisciplina);
   if (resultadoDoMatch) {
-    dadosDeUmaDisciplina["CODIGO_DEPARTAMENTO_DISCIPLINA"] = resultadoDoMatch[1];
-    dadosDeUmaDisciplina["CODIGO_DISCIPLINA_CINCO_ULTIMOS_NUMEROS"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["CODIGO_DISCIPLINA"] = `${resultadoDoMatch[1]}-${resultadoDoMatch[2]}` || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["NOME_DISCIPLINA"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["CODIGO_DEPARTAMENTO"] = resultadoDoMatch[1];
+    dadosDeUmaDisciplina["CODIGO_CINCO_ULTIMOS_NUMEROS"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["CODIGO"] = `${resultadoDoMatch[1]}-${resultadoDoMatch[2]}` || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["NOME"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
   }
 
   console.log(htmlDaDisciplina);
@@ -66,13 +66,13 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
 
   resultadoDoMatch = EstruturacaoDeDados.DEMAIS_CAMPOS["contentToFind"].exec(htmlDaDisciplina);
   if (resultadoDoMatch) {
-    dadosDeUmaDisciplina["PERIODO_DISCIPLINA"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["DISCIPLINA_JA_ATENDIDA"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["TIPO_DISCIPLINA"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["CODIGO_RAMIFICACAO_DISCIPLINA"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["NUM_CREDITOS_DISCIPLINA"] = resultadoDoMatch[5] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["CH_TOTAL_DISCIPLINA"] = resultadoDoMatch[6] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["TRAVA_CREDITO_DISCIPLINA"] = resultadoDoMatch[7] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["PERIODO"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["FOI_ATENDIDA"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["TIPO"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["RAMIFICACAO"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["NUM_CREDITOS"] = resultadoDoMatch[5] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = resultadoDoMatch[6] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = resultadoDoMatch[7] || DADO_NAO_ENCONTRADO;
   }
 
   console.log(dadosDeUmaDisciplina);
@@ -90,13 +90,13 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
   // TODO cenário mock com dados temporários, para teste
   console.log("ATENÇÃO: Dados de teste!");
   
-  // dadosDeUmaDisciplina["NUM_CREDITOS_DISCIPLINA"] = "valor do número de créditos"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["NUM_CREDITOS"] = "valor do número de créditos"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
   dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "valor da carga horária semanal";
-  // dadosDeUmaDisciplina["CH_TOTAL_DISCIPLINA"] = "valor da carga horária total"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "valor da carga horária total"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
   // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "valor indicando se é o período sugerido"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
   dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = "valor do tempo de duração";
   dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = "valor do tipo de aprovação";
-  // dadosDeUmaDisciplina["TRAVA_CREDITO_DISCIPLINA"] = "valor da trava de crédito" // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = "valor da trava de crédito" // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
   dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = "valor indicando se tem conflito de horário";
   dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = "valor indicando se é do tipo Universal"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
   dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = "valor indicando se permite lançamento 'em preparo'";
