@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Testando pra ver se dá pra mudar o acordeão</title>
+
+  <!-- Put it here for simplicity, I know it's not the correct approach. -->
+  <!-- Solution suggested by and adapted from ChatGPT 4.0 -->
+  <style>
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  td {
+    border: 1px solid #000000;
+  }
+
+  tr td {
+    flex: 1;
+  }
+
+  tr td.mais-detalhes {
+    flex-basis: 100%;
+    background-color: lightcoral;
+  }
+
+  caption {
+    font-weight: bold;
+    font-size: large;
+  }
+  </style>
+</head>
+
+<body>
+  <table>
+    <caption>Formato convencional</caption>
+    <tr>
+      <td>Row 1, Data 1</td>
+      <td>Row 1, Data 2</td>
+      <td>Row 1, Data 3</td>
+      <td>Row 1, Data 4</td>
+    </tr>
+    <tr>
+      <td>Row 2, Data 1</td>
+      <td>Row 2, Data 2</td>
+      <td>Row 2, Data 3</td>
+      <td>Row 2, Data 4</td>
+    </tr>
+    <tr>
+      <td>Row 3, Data 1</td>
+      <td>Row 3, Data 2</td>
+      <td>Row 3, Data 3</td>
+      <td>Row 3, Data 4</td>
+    </tr>
+  </table>
+  <hr />
+  <table>
+    <caption>Formato desejado</caption>
+    <tr>
+      <td>Periodo disc</td>
+      <td>Nome disc</td>
+      <td>Cod disc</td>
+      <td>Creds disc</td>
+      <td class="mais-detalhes">Aqui seria a expansão do acordeão</td>
+    </tr>
+    <tr>
+      <td>Periodo disc</td>
+      <td>Nome disc</td>
+      <td>Cod disc</td>
+      <td>Creds disc</td>
+      <td class="mais-detalhes">A expansão do acordeão requer mudança no CSS pra conseguir expandir essa célula.</td>
+    </tr>
+    <tr>
+      <td>Periodo disc</td>
+      <td>Nome disc</td>
+      <td>Cod disc</td>
+      <td>Creds disc</td>
+      <td class="mais-detalhes">Assim mantém o conceito de tabela. :)</td>
+    </tr>
+  </table>
+</body>
+</html>
+  
