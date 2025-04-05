@@ -23,12 +23,12 @@
   text-align: center;
 }
 
-.disciplina-nome {
+.disciplina-nome { /* tanto th quanto td */
   width: 400px;
   position: relative;
 }
 
-td.disciplina-nome {
+td.disciplina-nome { /* somente td */
   text-align: left;
 }
 

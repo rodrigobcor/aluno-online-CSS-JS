@@ -150,9 +150,6 @@ function transformarFormatoTurma() {
     formatoAntigo.parentNode.replaceChild(novoFormato, formatoAntigo);
 }
 
-transformarFormatoTurma();
-
-
 /**
  * 
  * @param {object[]} listaDadosDisciplinas Uma lista de objetos no formato JSON.
@@ -179,6 +176,13 @@ function testeTransformarListaDisciplinas() {
 }
 
 
+/**
+ * Gera o conteúdo HTML com os dados de uma disciplina, utilizando o modelo de estruturação dos dados.
+ * 
+ * @param {object} disciplina Um objeto JSON com os dados da disciplina.
+ * @returns {string} O conteúdo estruturado com os dados da disciplina.
+ */
+
 function preencherModeloDisciplina(disciplina) {
     let dadosGeraisDisciplina = preencherModeloDadosGeraisDisciplina(disciplina);
     // console.log(dadosGeraisDisciplina);
@@ -189,10 +193,15 @@ function preencherModeloDisciplina(disciplina) {
     return dadosGeraisDisciplina + "\n" + detalhesDisciplina;
 }
 
+/**
+ * Gera o conteúdo HTML com os dados de uma disciplina, utilizando o modelo de estruturação dos detalhes.
+ * 
+ * @param {object} disciplina Um objeto JSON com os dados da disciplina.
+ * @returns {string} O conteúdo estruturado com os detalhes da disciplina.
+ */
 function preencherModeloDetalhesDisciplina(disciplina) {
 
     // os dados a incluir aqui (ou a maioria) não se encontram na página geral de lista de disciplinas,
-    // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
     disciplina = extrairDadosComplementaresDisciplina(disciplina);
 
     let detalhesDisciplina = `
@@ -253,26 +262,27 @@ function preencherModeloDetalhesDisciplina(disciplina) {
         </ul>
       </div>
     </div>
-    <div class="divContentBlock">
-      <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
-      <div class="divContentBlockBody div-pre-requisitos">
-${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
+      <div class="divContentBlock">
+        <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
+        <div class="divContentBlockBody div-pre-requisitos">
+    ${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
+        </div>
       </div>
-    </div>
-    <div class="divContentBlock">
-      <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
-      <div class="divContentBlockBody">
-<!-- ---------------------------------------------------------- -->
-<!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
-<!-- ---------------------------------------------------------- -->
+      <div class="divContentBlock">
+        <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
+        <div class="divContentBlockBody">
+    <!-- ---------------------------------------------------------- -->
+    <!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
+    <!-- ---------------------------------------------------------- -->
+        </div>
       </div>
-    </div>
-  </td>
-</tr><!-- Fim do conteúdo da disciplina -->
-`
-    return detalhesDisciplina;
+    </td>
+    </tr><!-- Fim do conteúdo da disciplina -->
+    `
+      return detalhesDisciplina;
+    }
 }
-        
+
 
 /**
  * @param {object[]} requisitos O conjunto (`array`) de requisitos da disciplina.
