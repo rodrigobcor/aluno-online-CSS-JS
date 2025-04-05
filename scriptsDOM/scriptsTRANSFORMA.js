@@ -202,12 +202,12 @@ function preencherModeloDisciplina(disciplina) {
 function preencherModeloDetalhesDisciplina(disciplina) {
 
     // os dados a incluir aqui (ou a maioria) não se encontram na página geral de lista de disciplinas,
+    // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
     disciplina = extrairDadosComplementaresDisciplina(disciplina);
 
+  // FIXME desatualizado, pegar novamente do modelo
     let detalhesDisciplina = `
-<tr class="fold">
-  <td colspan="8" class="detalhes-disciplina">
-
+  <td colspan="10" class="detalhes-disciplina">
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
         <h3 class="info-disciplina-nome">${disciplina.NOME}</h3>
@@ -262,25 +262,23 @@ function preencherModeloDetalhesDisciplina(disciplina) {
         </ul>
       </div>
     </div>
-      <div class="divContentBlock">
-        <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
-        <div class="divContentBlockBody div-pre-requisitos">
+    <div class="divContentBlock">
+      <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
+      <div class="divContentBlockBody div-pre-requisitos">
     ${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
-        </div>
       </div>
-      <div class="divContentBlock">
-        <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
-        <div class="divContentBlockBody">
+    </div>
+    <div class="divContentBlock">
+      <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
+      <div class="divContentBlockBody">
     <!-- ---------------------------------------------------------- -->
     <!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
     <!-- ---------------------------------------------------------- -->
-        </div>
       </div>
-    </td>
-    </tr><!-- Fim do conteúdo da disciplina -->
-    `
-      return detalhesDisciplina;
-    }
+    </div>
+  </td>
+`
+  return detalhesDisciplina;
 }
 
 
