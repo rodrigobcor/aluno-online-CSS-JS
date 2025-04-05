@@ -1,5 +1,5 @@
 /********************************************/
-/* Resumo do plano de inscrições: Estrutura */
+/* Resumo do plano de inscriÃ§Ãµes: Estrutura */
 /********************************************/
 
 #tabela-resumo-plano-inscricoes {
@@ -21,14 +21,13 @@
 }
 
 /*********************************************************/
-/* Resumo do plano de inscrições: Formatação do conteúdo */
+/* Resumo do plano de inscriÃ§Ãµes: FormataÃ§Ã£o do conteÃºdo */
 /*********************************************************/
 
 #tabela-resumo-plano-inscricoes {
   & .resumo-disciplina-nome {
     width: 40%;
   }
-  
   & .resumo-disciplina-codigo {
     width: 10%;
   }
@@ -46,7 +45,7 @@
 }
 
 /**********************************/
-/* Plano de inscrições: Estrutura */
+/* Plano de inscriÃ§Ãµes: Estrutura */
 /**********************************/
 
 #tabela-plano-inscricoes {
