@@ -7,7 +7,9 @@
 #tabela-disciplinas {
   width: 100%;
 
-  & tbody > tr {
+  & > tbody > tr {
+    display: flex;
+    flex-wrap: wrap;
 
     & > th {
       font-weight: bold;
@@ -15,6 +17,10 @@
 
     & > th, td {
       padding: 0.4em;
+    }
+
+    & > td.detalhes-disciplina {
+      flex-basis: 100%;
     }
 
     & > th[scope="col"], th[scope="colgroup"] {
@@ -31,9 +37,14 @@
 
 #tabela-disciplinas.fold-table {
 
+  table-layout: fixed; 
+
   & > thead > tr.dados-disciplina,
   & > tbody > tr.dados-disciplina {
     font-size: 12px;
+    /* Para o conteúdo expansível do acordeão ficar numa célula (td): */
+    display: flex;
+    flex-wrap: wrap;
   }
 
   & > thead > tr > th {
@@ -68,11 +79,11 @@
       background-color: var(--menu-item-selected-bg-color);
       color: var(--menu-item-selected-text-color);
 
-        /* & th:first-child::before, */
-        &  > td:first-child::before {
-          transform: rotate(-180deg);
-          color: var(--arrow-selected-color);
-        }
+      /* & th:first-child::before, */
+      &  > td:first-child::before {
+        transform: rotate(-180deg);
+        color: var(--arrow-selected-color);
+      }
 
       & .disciplina-codigo {
         background-color: unset;
@@ -81,16 +92,21 @@
       & .detalhes-disciplina {
         background-color: var(--expanded-content-bg-color);
         color: var(--expanded-content-text-color);
+      }
     }
 
-    & > tr.fold {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 1s ease;
-      display: table-row; /* sempre uma linha, mas expande/contrai */
+    & td.detalhes-disciplina {
+
+      &.fold {
+        padding: 0px;
+        height: 0px;
+        transition: all 1s ease;
+      }
 
       &.open {
-        max-height: 5000px; /* temporário, vai ser alterado pelo script */
+        padding: unset;
+        height: unset;
+        transition: all 1s ease;
       }
     }
 

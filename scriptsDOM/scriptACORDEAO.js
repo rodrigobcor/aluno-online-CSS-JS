@@ -1,5 +1,6 @@
-/* Script de ativação do acordeão
- *
+/**
+ * Script de ativação do acordeão.
+ * 
  * Fonte: adaptado de:
  * - https://codepen.io/jopico/pen/kyRprJ (estrutura geral);
  * - https://codepen.io/arjancodes/pen/gbweYB (trechos da função `toggleAccordion()`);
@@ -9,13 +10,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   var toggleAccordion = function (event) {
-    // let itemSelecionado = event.currentTarget;
-    let itemSelecionado = event.currentTarget.parentElement;
-    itemSelecionado.classList.toggle("open");
-    let proximo = next(itemSelecionado, ".fold");
-
-    if (proximo.classList.contains('open')) {
-      proximo.style.maxHeight = '0px'; // collapse
+    let linhaInteira = event.currentTarget.parentElement;
+    linhaInteira.classList.toggle("open");
+    let celulaComDetalhes = linhaInteira.lastElementChild;
+    celulaComDetalhes.classList.toggle("open");
+    celulaComDetalhes.classList.toggle("fold");
+    
+    if (celulaComDetalhes.classList.contains("open")) {
+      celulaComDetalhes.style.padding = ""; // default
+      celulaComDetalhes.style.height = ""; // default
+      celulaComDetalhes.style.display = "";
     } else {
       proximo.style.maxHeight = proximo.scrollHeight + 'px'; // expand dynamically
     }
@@ -25,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var dadosDisciplinas = document.querySelectorAll(".fold-table tr.dados-disciplina");
   dadosDisciplinas.forEach(disciplina => {
-    // disciplina.addEventListener("click", toggleAccordion); // only if the whole line should be clickable
+    // disciplina.addEventListener("click", toggleAccordion); // apenas se a linha inteira deva ser selecionável para expandir o acordeão
     let itemAbreFecha = disciplina.querySelector(".disciplina-periodo");
-    if (itemAbreFecha) { // in case there's a null reference (shouldn't happen)
+    if (itemAbreFecha) {
       itemAbreFecha.addEventListener("click", toggleAccordion);
     }
   });

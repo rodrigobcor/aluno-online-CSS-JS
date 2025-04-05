@@ -1,8 +1,10 @@
+<!DOCTYPE html><!-- retirar caso importe o modelo diretamente desse arquivo -->
+
 <!-- Os espaços precedentes por linha, para a devida
 formatação dentro da tabela, devem ser incluídos à parte -->
 <tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_FOI_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
-    <span class="${CSS_PERIODO}">${PERIODO}
+    <span class="${CSS_PERIODO}">${PERIODO}</span>
   </td>
   <td class="disciplina-nome ${CSS_TOOLTIP_SE_FOI_ATENDIDA}">
     <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
@@ -11,22 +13,18 @@ formatação dentro da tabela, devem ser incluídos à parte -->
       <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
       <!-- SE ${NOT(${FOI_ATENDIDA})}... -->
       <span></span>
-    </span>
   </td>
   <td class="disciplina-codigo ${CODIGO_DEPARTAMENTO}">${CODIGO}</td>
   <td class="disciplina-tipo">${TIPO}</td>
+  <td class="disciplina-codigo-ramificacao">${RAMIFICACAO}</td>
   <td class="disciplina-num-creditos">${NUM_CREDITOS}</td>
   <td class="disciplina-ch-total">${CARGA_HORARIA_TOTAL}</td>
   <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_EH_PERIODO_SUGERIDO_MINUSCULAS}">
     <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
     <span class="texto-periodo-sugerido">${EH_PERIODO_SUGERIDO}</span>
   </td>
-  <td class="disciplina-codigo-ramificacao">${RAMIFICACAO}</td>
   <td class="disciplina-trava-credito" data-creditos-necessarios="${TRAVA_DE_CREDITO}">${TRAVA_DE_CREDITO}</td>
-</tr>
-
-<tr class="fold">
-  <td colspan="8" class="detalhes-disciplina">
+  <td colspan="10" class="fold detalhes-disciplina">
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
         <h3 class="info-disciplina-nome">${NOME}</h3>

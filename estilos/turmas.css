@@ -51,6 +51,7 @@
     margin-bottom: 20px;
     /* border: 4px double #d0d1d3; */
     /* border-spacing: 0px; */
+    display: table;
 
     & col.vagas-tipo, col.vagas-num-oferecidas,
         col.vagas-num-solicitadas, col.vagas-num-ocupadas {
@@ -59,6 +60,10 @@
 
     & .vagas-uerj, .vagas-vestibular {
       width:25%;
+    }
+
+    & > tbody > tr {
+      display: table-row;
     }
 
     & td {
