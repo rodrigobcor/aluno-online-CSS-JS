@@ -25,7 +25,7 @@ function extrairDadosGeraisDisciplinas() {
  * Esta função é compatível com a versão 2025-1 do sistema.
  * Qualquer alteração no formato HTML original pode comprometer seu funcionamento!
  * 
- * @param {string} htmlDaDisciplina 
+ * @param {string} htmlDaDisciplina
  * @returns {object} um objeto JSON com os dados da disciplina
  */
 function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
@@ -90,6 +90,7 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
   // TODO cenário mock com dados temporários, para teste
   console.log("ATENÇÃO: Dados de teste!");
 
+  dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
   // dadosDeUmaDisciplina["NUM_CREDITOS"] = "valor do número de créditos"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
   dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "valor da carga horária semanal";
   // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "valor da carga horária total"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
@@ -118,6 +119,7 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
     requisitos.push(requisitoUnico);
 
     // ========= PARA CADA REQUISITO COM ALTERNATIVAS (UM *OU* OUTRO): =========
+    
     // Passo 1: criar um objeto que funciona como um agregador de alternativas
     let opcoesDeRequisito = {
       TIPO_REQUISITO: "REQUISITO_COM_OPCOES_ALTERNATIVAS",
@@ -135,7 +137,6 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
 
     // Passo 4: Incluir o agregador de alternativas na lista de requisitos
     requisitos.push(opcoesDeRequisito);
-
 
     return requisitos;
   }
