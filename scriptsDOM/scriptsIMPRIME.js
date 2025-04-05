@@ -36,19 +36,6 @@ function getDisciplinasDaPagina() {
 }
 
 
-/** 
- * Obtém os detalhes da disciplina no formato HTML.
- * 
- * * Essa função não altera nenhum dado do servidor original.
- */
-function testGetDetalhesDisciplinas(codDisciplina) {
-    // essa linha é apenas para testes
-    numDisciplina = "10815";
-
-    let htmlDadosDisciplina = getDetalhesDisciplinas(codDisciplina);
-    console.log(htmlDadosDisciplina);
-}
-
 /**
  * Obtém os detalhes de determinada disciplina do período, no formato HTML.
  * 
@@ -101,9 +88,9 @@ function getDetalhesDisciplinas(codDisciplina) {
 
     return dadosDisciplina;
 }
-function testGetDetalhesDisciplinas() {
-    // um código (válido) qualquer
-    codDisciplina = "10815";
+
+function testGetDetalhesDisciplinas(codDisciplina) {
+    codDisciplina = codDisciplina || "10815"; // um código (válido) qualquer
     let htmlDadosDisciplina = getDetalhesDisciplinas(codDisciplina);
     console.log(htmlDadosDisciplina);
 }
