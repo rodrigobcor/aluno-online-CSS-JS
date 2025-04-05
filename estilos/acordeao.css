@@ -65,8 +65,8 @@
     }
 
     &  > tr.dados-disciplina.open {
-      background-color: #104e8b;
-      color: #ffffff;
+      background-color: var(--menu-item-selected-bg-color);
+      color: var(--menu-item-selected-text-color);
 
         /* & th:first-child::before, */
         &  > td:first-child::before {
@@ -77,6 +77,10 @@
       & .disciplina-codigo {
         background-color: unset;
       }
+
+      & .detalhes-disciplina {
+        background-color: var(--expanded-content-bg-color);
+        color: var(--expanded-content-text-color);
     }
 
     & > tr.fold {

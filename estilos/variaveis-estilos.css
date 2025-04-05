@@ -8,6 +8,15 @@
   --white: #faf0e6;
   --arrow-down: "\25bc";
   --arrow-selected-color: #64caca;
+
+  /* Listagem disciplina */
+  --menu-item-selected-bg-color: #104e8b;
+  --menu-item-selected-text-color: #ffffff;
+
+  /* Detalhes disciplina */
+  --expanded-content-bg-color: #f0f8ff;
+  --expanded-content-text-color: #000000;
+
   --divisor-tabela: 3px solid #104e8b;
   --consulta: " 🔍"; /* &#128269; */
   --sem-pre-requisito: " 🏳️";
