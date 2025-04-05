@@ -44,7 +44,6 @@ function getDisciplinasDaPagina() {
  * @param {number} codDisciplina O código identificador da disciplina (apenas números).
  */
 function getDetalhesDisciplinas(codDisciplina) {
-
     if (!codDisciplina) {
         throw SyntaxError("Para obter os detalhes da disciplina, "
             + "é necessário informar o código identificador (somente números).");
@@ -72,7 +71,7 @@ function getDetalhesDisciplinas(codDisciplina) {
                 // TODO ainda precisa ajustar os números que estão hard-coded
 
                 // Agora, selecionando a parte relevante do conteúdo HTML obtido
-                let inicio = html.indexOf("<form") + 411; // Pega o índice logo após o ": "
+                let inicio = html.indexOf("<form") + 411; // recupera o índice logo após o ": "
                 let fim = html.indexOf("</form>") - 199;
                 dadosDisciplina = html.slice(inicio, fim); // variável declarada fora do escopo da função
                 // console.log(dadosDisciplina); // Exibe os dados da disciplina
@@ -97,7 +96,7 @@ function testGetDetalhesDisciplinas(codDisciplina) {
 
 
 /**
- * Pega os horários da lista criada anteriormente.
+ * Obtém os horários da lista criada anteriormente.
  * 
  * @returns {string[]} os horários obtida da lista de disciplinas selecionadas para matrícula
  */
@@ -109,7 +108,7 @@ function getHorariosDaLista() {
 }
 
 /**
- * Pega a matrícula e nome do aluno que está logado.
+ * Obtém a matrícula e nome do aluno que está autenticado.
  */
 function getMatriculaENomeDoAluno() {
     console.log(document.querySelector("#divCabecalhoAplicacao > div:nth-child(2) > div:nth-child(1) > font").innerText);
