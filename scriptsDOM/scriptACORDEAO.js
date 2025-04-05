@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let celulaComDetalhes = linhaInteira.lastElementChild;
     celulaComDetalhes.classList.toggle("open");
     celulaComDetalhes.classList.toggle("fold");
-    
+
     if (celulaComDetalhes.classList.contains("open")) {
       celulaComDetalhes.style.padding = ""; // default
       celulaComDetalhes.style.height = ""; // default

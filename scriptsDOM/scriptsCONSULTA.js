@@ -5,8 +5,8 @@
  * @param {string} codigo O código da disciplina a ser consultada.
  */
 function consultarDisciplina(formOutput, codigo) {
-    formCreateHiddenInputField(formOutput, 'disciplinas[0]', codigo);
-    formOutput.submit();
+  formCreateHiddenInputField(formOutput, 'disciplinas[0]', codigo);
+  formOutput.submit();
 }
 
 /**
@@ -17,17 +17,17 @@ function consultarDisciplina(formOutput, codigo) {
  * @param {} requisicao Os dados da requisição a ser solicitada.
  */
 function consultarTurmasDisciplina(formOutput, codigo, requisicao) {
-    formCreateHiddenInputField(formOutput, 'disciplinas[0]', codigo);
+  formCreateHiddenInputField(formOutput, 'disciplinas[0]', codigo);
 
-    // mantém um cópia da definição da requisição original
-    var requisicaoOriginal = formOutput.elements["requisicao"].value;
+  // mantém um cópia da definição da requisição original
+  var requisicaoOriginal = formOutput.elements["requisicao"].value;
 
-    // efetua a requisição solicitada
-    formOutput.elements["requisicao"].value = requisicao;
-    formOutput.submit();
+  // efetua a requisição solicitada
+  formOutput.elements["requisicao"].value = requisicao;
+  formOutput.submit();
 
-    // retorna à definição da requisição original
-    formOutput.elements["requisicao"].value = requisicaoOriginal;
+  // retorna à definição da requisição original
+  formOutput.elements["requisicao"].value = requisicaoOriginal;
 }
 
 /**
@@ -40,11 +40,11 @@ function consultarTurmasDisciplina(formOutput, codigo, requisicao) {
  * 
  */
 function formCreateHiddenInputField(formOutput, campo, valor) {
-    var hiddenField = document.createElement('input');
-    hiddenField.type = 'hidden';
-    hiddenField.name = campo;
-    hiddenField.value = valor;
-    formOutput.appendChild(hiddenField);
+  var hiddenField = document.createElement('input');
+  hiddenField.type = 'hidden';
+  hiddenField.name = campo;
+  hiddenField.value = valor;
+  formOutput.appendChild(hiddenField);
 }
 
 /**
@@ -53,6 +53,6 @@ function formCreateHiddenInputField(formOutput, campo, valor) {
  * @param {string} idDisciplina O código identificador da disciplina.
  */
 function ementaDisciplina(idDisciplina) {
-    formCreateHiddenInputField(output, 'idDisciplina', idDisciplina);
-    document.output.submit();
+  formCreateHiddenInputField(output, 'idDisciplina', idDisciplina);
+  document.output.submit();
 }

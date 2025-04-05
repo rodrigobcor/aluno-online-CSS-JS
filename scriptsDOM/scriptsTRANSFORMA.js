@@ -289,74 +289,74 @@ function preencherModeloDetalhesDisciplina(disciplina) {
  * @returns O modelo de requisitos preenchido.
  */
 function getModeloRequisitosDisciplina(requisitos) {
-    if (!requisitos) {
-        throw ReferenceError("Os requisitos da disciplina não foram identificados.");
-    }
-    if (requisitos.length == 0) {
-        return `        <p>Esta disciplina não possui requisito para inscrição.</p>`;
-    }
-    let htmlRequisitos = [], htmlRequisito = null;
-    requisitos.forEach(umRequisito => {
-        htmlRequisito =
+  if (!requisitos) {
+    throw ReferenceError("Os requisitos da disciplina não foram identificados.");
+  }
+  if (requisitos.length == 0) {
+    return `        <p>Esta disciplina não possui requisito para inscrição.</p>`;
+  }
+  let htmlRequisitos = [], htmlRequisito = null;
+  requisitos.forEach(umRequisito => {
+    htmlRequisito =
 `        <div class="div-pre-requisito">
           <span class="label-pre-requisito">Pré-Requisito:</span>
           <p class="pre-requisitos">` + "\n";
-        if (umRequisito.TIPO_REQUISITO == "REQUISITO_SEM_OPCOES_ALTERNATIVAS") {
-            htmlRequisito += getHtmlRequisitoSimples(umRequisito, "");
-        } else if (umRequisito.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") {
-            htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito.ALTERNATIVAS_REQUISITO, "");
-        }
-        htmlRequisitos.push(htmlRequisito);
-        // fechando a tag do parágrafo
-        htmlRequisito +=
+    if (umRequisito.TIPO_REQUISITO == "REQUISITO_SEM_OPCOES_ALTERNATIVAS") {
+        htmlRequisito += getHtmlRequisitoSimples(umRequisito, "");
+    } else if (umRequisito.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") {
+        htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito.ALTERNATIVAS_REQUISITO, "");
+    }
+    htmlRequisitos.push(htmlRequisito);
+    // fechando a tag do parágrafo
+    htmlRequisito +=
 `          </p>
         </div>` + "\n";
+  });
+
+  // innner function
+    function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
+    return indentacao +
+                `            ${requisitoSimples.CODIGO_REQ_DISCIPLINA} ${requisitoSimples.NOME_REQ_DISCIPLINA}` + "\n";
+  }
+
+  // innner function
+  function getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao = "") {
+    let htmlTodasAsAlternativas = "";
+    // o divisor de alternativas irá constar entre as alternativas
+    let divisorDeAlternativas = indentacao + `            <br/><span class="alternativo">OU</span>` + "\n";
+
+    // o valor do atributo ALTERNATIVAS_REQUISITO é um array de requisitos alternativos
+    opcoesDeRequisito.ALTERNATIVAS_REQUISITO.forEach(requisitoAlternativo => {
+      if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_ALTERNATIVO") {
+          // cada opção/alternativa é tratada como um requisito simples
+          htmlTodasAsAlternativas += getHtmlRequisitoSimples(requisitoAlternativo, indentacao + "  ");
+          // e essas alternativas são separadas por "OU"s que indiquem essa natureza
+
+      } else if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") { // caso muito atípico, não testado!
+          htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
+      } // qualquer outra opção de escolha é provavelmente um erro sintático.
+
+      htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join(divisorDeAlternativas);
     });
 
-    // innner function
-    function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
-        return indentacao +
-                `            ${requisitoSimples.CODIGO_REQ_DISCIPLINA} ${requisitoSimples.NOME_REQ_DISCIPLINA}` + "\n";
-    }
+    return htmlTodasAsAlternativas;
+  }
 
-    // innner function
-    function getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao = "") {
-        let htmlTodasAsAlternativas = "";
-        // o divisor de alternativas irá constar entre as alternativas
-        let divisorDeAlternativas = indentacao + `            <br/><span class="alternativo">OU</span>` + "\n";
+  // innner function
+  // TODO tratar co-requisitos (menos prioritário que todo o resto)
+  function getCoRequisitos(requisitos) {
+      // provavelmente vai funcionar exatamente como a de comOpcaoAlternativa mas com divisor "E SIMULTANEAMENTE" ao invés de "OU"
+  }
 
-        // o valor do atributo ALTERNATIVAS_REQUISITO é um array de requisitos alternativos
-        opcoesDeRequisito.ALTERNATIVAS_REQUISITO.forEach(requisitoAlternativo => {
-            if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_ALTERNATIVO") {
-                // cada opção/alternativa é tratada como um requisito simples
-                htmlTodasAsAlternativas += getHtmlRequisitoSimples(requisitoAlternativo, indentacao + "  ");
-                // e essas alternativas são separadas por "OU"s que indiquem essa natureza
-
-            } else if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") { // caso muito atípico, não testado!
-                htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
-            } // qualquer outra opção de escolha é provavelmente um erro sintático.
-
-            htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join(divisorDeAlternativas);
-        });
-        
-        return htmlTodasAsAlternativas;
-    }
-
-    // innner function
-    // TODO tratar co-requisitos (menos prioritário que todo o resto)
-    function getCoRequisitos(requisitos) {
-        // provavelmente vai funcionar exatamente como a de comOpcaoAlternativa mas com divisor "E SIMULTANEAMENTE" ao invés de "OU"
-    }
-
-    return htmlRequisitos;
+  return htmlRequisitos;
 }
 
 function preencherModeloDadosGeraisDisciplina(disciplina) {
 
-    /* Obs.: Os espaços precedentes por linha, para a devida
-     * indentação com restante do código, devem ser incluídos à parte.
-     */
-    let modeloPreenchidoDadosGerais = `
+  /* Obs.: Os espaços precedentes por linha, para a devida
+   * indentação com restante do código, devem ser incluídos à parte.
+   */
+  let modeloPreenchidoDadosGerais = `
 <tr class="dados-disciplina ${(disciplina.FOI_ATENDIDA == "Sim" ? "disciplina-atendida tooltip" : "")}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
     <span class="${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.PERIODO}
@@ -380,5 +380,5 @@ function preencherModeloDadosGeraisDisciplina(disciplina) {
 </tr>
 `;
 
-    return modeloPreenchidoDadosGerais;
+  return modeloPreenchidoDadosGerais;
 }

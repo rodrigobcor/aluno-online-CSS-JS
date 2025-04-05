@@ -47,7 +47,7 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
 
   let dadosDeUmaDisciplina = {};
   const DADO_NAO_ENCONTRADO = "Dado não encontrado. Acesse a interface padrão do sistema.";
-  
+
   let resultadoDoMatch = EstruturacaoDeDados.TURMA_NO_PERIODO["contentToFind"].exec(htmlDaDisciplina);
   if (resultadoDoMatch) {
     dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = resultadoDoMatch[1];
@@ -86,10 +86,10 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
  */
 function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
   // TODO AINDA NÃO EXTRAI
-  
+
   // TODO cenário mock com dados temporários, para teste
   console.log("ATENÇÃO: Dados de teste!");
-  
+
   // dadosDeUmaDisciplina["NUM_CREDITOS"] = "valor do número de créditos"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
   dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "valor da carga horária semanal";
   // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "valor da carga horária total"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
@@ -139,6 +139,4 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
 
     return requisitos;
   }
-  
 }
-

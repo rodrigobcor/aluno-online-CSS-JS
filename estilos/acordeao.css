@@ -37,7 +37,7 @@
 
 #tabela-disciplinas.fold-table {
 
-  table-layout: fixed; 
+  table-layout: fixed;
 
   & > thead > tr.dados-disciplina,
   & > tbody > tr.dados-disciplina {
