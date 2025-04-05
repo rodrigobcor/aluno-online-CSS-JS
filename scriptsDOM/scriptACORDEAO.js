@@ -4,7 +4,6 @@
  * Fonte: adaptado de:
  * - https://codepen.io/jopico/pen/kyRprJ (estrutura geral);
  * - https://codepen.io/arjancodes/pen/gbweYB (trechos da função `toggleAccordion()`);
- * - https://gomakethings.com/converting-the-jquery-next-method-to-vanilla-js/ (função `next()`).
  * - https://www.w3schools.com/howto/howto_js_accordion.asp (animação)
  */
 document.addEventListener("DOMContentLoaded", function () {
@@ -21,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
       celulaComDetalhes.style.height = ""; // default
       celulaComDetalhes.style.display = "";
     } else {
-      proximo.style.maxHeight = proximo.scrollHeight + 'px'; // expand dynamically
+      celulaComDetalhes.style.padding = "0px";
+      celulaComDetalhes.style.height = "0px";
+      celulaComDetalhes.style.display = "none";
     }
-
-    proximo.classList.toggle("open");
   }
 
   var dadosDisciplinas = document.querySelectorAll(".fold-table tr.dados-disciplina");
@@ -35,19 +34,4 @@ document.addEventListener("DOMContentLoaded", function () {
       itemAbreFecha.addEventListener("click", toggleAccordion);
     }
   });
-
-  var next = function (elem, selector) {
-    // Get the next element
-    var nextElem = elem.nextElementSibling;
-    // If there's no selector, return the next element
-    if (!selector) {
-      return nextElem;
-    }
-    // Otherwise, check if the element matches the selector
-    if (nextElem && nextElem.matches(selector)) {
-      return nextElem;
-    }
-    // if it's not a match, return null
-    return null;
-  };
 });
