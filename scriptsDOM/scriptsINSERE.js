@@ -19,11 +19,10 @@ function inserirCSSPersonalizado() {
 }
 
 
-
-
-
 /**
  * Insere o conteúdo JavaScript personalizado para reformatação do Aluno Online.
+ * FIXME Desatualizado
+ * @todo
  */
 function inserirJSPersonalizado() {
     // Seleciona o arquivo JavaScript existente
