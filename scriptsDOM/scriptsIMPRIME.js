@@ -111,5 +111,11 @@ function getHorariosDaLista() {
  * Obtém a matrícula e nome do aluno que está autenticado.
  */
 function getMatriculaENomeDoAluno() {
-    console.log(document.querySelector("#divCabecalhoAplicacao > div:nth-child(2) > div:nth-child(1) > font").innerText);
+    let matriculaENome = document.querySelector("#table_cabecalho_rodape > tbody > tr:nth-child(3) > td > font").innerText;
+    console.log(matriculaENome);
+    [matricula, nome] = matriculaENome.split(" - ");
+    return {
+        "matricula": matricula,
+        "nome": nome
+    };
 }
