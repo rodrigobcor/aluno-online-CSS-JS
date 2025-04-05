@@ -1,17 +1,17 @@
 <!-- Os espaços precedentes por linha, para a devida
 formatação dentro da tabela, devem ser incluídos à parte -->
-<tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_FOI_ATENDIDA} ${CSS_TOOLTIP_SE_FOI_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
+<tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_FOI_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
     <span class="${CSS_PERIODO}">${PERIODO}
+  </td>
+  <td class="disciplina-nome ${CSS_TOOLTIP_SE_FOI_ATENDIDA}">
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-nome-disciplina">${NOME}</span>
       <!-- SE ${FOI_ATENDIDA}... -->
       <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
       <!-- SE ${NOT(${FOI_ATENDIDA})}... -->
       <span></span>
     </span>
-  </td>
-  <td class="disciplina-nome">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-nome-disciplina">${NOME}</span>
   </td>
   <td class="disciplina-codigo ${CODIGO_DEPARTAMENTO}">${CODIGO}</td>
   <td class="disciplina-tipo">${TIPO}</td>
