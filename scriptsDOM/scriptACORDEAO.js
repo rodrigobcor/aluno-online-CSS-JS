@@ -35,3 +35,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+async function getDetalhesDisciplinas(codDisciplina) {
+  if (!codDisciplina) {
+    throw new SyntaxError("Para obter os detalhes da disciplina, "
+      + "é necessário informar o código identificador (somente números).");
+  }
+
+  const formOutput = document.querySelector('form'); // Substitua pelo seletor correto
+  const formData = new FormData(formOutput);
+  
+  // Adicione ou modifique o código da disciplina no FormData
+  formData.set('codDisciplina', codDisciplina); // Ajuste o nome do campo conforme necessário
+
+  try {
+    const response = await fetch(formOutput.action || window.location.href, {
+      method: 'POST',
+      body: formData,
+    });
+    
+    const html = await response.text();
+    
+    // Processamento do HTML
+    const inicio = html.indexOf("<form") + 411; // Ajuste esses valores conforme necessário
+    const fim = html.indexOf("</form>") - 199;
+    const dadosDisciplina = html.slice(inicio, fim);
+    
+    return dadosDisciplina;
+  } catch (error) {
+    console.error("Erro ao consultar página.\nDetalhes técnicos:", error);
+    throw error; // Propaga o erro para quem chamar a função
+  }
+}
+
+// Inserir os detalhes na div
+getDetalhesDisciplinas(10814)
+  .then(dados => {
+    const detalhesDiv = document.getElementById('detalhes-disciplina-10814');
+    detalhesDiv.innerHTML = dados; // Insere o conteúdo retornado na div
+  })
+  .catch(err => console.error(err));
