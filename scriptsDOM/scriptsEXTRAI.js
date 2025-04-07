@@ -91,16 +91,16 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
   console.log("ATENÇÃO: Dados de teste!");
 
   dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
-  // dadosDeUmaDisciplina["NUM_CREDITOS"] = "<valor do número de créditos>"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
-  dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "<valor da carga horária semanal>";
-  // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "<valor da carga horária total>"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
-  // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "<valor indicando se é o período sugerido>"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
-  dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = "<valor do tempo de duração>";
-  dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = "<valor do tipo de aprovação>";
-  // dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = "<valor da trava de crédito" // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
-  dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = "<valor indicando se tem conflito de horário>";
-  dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = "<valor indicando se é do tipo Universal"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
-  dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = "<valor indicando se permite lançamento \"em preparo\">";
+  // dadosDeUmaDisciplina["NUM_CREDITOS"] = "[valor do número de créditos]"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "[valor da carga horária semanal]";
+  // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "[valor da carga horária total]"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "[valor indicando se é o período sugerido]"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = "[valor do tempo de duração]";
+  dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = "[valor do tipo de aprovação]";
+  // dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = "[valor da trava de crédito]" // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = "[valor indicando se tem conflito de horário]";
+  dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = "[valor indicando se é do tipo Universal]"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
+  dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = "[valor indicando se permite lançamento \"em preparo\"]";
 
   dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(dadosDeUmaDisciplina);
 
@@ -112,8 +112,8 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
     // Passo 1: Criar o requisito
     let requisitoUnico = {
       TIPO_REQUISITO: "REQUISITO_SEM_OPCOES_ALTERNATIVAS",
-      CODIGO_REQUISITO_DISCIPLINA: "<valor do código do requisito>",
-      NOME_REQUISITO_DISCIPLINA: "<valor do nome do requisito>"
+      CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito]",
+      NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito]"
     };
     // Passo 2: Incluir na lista de requisitos
     requisitos.push(requisitoUnico);
