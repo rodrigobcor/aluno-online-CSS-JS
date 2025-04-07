@@ -126,13 +126,19 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
       ALTERNATIVAS_REQUISITO: [] // por definição, tem que ter pelo menos dois requisitos como alternativas
     }
     // Passo 2: criar cada alternativa separadamente
-    let requisitoAlternativo = {
-      TIPO_PRE_REQUISITO: "REQUISITO_ALTERNATIVO", // indica se tratar de uma
-      CODIGO_REQUISITO_DISCIPLINA: "<valor do código do requisito alternativo>",
-      NOME_REQUISITO_DISCIPLINA: "<valor do nome do requisito alternativo>"
-    }
+    let requisitoAlternativo1 = {
+      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO", // indica se tratar de uma // TODO dormi e esqueci e tô com sono agora também 
+      CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 1]",
+      NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 1]"
+    };
+    let requisitoAlternativo2 = {
+      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO", // indica se tratar de uma // TODO dormi e esqueci e tô com sono agora também 
+      CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 2]",
+      NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 2]"
+    };
     // Passo 3: PARA CADA ALTERNATIVA CRIADA, inclui-la no agregador de alternativas
-    opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo);
+    opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo1);
+    opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo2);
     // reforçando: deve haver ao menos duas inclusões, por serem duas alternativas
 
     // Passo 4: Incluir o agregador de alternativas na lista de requisitos
