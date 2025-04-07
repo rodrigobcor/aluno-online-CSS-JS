@@ -10,10 +10,10 @@ function decomporIntervalo(intervalo) {
   const diaSemana = segmentosDoIntervalo.splice(0, 1); // obtém apenas o dia da semana e mantém o horário no segmentosDoIntervalo
   segmentosDoIntervalo = segmentosDoIntervalo.map(
     // lembrando que segmentosDoIntervalo contém apenas o horário, então pode-se reutilizar a variável
-    segmentosDoIntervalo => {
-      "dia" = diaSemana,
-      "horario" = segmentosDoIntervalo
-    }
+    segmentosDoIntervalo => ({
+      "dia": diaSemana,
+      "horario": segmentosDoIntervalo
+    })
   );
   return segmentosDoIntervalo;
 }
@@ -155,7 +155,6 @@ function transformarFormatoTurma() {
  * @param {object[]} listaDadosDisciplinas Uma lista de objetos no formato JSON.
  */
 function transformarListaDisciplinas(listaDadosDisciplinas) {
-  listaDadosDisciplinas.forEach(disciplina => preencherModeloDisciplina(disciplina));
 }
 
 function testeTransformarListaDisciplinas() {
@@ -173,6 +172,9 @@ function testeTransformarListaDisciplinas() {
     "CARGA_HORARIA_TOTAL": "90",
     "TRAVA_DE_CREDITO": "0"
   }`)]);
+  listaDadosDisciplinas = listaDadosDisciplinas.map(disciplina => preencherModeloDisciplina(disciplina));
+  console.log(listaDadosDisciplinas);
+  return listaDadosDisciplinas;
 }
 
 
@@ -323,7 +325,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
  */
 function preencherModeloRequisitosDisciplina(requisitos) {
   if (!requisitos) {
-    throw ReferenceError("Os requisitos da disciplina não foram identificados.");
+    throw ReferenceError("Não foi possível identificar a informação dos requisitos da disciplina.");
   }
   if (requisitos.length == 0) {
     return `        <p>Esta disciplina não possui requisito para inscrição.</p>`;
@@ -337,7 +339,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
     if (umRequisito.TIPO_REQUISITO == "REQUISITO_SEM_OPCOES_ALTERNATIVAS") {
         htmlRequisito += getHtmlRequisitoSimples(umRequisito, "");
     } else if (umRequisito.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") {
-        htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito.ALTERNATIVAS_REQUISITO, "");
+        htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito, "");
     }
     htmlRequisitos.push(htmlRequisito);
     // fechando a tag do parágrafo
@@ -349,7 +351,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
   // innner function
     function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
     return indentacao +
-`            ${requisitoSimples.CODIGO_REQ_DISCIPLINA} ${requisitoSimples.NOME_REQ_DISCIPLINA}` + "\n";
+`            ${requisitoSimples.CODIGO_REQUISITO_DISCIPLINA}: ${requisitoSimples.NOME_REQUISITO_DISCIPLINA}` + "\n";
   }
 
   // innner function
