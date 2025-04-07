@@ -205,7 +205,6 @@ function preencherModeloDetalhesDisciplina(disciplina) {
     // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
     disciplina = extrairDadosComplementaresDisciplina(disciplina);
 
-  // FIXME desatualizado, pegar novamente do modelo
     let detalhesDisciplina = `
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
@@ -264,15 +263,17 @@ function preencherModeloDetalhesDisciplina(disciplina) {
     <div class="divContentBlock">
       <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
       <div class="divContentBlockBody div-pre-requisitos">
-    ${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
+      ${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
       </div>
     </div>
     <div class="divContentBlock">
       <h4 class="divContentBlockHeader">Turmas da Disciplina</h4>
       <div class="divContentBlockBody">
-    <!-- ---------------------------------------------------------- -->
-    <!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
-    <!-- ---------------------------------------------------------- -->
+
+<!-- ---------------------------------------------------------- -->
+<!-- INCLUIR AQUI O CONTEÚDO DAS TURMAS (SEGUIR MODELO PRÓPRIO) -->
+<!-- ---------------------------------------------------------- -->
+
       </div>
     </div>
 `

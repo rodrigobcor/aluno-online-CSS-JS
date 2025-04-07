@@ -14,67 +14,67 @@ formatação dentro da tabela, devem ser incluídos à parte -->
       <!-- SE ${NOT(${FOI_ATENDIDA})}... -->
       <span></span>
   </td>
-  <td class="disciplina-codigo ${CODIGO_DEPARTAMENTO}">${CODIGO}</td>
-  <td class="disciplina-tipo">${TIPO}</td>
-  <td class="disciplina-codigo-ramificacao">${RAMIFICACAO}</td>
-  <td class="disciplina-num-creditos">${NUM_CREDITOS}</td>
-  <td class="disciplina-ch-total">${CARGA_HORARIA_TOTAL}</td>
+  <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO}">${CODIGO}</td>
+  <td class="disciplina-tipo">${disciplina.TIPO}</td>
+  <td class="disciplina-codigo-ramificacao">${disciplina.RAMIFICACAO}</td>
+  <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS}</td>
+  <td class="disciplina-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</td>
   <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_EH_PERIODO_SUGERIDO_MINUSCULAS}">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-periodo-sugerido">${EH_PERIODO_SUGERIDO}</span>
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-periodo-sugerido">${disciplina.EH_PERIODO_SUGERIDO}</span>
   </td>
-  <td class="disciplina-trava-credito" data-creditos-necessarios="${TRAVA_DE_CREDITO}">${TRAVA_DE_CREDITO}</td>
+  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${TRAVA_DE_CREDITO}</td>
   <td colspan="10" class="fold detalhes-disciplina">
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
-        <h3 class="info-disciplina-nome">${NOME}</h3>
-        <span class="info-disciplina-codigo">${CODIGO}</span>
-        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
+        <h3 class="info-disciplina-nome">${disciplina.NOME}</h3>
+        <span class="info-disciplina-codigo">${disciplina.CODIGO}</span>
+        <a class="info-disciplina-link-ementa" href="#" onclick="javascript:ementaDisciplina(${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128196; Ementa</a>
       </div>
       <div class="divContentBlockBody info-disciplina">
         <ul class="info-disciplina-dados-gerais">
           <li>
             <span class="label-info-disciplina-dados-gerais">N.º de créditos:</span>
-            <span class="info-disciplina-dados-gerais-num-creditos">${NUM_CREDITOS}</span>
+            <span class="info-disciplina-dados-gerais-num-creditos">${disciplina.NUM_CREDITOS}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
-            <span  class="info-disciplina-dados-gerais-ch-semanal">${CH_SEMANAL_DISCIPLINA}</span>
+            <span  class="info-disciplina-dados-gerais-ch-semanal">${disciplina.CH_SEMANAL_DISCIPLINA}</span>
             (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
-            <span class="info-disciplina-dados-gerais-ch-total">${CARGA_HORARIA_TOTAL}</span>)
+            <span class="info-disciplina-dados-gerais-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</span>)
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Sugerida para o período?</span>
-            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${BOOLEAN_EH_PERIODO_SUGERIDO_MINUSCULAS}">
-              ${EH_PERIODO_SUGERIDO}
+            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
+              ${disciplina.EH_PERIODO_SUGERIDO}
               <a href="#" onclick="javascript:consultarDisciplina(
-                  output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}
+                  output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}
               ); return false;">&#128269;</a>
             </span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Tempo de duração:</span>
-            <span class="info-disciplina-dados-gerais-tempo-duracao">${TEMPO_DURACAO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-tempo-duracao">${disciplina.TEMPO_DURACAO_DISCIPLINA}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Tipo de aprovação:</span>
-            <span class="info-disciplina-dados-gerais-tipo-aprovacao">${TIPO_APROVACAO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-tipo-aprovacao">${disciplina.TIPO_APROVACAO_DISCIPLINA}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
-            <span class="info-disciplina-dados-gerais-trava-credito">${TRAVA_DE_CREDITO}</span>
+            <span class="info-disciplina-dados-gerais-trava-credito">${disciplina.TRAVA_DE_CREDITO}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
-            <span class="info-disciplina-dados-gerais-pode-conflitar">${PERMITE_CONFLITO_HORARIO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-pode-conflitar">${disciplina.PERMITE_CONFLITO_HORARIO_DISCIPLINA}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">É oferecida como Universal?</span>
-            <span class="info-disciplina-dados-gerais-oferta-universal">${EH_UNIVERSAL_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-oferta-universal">${disciplina.EH_UNIVERSAL_DISCIPLINA}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Permite situação "Em Preparo"?</span>
-            <span class="info-disciplina-dados-gerais-pode-em-preparo">${PERMITE_EM_PREPARO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-pode-em-preparo">${disciplina.PERMITE_EM_PREPARO_DISCIPLINA}</span>
           </li>
         </ul>
       </div>
