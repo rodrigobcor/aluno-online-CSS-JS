@@ -193,6 +193,40 @@ function preencherModeloDisciplina(disciplina) {
     return dadosGeraisDisciplina + "\n" + detalhesDisciplina;
 }
 
+function preencherModeloDadosGeraisDisciplina(disciplina) {
+
+  /* Obs.: Os espaços precedentes por linha, para a devida
+   * indentação com restante do código, devem ser incluídos à parte.
+   */
+  let modeloPreenchidoDadosGerais = `
+<tr class="dados-disciplina${(disciplina.FOI_ATENDIDA == "Sim" ? " disciplina-atendida" : "")}"><!-- Início do conteúdo da disciplina -->
+  <td class="disciplina-periodo">
+    <span class="${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.PERIODO}</span>
+  </td>
+  <td class="disciplina-nome${(disciplina.FOI_ATENDIDA == "Sim" ? " tooltip" : "")}">
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-nome-disciplina">${disciplina.NOME}</span>
+    ${(disciplina.FOI_ATENDIDA == "Sim" ? `<span class="tooltip-texto">Esta disciplina já foi atendida.</span>` : "")}
+  </td>
+  <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.CODIGO}</td>
+  <td class="disciplina-tipo">${disciplina.TIPO}</td>
+  <td class="disciplina-codigo-ramificacao">${disciplina.RAMIFICACAO}</td>
+  <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS}</td>
+  <td class="disciplina-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</td>
+  <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-periodo-sugerido">${disciplina.EH_PERIODO_SUGERIDO}</span>
+  </td>
+  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${disciplina.TRAVA_DE_CREDITO}</td>
+  <td colspan="8" class="fold detalhes-disciplina">
+  </td>
+</tr>
+`;
+
+  return modeloPreenchidoDadosGerais;
+}
+
+
 /**
  * Gera o conteúdo HTML com os dados de uma disciplina, utilizando o modelo de estruturação dos detalhes.
  * 
@@ -205,7 +239,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
     // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
     disciplina = extrairDadosComplementaresDisciplina(disciplina);
 
-    let detalhesDisciplina = `
+    let modeloPreenchidoDetalhesDisciplina = `
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
         <h3 class="info-disciplina-nome">${disciplina.NOME}</h3>
@@ -263,7 +297,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
     <div class="divContentBlock">
       <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
       <div class="divContentBlockBody div-pre-requisitos">
-      ${getModeloRequisitosDisciplina(disciplina.REQUISITOS)}
+      ${preencherModeloRequisitosDisciplina(disciplina.REQUISITOS)}
       </div>
     </div>
     <div class="divContentBlock">
@@ -277,7 +311,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
       </div>
     </div>
 `
-  return detalhesDisciplina;
+  return modeloPreenchidoDetalhesDisciplina;
 }
 
 
@@ -287,7 +321,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
  * 
  * @returns O modelo de requisitos preenchido.
  */
-function getModeloRequisitosDisciplina(requisitos) {
+function preencherModeloRequisitosDisciplina(requisitos) {
   if (!requisitos) {
     throw ReferenceError("Os requisitos da disciplina não foram identificados.");
   }
@@ -348,37 +382,4 @@ function getModeloRequisitosDisciplina(requisitos) {
   }
 
   return htmlRequisitos;
-}
-
-function preencherModeloDadosGeraisDisciplina(disciplina) {
-
-  /* Obs.: Os espaços precedentes por linha, para a devida
-   * indentação com restante do código, devem ser incluídos à parte.
-   */
-  let modeloPreenchidoDadosGerais = `
-<tr class="dados-disciplina${(disciplina.FOI_ATENDIDA == "Sim" ? " disciplina-atendida" : "")}"><!-- Início do conteúdo da disciplina -->
-  <td class="disciplina-periodo">
-    <span class="${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.PERIODO}</span>
-  </td>
-  <td class="disciplina-nome${(disciplina.FOI_ATENDIDA == "Sim" ? " tooltip" : "")}">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-nome-disciplina">${disciplina.NOME}</span>
-    ${(disciplina.FOI_ATENDIDA == "Sim" ? `<span class="tooltip-texto">Esta disciplina já foi atendida.</span>` : "")}
-  </td>
-  <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.CODIGO}</td>
-  <td class="disciplina-tipo">${disciplina.TIPO}</td>
-  <td class="disciplina-codigo-ramificacao">${disciplina.RAMIFICACAO}</td>
-  <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS}</td>
-  <td class="disciplina-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</td>
-  <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-periodo-sugerido">${disciplina.EH_PERIODO_SUGERIDO}</span>
-  </td>
-  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${disciplina.TRAVA_DE_CREDITO}</td>
-  <td colspan="8" class="fold detalhes-disciplina">
-  </td>
-</tr>
-`;
-
-  return modeloPreenchidoDadosGerais;
 }
