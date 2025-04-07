@@ -4,18 +4,18 @@
  * @returns {{dia: string, horario: string}} um objeto com a decomposição do intervalo em dia e horário.
  */
 function decomporIntervalo(intervalo) {
-    let segmentosDoIntervalo = getArrayOfGroupMatches(getRegexIntervalo(), intervalo);
-    // o primeiro elemento é o dia da semana (ex. QUA), os outros são os horários (ex. T2)
-    // cada segmento vai ser antecedido do dia da semana
-    const diaSemana = segmentosDoIntervalo.splice(0, 1); // obtém apenas o dia da semana e mantém o horário no segmentosDoIntervalo
-    segmentosDoIntervalo = segmentosDoIntervalo.map(
-        // lembrando que segmentosDoIntervalo contém apenas o horário, então pode-se reutilizar a variável
-        segmentosDoIntervalo => {
-        	"dia" = diaSemana,
-        	"horario" = segmentosDoIntervalo
-        }
-    );
-    return segmentosDoIntervalo;
+  let segmentosDoIntervalo = getArrayOfGroupMatches(getRegexIntervalo(), intervalo);
+  // o primeiro elemento é o dia da semana (ex. QUA), os outros são os horários (ex. T2)
+  // cada segmento vai ser antecedido do dia da semana
+  const diaSemana = segmentosDoIntervalo.splice(0, 1); // obtém apenas o dia da semana e mantém o horário no segmentosDoIntervalo
+  segmentosDoIntervalo = segmentosDoIntervalo.map(
+    // lembrando que segmentosDoIntervalo contém apenas o horário, então pode-se reutilizar a variável
+    segmentosDoIntervalo => {
+      "dia" = diaSemana,
+      "horario" = segmentosDoIntervalo
+    }
+  );
+  return segmentosDoIntervalo;
 }
 
 function transformarFormatoTurma() {
@@ -155,24 +155,24 @@ function transformarFormatoTurma() {
  * @param {object[]} listaDadosDisciplinas Uma lista de objetos no formato JSON.
  */
 function transformarListaDisciplinas(listaDadosDisciplinas) {
-    listaDadosDisciplinas.forEach(disciplina => preencherModeloDisciplina(disciplina));
+  listaDadosDisciplinas.forEach(disciplina => preencherModeloDisciplina(disciplina));
 }
 
 function testeTransformarListaDisciplinas() {
-    transformarListaDisciplinas([JSON.parse(`{
-        "EH_PERIODO_SUGERIDO": "Sim",
-        "CODIGO_DEPARTAMENTO": "IME04",
-        "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
-        "CODIGO": "IME04-10817",
-        "NOME": "Fundamentos da Computação",
-        "PERIODO": "1",
-        "FOI_ATENDIDA": "Sim",
-        "TIPO": "Obrigatória",
-        "RAMIFICACAO": "626",
-        "NUM_CREDITOS": "5",
-        "CARGA_HORARIA_TOTAL": "90",
-        "TRAVA_DE_CREDITO": "0"
-    }`)]);
+  transformarListaDisciplinas([JSON.parse(`{
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "CODIGO_DEPARTAMENTO": "IME04",
+    "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
+    "CODIGO": "IME04-10817",
+    "NOME": "Fundamentos da Computação",
+    "PERIODO": "1",
+    "FOI_ATENDIDA": "Sim",
+    "TIPO": "Obrigatória",
+    "RAMIFICACAO": "626",
+    "NUM_CREDITOS": "5",
+    "CARGA_HORARIA_TOTAL": "90",
+    "TRAVA_DE_CREDITO": "0"
+  }`)]);
 }
 
 
@@ -184,13 +184,13 @@ function testeTransformarListaDisciplinas() {
  */
 
 function preencherModeloDisciplina(disciplina) {
-    let dadosGeraisDisciplina = preencherModeloDadosGeraisDisciplina(disciplina);
-    // console.log(dadosGeraisDisciplina);
+  let dadosGeraisDisciplina = preencherModeloDadosGeraisDisciplina(disciplina);
+  // console.log(dadosGeraisDisciplina);
 
-    let detalhesDisciplina = preencherModeloDetalhesDisciplina(disciplina);
-    // console.log(detalhesDisciplina);
+  let detalhesDisciplina = preencherModeloDetalhesDisciplina(disciplina);
+  // console.log(detalhesDisciplina);
 
-    return dadosGeraisDisciplina + "\n" + detalhesDisciplina;
+  return dadosGeraisDisciplina + "\n" + detalhesDisciplina;
 }
 
 function preencherModeloDadosGeraisDisciplina(disciplina) {
@@ -349,24 +349,25 @@ function preencherModeloRequisitosDisciplina(requisitos) {
   // innner function
     function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
     return indentacao +
-        `            ${requisitoSimples.CODIGO_REQ_DISCIPLINA} ${requisitoSimples.NOME_REQ_DISCIPLINA}` + "\n";
+`            ${requisitoSimples.CODIGO_REQ_DISCIPLINA} ${requisitoSimples.NOME_REQ_DISCIPLINA}` + "\n";
   }
 
   // innner function
   function getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao = "") {
     let htmlTodasAsAlternativas = "";
     // o divisor de alternativas irá constar entre as alternativas
-    let divisorDeAlternativas = indentacao + `            <br/><span class="alternativo">OU</span>` + "\n";
+    let divisorDeAlternativas = indentacao +
+`            <br/><span class="alternativo">OU</span>` + "\n";
 
     // o valor do atributo ALTERNATIVAS_REQUISITO é um array de requisitos alternativos
     opcoesDeRequisito.ALTERNATIVAS_REQUISITO.forEach(requisitoAlternativo => {
       if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_ALTERNATIVO") {
-          // cada opção/alternativa é tratada como um requisito simples
-          htmlTodasAsAlternativas += getHtmlRequisitoSimples(requisitoAlternativo, indentacao + "  ");
-          // e essas alternativas são separadas por "OU"s que indiquem essa natureza
+        // cada opção/alternativa é tratada como um requisito simples
+        htmlTodasAsAlternativas += getHtmlRequisitoSimples(requisitoAlternativo, indentacao + "  ");
+        // e essas alternativas são separadas por "OU"s que indiquem essa natureza
 
       } else if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") { // caso muito atípico, não testado!
-          htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
+        htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
       } // qualquer outra opção de escolha é provavelmente um erro sintático.
 
       htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join(divisorDeAlternativas);
@@ -378,7 +379,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
   // innner function
   // TODO tratar co-requisitos (menos prioritário que todo o resto)
   function getCoRequisitos(requisitos) {
-      // provavelmente vai funcionar exatamente como a de comOpcaoAlternativa mas com divisor "E SIMULTANEAMENTE" ao invés de "OU"
+    // provavelmente vai funcionar exatamente como a de comOpcaoAlternativa mas com divisor "E SIMULTANEAMENTE" ao invés de "OU"
   }
 
   return htmlRequisitos;
