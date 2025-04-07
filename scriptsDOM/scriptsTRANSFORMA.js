@@ -155,23 +155,6 @@ function transformarFormatoTurma() {
  * @param {object[]} listaDadosDisciplinas Uma lista de objetos no formato JSON.
  */
 function transformarListaDisciplinas(listaDadosDisciplinas) {
-}
-
-function testeTransformarListaDisciplinas() {
-  transformarListaDisciplinas([JSON.parse(`{
-    "EH_PERIODO_SUGERIDO": "Sim",
-    "CODIGO_DEPARTAMENTO": "IME04",
-    "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
-    "CODIGO": "IME04-10817",
-    "NOME": "Fundamentos da Computação",
-    "PERIODO": "1",
-    "FOI_ATENDIDA": "Sim",
-    "TIPO": "Obrigatória",
-    "RAMIFICACAO": "626",
-    "NUM_CREDITOS": "5",
-    "CARGA_HORARIA_TOTAL": "90",
-    "TRAVA_DE_CREDITO": "0"
-  }`)]);
   listaDadosDisciplinas = listaDadosDisciplinas.map(disciplina => preencherModeloDisciplina(disciplina));
   console.log(listaDadosDisciplinas);
   return listaDadosDisciplinas;
@@ -385,4 +368,21 @@ function preencherModeloRequisitosDisciplina(requisitos) {
   }
 
   return htmlRequisitos;
+}
+
+function testeTransformarListaDisciplinas() {
+  transformarListaDisciplinas([JSON.parse(`{
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "CODIGO_DEPARTAMENTO": "IME04",
+    "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
+    "CODIGO": "IME04-10817",
+    "NOME": "Fundamentos da Computação",
+    "PERIODO": "1",
+    "FOI_ATENDIDA": "Sim",
+    "TIPO": "Obrigatória",
+    "RAMIFICACAO": "626",
+    "NUM_CREDITOS": "5",
+    "CARGA_HORARIA_TOTAL": "90",
+    "TRAVA_DE_CREDITO": "0"
+  }`)]);
 }
