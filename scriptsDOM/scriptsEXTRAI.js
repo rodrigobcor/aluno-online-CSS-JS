@@ -104,6 +104,8 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
 
   dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(dadosDeUmaDisciplina);
 
+  return dadosDeUmaDisciplina;
+
   // Função auxiliar interna, para melhor coesão
   function extrairRequisitos() {
     let requisitos = []; // se não tiver nenhum, fica vazio

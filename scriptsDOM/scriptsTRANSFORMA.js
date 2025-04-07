@@ -160,7 +160,6 @@ function transformarListaDisciplinas(listaDadosDisciplinas) {
   return listaDadosDisciplinas;
 }
 
-
 /**
  * Gera o conteúdo HTML com os dados de uma disciplina, utilizando o modelo de estruturação dos dados.
  * 
@@ -282,7 +281,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
     <div class="divContentBlock">
       <h4 class="divContentBlockHeader">Requisitos da Disciplina</h4>
       <div class="divContentBlockBody div-pre-requisitos">
-      ${preencherModeloRequisitosDisciplina(disciplina.REQUISITOS)}
+${preencherModeloRequisitosDisciplina(disciplina.REQUISITOS)}
       </div>
     </div>
     <div class="divContentBlock">
@@ -324,11 +323,11 @@ function preencherModeloRequisitosDisciplina(requisitos) {
     } else if (umRequisito.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") {
         htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito, "");
     }
-    htmlRequisitos.push(htmlRequisito);
     // fechando a tag do parágrafo
     htmlRequisito +=
 `          </p>
         </div>` + "\n";
+    htmlRequisitos.push(htmlRequisito);
   });
 
   // innner function
@@ -354,9 +353,9 @@ function preencherModeloRequisitosDisciplina(requisitos) {
       } else if (requisitoAlternativo.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") { // caso muito atípico, não testado!
         htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
       } // qualquer outra opção de escolha é provavelmente um erro sintático.
-
-      htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join(divisorDeAlternativas);
     });
+
+    htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join("\n" + divisorDeAlternativas);
 
     return htmlTodasAsAlternativas;
   }
