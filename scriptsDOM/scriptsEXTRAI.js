@@ -129,12 +129,12 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
     }
     // Passo 2: criar cada alternativa separadamente
     let requisitoAlternativo1 = {
-      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO", // indica se tratar de uma // TODO dormi e esqueci e tô com sono agora também 
+      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
       CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 1]",
       NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 1]"
     };
     let requisitoAlternativo2 = {
-      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO", // indica se tratar de uma // TODO dormi e esqueci e tô com sono agora também 
+      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
       CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 2]",
       NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 2]"
     };
