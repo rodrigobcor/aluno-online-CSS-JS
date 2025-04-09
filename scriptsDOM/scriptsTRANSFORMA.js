@@ -371,18 +371,35 @@ function preencherModeloRequisitosDisciplina(requisitos) {
 }
 
 function testeTransformarListaDisciplinas() {
-  transformarListaDisciplinas([JSON.parse(`{
-    "EH_PERIODO_SUGERIDO": "Sim",
-    "CODIGO_DEPARTAMENTO": "IME04",
-    "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
-    "CODIGO": "IME04-10817",
-    "NOME": "Fundamentos da Computação",
-    "PERIODO": "1",
-    "FOI_ATENDIDA": "Sim",
-    "TIPO": "Obrigatória",
-    "RAMIFICACAO": "626",
-    "NUM_CREDITOS": "5",
-    "CARGA_HORARIA_TOTAL": "90",
-    "TRAVA_DE_CREDITO": "0"
-  }`)]);
+  transformarListaDisciplinas([
+    JSON.parse(`{
+      "CODIGO_DEPARTAMENTO": "IME04",
+      "CODIGO_CINCO_ULTIMOS_NUMEROS": "10817",
+      "CODIGO": "IME04-10817",
+      "NOME": "Fundamentos da Computação",
+      "PERIODO": "1",
+      "FOI_ATENDIDA": "Sim",
+      "TIPO": "Obrigatória",
+      "RAMIFICACAO": "626",
+      "NUM_CREDITOS": "5",
+      "CARGA_HORARIA_TOTAL": "90",
+      "EH_PERIODO_SUGERIDO": "Sim",
+      "TRAVA_DE_CREDITO": "0"
+    }`),
+    JSON.parse(`{
+      "CODIGO_DEPARTAMENTO": "ILE02",
+      "CODIGO_CINCO_ULTIMOS_NUMEROS": "10822",
+
+      "CODIGO": "ILE02-10822",
+      "NOME": "Português Instrumental",
+      "PERIODO": "3",
+      "FOI_ATENDIDA": "Sim",
+      "TIPO": "Obrigatória",
+      "RAMIFICACAO": "626",
+      "NUM_CREDITOS": "4",
+      "CARGA_HORARIA_TOTAL": "60",
+      "EH_PERIODO_SUGERIDO": "Sim",
+      "TRAVA_DE_CREDITO": "0"
+    }`)
+  ]);
 }
