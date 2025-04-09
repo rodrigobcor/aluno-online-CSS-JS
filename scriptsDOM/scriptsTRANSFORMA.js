@@ -160,6 +160,7 @@ function transformarListaDisciplinas(listaDadosDisciplinas) {
   return listaDadosDisciplinas;
 }
 
+
 /**
  * Gera o conteúdo HTML com os dados de uma disciplina, utilizando o modelo de estruturação dos dados.
  * 
@@ -223,8 +224,8 @@ function preencherModeloDetalhesDisciplina(disciplina) {
     // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
     disciplina = extrairDadosComplementaresDisciplina(disciplina);
 
-    let modeloPreenchidoDetalhesDisciplina = `
-    <div class="divContentBlock">
+    let modeloPreenchidoDetalhesDisciplina = 
+`    <div class="divContentBlock">
       <div class="divContentBlockHeader">
         <h3 class="info-disciplina-nome">${disciplina.NOME}</h3>
         <span class="info-disciplina-codigo">${disciplina.CODIGO}</span>
@@ -293,8 +294,7 @@ ${preencherModeloRequisitosDisciplina(disciplina.REQUISITOS)}
 <!-- ---------------------------------------------------------- -->
 
       </div>
-    </div>
-`
+    </div>`;
   return modeloPreenchidoDetalhesDisciplina;
 }
 
@@ -326,7 +326,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
     // fechando a tag do parágrafo
     htmlRequisito +=
 `          </p>
-        </div>` + "\n";
+        </div>`;
     htmlRequisitos.push(htmlRequisito);
   });
 
@@ -355,7 +355,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
       } // qualquer outra opção de escolha é provavelmente um erro sintático.
     });
 
-    htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join("\n" + divisorDeAlternativas);
+    htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join("\n" + divisorDeAlternativas) +  "\n";
 
     return htmlTodasAsAlternativas;
   }
@@ -366,7 +366,8 @@ function preencherModeloRequisitosDisciplina(requisitos) {
     // provavelmente vai funcionar exatamente como a de comOpcaoAlternativa mas com divisor "E SIMULTANEAMENTE" ao invés de "OU"
   }
 
-  return htmlRequisitos;
+  // retornando todo o conteúdo HTML removendo vírgula separadora dos trechos
+  return htmlRequisitos.join("\n");
 }
 
 function testeTransformarListaDisciplinas() {
