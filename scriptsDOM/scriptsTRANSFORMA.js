@@ -167,23 +167,13 @@ function transformarListaDisciplinas(listaDadosDisciplinas) {
  * @param {object} disciplina Um objeto JSON com os dados da disciplina.
  * @returns {string} O conteúdo estruturado com os dados da disciplina.
  */
-
 function preencherModeloDisciplina(disciplina) {
-  let dadosGeraisDisciplina = preencherModeloDadosGeraisDisciplina(disciplina);
-  // console.log(dadosGeraisDisciplina);
-
-  let detalhesDisciplina = preencherModeloDetalhesDisciplina(disciplina);
-  // console.log(detalhesDisciplina);
-
-  return dadosGeraisDisciplina + "\n" + detalhesDisciplina;
-}
-
-function preencherModeloDadosGeraisDisciplina(disciplina) {
 
   /* Obs.: Os espaços precedentes por linha, para a devida
    * indentação com restante do código, devem ser incluídos à parte.
    */
-  let modeloPreenchidoDadosGerais = `
+  let modeloPreenchidoDisciplina = `
+<!-- ${disciplina.NOME} -->
 <tr class="dados-disciplina${(disciplina.FOI_ATENDIDA == "Sim" ? " disciplina-atendida" : "")}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
     <span class="${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.PERIODO}</span>
@@ -204,11 +194,12 @@ function preencherModeloDadosGeraisDisciplina(disciplina) {
   </td>
   <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${disciplina.TRAVA_DE_CREDITO}</td>
   <td colspan="8" class="fold detalhes-disciplina">
+${preencherModeloDetalhesDisciplina(disciplina)}
   </td>
 </tr>
 `;
 
-  return modeloPreenchidoDadosGerais;
+  return modeloPreenchidoDisciplina;
 }
 
 
