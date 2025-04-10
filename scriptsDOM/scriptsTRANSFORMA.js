@@ -151,8 +151,11 @@ function transformarFormatoTurma() {
 }
 
 /**
+ * Transforma uma lista de dados de disciplinas (cada elemento como um objeto JSON)
+ * no formato HTML compatível com o acordeão.
  * 
  * @param {object[]} listaDadosDisciplinas Uma lista de objetos no formato JSON.
+ * Para uma única disciplina, utilize a função `preencherModeloDisciplina(disciplina)`.
  */
 function transformarListaDisciplinas(listaDadosDisciplinas) {
   listaDadosDisciplinas = listaDadosDisciplinas.map(disciplina => preencherModeloDisciplina(disciplina));
