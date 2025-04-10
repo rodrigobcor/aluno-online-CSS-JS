@@ -96,6 +96,54 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
 
   // TODO cenário mock com dados temporários, para teste
   console.log("ATENÇÃO: Dados de teste!");
+function extrairRequisitos(htmlDetalhesDisciplina) {
+  // TODO AINDA NÃO EXTRAI, chamando stub
+  return stubExtrairRequisitos();
+
+  // TODO RASCUNHO A PARTIR DO STUB
+  let requisitos = []; // se não tiver nenhum, fica vazio
+
+  // ========= PARA CADA REQUISITO INVARIÁVEL: =========
+  // Passo 1: Criar o requisito
+  let requisitoUnico = {
+    TIPO_REQUISITO: "REQUISITO_SEM_OPCOES_ALTERNATIVAS",
+    CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito]",
+    NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito]"
+  };
+  // Passo 2: Incluir na lista de requisitos
+  requisitos.push(requisitoUnico);
+
+  // ========= PARA CADA REQUISITO COM ALTERNATIVAS (UM *OU* OUTRO): =========
+
+  // Passo 1: criar um objeto que funciona como um agregador de alternativas
+  let opcoesDeRequisito = {
+    TIPO_REQUISITO: "REQUISITO_COM_OPCOES_ALTERNATIVAS",
+    ALTERNATIVAS_REQUISITO: [] // por definição, tem que ter pelo menos dois requisitos como alternativas
+  }
+  // Passo 2: criar cada alternativa separadamente
+  let requisitoAlternativo1 = {
+    TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
+    CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 1]",
+    NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 1]"
+  };
+  let requisitoAlternativo2 = {
+    TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
+    CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 2]",
+    NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 2]"
+  };
+  // Passo 3: PARA CADA ALTERNATIVA CRIADA, inclui-la no agregador de alternativas
+  opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo1);
+  opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo2);
+  // reforçando: deve haver ao menos duas inclusões, por serem duas alternativas
+
+  // Passo 4: Incluir o agregador de alternativas na lista de requisitos
+  requisitos.push(opcoesDeRequisito);
+
+  return requisitos;
+}
+
+function stubExtrairDadosComplementaresDisciplina(dadosDeUmaDisciplina) {
+  console.log("ATENÇÃO: Os dados complementares da disciplina são hipotéticos e apenas para testes!");
 
   dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
   // dadosDeUmaDisciplina["NUM_CREDITOS"] = "[valor do número de créditos]"; // JÁ TEM ESSE DADO, só pra conferir consistência
@@ -112,47 +160,36 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
   dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(dadosDeUmaDisciplina);
 
   return dadosDeUmaDisciplina;
+}
 
-  // Função auxiliar interna, para melhor coesão
-  function extrairRequisitos() {
-    let requisitos = []; // se não tiver nenhum, fica vazio
+function stubExtrairRequisitos() {
+  console.log("ATENÇÃO: Os dados de requisitos são hipotéticos e apenas para testes!");
+  let requisitos = []; // se não tiver nenhum, fica vazio
 
-    // ========= PARA CADA REQUISITO INVARIÁVEL: =========
-    // Passo 1: Criar o requisito
-    let requisitoUnico = {
-      TIPO_REQUISITO: "REQUISITO_SEM_OPCOES_ALTERNATIVAS",
-      CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito]",
-      NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito]"
-    };
-    // Passo 2: Incluir na lista de requisitos
-    requisitos.push(requisitoUnico);
+  let requisitoUnico = {
+    TIPO_REQUISITO: "REQUISITO_SEM_OPCOES_ALTERNATIVAS",
+    CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito]",
+    NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito]"
+  };
+  requisitos.push(requisitoUnico);
 
-    // ========= PARA CADA REQUISITO COM ALTERNATIVAS (UM *OU* OUTRO): =========
-
-    // Passo 1: criar um objeto que funciona como um agregador de alternativas
-    let opcoesDeRequisito = {
-      TIPO_REQUISITO: "REQUISITO_COM_OPCOES_ALTERNATIVAS",
-      ALTERNATIVAS_REQUISITO: [] // por definição, tem que ter pelo menos dois requisitos como alternativas
-    }
-    // Passo 2: criar cada alternativa separadamente
-    let requisitoAlternativo1 = {
-      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
-      CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 1]",
-      NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 1]"
-    };
-    let requisitoAlternativo2 = {
-      TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
-      CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 2]",
-      NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 2]"
-    };
-    // Passo 3: PARA CADA ALTERNATIVA CRIADA, inclui-la no agregador de alternativas
-    opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo1);
-    opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo2);
-    // reforçando: deve haver ao menos duas inclusões, por serem duas alternativas
-
-    // Passo 4: Incluir o agregador de alternativas na lista de requisitos
-    requisitos.push(opcoesDeRequisito);
-
-    return requisitos;
+  let opcoesDeRequisito = {
+    TIPO_REQUISITO: "REQUISITO_COM_OPCOES_ALTERNATIVAS",
+    ALTERNATIVAS_REQUISITO: [] // por definição, tem que ter pelo menos dois requisitos como alternativas
   }
+  let requisitoAlternativo1 = {
+    TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
+    CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 1]",
+    NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 1]"
+  };
+  let requisitoAlternativo2 = {
+    TIPO_REQUISITO: "REQUISITO_ALTERNATIVO",
+    CODIGO_REQUISITO_DISCIPLINA: "[valor do código do requisito alternativo 2]",
+    NOME_REQUISITO_DISCIPLINA: "[valor do nome do requisito alternativo 2]"
+  };
+  opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo1);
+  opcoesDeRequisito["ALTERNATIVAS_REQUISITO"].push(requisitoAlternativo2);
+  requisitos.push(opcoesDeRequisito);
+
+  return requisitos;
 }
