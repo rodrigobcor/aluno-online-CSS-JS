@@ -20,12 +20,14 @@ function extrairDadosGeraisDisciplinas() {
   for (let i = 1; i < todasAsDisciplinasHTML.length; i++) { // primeiro elemento (0): início da tabela (cabeçalhosdas colunas)
     htmlDeUmaDisciplina = todasAsDisciplinasHTML[i].innerHTML;
     // console.log(htmlDeUmaDisciplina);
-    listaDadosDisciplinas.push(extrairDadosDisciplina2025_1(htmlDeUmaDisciplina));
+    listaDadosDisciplinas.push(extrairDadosDisciplina(htmlDeUmaDisciplina));
   }
   return listaDadosDisciplinas;
 }
 
 /**
+ * Extrai os dados da disciplina a partir do trecho HTML equivalente.
+ * 
  * ATENÇÃO: Infelizmente, a página-fonte não contém identificadores
  * que permitam uma consulta mais direta.
  * Esta função é compatível com a versão do sistema disponibilizada no período 2025/1.
@@ -34,7 +36,7 @@ function extrairDadosGeraisDisciplinas() {
  * @param {string} htmlDisciplina O trecho HTML que contém os dados da disciplina.
  * @returns {object} um objeto JSON com os dados estruturados da disciplina.
  */
-function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
+function extrairDadosDisciplina(htmlDisciplina) {
   let EstruturacaoDeDados = {
     DEPTO_NUM_COD_NOME: {
       // dois \s pra não ignorar espaço entre palavras
