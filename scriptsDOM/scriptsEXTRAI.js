@@ -87,15 +87,74 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
 
 
 /**
+ * Extrai os dados da disciplina a partir do trecho HTML equivalente.
  * 
+ * ATENÇÃO: Infelizmente, a página-fonte não contém identificadores
+ * que permitam uma consulta mais direta.
+ * Esta função é compatível com a versão do sistema disponibilizada no período 2025/1.
+ * Qualquer alteração no formato HTML original pode comprometer seu funcionamento.
+ * 
+ * @param {string} htmlDetalhesDisciplina O trecho HTML que contém os dados detalhados da disciplina.
  * @param {object} disciplina Um objeto JSON com os dados já obtidos na lista de disciplinas.
-   @returns {object} os dados originais acrescidos dos dados complementares da disciplina, mantendo a estrutura JSON
+   @returns {object} o objeto JSON com os dados originais acrescidos dos dados complementares da disciplina.
  */
-function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
-  // TODO AINDA NÃO EXTRAI
 
-  // TODO cenário mock com dados temporários, para teste
-  console.log("ATENÇÃO: Dados de teste!");
+function extrairDadosComplementaresDisciplina(htmlDetalhesDisciplina, dadosDeUmaDisciplina) {
+  // TODO AINDA NÃO EXTRAI, chamando stub
+  return stubExtrairDadosComplementaresDisciplina(dadosDeUmaDisciplina);
+
+  let EstruturacaoDeDados = {
+    TODO_REGEX_PRA_VERIFICAR_CONSISTENCIA: {
+      contentToFind: /TODO/gm,
+      // replace: "TODO"
+    },
+    TODO_ID_EXPRESSAO_REGULAR: {
+      contentToFind: /TODO/gm,
+      // replace: "TODO"
+    } // ...
+  };
+
+  dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
+  const DADO_NAO_ENCONTRADO = "Dado não encontrado. Acesse a interface padrão do sistema.";
+  const DADO_INCONSISTENTE = "Há uma inconsistência entre as informações gerais da disciplina e seus detalhes. Acesse a interface padrão do sistema."
+
+  let resultadoDoMatch = EstruturacaoDeDados.TODO_REGEX_PRA_VERIFICAR_CONSISTENCIA["contentToFind"].exec(htmlDetalhesDisciplina);
+  if (resultadoDoMatch) {
+
+    // os dados a seguir são comuns à parte de dados gerais e a de dados detalhados da disciplina, e precisam estar consistentes
+    // TODO preencher campos, subdividir depois quais são extraíveis de quais regexes
+    // TODO todos os índices do resultado do match são hipotéticos e devem ser substituídos
+    verificarConsistencia(resultadoDoMatch[1], dadosDeUmaDisciplina["NUM_CREDITOS"]);
+    verificarConsistencia(resultadoDoMatch[2], dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"]);
+    verificarConsistencia(resultadoDoMatch[3], dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"]); // FIXME isso REALMENTE está nos detalhes da disciplina???
+    verificarConsistencia(resultadoDoMatch[4], dadosDeUmaDisciplina["TRAVA_DE_CREDITO"]);
+
+    // se estiver tudo ok, continua
+  }
+
+  resultadoDoMatch = EstruturacaoDeDados.TODO_ID_EXPRESSAO_REGULAR["contentToFind"].exec(htmlDetalhesDisciplina);
+  if (resultadoDoMatch) {
+    // TODO preencher campos, subdividir depois quais são extraíveis de quais regexes
+    // TODO todos os índices do resultado do match são hipotéticos e devem ser substituídos
+    dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = resultadoDoMatch[5] || DADO_NAO_ENCONTRADO; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
+    dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = resultadoDoMatch[6] || DADO_NAO_ENCONTRADO;
+
+    dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(htmlDetalhesDisciplina, dadosDeUmaDisciplina);
+  }
+
+  return htmlDetalhesDisciplina;
+
+  // inner function
+  function verificarConsistencia(dadoEsperado, dadoRecebido) {
+    if (dadoEsperado != dadoRecebido) {
+      throw ReferenceError(DADO_INCONSISTENTE);
+    }
+  }
+}
+
 function extrairRequisitos(htmlDetalhesDisciplina) {
   // TODO AINDA NÃO EXTRAI, chamando stub
   return stubExtrairRequisitos();
