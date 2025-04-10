@@ -1,4 +1,10 @@
 /**
+ * NOTA: Essa função **NÃO FILTRA** uma disciplina específica para obter seu conteúdo.
+ * Ao invés disso, extrai os dados de TODAS as disciplinas.
+ * Por isso, deve ser usada APENAS QUANDO **IMPRESCINDÍVEL**,
+ * para que não haja um excesso de requisições que
+ * venham a resultar em negação de serviço pelo servidor.
+ * 
  * Seleciona, a partir do DOM, os elementos HTML para coleta, e extrai os dados pertinentes.
  * 
  * @returns {object[]} Uma lista de objetos JSON, cada um com os dados de uma disciplina.
@@ -22,11 +28,11 @@ function extrairDadosGeraisDisciplinas() {
 /**
  * ATENÇÃO: Infelizmente, a página-fonte não contém identificadores
  * que permitam uma consulta mais direta.
- * Esta função é compatível com a versão 2025-1 do sistema.
- * Qualquer alteração no formato HTML original pode comprometer seu funcionamento!
+ * Esta função é compatível com a versão do sistema disponibilizada no período 2025/1.
+ * Qualquer alteração no formato HTML original pode comprometer seu funcionamento.
  * 
- * @param {string} htmlDaDisciplina
- * @returns {object} um objeto JSON com os dados da disciplina
+ * @param {string} htmlDisciplina O trecho HTML que contém os dados da disciplina.
+ * @returns {object} um objeto JSON com os dados estruturados da disciplina.
  */
 function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
   let EstruturacaoDeDados = {
@@ -48,12 +54,12 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
   let dadosDeUmaDisciplina = {};
   const DADO_NAO_ENCONTRADO = "Dado não encontrado. Acesse a interface padrão do sistema.";
 
-  let resultadoDoMatch = EstruturacaoDeDados.TURMA_NO_PERIODO["contentToFind"].exec(htmlDaDisciplina);
+  let resultadoDoMatch = EstruturacaoDeDados.TURMA_NO_PERIODO["contentToFind"].exec(htmlDisciplina);
   if (resultadoDoMatch) {
     dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = resultadoDoMatch[1];
   }
 
-  resultadoDoMatch = EstruturacaoDeDados.DEPTO_NUM_COD_NOME["contentToFind"].exec(htmlDaDisciplina);
+  resultadoDoMatch = EstruturacaoDeDados.DEPTO_NUM_COD_NOME["contentToFind"].exec(htmlDisciplina);
   if (resultadoDoMatch) {
     dadosDeUmaDisciplina["CODIGO_DEPARTAMENTO"] = resultadoDoMatch[1];
     dadosDeUmaDisciplina["CODIGO_CINCO_ULTIMOS_NUMEROS"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
@@ -61,10 +67,10 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
     dadosDeUmaDisciplina["NOME"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
   }
 
-  console.log(htmlDaDisciplina);
+  console.log(htmlDisciplina);
   console.log(EstruturacaoDeDados.DEMAIS_CAMPOS["contentToFind"]);
 
-  resultadoDoMatch = EstruturacaoDeDados.DEMAIS_CAMPOS["contentToFind"].exec(htmlDaDisciplina);
+  resultadoDoMatch = EstruturacaoDeDados.DEMAIS_CAMPOS["contentToFind"].exec(htmlDisciplina);
   if (resultadoDoMatch) {
     dadosDeUmaDisciplina["PERIODO"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
     dadosDeUmaDisciplina["FOI_ATENDIDA"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
@@ -75,9 +81,10 @@ function extrairDadosDisciplina2025_1(htmlDaDisciplina) {
     dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = resultadoDoMatch[7] || DADO_NAO_ENCONTRADO;
   }
 
-  console.log(dadosDeUmaDisciplina);
+  // console.log(dadosDeUmaDisciplina);
   return dadosDeUmaDisciplina;
 }
+
 
 /**
  * 
@@ -91,13 +98,13 @@ function extrairDadosComplementaresDisciplina2025_1(dadosDeUmaDisciplina) {
   console.log("ATENÇÃO: Dados de teste!");
 
   dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
-  // dadosDeUmaDisciplina["NUM_CREDITOS"] = "[valor do número de créditos]"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["NUM_CREDITOS"] = "[valor do número de créditos]"; // JÁ TEM ESSE DADO, só pra conferir consistência
   dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "[valor da carga horária semanal]";
-  // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "[valor da carga horária total]"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
-  // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "[valor indicando se é o período sugerido]"; // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "[valor da carga horária total]"; // JÁ TEM ESSE DADO, só pra conferir consistência
+  // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "[valor indicando se é o período sugerido]"; // JÁ TEM ESSE DADO, só pra conferir consistência
   dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = "[valor do tempo de duração]";
   dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = "[valor do tipo de aprovação]";
-  // dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = "[valor da trava de crédito]" // JÁ TEM ESSE DADO, não sei se é o caso de conferir consistência
+  // dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = "[valor da trava de crédito]" // JÁ TEM ESSE DADO, só pra conferir consistência
   dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = "[valor indicando se tem conflito de horário]";
   dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = "[valor indicando se é do tipo Universal]"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
   dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = "[valor indicando se permite lançamento \"em preparo\"]";
