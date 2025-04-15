@@ -236,7 +236,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "59"
   },
   {
     "CODIGO": "IME04-10831",
@@ -283,7 +284,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",    
+    "TRAVA_DE_CREDITO": "69"
   },
   {
     "CODIGO": "IME04-10833",
@@ -378,7 +380,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",    
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME04-10840",
@@ -413,7 +416,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "IME04-10843",
@@ -424,7 +428,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "IME04-10844",
@@ -435,7 +440,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "118"
   },
   {
     "CODIGO": "IME04-10845",
@@ -446,7 +452,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "118"
   },
   {
     "CODIGO": "IME04-10846",
@@ -505,7 +512,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME06-10852",
@@ -624,7 +632,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME04-10854",
@@ -635,7 +644,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "59"
   },
   {
     "CODIGO": "IME04-10855",
@@ -646,7 +656,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "59"
   },
   {
     "CODIGO": "IME04-10856",
@@ -705,7 +716,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "41"
   },
   {
     "CODIGO": "IME04-10861",
@@ -716,7 +728,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME04-10863",
@@ -727,7 +740,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME04-10864",
@@ -738,7 +752,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME04-10865",
@@ -749,7 +764,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "99"
   },
   {
     "CODIGO": "IME04-10867",
@@ -760,7 +776,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "79"
   },
   {
     "CODIGO": "IME04-10868",
@@ -783,7 +800,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "79"
   },
   {
     "CODIGO": "IME04-10870",
@@ -794,7 +812,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "IME04-10871",
@@ -817,7 +836,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "IME04-10873",
@@ -828,7 +848,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Não"
+    "EH_PERIODO_SUGERIDO": "Não",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "IME04-10874",
@@ -839,7 +860,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "IME04-10875",
@@ -850,7 +872,8 @@
     "RAMIFICACAO": "626",
     "NUM_CREDITOS": "4",
     "CARGA_HORARIA_TOTAL": "60",
-    "EH_PERIODO_SUGERIDO": "Sim"
+    "EH_PERIODO_SUGERIDO": "Sim",
+    "TRAVA_DE_CREDITO": "108"
   },
   {
     "CODIGO": "FIS02-11016",
