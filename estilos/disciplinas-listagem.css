@@ -18,13 +18,13 @@
 }
 
 .disciplina-codigo {
-  width: 120px;
-  min-width: 120px;
+  width: 10%;
+  min-width: 85px;
   text-align: center;
 }
 
 .disciplina-nome { /* tanto th quanto td */
-  width: 400px;
+  width: 40%;
   position: relative;
 }
 
@@ -37,7 +37,7 @@ td.disciplina-nome { /* somente td */
 }
 
 .disciplina-periodo {
-  width: 70px;
+  width: 7%;
   text-align: center;
 }
 
@@ -47,14 +47,14 @@ td.disciplina-nome { /* somente td */
 }
 
 .disciplina-situacao-estudante {
-  width: 30px;
+  width: 5%;
   padding-left: 25px;
   text-align: center;
 }
 
 .disciplina-tipo {
-  width: 120px;
-  min-width: 120px;
+  width: 10%;
+  min-width: 85px;
 }
 
 /* Números, quando não são apenas rótulos/identificadores, devem ser alinhados à direita. */
@@ -63,18 +63,15 @@ td.disciplina-num-creditos, td.disciplina-ch-total, td.disciplina-trava-credito 
 }
 
 .disciplina-num-creditos {
-  width: 100px;
-  min-width: 100px;
+  width: 3%;
 }
 
 .disciplina-ch-total {
-  width: 120px;
-  min-width: 120px;
+  width: 3%;
 }
 
 .disciplina-periodo-sugerido {
-  width: 100px;
-  min-width: 100px;
+  width: 10%;
 }
 
 :not(.disciplina-atendida) > td[data-periodo-sugerido="true"] {
@@ -82,12 +79,12 @@ td.disciplina-num-creditos, td.disciplina-ch-total, td.disciplina-trava-credito 
 }
 
 .disciplina-codigo-ramificacao {
-  width: 110px;
+  width: 5%;
   /* padding-left: 15px; */
 }
 
 .disciplina-trava-credito {
-  width: 70px;
+  width: 7%;
 }
 
 td.disciplina-trava-credito::after {
