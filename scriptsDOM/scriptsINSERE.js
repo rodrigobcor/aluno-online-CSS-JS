@@ -37,38 +37,54 @@ function inserirJSPersonalizado() {
   scriptExistente.parentNode.insertBefore(novoScript, scriptExistente.nextSibling);
 }
 
-
 function inserirIntervaloNaTabela() {
-  // Seleciona a tabela-resumo de disciplinas
-  const tabelaDisciplinas = document.querySelector('.tabela-resumo-plano-inscricoes');
+  // Seleciona a tabela-resumo de disciplinas (corrigido o seletor)
+  const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
+  
+  // Seleciona todas as linhas da tabela (corrigido para pegar apenas linhas do tbody)
+  const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
 
-  // Seleciona todas as linhas da tabela, exceto o cabeçalho
-  const linhas = tabelaDisciplinas.querySelectorAll('tr:not(:first-child)');
-
-  // Seleciona a tabela do plano de inscrições com os horários
-  const tabelaIntervalos = document.querySelector('.tabela-plano-inscricoes');
+  // Seleciona a tabela do plano de inscrições com os horários (corrigido o seletor)
+  const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
 
   // Percorre cada linha da tabela de disciplinas
   linhas.forEach(linha => {
-    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim(); // Código da disciplina
-    const horarios = linha.querySelector('.resumo-turma-tempos').textContent.trim(); // Horários
+    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
+    const itensHorario = linha.querySelectorAll('.info-disciplina-turma-tempo');
 
-    // Divide os horários em partes (SEG M5 M6, TER M5 M6, etc.)
-    const partesHorarios = horarios.split('\n');
+    itensHorario.forEach(item => {
+      const textoHorario = item.textContent.trim();
+      const [dia, ...horariosDia] = textoHorario.split(' ');
+      
+      // Mapeia os dias para as classes CSS correspondentes
+      const diaMap = {
+        'SEG': 'seg',
+        'TER': 'ter',
+        'QUA': 'qua',
+        'QUI': 'qui',
+        'SEX': 'sex',
+        'SAB': 'sab'
+      };
+      
+      const diaClass = diaMap[dia];
+      
+      if (!diaClass) return; // Se não encontrar o dia, pula para o próximo
 
-    partesHorarios.forEach(parte => {
-      const [dia, ...horariosDia] = parte.split(' '); // Separa o dia e os horários
       horariosDia.forEach(horario => {
-        // Seleciona a linha correspondente ao horário na tabela de horários
-        const linhaHorario = tabelaIntervalos.querySelector(`.${horario}`);
-        if (linhaHorario) {
-          // Seleciona a célula correspondente ao dia
-          const celula = linhaHorario.querySelector(`.${dia}`);
-          if (celula) {
-            // Insere o código da disciplina na célula
-            celula.textContent = codigo;
-          }
-        }
+        // Seleciona todas as células que correspondem ao dia e horário
+        const celulas = tabelaIntervalos.querySelectorAll(`.${diaClass}.${horario.toLowerCase()}`);
+        
+        celulas.forEach(celula => {
+          // Cria um elemento para mostrar a disciplina e o código
+          const div = document.createElement('div');
+          div.textContent = `${codigo}`;
+          div.style.fontSize = 'smaller';
+          div.style.padding = '2px';
+          
+          // Limpa a célula antes de adicionar novo conteúdo
+          celula.innerHTML = '';
+          celula.appendChild(div);
+        });
       });
     });
   });
