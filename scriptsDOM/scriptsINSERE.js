@@ -38,13 +38,13 @@ function inserirJSPersonalizado() {
 }
 
 function inserirIntervaloNaTabela() {
-  // Seleciona a tabela-resumo de disciplinas (corrigido o seletor)
+  // Seleciona a tabela-resumo de disciplinas
   const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
   
-  // Seleciona todas as linhas da tabela (corrigido para pegar apenas linhas do tbody)
+  // Seleciona todas as linhas da tabela
   const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
 
-  // Seleciona a tabela do plano de inscrições com os horários (corrigido o seletor)
+  // Seleciona a tabela do plano de inscrições com os horários
   const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
 
   // Percorre cada linha da tabela de disciplinas
@@ -78,6 +78,59 @@ function inserirIntervaloNaTabela() {
           // Cria um elemento para mostrar a disciplina e o código
           const div = document.createElement('div');
           div.textContent = `${codigo}`;
+          div.style.fontSize = 'smaller';
+          div.style.padding = '2px';
+          
+          // Limpa a célula antes de adicionar novo conteúdo
+          celula.innerHTML = '';
+          celula.appendChild(div);
+        });
+      });
+    });
+  });
+}
+
+function apagaTabelaDeHorarios() {
+  // Seleciona a tabela-resumo de disciplinas
+  const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
+  
+  // Seleciona todas as linhas da tabela
+  const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
+
+  // Seleciona a tabela do plano de inscrições com os horários
+  const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
+
+  // Percorre cada linha da tabela de disciplinas
+  linhas.forEach(linha => {
+    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
+    const itensHorario = linha.querySelectorAll('.info-disciplina-turma-tempo');
+
+    itensHorario.forEach(item => {
+      const textoHorario = item.textContent.trim();
+      const [dia, ...horariosDia] = textoHorario.split(' ');
+      
+      // Mapeia os dias para as classes CSS correspondentes
+      const diaMap = {
+        'SEG': 'seg',
+        'TER': 'ter',
+        'QUA': 'qua',
+        'QUI': 'qui',
+        'SEX': 'sex',
+        'SAB': 'sab'
+      };
+      
+      const diaClass = diaMap[dia];
+      
+      if (!diaClass) return; // Se não encontrar o dia, pula para o próximo
+
+      horariosDia.forEach(horario => {
+        // Seleciona todas as células que correspondem ao dia e horário
+        const celulas = tabelaIntervalos.querySelectorAll(`.${diaClass}.${horario.toLowerCase()}`);
+        
+        celulas.forEach(celula => {
+          // Cria um elemento para mostrar a disciplina e o código
+          const div = document.createElement('div');
+          div.textContent = ' ';
           div.style.fontSize = 'smaller';
           div.style.padding = '2px';
           
