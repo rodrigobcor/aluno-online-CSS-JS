@@ -7,6 +7,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <meta name="KeyWords" content="Aluno Online UERJ SAG CETREINA PROTOCOLO">
 
+  <script type="text/javascript" src="./scriptsDOM/scriptsINSERE.js"></script>
   <script type="text/javascript" src="./scriptsDOM/scriptsVALIDA.js"></script>
   <script type="text/javascript" src="https://rodrigobcor.github.io/aluno-online-CSS-JS/scriptsDOM/scriptACORDEAO.js"></script>
 
@@ -19,6 +20,8 @@
   <link rel="stylesheet" href="https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/disciplinas-detalhes.css">
   <link rel="stylesheet" href="https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/turmas.css">
   <link rel="stylesheet" href="https://rodrigobcor.github.io/aluno-online-CSS-JS/estilos/info-tooltips.css">
+  <link rel="stylesheet" href="./estilos/turmas.css">
+  <link rel="stylesheet" href="./estilos/plano-inscricoes.css">
 </head>
 
 <body>
@@ -72,43 +75,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="resumo-disciplina-nome">Álgebra</td>
-              <td class="resumo-disciplina-codigo">IME02-10815</td>
-              <td class="resumo-turma-id">1</td>
-              <td class="resumo-turma-tempos">
-                <ul class="info-disciplina-turma-tempos">
-                  <li class="info-disciplina-turma-tempo">SEG M5 M6</li>
-                  <li class="info-disciplina-turma-tempo">TER M5 M6</li>
-                  <li class="info-disciplina-turma-tempo">QUI M5 M6</li>
-                </ul>
-              </td>
-              <td class="resumo-turma-local-aulas">Não informado</td>
-            </tr>
-            <tr>
-              <td class="resumo-disciplina-nome">Cálculo das Probabilidades</td>
-              <td class="resumo-disciplina-codigo">IME05-10819</td>
-              <td class="resumo-turma-id">1</td>
-              <td class="resumo-turma-tempos">
-                <ul class="info-disciplina-turma-tempos">
-                  <li class="info-disciplina-turma-tempo">QUA T5 T6</li>
-                  <li class="info-disciplina-turma-tempo">SEX N1 N2</li>
-                </ul>
-              </td>
-              <td class="resumo-turma-local-aulas">Não informado</td>
-            </tr>
-            <tr>
-              <td class="resumo-disciplina-nome">Elementos de Lógica</td>
-              <td class="resumo-disciplina-codigo">IME02-10824</td>
-              <td class="resumo-turma-id">1</td>
-              <td class="resumo-turma-tempos">
-                <ul class="info-disciplina-turma-tempos">
-                  <li class="info-disciplina-turma-tempo">QUA T3 T4</li>
-                  <li class="info-disciplina-turma-tempo">SEX T3 T4</li>
-                </ul>
-              </td>
-              <td class="resumo-turma-local-aulas">Não informado</td>
-            </tr>
+            
           </tbody>
         </table>
         <table id="tabela-plano-inscricoes">
@@ -461,9 +428,11 @@
                           <div class="info-disciplina-turma-informacoes">
                             <ul class="info-disciplina-turma">
                               <li>
-                                <button class="botao-adicionar-turma" data-turma="1">➕</button>
-                                <span class="label-info-disciplina-turma">Turma:</span>
-                                <span class="info-disciplina-turma-id">1</span>
+                                <div>
+                                  <a href="#" class="botao-adicionar-turma" data-turma="1">➕</a>
+                                  <span class="label-info-disciplina-turma">Turma:</span>
+                                  <span class="info-disciplina-turma-id">1</span>
+                                </div>
                               </li>
                               <li>
                                 <span class="label-info-disciplina-turma">Turma preferencial?</span>
@@ -561,9 +530,11 @@
                           <div class="info-disciplina-turma-informacoes">
                             <ul class="info-disciplina-turma">
                               <li>
-                                <span class="label-info-disciplina-turma">Turma:</span>
-                                <span class="info-disciplina-turma-id">2
-                                </span>
+                                <div>
+                                  <a href="#" class="botao-adicionar-turma" data-turma="2">➕</a>
+                                  <span class="label-info-disciplina-turma">Turma:</span>
+                                  <span class="info-disciplina-turma-id">2</span>
+                                </div>
                               </li>
                               <li>
                                 <span class="label-info-disciplina-turma">Turma preferencial?</span>
@@ -581,9 +552,9 @@
                               <li>
                                 <span class="label-info-disciplina-turma">Tempos:</span>
                                 <ul class="info-disciplina-turma-tempos">
-                                  <li class="info-disciplina-turma-tempo">SEG M3 M4</li>
-                                  <li class="info-disciplina-turma-tempo">QUA M3 M4</li>
-                                  <li class="info-disciplina-turma-tempo">SEX M3 M4</li>
+                                  <li class="info-disciplina-turma-tempo">SEG M5 M6</li>
+                                  <li class="info-disciplina-turma-tempo">QUA M5 M6</li>
+                                  <li class="info-disciplina-turma-tempo">SEX M5 M6</li>
                                 </ul>
                               </li>
                             </ul>

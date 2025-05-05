@@ -37,51 +37,44 @@ function inserirJSPersonalizado() {
   scriptExistente.parentNode.insertBefore(novoScript, scriptExistente.nextSibling);
 }
 
-function inserirIntervaloNaTabela() {
-  // Seleciona a tabela-resumo de disciplinas
+function inserirHorariosNaTabelaDeHorarios() {
+  // Limpa todos os horários primeiro (opcional, dependendo do seu caso)
+  apagaTabelaDeHorarios();
+  
   const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
-
-  // Seleciona todas as linhas da tabela
   const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
-
-  // Seleciona a tabela do plano de inscrições com os horários
   const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
 
-  // Percorre cada linha da tabela de disciplinas
   linhas.forEach(linha => {
     const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
+    const turmaId = linha.querySelector('.resumo-turma-id').textContent.trim();
     const itensHorario = linha.querySelectorAll('.info-disciplina-turma-tempo');
 
     itensHorario.forEach(item => {
       const textoHorario = item.textContent.trim();
       const [dia, ...horariosDia] = textoHorario.split(' ');
 
-      // Mapeia os dias para as classes CSS correspondentes
       const diaMap = {
-        'SEG': 'seg',
-        'TER': 'ter',
-        'QUA': 'qua',
-        'QUI': 'qui',
-        'SEX': 'sex',
-        'SAB': 'sab'
+        'SEG': 'seg', 'TER': 'ter', 'QUA': 'qua', 
+        'QUI': 'qui', 'SEX': 'sex', 'SAB': 'sab'
       };
 
       const diaClass = diaMap[dia];
-
-      if (!diaClass) return; // Se não encontrar o dia, pula para o próximo
+      if (!diaClass) return;
 
       horariosDia.forEach(horario => {
-        // Seleciona todas as células que correspondem ao dia e horário
         const celulas = tabelaIntervalos.querySelectorAll(`.${diaClass}.${horario.toLowerCase()}`);
-
+        
         celulas.forEach(celula => {
-          // Cria um elemento para mostrar a disciplina e o código
           const div = document.createElement('div');
           div.textContent = `${codigo}`;
           div.style.fontSize = 'smaller';
           div.style.padding = '2px';
-
-          // Limpa a célula antes de adicionar novo conteúdo
+          
+          // Marca a célula com os dados da disciplina
+          celula.setAttribute('data-codigo', codigo);
+          celula.setAttribute('data-turma', turmaId);
+          
           celula.innerHTML = '';
           celula.appendChild(div);
         });
@@ -91,59 +84,44 @@ function inserirIntervaloNaTabela() {
 }
 
 function apagaTabelaDeHorarios() {
-  // Seleciona a tabela-resumo de disciplinas
-  const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
-
-  // Seleciona todas as linhas da tabela
-  const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
-
-  // Seleciona a tabela do plano de inscrições com os horários
   const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
-
-  // Percorre cada linha da tabela de disciplinas
-  linhas.forEach(linha => {
-    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
-    const itensHorario = linha.querySelectorAll('.info-disciplina-turma-tempo');
-
-    itensHorario.forEach(item => {
-      const textoHorario = item.textContent.trim();
-      const [dia, ...horariosDia] = textoHorario.split(' ');
-
-      // Mapeia os dias para as classes CSS correspondentes
-      const diaMap = {
-        'SEG': 'seg',
-        'TER': 'ter',
-        'QUA': 'qua',
-        'QUI': 'qui',
-        'SEX': 'sex',
-        'SAB': 'sab'
-      };
-
-      const diaClass = diaMap[dia];
-
-      if (!diaClass) return; // Se não encontrar o dia, pula para o próximo
-
-      horariosDia.forEach(horario => {
-        // Seleciona todas as células que correspondem ao dia e horário
-        const celulas = tabelaIntervalos.querySelectorAll(`.${diaClass}.${horario.toLowerCase()}`);
-
-        celulas.forEach(celula => {
-          // Cria um elemento para mostrar a disciplina e o código
-          const div = document.createElement('div');
-          div.textContent = ' ';
-          div.style.fontSize = 'smaller';
-          div.style.padding = '2px';
-
-          // Limpa a célula antes de adicionar novo conteúdo
-          celula.innerHTML = '';
-          celula.appendChild(div);
-        });
-      });
-    });
+  const celulasComDisciplinas = tabelaIntervalos.querySelectorAll('td[data-codigo]');
+  
+  celulasComDisciplinas.forEach(celula => {
+    celula.innerHTML = '';
+    celula.removeAttribute('data-codigo');
+    celula.removeAttribute('data-turma');
   });
 }
 
-function adicionarDisciplinaNaTabela() {
+function removerHorariosDaDisciplina(codigoDisciplina, turmaId) {
+  const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
+  const celulasComDisciplina = tabelaIntervalos.querySelectorAll(
+    `td[data-codigo="${codigoDisciplina}"][data-turma="${turmaId}"]`
+  );
+  
+  celulasComDisciplina.forEach(celula => {
+    celula.innerHTML = '';
+    celula.removeAttribute('data-codigo');
+    celula.removeAttribute('data-turma');
+  });
+}
+
+function turmaJaExiste(codigoDisciplina, numeroTurma) {
+  const linhas = document.querySelectorAll('#tabela-resumo-plano-inscricoes tbody tr');
+  
+  for (const linha of linhas) {
+    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
+    const turma = linha.querySelector('.resumo-turma-id').textContent.trim();
+    
+    if (codigo === codigoDisciplina && turma === numeroTurma) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function adicionarTurmaNaTabela(turmaId) {
   // Seleciona o TD com os detalhes da disciplina
   const tdDetalhes = document.querySelector('#tabela-disciplinas > tbody > tr.dados-disciplina.open > td.detalhes-disciplina.open');
   
@@ -157,15 +135,24 @@ function adicionarDisciplinaNaTabela() {
   const codigoDisciplina = tdDetalhes.querySelector('.info-disciplina-codigo').textContent.trim();
   
   // Encontra a turma específica pelo ID
-  const turma = Array.from(tdDetalhes.querySelectorAll('.info-disciplina-turma-id')).find(el => el.textContent.trim() === turmaId).closest('.div-grupo-turmas-disciplina');
+  const turma = Array.from(tdDetalhes.querySelectorAll('.info-disciplina-turma-id'))
+    .find(el => el.textContent.trim() === turmaId)
+    .closest('.div-grupo-turmas-disciplina');
   
   if (!turma) {
     console.log(`Turma ${turmaId} não encontrada`);
     return;
   }
 
-  const numeroTurma = primeiraTurma.querySelector('.info-disciplina-turma-id').textContent.trim();
-  const horarios = primeiraTurma.querySelectorAll('.info-disciplina-turma-tempo');
+  const numeroTurma = turma.querySelector('.info-disciplina-turma-id').textContent.trim();
+  
+  // Verifica se a turma já existe na tabela
+  if (turmaJaExiste(codigoDisciplina, numeroTurma)) {
+    alert('Esta turma já foi adicionada ao seu planejamento!');
+    return;
+  }
+
+  const horarios = turma.querySelectorAll('.info-disciplina-turma-tempo');
 
   // Cria um UL para os horários como na tabela original
   const ulHorarios = document.createElement('ul');
@@ -185,7 +172,33 @@ function adicionarDisciplinaNaTabela() {
   // Cria a nova linha
   const novaLinha = document.createElement('tr');
   
-  // Cria as células com as mesmas classes da tabela original
+  // Cria a célula com o botão de remoção
+  const celulaBotaoRemover = document.createElement('td');
+  celulaBotaoRemover.className = 'botao-remover-turma';
+  
+  const linkRemover = document.createElement('a');
+  linkRemover.href = '#';
+  linkRemover.innerHTML = '✖️';
+  
+  // Adiciona o event listener para remover a linha
+  linkRemover.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (confirm('Tem certeza que deseja remover esta disciplina do seu planejamento?')) {
+      novaLinha.remove();
+      // Reativa o botão de adicionar turma correspondente
+      const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
+      if (botaoAdicionar) {
+        botaoAdicionar.disabled = false;
+        botaoAdicionar.style.opacity = '1';
+      }
+      // Atualiza a tabela de horários após remoção
+      inserirHorariosNaTabelaDeHorarios();
+    }
+  });
+  
+  celulaBotaoRemover.appendChild(linkRemover);
+  
+  // Cria as demais células
   const celulaNome = document.createElement('td');
   celulaNome.className = 'resumo-disciplina-nome';
   celulaNome.textContent = nomeDisciplina;
@@ -207,6 +220,7 @@ function adicionarDisciplinaNaTabela() {
   celulaLocal.textContent = 'Não informado';
 
   // Adiciona as células à linha
+  novaLinha.appendChild(celulaBotaoRemover);
   novaLinha.appendChild(celulaNome);
   novaLinha.appendChild(celulaCodigo);
   novaLinha.appendChild(celulaTurma);
@@ -215,14 +229,43 @@ function adicionarDisciplinaNaTabela() {
 
   // Adiciona a linha ao final da tabela
   tbody.appendChild(novaLinha);
+  
+  // Desabilita o botão de adicionar turma correspondente
+  const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
+  if (botaoAdicionar) {
+    botaoAdicionar.disabled = true;
+    botaoAdicionar.style.opacity = '0.5';
+  }
+  
+  // Atualiza a tabela de horários
+  inserirHorariosNaTabelaDeHorarios();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   // Adiciona event listeners a todos os botões
   document.querySelectorAll('.botao-adicionar-turma').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault(); // Previne o comportamento padrão do link
       const turmaId = this.getAttribute('data-turma');
       adicionarTurmaNaTabela(turmaId);
     });
   });
+});
+
+linkRemover.addEventListener('click', function(e) {
+  e.preventDefault();
+  if (confirm('Tem certeza que deseja remover esta disciplina do seu planejamento?')) {
+    // Remove os horários específicos primeiro
+    removerHorariosDaDisciplina(codigoDisciplina, numeroTurma);
+    
+    // Depois remove a linha da tabela
+    novaLinha.remove();
+    
+    // Reativa o botão de adicionar
+    const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
+    if (botaoAdicionar) {
+      botaoAdicionar.disabled = false;
+      botaoAdicionar.style.opacity = '1';
+    }
+  }
 });
