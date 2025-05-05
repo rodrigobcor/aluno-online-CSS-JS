@@ -231,7 +231,7 @@ function preencherModeloDetalhesDisciplina(disciplina) {
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Carga horária semanal:</span>
-            <span  class="info-disciplina-dados-gerais-ch-semanal">${disciplina.CH_SEMANAL_DISCIPLINA}</span>
+            <span  class="info-disciplina-dados-gerais-ch-semanal">${disciplina.CARGA_HORARIA_SEMANAL}</span>
             (<span class="label-info-disciplina-dados-gerais">Carga horária total:</span>
             <span class="info-disciplina-dados-gerais-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</span>)
           </li>
@@ -246,11 +246,11 @@ function preencherModeloDetalhesDisciplina(disciplina) {
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Tempo de duração:</span>
-            <span class="info-disciplina-dados-gerais-tempo-duracao">${disciplina.TEMPO_DURACAO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-tempo-duracao">${disciplina.TEMPO_DURACAO}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Tipo de aprovação:</span>
-            <span class="info-disciplina-dados-gerais-tipo-aprovacao">${disciplina.TIPO_APROVACAO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-tipo-aprovacao">${disciplina.TIPO_APROVACAO}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Trava de crédito:</span>
@@ -258,15 +258,15 @@ function preencherModeloDetalhesDisciplina(disciplina) {
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Permite conflito de horário?</span>
-            <span class="info-disciplina-dados-gerais-pode-conflitar">${disciplina.PERMITE_CONFLITO_HORARIO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-pode-conflitar">${disciplina.PERMITE_CONFLITO_HORARIO}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">É oferecida como Universal?</span>
-            <span class="info-disciplina-dados-gerais-oferta-universal">${disciplina.EH_UNIVERSAL_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-oferta-universal">${disciplina.EH_UNIVERSAL}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Permite situação "Em Preparo"?</span>
-            <span class="info-disciplina-dados-gerais-pode-em-preparo">${disciplina.PERMITE_EM_PREPARO_DISCIPLINA}</span>
+            <span class="info-disciplina-dados-gerais-pode-em-preparo">${disciplina.PERMITE_EM_PREPARO}</span>
           </li>
         </ul>
       </div>

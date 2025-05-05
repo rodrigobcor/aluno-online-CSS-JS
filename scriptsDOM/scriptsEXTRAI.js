@@ -87,7 +87,6 @@ function extrairDadosDisciplina(htmlDisciplina) {
   return dadosDeUmaDisciplina;
 }
 
-
 /**
  * Extrai os dados da disciplina a partir do trecho HTML equivalente.
  * 
@@ -138,11 +137,11 @@ function extrairDadosComplementaresDisciplina(htmlDetalhesDisciplina, dadosDeUma
   if (resultadoDoMatch) {
     // TODO preencher campos, subdividir depois quais são extraíveis de quais regexes
     // TODO todos os índices do resultado do match são hipotéticos e devem ser substituídos
-    dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = resultadoDoMatch[5] || DADO_NAO_ENCONTRADO; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
-    dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = resultadoDoMatch[6] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["CARGA_HORARIA_SEMANAL"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["TEMPO_DURACAO"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;dadosDeUmaDisciplina["TIPO_APROVACAO"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["EH_UNIVERSAL"] = resultadoDoMatch[5] || DADO_NAO_ENCONTRADO; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
+    dadosDeUmaDisciplina["PERMITE_EM_PREPARO"] = resultadoDoMatch[6] || DADO_NAO_ENCONTRADO;
 
     dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(htmlDetalhesDisciplina, dadosDeUmaDisciplina);
   }
@@ -208,15 +207,15 @@ function stubExtrairDadosComplementaresDisciplina(dadosDeUmaDisciplina) {
 
   dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
   // dadosDeUmaDisciplina["NUM_CREDITOS"] = "[valor do número de créditos]"; // JÁ TEM ESSE DADO, só pra conferir consistência
-  dadosDeUmaDisciplina["CH_SEMANAL_DISCIPLINA"] = "[valor da carga horária semanal]";
+  dadosDeUmaDisciplina["CARGA_HORARIA_SEMANAL"] = "[valor da carga horária semanal]";
   // dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = "[valor da carga horária total]"; // JÁ TEM ESSE DADO, só pra conferir consistência
   // dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"] = "[valor indicando se é o período sugerido]"; // JÁ TEM ESSE DADO, só pra conferir consistência
-  dadosDeUmaDisciplina["TEMPO_DURACAO_DISCIPLINA"] = "[valor do tempo de duração]";
-  dadosDeUmaDisciplina["TIPO_APROVACAO_DISCIPLINA"] = "[valor do tipo de aprovação]";
+  dadosDeUmaDisciplina["TEMPO_DURACAO"] = "[valor do tempo de duração]";
+  dadosDeUmaDisciplina["TIPO_APROVACAO"] = "[valor do tipo de aprovação]";
   // dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = "[valor da trava de crédito]" // JÁ TEM ESSE DADO, só pra conferir consistência
-  dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO_DISCIPLINA"] = "[valor indicando se tem conflito de horário]";
-  dadosDeUmaDisciplina["EH_UNIVERSAL_DISCIPLINA"] = "[valor indicando se é do tipo Universal]"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
-  dadosDeUmaDisciplina["PERMITE_EM_PREPARO_DISCIPLINA"] = "[valor indicando se permite lançamento \"em preparo\"]";
+  dadosDeUmaDisciplina["PERMITE_CONFLITO_HORARIO"] = "[valor indicando se tem conflito de horário]";
+  dadosDeUmaDisciplina["EH_UNIVERSAL"] = "[valor indicando se é do tipo Universal]"; // XXX não sei por que isso (entre outros) é mantido, dá pra ver pela lista
+  dadosDeUmaDisciplina["PERMITE_EM_PREPARO"] = "[valor indicando se permite lançamento \"em preparo\"]";
 
   dadosDeUmaDisciplina["REQUISITOS"] = extrairRequisitos(dadosDeUmaDisciplina);
 
