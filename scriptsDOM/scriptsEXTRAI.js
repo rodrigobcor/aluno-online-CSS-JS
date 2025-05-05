@@ -49,7 +49,7 @@ function extrairDadosDisciplina(htmlDisciplina) {
     },
     DEMAIS_CAMPOS: {
       contentToFind: /\s*<td style="text-align: center;">([0-9 -]+?)<\/td>\n\s*<td style="text-align: center;">(Sim|Não)<\/td>\n\s*<td style="text-align: center;">(.+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>\n\s*<td style="text-align: center;">([0-9]+?)<\/td>/gm,
-      // replace: "\nPERIODO:$1\nFOI_ATENDIDA:$2\nTIPO:$3\nRAMIFICACAO:$4\nNUM_CREDITOS:$5\nCARGA_HORARIA_TOTAL:$6\nTRAVA_DE_CREDITO:$7\n"
+      // replace: "\nPERIODO:$1\nFOI_ATENDIDA:$2\nTIPO:$3\nCODIGO_RAMIFICACAO:$4\nNUM_CREDITOS:$5\nCARGA_HORARIA_TOTAL:$6\nTRAVA_DE_CREDITO:$7\n"
     }
   };
 
@@ -77,7 +77,7 @@ function extrairDadosDisciplina(htmlDisciplina) {
     dadosDeUmaDisciplina["PERIODO"] = resultadoDoMatch[1] || DADO_NAO_ENCONTRADO;
     dadosDeUmaDisciplina["FOI_ATENDIDA"] = resultadoDoMatch[2] || DADO_NAO_ENCONTRADO;
     dadosDeUmaDisciplina["TIPO"] = resultadoDoMatch[3] || DADO_NAO_ENCONTRADO;
-    dadosDeUmaDisciplina["RAMIFICACAO"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
+    dadosDeUmaDisciplina["CODIGO_RAMIFICACAO"] = resultadoDoMatch[4] || DADO_NAO_ENCONTRADO;
     dadosDeUmaDisciplina["NUM_CREDITOS"] = resultadoDoMatch[5] || DADO_NAO_ENCONTRADO;
     dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"] = resultadoDoMatch[6] || DADO_NAO_ENCONTRADO;
     dadosDeUmaDisciplina["TRAVA_DE_CREDITO"] = resultadoDoMatch[7] || DADO_NAO_ENCONTRADO;

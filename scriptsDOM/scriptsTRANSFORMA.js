@@ -163,7 +163,6 @@ function transformarListaDisciplinas(listaDadosDisciplinas) {
   return listaDadosDisciplinas;
 }
 
-
 /**
  * Gera o conteúdo HTML com os dados de uma disciplina, utilizando o modelo de estruturação dos dados.
  * 
@@ -188,7 +187,7 @@ function preencherModeloDisciplina(disciplina) {
   </td>
   <td class="disciplina-codigo ${disciplina.CODIGO_DEPARTAMENTO}">${disciplina.CODIGO}</td>
   <td class="disciplina-tipo">${disciplina.TIPO}</td>
-  <td class="disciplina-codigo-ramificacao">${disciplina.RAMIFICACAO}</td>
+  <td class="disciplina-codigo-ramificacao">${disciplina.CODIGO_RAMIFICACAO}</td>
   <td class="disciplina-num-creditos">${disciplina.NUM_CREDITOS}</td>
   <td class="disciplina-ch-total">${disciplina.CARGA_HORARIA_TOTAL}</td>
   <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${disciplina.EH_PERIODO_SUGERIDO == "Sim"}">
@@ -201,7 +200,6 @@ ${preencherModeloDetalhesDisciplina(disciplina)}
   </td>
 </tr>
 `;
-
   return modeloPreenchidoDisciplina;
 }
 
@@ -214,11 +212,11 @@ ${preencherModeloDetalhesDisciplina(disciplina)}
  */
 function preencherModeloDetalhesDisciplina(disciplina) {
 
-    // os dados a incluir aqui (ou a maioria) não se encontram na página geral de lista de disciplinas,
-    // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
-    disciplina = extrairDadosComplementaresDisciplina(disciplina);
+  // os dados a incluir aqui (ou a maioria) não se encontram na página geral de lista de disciplinas,
+  // e só aparecem sob demanda, quando se seleciona a opção de consulta de uma disciplina
+  disciplina = extrairDadosComplementaresDisciplina(disciplina);
 
-    let modeloPreenchidoDetalhesDisciplina = 
+  let modeloPreenchidoDetalhesDisciplina = 
 `    <div class="divContentBlock">
       <div class="divContentBlockHeader">
         <h3 class="info-disciplina-nome">${disciplina.NOME}</h3>
@@ -292,7 +290,6 @@ ${preencherModeloRequisitosDisciplina(disciplina.REQUISITOS)}
   return modeloPreenchidoDetalhesDisciplina;
 }
 
-
 /**
  * @param {object[]} requisitos O conjunto (`array`) de requisitos da disciplina.
  * Caso não haja requisitos, deve-se indicar **com um `array` vazio** (sem elementos).
@@ -313,9 +310,9 @@ function preencherModeloRequisitosDisciplina(requisitos) {
           <span class="label-pre-requisito">Pré-Requisito:</span>
           <p class="pre-requisitos">` + "\n";
     if (umRequisito.TIPO_REQUISITO == "REQUISITO_SEM_OPCOES_ALTERNATIVAS") {
-        htmlRequisito += getHtmlRequisitoSimples(umRequisito, "");
+      htmlRequisito += getHtmlRequisitoSimples(umRequisito, "");
     } else if (umRequisito.TIPO_REQUISITO == "REQUISITO_COM_OPCOES_ALTERNATIVAS") {
-        htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito, "");
+      htmlRequisito += getHtmlRequisitoComOpcaoAlternativa(umRequisito, "");
     }
     // fechando a tag do parágrafo
     htmlRequisito +=
@@ -325,7 +322,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
   });
 
   // innner function
-    function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
+  function getHtmlRequisitoSimples(requisitoSimples, indentacao = "") {
     return indentacao +
 `            ${requisitoSimples.CODIGO_REQUISITO_DISCIPLINA}: ${requisitoSimples.NOME_REQUISITO_DISCIPLINA}` + "\n";
   }
@@ -334,7 +331,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
   function getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao = "") {
     let htmlTodasAsAlternativas = "";
     // o divisor de alternativas irá constar entre as alternativas
-    let divisorDeAlternativas = indentacao +
+    let divisorDeAlternativas = "\n" + indentacao +
 `            <br/><span class="alternativo">OU</span>` + "\n";
 
     // o valor do atributo ALTERNATIVAS_REQUISITO é um array de requisitos alternativos
@@ -348,9 +345,7 @@ function preencherModeloRequisitosDisciplina(requisitos) {
         htmlTodasAsAlternativas += getHtmlRequisitoComOpcaoAlternativa(opcoesDeRequisito, indentacao + "  ");
       } // qualquer outra opção de escolha é provavelmente um erro sintático.
     });
-
-    htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join("\n" + divisorDeAlternativas) +  "\n";
-
+    htmlTodasAsAlternativas = htmlTodasAsAlternativas.trimEnd().split("\n").join(divisorDeAlternativas) + "\n";
     return htmlTodasAsAlternativas;
   }
 
@@ -374,7 +369,7 @@ function testeTransformarListaDisciplinas() {
       "PERIODO": "1",
       "FOI_ATENDIDA": "Sim",
       "TIPO": "Obrigatória",
-      "RAMIFICACAO": "626",
+      "CODIGO_RAMIFICACAO": "626",
       "NUM_CREDITOS": "5",
       "CARGA_HORARIA_TOTAL": "90",
       "EH_PERIODO_SUGERIDO": "Sim",
@@ -383,13 +378,12 @@ function testeTransformarListaDisciplinas() {
     JSON.parse(`{
       "CODIGO_DEPARTAMENTO": "ILE02",
       "CODIGO_CINCO_ULTIMOS_NUMEROS": "10822",
-
       "CODIGO": "ILE02-10822",
       "NOME": "Português Instrumental",
       "PERIODO": "3",
       "FOI_ATENDIDA": "Sim",
       "TIPO": "Obrigatória",
-      "RAMIFICACAO": "626",
+      "CODIGO_RAMIFICACAO": "626",
       "NUM_CREDITOS": "4",
       "CARGA_HORARIA_TOTAL": "60",
       "EH_PERIODO_SUGERIDO": "Sim",
