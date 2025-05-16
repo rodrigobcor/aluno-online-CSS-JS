@@ -132,6 +132,95 @@ function adicionarTurmaNaTabela(turmaId) {
     inserirHorariosNaTabelaDeHorarios();
 }
 
+// BEGIN pending commit
+
+/**
+ * Fills out the schedule table with the disciplines
+ * 
+ * @param {object[]} listOfDisciplines The list of disciplines
+ *     selected for enrollment.
+ * @param {string} listOfDisciplines.code The discipline code identifier.
+ * @param {string[]} listOfDisciplines.weekDaysAndTimes The scheduled
+ *     days and times for the discipline.
+ */
+function fillOutTable(listOfDisciplines) {
+  let weekDay, timeCode = undefined;
+  listOfDisciplines.forEach(discipline => {
+    discipline.weekDaysAndTimes.forEach(weekDayAndTime => {
+      [weekDay, timeCode] = weekDayAndTime.split(" ");
+      fillOutCell(discipline.code, weekDay, timeCode);
+    });
+  });
+}
+
+/**
+ * Removes every marker/color of from the cells of the schedule table,
+ * even if the discipline is (still) present on the list of disciplinas.
+ * 
+ * This function must be called everytime a change occurs in the list of disciplines.
+ */
+function clearWholeTable() {
+  // select all cells
+  let allCells = document.querySelectorAll("#tabela-plano-inscricoes > tbody > tr > td");
+  allCells.forEach(tableCell => {
+    // clean markers (classes) of selected disciplines, 
+    // it will be filled out again later
+    tableCell.classList.remove("selecionada");
+    tableCell.classList.remove("com-conflito");
+    tableCell.innerText = "";
+  });
+}
+
+/**
+ * This funcion must be called from the array of disciplines from the list.
+ * It handles duplicate schedules for different disciplines.
+ * 
+ * Note-to-self: Ideally, this array uses objects with disciplineCodes and each week/time info.
+ * If so, change the parameter (as it avoids a long parameter list)
+ * 
+ * @param {string} disciplineCode 
+ * @param {string} weekDay 
+ * @param {string} timeCode 
+ */
+function fillOutCell(disciplineCode, weekDay, timeCode) {
+
+  let selector = `#tabela-plano-inscricoes > tbody > tr.${timeCode} > td.${weekDay}`;
+  let tableCell = document.querySelector(selector);
+  let classToAdd = "";
+  let cellText = tableCell.innerText;
+  // verifico se algum código foi adicionado em uma iteração anterior
+  if (cellText.length == 0) { // no discipline has been added to this cell
+    classToAdd = "selecionada";
+    cellText = disciplineCode;
+  } else { // at least one discipline has been added to this cell
+    classToAdd = "com-conflito";
+    cellText = cellText + '\n' + disciplineCode; // keep the former and add the current one
+  }
+  tableCell.classList.add(classToAdd);
+  tableCell.innerText = cellText;
+}
+
+function fillOutCellTest() {
+  let disciplineCode = "IMERMÃO 101";
+  let weekDay = "seg";
+  let timeCode = "m5";
+  fillOutCell(disciplineCode, weekDay, timeCode);
+  // horário seguinte
+  timeCode = "m6";
+  fillOutCell(disciplineCode, weekDay, timeCode);
+  // another discipline
+  disciplineCode = "FISCERTO 102"
+  weekDay = "seg";
+  timeCode = "m3";
+  fillOutCell(disciplineCode, weekDay, timeCode);
+  timeCode = "m4";
+  fillOutCell(disciplineCode, weekDay, timeCode);
+  timeCode = "m5";
+  fillOutCell(disciplineCode, weekDay, timeCode);
+}
+
+// END pending commit
+
 document.addEventListener('DOMContentLoaded', function () {
     // Adiciona event listeners a todos os botões
     document.querySelectorAll('.botao-adicionar-turma').forEach(btn => {
