@@ -63,7 +63,7 @@
     font-size: 12px;
     margin-bottom: 20px;
     /* border: 4px double #d0d1d3; */
-    /* border-spacing: 0px; */
+    /* border-spacing: 0; */
     display: table;
 
     & col.vagas-tipo, col.vagas-num-oferecidas,

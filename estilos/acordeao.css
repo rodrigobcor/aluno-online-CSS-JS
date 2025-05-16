@@ -98,8 +98,8 @@
     & td.detalhes-disciplina {
 
       &.fold {
-        padding: 0px;
-        height: 0px;
+        padding: 0;
+        height: 0;
         display: none;
         transition: all 1s ease;
       }
