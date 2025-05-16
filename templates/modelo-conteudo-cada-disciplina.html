@@ -4,11 +4,11 @@
 formatação dentro da tabela, devem ser incluídos à parte -->
 <tr class="dados-disciplina ${CSS_JA_ATENDIDA_SE_FOI_ATENDIDA}"><!-- Início do conteúdo da disciplina -->
   <td class="disciplina-periodo">
-    <span class="${CSS_PERIODO}">${PERIODO}</span>
+    <span class="${CSS_PERIODO}">${disciplina.PERIODO}</span>
   </td>
   <td class="disciplina-nome ${CSS_TOOLTIP_SE_FOI_ATENDIDA}">
-    <a href="#" onclick="javascript:consultarDisciplina(output, ${CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
-    <span class="texto-nome-disciplina">${NOME}</span>
+    <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
+    <span class="texto-nome-disciplina">${disciplina.NOME}</span>
       <!-- SE ${FOI_ATENDIDA}... -->
       <span class="tooltip-texto">Esta disciplina já foi atendida.</span>
       <!-- SE ${NOT(${FOI_ATENDIDA})}... -->
@@ -23,7 +23,7 @@ formatação dentro da tabela, devem ser incluídos à parte -->
     <a href="#" onclick="javascript:consultarDisciplina(output, ${disciplina.CODIGO_CINCO_ULTIMOS_NUMEROS}); return false;">&#128269;</a>
     <span class="texto-periodo-sugerido">${disciplina.EH_PERIODO_SUGERIDO}</span>
   </td>
-  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${TRAVA_DE_CREDITO}</td>
+  <td class="disciplina-trava-credito" data-creditos-necessarios="${disciplina.TRAVA_DE_CREDITO}">${disciplina.TRAVA_DE_CREDITO}</td>
   <td colspan="10" class="fold detalhes-disciplina">
     <div class="divContentBlock">
       <div class="divContentBlockHeader">
