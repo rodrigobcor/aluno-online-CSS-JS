@@ -1,15 +1,15 @@
 function turmaJaExiste(codigoDisciplina, numeroTurma) {
-    const linhas = document.querySelectorAll('#tabela-resumo-plano-inscricoes tbody tr');
+  const linhas = document.querySelectorAll('#tabela-resumo-plano-inscricoes tbody tr');
 
-    for (const linha of linhas) {
-        const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
-        const turma = linha.querySelector('.resumo-turma-id').textContent.trim();
+  for (const linha of linhas) {
+    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
+    const turma = linha.querySelector('.resumo-turma-id').textContent.trim();
 
-        if (codigo === codigoDisciplina && turma === numeroTurma) {
-            return true;
-        }
+    if (codigo === codigoDisciplina && turma === numeroTurma) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 
 function adicionarTurmaNaTabela(turmaId) {
@@ -222,30 +222,29 @@ function fillOutCellTest() {
 // END pending commit
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Adiciona event listeners a todos os botões
-    document.querySelectorAll('.botao-adicionar-turma').forEach(btn => {
-        btn.addEventListener('click', function (e) {
-            e.preventDefault(); // Previne o comportamento padrão do link
-            const turmaId = this.getAttribute('data-turma');
-            adicionarTurmaNaTabela(turmaId);
-        });
+  // Adiciona event listeners a todos os botões
+  document.querySelectorAll('.botao-adicionar-turma').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault(); // Previne o comportamento padrão do link
+      const turmaId = this.getAttribute('data-turma');
+      adicionarTurmaNaTabela(turmaId);
     });
+  });
 });
 
 linkRemover.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (confirm('Tem certeza que deseja remover esta disciplina do seu planejamento?')) {
-        // Remove os horários específicos primeiro
-        removerHorariosDaDisciplina(codigoDisciplina, numeroTurma);
+  e.preventDefault();
+  if (confirm('Tem certeza que deseja remover esta disciplina do seu planejamento?')) {
+    // Remove os horários específicos primeiro
+    removerHorariosDaDisciplina(codigoDisciplina, numeroTurma);
 
-        // Depois remove a linha da tabela
-        novaLinha.remove();
+    // Depois remove a linha da tabela
+    novaLinha.remove();
 
-        // Reativa o botão de adicionar
-        const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
-        if (botaoAdicionar) {
-            botaoAdicionar.disabled = false;
-            botaoAdicionar.style.opacity = '1';
-        }
+    // Reativa o botão de adicionar
+    const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
+    if (botaoAdicionar) {
+      botaoAdicionar.disabled = false;
+      botaoAdicionar.style.opacity = '1';
     }
 });

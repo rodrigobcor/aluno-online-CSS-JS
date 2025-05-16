@@ -333,4 +333,4 @@ function getRegexHorario() {
       console.log(`Total de erros = ${numErros}.`);
     }
   }
-  
+}

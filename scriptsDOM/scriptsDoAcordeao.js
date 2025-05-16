@@ -76,7 +76,7 @@ getDetalhesDisciplinas(10814)
   })
   .catch(err => console.error(err));
 
-  /**
+/**
  * Transforma uma lista de dados de disciplinas (cada elemento como um objeto JSON)
  * no formato HTML compatível com o acordeão.
  * 

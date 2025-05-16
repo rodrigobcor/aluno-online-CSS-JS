@@ -38,7 +38,7 @@ function getDetalhesDisciplinas(codDisciplina) {
         dadosDisciplina = html.slice(inicio, fim); // variável declarada fora do escopo da função
         // console.log(dadosDisciplina); // Exibe os dados da disciplina
       })
-      .catch(error => console.error("Erro ao consultar página.\nDetalhes técnicos:", error));
+      .catch(error => console.error("Erro ao consultar página.\nDetalhes técnicos: ", error));
   };
 
   // Agora, chame a função consultar com o código desejado
@@ -183,7 +183,6 @@ function extrairDadosDisciplina(htmlDisciplina) {
  * @param {object} disciplina Um objeto JSON com os dados já obtidos na lista de disciplinas.
    @returns {object} o objeto JSON com os dados originais acrescidos dos dados complementares da disciplina.
  */
-
 function extrairDadosComplementaresDisciplina(htmlDetalhesDisciplina, dadosDeUmaDisciplina) {
   // TODO AINDA NÃO EXTRAI, chamando stub
   return stubExtrairDadosComplementaresDisciplina(dadosDeUmaDisciplina);
