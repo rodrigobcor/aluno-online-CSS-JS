@@ -17,21 +17,21 @@ function adicionarTurmaNaTabela(turmaId) {
   const tdDetalhes = document.querySelector('#tabela-disciplinas > tbody > tr.dados-disciplina.open > td.detalhes-disciplina.open');
 
 
-    // Extrai as informações da disciplina
-    const nomeDisciplina = tdDetalhes.querySelector('.info-disciplina-nome').textContent.trim();
-    const codigoDisciplina = tdDetalhes.querySelector('.info-disciplina-codigo').textContent.trim();
+  // Extrai as informações da disciplina
+  const nomeDisciplina = tdDetalhes.querySelector('.info-disciplina-nome').textContent.trim();
+  const codigoDisciplina = tdDetalhes.querySelector('.info-disciplina-codigo').textContent.trim();
 
-    // Encontra a turma específica pelo ID
-    const turma = Array.from(tdDetalhes.querySelectorAll('.info-disciplina-turma-id'))
-        .find(el => el.textContent.trim() === turmaId)
-        .closest('.div-grupo-turmas-disciplina');
+  // Encontra a turma específica pelo ID
+  const turma = Array.from(tdDetalhes.querySelectorAll('.info-disciplina-turma-id'))
+    .find(el => el.textContent.trim() === turmaId)
+    .closest('.div-grupo-turmas-disciplina');
 
-    if (!turma) {
-        console.log(`Turma ${turmaId} não encontrada`);
-        return;
-    }
+  if (!turma) {
+    console.log(`Turma ${turmaId} não encontrada`);
+    return;
+  }
 
-    const numeroTurma = turma.querySelector('.info-disciplina-turma-id').textContent.trim();
+  const numeroTurma = turma.querySelector('.info-disciplina-turma-id').textContent.trim();
 
     // Verifica se a turma já existe na tabela
     if (turmaJaExiste(codigoDisciplina, numeroTurma)) {
