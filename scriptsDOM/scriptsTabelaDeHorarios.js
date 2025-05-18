@@ -44,6 +44,7 @@ function inserirHorariosNaTabelaDeHorarios() {
   });
 }
 
+
 function apagaTabelaDeHorarios() {
   const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
   const celulasComDisciplinas = tabelaIntervalos.querySelectorAll('td[data-codigo]');
@@ -54,6 +55,7 @@ function apagaTabelaDeHorarios() {
     celula.removeAttribute('data-turma');
   });
 }
+
 
 function removerHorariosDaDisciplina(codigoDisciplina, turmaId) {
   const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
@@ -67,6 +69,7 @@ function removerHorariosDaDisciplina(codigoDisciplina, turmaId) {
     celula.removeAttribute('data-turma');
   });
 }
+
 
 /**
  * 
@@ -87,6 +90,7 @@ function decomporIntervalo(intervalo) {
   );
   return segmentosDoIntervalo;
 }
+
 
 function transformarFormatoTurma() {
   const formatoAntigo = document.querySelector('td[style*="border-style: solid"]');
@@ -216,9 +220,9 @@ function transformarFormatoTurma() {
   } else {
     console.error('Tabelas de vagas não encontradas.');
   }
-
   formatoAntigo.parentNode.replaceChild(novoFormato, formatoAntigo);
 }
+
 
 /**
  * Verifica se o horário atende ao seguinte formato:
@@ -255,7 +259,8 @@ function getRegexHorario() {
     // console.log(`Regex horário: ${regexHorario.source}`); // pra mostrar o resultado, em caso de manutenção do código
     // Resultado (não confie, o código pode ter mudado!!!): /^(SEG|TER|QUA|QUI|SEX|SAB) (M[1-6]|T[1-6]|N[1-5])(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?$/gim
     return regexHorario; // Ufa!
-  }
+}
+
 
 /**
  * Adapted from regex101.com by Marcelo
@@ -278,6 +283,7 @@ function getArrayOfGroupMatches(aRegex, text) {
     // console.log(`Applying the regex ${aRegex.source} to the text returned : ${JSON.stringify(allResults)}.`);
     return allResults;
 }
+
 
 /**
  * Testa a aplicação da função `getRegexHorario()
