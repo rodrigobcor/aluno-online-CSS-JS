@@ -313,19 +313,19 @@ function testeGetRegexHorario() {
     }
   });
   const naoPodemPassar = [
-      "RAÇÃO PARA GATOS", // conteúdo inválido
-      "TER 1", // turno ausente
-      "QUA T", // turno sem identificador de horário
-      "SEG G1", // turno inválido
-      "SEX N6", // turno inexistente
-      "SEG M7", // identificador de horário inválido
-      "QUI N1N",// um dos turnos sem identificador de horário
-      "QU N2", // número de caracteres do dia da semana < 3
-      "QUIN N3", // número de caracteres do dia da semana > 3
-      "SEQ G1", // dia da semana inválido
-      // OS FORMATOS A SEGUIR SÃO VÁLIDOS EM OUTROS LUGARES FORA DO AOL:
-      "TER T3 SEX T3", // dia da semana na mesma linha
-      "SEXM1M2" // sem espaço entre os itens
+    "RAÇÃO PARA GATOS", // conteúdo inválido
+    "TER 1", // turno ausente
+    "QUA T", // turno sem identificador de horário
+    "SEG G1", // turno inválido
+    "SEX N6", // turno inexistente
+    "SEG M7", // identificador de horário inválido
+    "QUI N1N",// um dos turnos sem identificador de horário
+    "QU N2", // número de caracteres do dia da semana < 3
+    "QUIN N3", // número de caracteres do dia da semana > 3
+    "SEQ G1", // dia da semana inválido
+    // OS FORMATOS A SEGUIR SÃO VÁLIDOS EM OUTROS LUGARES FORA DO AOL:
+    "TER T3 SEX T3", // dia da semana na mesma linha
+    "SEXM1M2" // sem espaço entre os itens
   ];
   naoPodemPassar.forEach(horario => {
     if (getRegexHorario().test(horario)) { // Erro: passou, mas não devia passar.
@@ -333,9 +333,9 @@ function testeGetRegexHorario() {
       numErros++;
     }
   });
-    if (numErros == 0) {
-      console.log(`Todos os valores de teste foram aprovados.`);
-    } else {
-      console.log(`Total de erros = ${numErros}.`);
-    }
+  if (numErros == 0) {
+    console.log(`Todos os valores de teste foram aprovados.`);
+  } else {
+    console.log(`Total de erros = ${numErros}.`);
+  }
 }
