@@ -233,32 +233,32 @@ function transformarFormatoTurma() {
  * @returns {RegExp} a expressão regular para verificação do horário no formato do Aluno Online
  */
 function getRegexHorario() {
-    // passo-a-passo:
-    const inicioDaString = "^", fimDaString = "$"; // indicam que não pode haver nada antes ou depois do horário
-    const opcional = "?"; // indica que algo pode existir (sem repetição) ou não existir
-  
-    const diaDaSemana = "(SEG|TER|QUA|QUI|SEX|SAB)"; // entre parênteses - primeiro grupo de captura
-  
-    // cada turno (M, T, N) possui um identificador de intervalo de 1 até 6
-    // (exceto à noite, que agora tem 5), separado do grupo anterior por um caractere de espaço
-    const turnoEIntervalo = " (M[1-6]|T[1-6]|N[1-5])"; // entre parênteses - segundo grupo de captura
-  
-    // Cada horário tem pelo menos um turno e um identificador de intervalo,
-    // mas normalmente há outros horários, antecedidos por um espaço.
-    const maisUmTurnoOpcional = "(?:" + turnoEIntervalo + ")" + opcional;
-    // a expressão "?:" indica que, embora estabeleça uma correspondência (match), não é um grupo de captura
-  
-    // finalmente, a composição
-    // XXX IMPORTANTE: Esse código considera até 5 horários num mesmo dia
-    let regexHorario = inicioDaString + diaDaSemana + turnoEIntervalo
-        + maisUmTurnoOpcional + maisUmTurnoOpcional + maisUmTurnoOpcional
-        + maisUmTurnoOpcional + maisUmTurnoOpcional + fimDaString;
-  
-    regexHorario = new RegExp(regexHorario, "gmi"); // global, multilinha, indiferente de maiúsculas e minúsculas
-  
-    // console.log(`Regex horário: ${regexHorario.source}`); // pra mostrar o resultado, em caso de manutenção do código
-    // Resultado (não confie, o código pode ter mudado!!!): /^(SEG|TER|QUA|QUI|SEX|SAB) (M[1-6]|T[1-6]|N[1-5])(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?$/gim
-    return regexHorario; // Ufa!
+  // passo-a-passo:
+  const inicioDaString = "^", fimDaString = "$"; // indicam que não pode haver nada antes ou depois do horário
+  const opcional = "?"; // indica que algo pode existir (sem repetição) ou não existir
+  // nas demais constantes: "|" (sem aspas) significa "ou"
+  const diaDaSemana = "(SEG|TER|QUA|QUI|SEX|SAB)"; // entre parênteses - primeiro grupo de captura
+
+  // cada turno (M, T, N) possui um identificador de intervalo de 1 até 6
+  // (exceto à noite, que agora tem 5), separado do grupo anterior por um caractere de espaço
+  const turnoEIntervalo = " (M[1-6]|T[1-6]|N[1-5])"; // entre parênteses - segundo grupo de captura
+
+  // os horário têm pelo menos um turno e um identificador de intervalo,
+  // mas normalmente há outros horários, antecedidos por um espaço
+  const maisUmTurnoOpcional = "(?:" + turnoEIntervalo + ")" + opcional;
+  // a expressão "?:" (sem aspas) indica que, embora estabeleça uma correspondência (match), não é um grupo de captura
+
+  // finalmente, a composição
+  // XXX IMPORTANTE: Esse código considera até 5 horários num mesmo dia
+  let regexHorario = inicioDaString + diaDaSemana + turnoEIntervalo
+      + maisUmTurnoOpcional + maisUmTurnoOpcional + maisUmTurnoOpcional
+      + maisUmTurnoOpcional + maisUmTurnoOpcional + fimDaString;
+
+  regexHorario = new RegExp(regexHorario, "gmi"); // global, multilinha, indiferente de maiúsculas e minúsculas
+
+  // console.log(`Regex horário: ${regexHorario.source}`); // pra mostrar o resultado, em caso de manutenção do código
+  // Resultado (não confie, o código pode ter mudado!!!): /^(SEG|TER|QUA|QUI|SEX|SAB) (M[1-6]|T[1-6]|N[1-5])(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?$/gim
+  return regexHorario; // ufa!
 }
 
 
