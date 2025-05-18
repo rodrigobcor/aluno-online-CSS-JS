@@ -16,6 +16,10 @@ function adicionarTurmaNaTabela(turmaId) {
   // Seleciona o TD com os detalhes da disciplina
   const tdDetalhes = document.querySelector('#tabela-disciplinas > tbody > tr.dados-disciplina.open > td.detalhes-disciplina.open');
 
+  if (!tdDetalhes) {
+    console.log('TD de detalhes não encontrado');
+    return;
+  }
 
   // Extrai as informações da disciplina
   const nomeDisciplina = tdDetalhes.querySelector('.info-disciplina-nome').textContent.trim();
@@ -82,10 +86,6 @@ function adicionarTurmaNaTabela(turmaId) {
       inserirHorariosNaTabelaDeHorarios();
     }
   });
-  if (!tdDetalhes) {
-    console.log('TD de detalhes não encontrado');
-    return;
-  }
 
   celulaBotaoRemover.appendChild(linkRemover);
 
@@ -247,4 +247,5 @@ linkRemover.addEventListener('click', function (e) {
       botaoAdicionar.disabled = false;
       botaoAdicionar.style.opacity = '1';
     }
+  }
 });
