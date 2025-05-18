@@ -52,36 +52,36 @@ function adicionarTurmaNaTabela(turmaId) {
     ulHorarios.appendChild(li);
   });
 
-    // Seleciona a primeira tabela
-    const tabelaResumo = document.getElementById('tabela-resumo-plano-inscricoes');
-    const tbody = tabelaResumo.querySelector('tbody');
+  // Seleciona a primeira tabela
+  const tabelaResumo = document.getElementById('tabela-resumo-plano-inscricoes');
+  const tbody = tabelaResumo.querySelector('tbody');
 
-    // Cria a nova linha
-    const novaLinha = document.createElement('tr');
+  // Cria a nova linha
+  const novaLinha = document.createElement('tr');
 
-    // Cria a célula com o botão de remoção
-    const celulaBotaoRemover = document.createElement('td');
-    celulaBotaoRemover.className = 'botao-remover-turma';
+  // Cria a célula com o botão de remoção
+  const celulaBotaoRemover = document.createElement('td');
+  celulaBotaoRemover.className = 'botao-remover-turma';
 
-    const linkRemover = document.createElement('a');
-    linkRemover.href = '#';
-    linkRemover.innerHTML = '✖️';
+  const linkRemover = document.createElement('a');
+  linkRemover.href = '#';
+  linkRemover.innerHTML = '✖️';
 
-    // Adiciona o event listener para remover a linha
-    linkRemover.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (confirm('Tem certeza que deseja remover esta disciplina do seu planejamento?')) {
-            novaLinha.remove();
-            // Reativa o botão de adicionar turma correspondente
-            const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
-            if (botaoAdicionar) {
-                botaoAdicionar.disabled = false;
-                botaoAdicionar.style.opacity = '1';
-            }
-            // Atualiza a tabela de horários após remoção
-            inserirHorariosNaTabelaDeHorarios();
-        }
-    });
+  // Adiciona o event listener para remover a linha
+  linkRemover.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (confirm('Tem certeza que deseja remover esta disciplina do seu planejamento?')) {
+      novaLinha.remove();
+      // Reativa o botão de adicionar turma correspondente
+      const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
+      if (botaoAdicionar) {
+        botaoAdicionar.disabled = false;
+        botaoAdicionar.style.opacity = '1';
+      }
+      // Atualiza a tabela de horários após remoção
+      inserirHorariosNaTabelaDeHorarios();
+    }
+  });
   if (!tdDetalhes) {
     console.log('TD de detalhes não encontrado');
     return;
