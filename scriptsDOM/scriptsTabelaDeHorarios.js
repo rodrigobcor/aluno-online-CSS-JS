@@ -270,18 +270,18 @@ function getRegexHorario() {
  * @returns {any[]} the list of matches, **as an array of arrays**.
  */
 function getArrayOfGroupMatches(aRegex, text) {
-    let allResults = [], matchResult;
-    while ((matchResult = aRegex.exec(text)) !== null) {
-      matchResult = matchResult.splice(1); // removing global match (not necessary)
-      allResults.push(matchResult);
-      // regex101.com states that this is necessary to avoid infinite loops
-      // with zero-width matches (not use it while testing, though)
-      if (matchResult.index === aRegex.lastIndex) {
-        aRegex.lastIndex++;
-      }
+  let allResults = [], matchResult;
+  while ((matchResult = aRegex.exec(text)) !== null) {
+    matchResult = matchResult.splice(1); // removing global match (not necessary)
+    allResults.push(matchResult);
+    // regex101.com states that this is necessary to avoid infinite loops
+    // with zero-width matches (not use it while testing, though)
+    if (matchResult.index === aRegex.lastIndex) {
+      aRegex.lastIndex++;
     }
-    // console.log(`Applying the regex ${aRegex.source} to the text returned : ${JSON.stringify(allResults)}.`);
-    return allResults;
+  }
+  // console.log(`Applying the regex ${aRegex.source} to the text returned : ${JSON.stringify(allResults)}.`);
+  return allResults;
 }
 
 
@@ -297,22 +297,22 @@ function getArrayOfGroupMatches(aRegex, text) {
  * O conteúdo deve vir corretamente do sistema original.
  */
 function testeGetRegexHorario() {
-    let numErros = 0;
-    const devemPassar = [
-      "SEG M5", // apenas um segmento de horário
-      "TER M5 M6", // dois segmentos de horário
-      "QUA T6 N1", // dois segmentos de horário com variação de turno
-      "QUI M4 M5 M6", // três segmentos de horário
-      "QUA T3 T4 T5 T6", // quatro segmentos de horário // assumindo que não há 5 no mesmo dia
-      "SAB M6 T1" // só pra testar sábado
-    ];
-    devemPassar.forEach(horario => {
-      if (!getRegexHorario().test(horario)) { // Erro: não passou, mas devia passar.
-        console.error(`O formato de horário "${horario}" teoricamente devia passar, mas não passou.`);
-        numErros++;
-      }
-    });
-    const naoPodemPassar = [
+  let numErros = 0;
+  const devemPassar = [
+    "SEG M5", // apenas um segmento de horário
+    "TER M5 M6", // dois segmentos de horário
+    "QUA T6 N1", // dois segmentos de horário com variação de turno
+    "QUI M4 M5 M6", // três segmentos de horário
+    "QUA T3 T4 T5 T6", // quatro segmentos de horário // assumindo que não há 5 no mesmo dia
+    "SAB M6 T1" // só pra testar sábado
+  ];
+  devemPassar.forEach(horario => {
+    if (!getRegexHorario().test(horario)) { // Erro: não passou, mas devia passar.
+      console.error(`O formato de horário "${horario}" teoricamente devia passar, mas não passou.`);
+      numErros++;
+    }
+  });
+  const naoPodemPassar = [
       "RAÇÃO PARA GATOS", // conteúdo inválido
       "TER 1", // turno ausente
       "QUA T", // turno sem identificador de horário
@@ -326,17 +326,16 @@ function testeGetRegexHorario() {
       // OS FORMATOS A SEGUIR SÃO VÁLIDOS EM OUTROS LUGARES FORA DO AOL:
       "TER T3 SEX T3", // dia da semana na mesma linha
       "SEXM1M2" // sem espaço entre os itens
-    ];
-    naoPodemPassar.forEach(horario => {
-      if (getRegexHorario().test(horario)) { // Erro: passou, mas não devia passar.
-        console.error(`O formato de horário "${horario}" teoricamente não devia passar, mas passou.`);
-        numErros++;
-      }
-    });
+  ];
+  naoPodemPassar.forEach(horario => {
+    if (getRegexHorario().test(horario)) { // Erro: passou, mas não devia passar.
+      console.error(`O formato de horário "${horario}" teoricamente não devia passar, mas passou.`);
+      numErros++;
+    }
+  });
     if (numErros == 0) {
       console.log(`Todos os valores de teste foram aprovados.`);
     } else {
       console.log(`Total de erros = ${numErros}.`);
     }
-  }
 }
