@@ -87,8 +87,8 @@ function decomporIntervalo(intervalo) {
   );
   return segmentosDoIntervalo;
 }
-  
-  function transformarFormatoTurma() {
+
+function transformarFormatoTurma() {
   const formatoAntigo = document.querySelector('td[style*="border-style: solid"]');
   if (!formatoAntigo) {
     console.error('Elemento do formato antigo não encontrado.');
@@ -218,7 +218,7 @@ function decomporIntervalo(intervalo) {
   }
 
   formatoAntigo.parentNode.replaceChild(novoFormato, formatoAntigo);
-  }
+}
 
 /**
  * Verifica se o horário atende ao seguinte formato:
@@ -256,15 +256,15 @@ function getRegexHorario() {
     // Resultado (não confie, o código pode ter mudado!!!): /^(SEG|TER|QUA|QUI|SEX|SAB) (M[1-6]|T[1-6]|N[1-5])(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?(?: (M[1-6]|T[1-6]|N[1-5]))?$/gim
     return regexHorario; // Ufa!
   }
-  
-  /**
-   * Adapted from regex101.com by Marcelo
-   * 
-   * @param {RegExp} aRegex The regex to apply.
-   * @param {string} text The source text to find matches.
-   * @returns {any[]} the list of matches, **as an array of arrays**.
-   */
-  function getArrayOfGroupMatches(aRegex, text) {
+
+/**
+ * Adapted from regex101.com by Marcelo
+ * 
+ * @param {RegExp} aRegex The regex to apply.
+ * @param {string} text The source text to find matches.
+ * @returns {any[]} the list of matches, **as an array of arrays**.
+ */
+function getArrayOfGroupMatches(aRegex, text) {
     let allResults = [], matchResult;
     while ((matchResult = aRegex.exec(text)) !== null) {
       matchResult = matchResult.splice(1); // removing global match (not necessary)
@@ -277,20 +277,20 @@ function getRegexHorario() {
     }
     // console.log(`Applying the regex ${aRegex.source} to the text returned : ${JSON.stringify(allResults)}.`);
     return allResults;
-  }
-  
-  /**
-   * Testa a aplicação da função `getRegexHorario()
-   * com relação a dados de entrada.
-   * 
-   * Essa função NÃO testa:
-   * - se os horários não são sequenciais (ex.: T1T3);
-   * - se há horários repetidos (ex.: M3M3);
-   * - se os horários não fazem sentido (ex.: M1N5).
-   * 
-   * O conteúdo deve vir corretamente do sistema original.
-   */
-  function testeGetRegexHorario() {
+}
+
+/**
+ * Testa a aplicação da função `getRegexHorario()
+ * com relação a dados de entrada.
+ * 
+ * Essa função NÃO testa:
+ * - se os horários não são sequenciais (ex.: T1T3);
+ * - se há horários repetidos (ex.: M3M3);
+ * - se os horários não fazem sentido (ex.: M1N5).
+ * 
+ * O conteúdo deve vir corretamente do sistema original.
+ */
+function testeGetRegexHorario() {
     let numErros = 0;
     const devemPassar = [
       "SEG M5", // apenas um segmento de horário
