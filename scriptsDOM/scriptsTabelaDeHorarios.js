@@ -1,71 +1,71 @@
 function inserirHorariosNaTabelaDeHorarios() {
-    // Limpa todos os horários primeiro (opcional, dependendo do seu caso)
-    apagaTabelaDeHorarios();
+  // Limpa todos os horários primeiro (opcional, dependendo do seu caso)
+  apagaTabelaDeHorarios();
 
-    const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
-    const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
-    const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
+  const tabelaDisciplinas = document.getElementById('tabela-resumo-plano-inscricoes');
+  const linhas = tabelaDisciplinas.querySelectorAll('tbody tr');
+  const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
 
-    linhas.forEach(linha => {
-        const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
-        const turmaId = linha.querySelector('.resumo-turma-id').textContent.trim();
-        const itensHorario = linha.querySelectorAll('.info-disciplina-turma-tempo');
+  linhas.forEach(linha => {
+    const codigo = linha.querySelector('.resumo-disciplina-codigo').textContent.trim();
+    const turmaId = linha.querySelector('.resumo-turma-id').textContent.trim();
+    const itensHorario = linha.querySelectorAll('.info-disciplina-turma-tempo');
 
-        itensHorario.forEach(item => {
-            const textoHorario = item.textContent.trim();
-            const [dia, ...horariosDia] = textoHorario.split(' ');
+    itensHorario.forEach(item => {
+      const textoHorario = item.textContent.trim();
+      const [dia, ...horariosDia] = textoHorario.split(' ');
 
-            const diaMap = {
-                'SEG': 'seg', 'TER': 'ter', 'QUA': 'qua',
-                'QUI': 'qui', 'SEX': 'sex', 'SAB': 'sab'
-            };
+      const diaMap = {
+        'SEG': 'seg', 'TER': 'ter', 'QUA': 'qua',
+        'QUI': 'qui', 'SEX': 'sex', 'SAB': 'sab'
+      };
 
-            const diaClass = diaMap[dia];
-            if (!diaClass) return;
+      const diaClass = diaMap[dia];
+      if (!diaClass) return;
 
-            horariosDia.forEach(horario => {
-                const celulas = tabelaIntervalos.querySelectorAll(`.${diaClass}.${horario.toLowerCase()}`);
+      horariosDia.forEach(horario => {
+        const celulas = tabelaIntervalos.querySelectorAll(`.${diaClass}.${horario.toLowerCase()}`);
 
-                celulas.forEach(celula => {
-                    const div = document.createElement('div');
-                    div.textContent = `${codigo}`;
-                    div.style.fontSize = 'smaller';
-                    div.style.padding = '2px';
+        celulas.forEach(celula => {
+          const div = document.createElement('div');
+          div.textContent = `${codigo}`;
+          div.style.fontSize = 'smaller';
+          div.style.padding = '2px';
 
-                    // Marca a célula com os dados da disciplina
-                    celula.setAttribute('data-codigo', codigo);
-                    celula.setAttribute('data-turma', turmaId);
+          // Marca a célula com os dados da disciplina
+          celula.setAttribute('data-codigo', codigo);
+          celula.setAttribute('data-turma', turmaId);
 
-                    celula.innerHTML = '';
-                    celula.appendChild(div);
-                });
-            });
+          celula.innerHTML = '';
+          celula.appendChild(div);
         });
+      });
     });
+  });
 }
 
 function apagaTabelaDeHorarios() {
-    const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
-    const celulasComDisciplinas = tabelaIntervalos.querySelectorAll('td[data-codigo]');
+  const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
+  const celulasComDisciplinas = tabelaIntervalos.querySelectorAll('td[data-codigo]');
 
-    celulasComDisciplinas.forEach(celula => {
-        celula.innerHTML = '';
-        celula.removeAttribute('data-codigo');
-        celula.removeAttribute('data-turma');
-    });
+  celulasComDisciplinas.forEach(celula => {
+    celula.innerHTML = '';
+    celula.removeAttribute('data-codigo');
+    celula.removeAttribute('data-turma');
+  });
 }
 
 function removerHorariosDaDisciplina(codigoDisciplina, turmaId) {
-    const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
-    const celulasComDisciplina = tabelaIntervalos.querySelectorAll(
-        `td[data-codigo="${codigoDisciplina}"][data-turma="${turmaId}"]`
-    );
+  const tabelaIntervalos = document.getElementById('tabela-plano-inscricoes');
+  const celulasComDisciplina = tabelaIntervalos.querySelectorAll(
+    `td[data-codigo="${codigoDisciplina}"][data-turma="${turmaId}"]`
+  );
 
-    celulasComDisciplina.forEach(celula => {
-        celula.innerHTML = '';
-        celula.removeAttribute('data-codigo');
-        celula.removeAttribute('data-turma');
-    });
+  celulasComDisciplina.forEach(celula => {
+    celula.innerHTML = '';
+    celula.removeAttribute('data-codigo');
+    celula.removeAttribute('data-turma');
+  });
 }
 
 /**
@@ -74,19 +74,19 @@ function removerHorariosDaDisciplina(codigoDisciplina, turmaId) {
  * @returns {{dia: string, horario: string}} um objeto com a decomposição do intervalo em dia e horário.
  */
 function decomporIntervalo(intervalo) {
-    let segmentosDoIntervalo = getArrayOfGroupMatches(getRegexIntervalo(), intervalo);
-    // o primeiro elemento é o dia da semana (ex. QUA), os outros são os horários (ex. T2)
-    // cada segmento vai ser antecedido do dia da semana
-    const diaSemana = segmentosDoIntervalo.splice(0, 1); // obtém apenas o dia da semana e mantém o horário no segmentosDoIntervalo
-    segmentosDoIntervalo = segmentosDoIntervalo.map(
-      // lembrando que segmentosDoIntervalo contém apenas o horário, então pode-se reutilizar a variável
-      segmentosDoIntervalo => ({
-        "dia": diaSemana,
-        "horario": segmentosDoIntervalo
-      })
-    );
-    return segmentosDoIntervalo;
-  }
+  let segmentosDoIntervalo = getArrayOfGroupMatches(getRegexIntervalo(), intervalo);
+  // o primeiro elemento é o dia da semana (ex. QUA), os outros são os horários (ex. T2)
+  // cada segmento vai ser antecedido do dia da semana
+  const diaSemana = segmentosDoIntervalo.splice(0, 1); // obtém apenas o dia da semana e mantém o horário no segmentosDoIntervalo
+  segmentosDoIntervalo = segmentosDoIntervalo.map(
+    // lembrando que segmentosDoIntervalo contém apenas o horário, então pode-se reutilizar a variável
+    segmentosDoIntervalo => ({
+      "dia": diaSemana,
+      "horario": segmentosDoIntervalo
+    })
+  );
+  return segmentosDoIntervalo;
+}
   
   function transformarFormatoTurma() {
       const formatoAntigo = document.querySelector('td[style*="border-style: solid"]');
