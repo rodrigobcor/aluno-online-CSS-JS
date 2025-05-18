@@ -33,24 +33,24 @@ function adicionarTurmaNaTabela(turmaId) {
 
   const numeroTurma = turma.querySelector('.info-disciplina-turma-id').textContent.trim();
 
-    // Verifica se a turma já existe na tabela
-    if (turmaJaExiste(codigoDisciplina, numeroTurma)) {
-        alert('Esta turma já foi adicionada ao seu planejamento!');
-        return;
-    }
+  // Verifica se a turma já existe na tabela
+  if (turmaJaExiste(codigoDisciplina, numeroTurma)) {
+    alert('Esta turma já foi adicionada ao seu planejamento!');
+    return;
+  }
 
-    const horarios = turma.querySelectorAll('.info-disciplina-turma-tempo');
+  const horarios = turma.querySelectorAll('.info-disciplina-turma-tempo');
 
-    // Cria um UL para os horários como na tabela original
-    const ulHorarios = document.createElement('ul');
-    ulHorarios.className = 'info-disciplina-turma-tempos';
+  // Cria um UL para os horários como na tabela original
+  const ulHorarios = document.createElement('ul');
+  ulHorarios.className = 'info-disciplina-turma-tempos';
 
-    horarios.forEach(horario => {
-        const li = document.createElement('li');
-        li.className = 'info-disciplina-turma-tempo';
-        li.textContent = horario.textContent.trim();
-        ulHorarios.appendChild(li);
-    });
+  horarios.forEach(horario => {
+    const li = document.createElement('li');
+    li.className = 'info-disciplina-turma-tempo';
+    li.textContent = horario.textContent.trim();
+    ulHorarios.appendChild(li);
+  });
 
     // Seleciona a primeira tabela
     const tabelaResumo = document.getElementById('tabela-resumo-plano-inscricoes');
