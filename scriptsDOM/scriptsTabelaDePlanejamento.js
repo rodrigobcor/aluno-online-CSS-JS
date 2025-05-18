@@ -87,49 +87,49 @@ function adicionarTurmaNaTabela(turmaId) {
     return;
   }
 
-    celulaBotaoRemover.appendChild(linkRemover);
+  celulaBotaoRemover.appendChild(linkRemover);
 
-    // Cria as demais células
-    const celulaNome = document.createElement('td');
-    celulaNome.className = 'resumo-disciplina-nome';
-    celulaNome.textContent = nomeDisciplina;
+  // Cria as demais células
+  const celulaNome = document.createElement('td');
+  celulaNome.className = 'resumo-disciplina-nome';
+  celulaNome.textContent = nomeDisciplina;
 
-    const celulaCodigo = document.createElement('td');
-    celulaCodigo.className = 'resumo-disciplina-codigo';
-    celulaCodigo.textContent = codigoDisciplina;
+  const celulaCodigo = document.createElement('td');
+  celulaCodigo.className = 'resumo-disciplina-codigo';
+  celulaCodigo.textContent = codigoDisciplina;
 
-    const celulaTurma = document.createElement('td');
-    celulaTurma.className = 'resumo-turma-id';
-    celulaTurma.textContent = numeroTurma;
+  const celulaTurma = document.createElement('td');
+  celulaTurma.className = 'resumo-turma-id';
+  celulaTurma.textContent = numeroTurma;
 
-    const celulaHorarios = document.createElement('td');
-    celulaHorarios.className = 'resumo-turma-tempos';
-    celulaHorarios.appendChild(ulHorarios);
+  const celulaHorarios = document.createElement('td');
+  celulaHorarios.className = 'resumo-turma-tempos';
+  celulaHorarios.appendChild(ulHorarios);
 
-    const celulaLocal = document.createElement('td');
-    celulaLocal.className = 'resumo-turma-local-aulas';
-    celulaLocal.textContent = 'Não informado';
+  const celulaLocal = document.createElement('td');
+  celulaLocal.className = 'resumo-turma-local-aulas';
+  celulaLocal.textContent = 'Não informado';
 
-    // Adiciona as células à linha
-    novaLinha.appendChild(celulaBotaoRemover);
-    novaLinha.appendChild(celulaNome);
-    novaLinha.appendChild(celulaCodigo);
-    novaLinha.appendChild(celulaTurma);
-    novaLinha.appendChild(celulaHorarios);
-    novaLinha.appendChild(celulaLocal);
+  // Adiciona as células à linha
+  novaLinha.appendChild(celulaBotaoRemover);
+  novaLinha.appendChild(celulaNome);
+  novaLinha.appendChild(celulaCodigo);
+  novaLinha.appendChild(celulaTurma);
+  novaLinha.appendChild(celulaHorarios);
+  novaLinha.appendChild(celulaLocal);
 
-    // Adiciona a linha ao final da tabela
-    tbody.appendChild(novaLinha);
+  // Adiciona a linha ao final da tabela
+  tbody.appendChild(novaLinha);
 
-    // Desabilita o botão de adicionar turma correspondente
-    const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
-    if (botaoAdicionar) {
-        botaoAdicionar.disabled = true;
-        botaoAdicionar.style.opacity = '0.5';
-    }
+  // Desabilita o botão de adicionar turma correspondente
+  const botaoAdicionar = document.querySelector(`.botao-adicionar-turma[data-turma="${turmaId}"]`);
+  if (botaoAdicionar) {
+    botaoAdicionar.disabled = true;
+    botaoAdicionar.style.opacity = '0.5';
+  }
 
-    // Atualiza a tabela de horários
-    inserirHorariosNaTabelaDeHorarios();
+  // Atualiza a tabela de horários
+  inserirHorariosNaTabelaDeHorarios();
 }
 
 // BEGIN pending commit
