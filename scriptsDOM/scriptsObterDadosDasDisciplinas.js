@@ -200,22 +200,24 @@ function extrairDadosComplementaresDisciplina(htmlDetalhesDisciplina, dadosDeUma
 
   dadosDeUmaDisciplina = dadosDeUmaDisciplina || {};
   const DADO_NAO_ENCONTRADO = "Dado não encontrado. Acesse a interface padrão do sistema.";
-  const DADO_INCONSISTENTE = "Há uma inconsistência entre as informações gerais da disciplina e seus detalhes. Acesse a interface padrão do sistema."
 
+  // antes de elaborar o objeto resultante, verifica a consistência
   let resultadoDoMatch = EstruturacaoDeDados.TODO_REGEX_PRA_VERIFICAR_CONSISTENCIA["contentToFind"].exec(htmlDetalhesDisciplina);
   if (resultadoDoMatch) {
-
-    // os dados a seguir são comuns à parte de dados gerais e a de dados detalhados da disciplina, e precisam estar consistentes
-    // TODO preencher campos, subdividir depois quais são extraíveis de quais regexes
-    // TODO todos os índices do resultado do match são hipotéticos e devem ser substituídos
-    verificarConsistencia(resultadoDoMatch[1], dadosDeUmaDisciplina["NUM_CREDITOS"]);
-    verificarConsistencia(resultadoDoMatch[2], dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"]);
-    verificarConsistencia(resultadoDoMatch[3], dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"]); // FIXME isso REALMENTE está nos detalhes da disciplina???
-    verificarConsistencia(resultadoDoMatch[4], dadosDeUmaDisciplina["TRAVA_DE_CREDITO"]);
-
-    // se estiver tudo ok, continua
+    try {
+      // os dados a seguir são comuns à parte de dados gerais e a de dados detalhados da disciplina, e precisam estar consistentes
+      // TODO preencher campos, subdividir depois quais são extraíveis de quais regexes
+      // TODO todos os índices do resultado do match são hipotéticos e devem ser substituídos
+      verificarConsistencia(resultadoDoMatch[1], dadosDeUmaDisciplina["NUM_CREDITOS"]);
+      verificarConsistencia(resultadoDoMatch[2], dadosDeUmaDisciplina["CARGA_HORARIA_TOTAL"]);
+      verificarConsistencia(resultadoDoMatch[3], dadosDeUmaDisciplina["EH_PERIODO_SUGERIDO"]); // FIXME isso REALMENTE está nos detalhes da disciplina???
+      verificarConsistencia(resultadoDoMatch[4], dadosDeUmaDisciplina["TRAVA_DE_CREDITO"]);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
+  // agora é possível obter e atribuir os dados de fato
   resultadoDoMatch = EstruturacaoDeDados.TODO_ID_EXPRESSAO_REGULAR["contentToFind"].exec(htmlDetalhesDisciplina);
   if (resultadoDoMatch) {
     // TODO preencher campos, subdividir depois quais são extraíveis de quais regexes
@@ -233,6 +235,7 @@ function extrairDadosComplementaresDisciplina(htmlDetalhesDisciplina, dadosDeUma
 
   // inner function
   function verificarConsistencia(dadoEsperado, dadoRecebido) {
+    const DADO_INCONSISTENTE = "Há uma inconsistência entre as informações gerais da disciplina e seus detalhes. Acesse a interface padrão do sistema.";
     if (dadoEsperado != dadoRecebido) {
       throw ReferenceError(DADO_INCONSISTENTE);
     }
