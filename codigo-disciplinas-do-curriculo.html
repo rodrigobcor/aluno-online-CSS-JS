@@ -272,6 +272,11 @@
             <!-- Fonte do acordeão: adaptado de https://codepen.io/jopico/pen/kyRprJ -->
             <thead>
               <tr class="dados-disciplina">
+                <th scope="col" class="disciplina-periodo tooltip">Período
+                  <span class="tooltip-texto">Algumas disciplinas estão associadas
+                    a um período específico na grade curricular.</span>
+                </th>
+
                 <th scope="col" class="disciplina-nome tooltip">Nome
                   <span class="tooltip-texto">O nome da disciplina é a forma designada
                     para sua identificação em diversas situações.</span>
@@ -283,58 +288,28 @@
                     no formulário de inscrição em disciplinas.</span>
                 </th>
 
-                <th scope="col" class="disciplina-periodo tooltip">Período
-                  <span class="tooltip-texto">Algumas disciplinas estão associadas
-                    a um período específico na grade curricular.</span>
-                </th>
-
-                <th scope="col">Atendida?
-                  <!-- não será mais coluna; cada linha de disciplina atendida
-                   estará mais fosca e com tooltip indicando que foi atendida -->
-                </th>
-
                 <th scope="col" class="disciplina-tipo tooltip">Tipo
-                  <span class="tooltip-texto move-left">Além das obrigatórias,
-                    há disciplinas dos seguintes tipos:
-                    eletivas restritas (para estudantes do curso em
-                    determinada ramificação ou habilitação);
-                    eletivas definidas (para qualquer estudante do curso,
-                    independentemente de ramificação ou habilitação);
-                    universais (para qualquer estudante de qualquer curso);
-                    ou de extensão (para atividades de aprimoramento da
-                    formação e na relação universidade-sociedade).</span>
+                  <span class="tooltip-texto move-left">(manter o texto atual do tooltip de Tipo)</span>
                 </th>
 
                 <th scope="col" class="disciplina-codigo-ramificacao tooltip">Ramificação
-                  <span class="tooltip-texto move-left">Os cursos da UERJ possuem ramificações
-                    identificadas por códigos. Pode haver, por exemplo, diferentes
-                    ramificações para as modalidades Bacharelado e Licenciatura.
-                    Também há códigos diferentes para versões diferentes da
-                    grade curricular de um curso.</span>
+                  <span class="tooltip-texto move-left">(manter o texto atual)</span>
                 </th>
 
                 <th scope="col" class="disciplina-num-creditos tooltip">Créditos
-                  <span class="tooltip-texto move-left">O crédito é a unidade básica
-                    de medida para o trabalho desempenhado em uma disciplina
-                    ou atividade, e corresponde ao número de tempos semanais
-                    em aulas teóricas e/ou a outros trabalhos desenvolvidos
-                    no período.</span>
+                  <span class="tooltip-texto move-left">(manter o texto atual)</span>
                 </th>
 
-                <th scope="col" class="disciplina-ch-total tooltip ">Carga horária total
-                  <span class="tooltip-texto move-left">A carga horária total corresponde ao
-                    total de créditos no período de 15 semanas.</span>
+                <th scope="col" class="disciplina-ch-total tooltip">Carga horária total
+                  <span class="tooltip-texto move-left">(manter o texto atual)</span>
                 </th>
 
                 <th scope="col" class="disciplina-periodo-sugerido tooltip">Turma do período?
-                  <span class="tooltip-texto move-left">Espera-se que as disciplinas sejam
-                    atendidas de acordo com o plano de periodização.</span>
+                  <span class="tooltip-texto move-left">(manter o texto atual)</span>
                 </th>
 
                 <th scope="col" class="disciplina-trava-credito tooltip">Trava de crédito
-                  <span class="tooltip-texto move-left">Algumas disciplinas só podem ser
-                    cursadas quando uma determinada quantidade de créditos
-                    forem obtidos no decorrer do curso.</span>
+                  <span class="tooltip-texto move-left">(manter o texto atual)</span>
                 </th>
               </tr>
             </thead>
@@ -928,10 +903,6 @@
                   </div>
                 </td>
               </tr>
-
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10814); return false;">&#128269;</a>
                   <!-- Geometria Analítica -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -965,9 +936,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10815); return false;">&#128269;</a>
                   <!-- Álgebra -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -988,7 +956,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -1003,9 +971,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10816); return false;">&#128269;</a>
                   <!-- Matemática Discreta -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1038,9 +1003,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10817); return false;">&#128269;</a>
+
                   <!-- Fundamentos da Computação -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1073,9 +1036,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 6766); return false;">&#128269;</a>
+
                   <!-- Cálculo II -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1108,9 +1069,6 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10818); return false;">&#128269;</a>
                   <!-- Álgebra Linear -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1143,9 +1101,6 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10819); return false;">&#128269;</a>
                   <!-- Cálculo das Probabilidades -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1178,9 +1133,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10820); return false;">&#128269;</a>
+
                   <!-- Algoritmos e Estruturas de Dados I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1213,9 +1166,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10821); return false;">&#128269;</a>
+
                   <!-- Linguagem de Programação I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1248,9 +1199,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10982); return false;">&#128269;</a>
+
                   <!-- Física I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1283,9 +1232,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 6767); return false;">&#128269;</a>
+
                   <!-- Cálculo III -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1318,9 +1265,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10822); return false;">&#128269;</a>
+
                   <!-- Português Instrumental -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1353,9 +1298,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10823); return false;">&#128269;</a>
+
                   <!-- Algoritmos e Estruturas de Dados II -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1388,9 +1331,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10824); return false;">&#128269;</a>
+
                   <!-- Elementos de Lógica -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1423,9 +1364,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10825); return false;">&#128269;</a>
+
                   <!-- Linguagem de Programação II -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1458,9 +1397,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10826); return false;">&#128269;</a>
+
                   <!-- Teoria da Computação -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1494,9 +1431,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10827); return false;">&#128269;</a>
                   <!-- Cálculo Numérico -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -1517,7 +1451,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -1532,9 +1466,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10828); return false;">&#128269;</a>
                   <!-- Cálculo IV -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1568,9 +1499,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10830); return false;">&#128269;</a>
                   <!-- Engenharia de Software -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1591,7 +1519,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="59">
-                  <span class="textoBalao">59</span>
+                  <span class="texto-balao">59</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -1606,9 +1534,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10831); return false;">&#128269;</a>
                   <!-- Arquitetura de Computadores I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1642,9 +1567,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10983); return false;">&#128269;</a>
                   <!-- Física II -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -1665,7 +1587,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -1680,9 +1602,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 11311); return false;">&#128269;</a>
                   <!-- Algoritmos em Grafos -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1716,9 +1635,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10832); return false;">&#128269;</a>
                   <!-- Banco de Dados I -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -1739,7 +1655,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="69">
-                  <span class="textoBalao">69</span>
+                  <span class="texto-balao">69</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -1754,9 +1670,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10833); return false;">&#128269;</a>
                   <!-- Análise e Projeto de Sistemas -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1790,9 +1703,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10834); return false;">&#128269;</a>
                   <!-- Estruturas de Linguagens -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1825,9 +1735,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10835); return false;">&#128269;</a>
+
                   <!-- Sistemas Operacionais I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1860,9 +1768,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10836); return false;">&#128269;</a>
+
                   <!-- Arquitetura de Computadores II -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1895,9 +1801,7 @@
                   </div>
                 </td>
               </tr>
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 11312); return false;">&#128269;</a>
+
                   <!-- Otimização em Grafos -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -1931,9 +1835,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10837); return false;">&#128269;</a>
                   <!-- Otimização Combinatória -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -1954,7 +1855,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -1969,9 +1870,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10838); return false;">&#128269;</a>
                   <!-- Banco de Dados II -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -1992,7 +1890,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2007,9 +1905,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10839); return false;">&#128269;</a>
                   <!-- Interfaces Humano-Computador -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2030,7 +1925,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="99">
-                  <span class="textoBalao">99</span>
+                  <span class="texto-balao">99</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2045,9 +1940,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10840); return false;">&#128269;</a>
                   <!-- Sistemas Operacionais II -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2068,7 +1960,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2083,9 +1975,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10841); return false;">&#128269;</a>
                   <!-- Compiladores -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2119,9 +2008,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10842); return false;">&#128269;</a>
                   <!-- Computação Gráfica -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2142,7 +2028,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2157,9 +2043,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10843); return false;">&#128269;</a>
                   <!-- Inteligência Artificial -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2180,7 +2063,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2195,9 +2078,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10844); return false;">&#128269;</a>
                   <!-- Ética, Computadores e Sociedade -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2218,7 +2098,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="118">
-                  <span class="textoBalao">118</span>
+                  <span class="texto-balao">118</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2233,9 +2113,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10845); return false;">&#128269;</a>
                   <!-- Metodologia Científica no Projeto Final -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2256,7 +2133,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="59">
-                  <span class="textoBalao">59</span>
+                  <span class="texto-balao">59</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2271,9 +2148,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10846); return false;">&#128269;</a>
                   <!-- Redes de Computadores I -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2294,7 +2168,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2309,9 +2183,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10847); return false;">&#128269;</a>
                   <!-- Arquiteturas Avançadas de Computadores -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2332,7 +2203,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2347,9 +2218,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10848); return false;">&#128269;</a>
                   <!-- Projeto Final -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2370,7 +2238,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2385,9 +2253,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10849); return false;">&#128269;</a>
                   <!-- Sistemas Distribuídos -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2421,9 +2286,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10850); return false;">&#128269;</a>
                   <!-- Álgebra Linear aplic à Computação Gráfica -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2444,7 +2306,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="99">
-                  <span class="textoBalao">99</span>
+                  <span class="texto-balao">99</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2459,9 +2321,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10852); return false;">&#128269;</a>
                   <!-- Análise Numérica -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2482,7 +2341,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2497,9 +2356,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10862); return false;">&#128269;</a>
                   <!-- Estatística Aplicada -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2520,7 +2376,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2535,9 +2391,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10866); return false;">&#128269;</a>
                   <!-- Ling Inglesa Instr p/Leitura na Ciência da Computação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2558,7 +2411,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2573,9 +2426,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, '04304'); return false;">&#128269;</a>
                   <!-- Fundamentos de Administração -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2596,7 +2446,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2611,9 +2461,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, '06247'); return false;">&#128269;</a>
                   <!-- Empreendedor em Tecnologia de Informação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2634,7 +2481,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2649,9 +2496,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, '08559'); return false;">&#128269;</a>
                   <!-- Tópicos Especiais de Matemática Aplicada I -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2672,7 +2516,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2687,9 +2531,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, '08560'); return false;">&#128269;</a>
                   <!-- Tópicos Especiais de Matemática Aplicada II -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2710,7 +2551,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2725,9 +2566,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10679); return false;">&#128269;</a>
                   <!-- Avaliação e Inovação em Tecnologia -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2748,7 +2586,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2763,9 +2601,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10851); return false;">&#128269;</a>
                   <!-- Algoritmos Distribuídos -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2786,7 +2621,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2801,9 +2636,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10853); return false;">&#128269;</a>
                   <!-- Algoritmos para Geometria Computacional -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2824,7 +2656,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="99">
-                  <span class="textoBalao">99</span>
+                  <span class="texto-balao">99</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2839,9 +2671,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10854); return false;">&#128269;</a>
                   <!-- Aspectos Práticos em Ciência da Computação I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2862,7 +2691,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="59">
-                  <span class="textoBalao">59</span>
+                  <span class="texto-balao">59</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2877,9 +2706,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10855); return false;">&#128269;</a>
                   <!-- Aspectos Práticos em Ciência da Computação II -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -2900,7 +2726,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="59">
-                  <span class="textoBalao">59</span>
+                  <span class="texto-balao">59</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2915,9 +2741,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10856); return false;">&#128269;</a>
                   <!-- Aspectos Práticos em Redes de Computadores -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2938,7 +2761,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2953,9 +2776,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10857); return false;">&#128269;</a>
                   <!-- Aspectos Práticos em Sistemas Operacionais -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -2976,7 +2796,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -2991,9 +2811,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10858); return false;">&#128269;</a>
                   <!-- Computação Científica -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3014,7 +2831,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3029,9 +2846,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10859); return false;">&#128269;</a>
                   <!-- Desenvolvimento e Implementação de Algoritmos -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3052,7 +2866,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3067,9 +2881,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10860); return false;">&#128269;</a>
                   <!-- Empreendedor em Tecnologia da Informação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3090,7 +2901,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3105,9 +2916,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10861); return false;">&#128269;</a>
                   <!-- Engenharia de Requisitos de Software -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3128,7 +2936,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3143,9 +2951,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10863); return false;">&#128269;</a>
                   <!-- Filosofia da Ciência -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3166,7 +2971,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3181,9 +2986,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10864); return false;">&#128269;</a>
                   <!-- Gestão de Tecnologia da Informação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3204,7 +3006,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="99">
-                  <span class="textoBalao">99</span>
+                  <span class="texto-balao">99</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3219,9 +3021,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10865); return false;">&#128269;</a>
                   <!-- Informática na Educação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3242,7 +3041,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="99">
-                  <span class="textoBalao">99</span>
+                  <span class="texto-balao">99</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3257,9 +3056,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10867); return false;">&#128269;</a>
                   <!-- Modelagem de Sistemas -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3280,7 +3076,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="79">
-                  <span class="textoBalao">79</span>
+                  <span class="texto-balao">79</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3295,9 +3091,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10868); return false;">&#128269;</a>
                   <!-- Programação Paralela e Distribuída -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -3331,9 +3124,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10869); return false;">&#128269;</a>
                   <!-- Qualidade de Software -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3354,7 +3144,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="79">
-                  <span class="textoBalao">79</span>
+                  <span class="texto-balao">79</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3369,9 +3159,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10870); return false;">&#128269;</a>
                   <!-- Realidade Virtual -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3392,7 +3179,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3407,9 +3194,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10871); return false;">&#128269;</a>
                   <!-- Redes de Computadores II -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3430,7 +3214,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3445,9 +3229,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10872); return false;">&#128269;</a>
                   <!-- Redes Neuronais -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3468,7 +3249,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3483,9 +3264,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10873); return false;">&#128269;</a>
                   <!-- Sistemas de Informação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3506,7 +3284,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3521,9 +3299,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina disciplina-atendida">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10874); return false;">&#128269;</a>
                   <!-- Tópicos Especiais I -->
               <tr class="dados-disciplina disciplina-atendida">
                 <td class="disciplina-periodo">
@@ -3544,7 +3319,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3559,9 +3334,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 10875); return false;">&#128269;</a>
                   <!-- Tópicos Especiais II -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3582,7 +3354,7 @@
                   <span class="texto-periodo-sugerido">Sim</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="108">
-                  <span class="textoBalao">108</span>
+                  <span class="texto-balao">108</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3597,9 +3369,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 11016); return false;">&#128269;</a>
                   <!-- Física III -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3620,7 +3389,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3635,9 +3404,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 11017); return false;">&#128269;</a>
                   <!-- Física IV -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3658,7 +3424,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
@@ -3673,9 +3439,6 @@
                 </td>
               </tr>
 
-              <tr class="dados-disciplina">
-                <td class="detalhes-disciplina acordeao">
-                  <a href="#" onclick="javascript:consultarDisciplina(output, 11454); return false;">&#128269;</a>
                   <!-- Gestão da Inovação -->
               <tr class="dados-disciplina">
                 <td class="disciplina-periodo">
@@ -3696,7 +3459,7 @@
                   <span class="texto-periodo-sugerido">Não</span>
                 </td>
                 <td class="disciplina-trava-credito" data-creditos-necessarios="0">
-                  <span class="textoBalao">0</span>
+                  <span class="texto-balao">0</span>
                 </td>
                 <td colspan="8" class="fold detalhes-disciplina">
                   <div class="divContentBlock">
