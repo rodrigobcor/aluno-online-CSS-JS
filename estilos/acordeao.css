@@ -67,10 +67,6 @@
       }
     }
 
-    & > tr.dados-disciplina:nth-child(4n-1) {
-      background-color: #cbd4e5;
-    }
-
     & > tr.dados-disciplina:hover {
       background-color: #7ab1e5;
     }
