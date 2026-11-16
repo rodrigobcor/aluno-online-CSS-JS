@@ -67,6 +67,10 @@
       }
     }
 
+    & > tr.dados-disciplina.zebra {
+      background-color: #cbd4e5;
+    }
+
     & > tr.dados-disciplina:hover {
       background-color: #7ab1e5;
     }
