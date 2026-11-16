@@ -2,7 +2,7 @@
 
 ## Resumo de Mudanças
 
-1. Remoção dos estilos (`style`) *inline* das classes (`class`) e das linhas de tabela (`tr`) referentes às linhas de informação (nome, código, período etc.) das disciplinas.
+1. *CORRIGIDO* Remoção dos estilos (`style`) *inline* das classes (`class`) e das linhas de tabela (`tr`) referentes às linhas de informação (nome, código, período etc.) das disciplinas.
 2. Inclusão de classes em cada célula (`td`) das linhas da tabela, para formatação mais precisa com CSS.
 3. Modificação do CSS original para um novo CSS com a formatação  *inline* que foi retirada das classes e células.
 4. Inclusão de formatações como:

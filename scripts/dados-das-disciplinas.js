@@ -500,7 +500,7 @@ function preencherModeloDisciplina(disciplina) {
   <td class="disciplina-codigo-ramificacao">${e(d.CODIGO_RAMIFICACAO)}</td>
   <td class="disciplina-num-creditos">${e(d.NUM_CREDITOS)}</td>
   <td class="disciplina-ch-total">${e(d.CARGA_HORARIA_TOTAL)}</td>
-  <td class="disciplina-periodo-sugerido" data-turma-no-periodo="${sim(d.TEM_TURMA_NO_PERIODO)}">
+  <td class="disciplina-periodo-sugerido" data-periodo-sugerido="${sim(d.TEM_TURMA_NO_PERIODO)}">
     <a href="#" onclick="${abrirConsulta}">&#128269;</a>
     <span class="texto-periodo-sugerido">${e(d.TEM_TURMA_NO_PERIODO)}</span>
   </td>
@@ -560,7 +560,7 @@ function preencherModeloDadosGerais(d) {
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Turma ofertada no período?</span>
-            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-turma-no-periodo="${sim(d.TEM_TURMA_NO_PERIODO)}">${v("TEM_TURMA_NO_PERIODO")}</span>
+            <span class="info-disciplina-dados-gerais-periodo-sugerido" data-periodo-sugerido="${sim(d.TEM_TURMA_NO_PERIODO)}">${v("TEM_TURMA_NO_PERIODO")}</span>
           </li>
           <li>
             <span class="label-info-disciplina-dados-gerais">Tempo de duração:</span>

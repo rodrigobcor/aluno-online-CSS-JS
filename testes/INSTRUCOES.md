@@ -5,7 +5,7 @@ _Nota: Caso haja alguma inconsistência nessa descrição, favor entrar em conta
 ## Sem acesso ao sistema remoto
 
 1. Iniciar emulador de servidor (servidor local), caso esteja utilizando arquivos do próprio computador ¹.
-2. Localizar e abrir o arquivo `disciplinasDoCurriculo_2025-1.html`.
+2. Localizar e abrir o arquivo `codigo-disciplinas-do-curriculo.html`.
 3. Abrir e fechar um ou dois itens acordeão, vendo se:
    * o layout está correto.
    * os detalhes da disciplina e turmas existentes estão aparecendo.
