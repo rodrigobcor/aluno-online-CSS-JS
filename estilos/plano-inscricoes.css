@@ -20,6 +20,11 @@
   }
 }
 
+#tabela-resumo-plano-inscricoes {
+  & > tbody { display: table-row-group; }
+  & tr { display: table-row; }
+}
+
 /*********************************************************/
 /* Resumo do plano de inscrições: Formatação do conteúdo */
 /*********************************************************/
